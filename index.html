@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reference Data - an Open Data Service from the Open Knowledge Foundation</title>
+  <meta name="description" content="">
+  <meta name="author" content="Open Knowledge Foundation">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  <link href="../vendorjs/bootstrap/2.0.2/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">Open Reference Data</a>
+      <ul class="nav">
+      </ul>
+      <ul class="nav pull-right">
+        <li>
+          <a class="nav-logo pull-left" href="http://okfn.org/" title="An Open Knowledge Foundation Project">
+            <img src="http://assets.okfn.org/p/okfn/img/logo_28x30.png" alt="Open Knowledge Foundation logo" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="content">
+  <div class="page-header">
+    <h1>
+      Open Reference Data
+      <small>High quality, key datasets in simple, easy-to-use and <a href="http://opendefinition.org/" title="Open Definition - defining open data">open</a> form</small>
+    </h1>
+  </div>
+
+  <div class="datasets">
+    <h2>
+      Datasets
+      <form class="form-horizontal form-search dataset-search">
+        <input type="text" name="q" placeholder="Search datasets" class="search-query span5" />
+      </form>
+    </h2>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="span4">
+      <h3>High Quality Essential Data</h3>
+      <p>We have sourced, normalized and quality checked a set of <strong>key
+        reference datasets such as country codes, currencies, GDP and
+        population</strong>.</p>
+    </div>
+    <div class="span4">
+      <h3>Standardized Form, Bulk Access</h3>
+      <p>All the datasets are provided in a <strong>standardized</strong> form
+      and can be accessed in <strong>bulk as CSV</strong> (plus JSON
+      schema).</p>
+    </div>
+    <div class="span4">
+      <h3>Versioned Sources & Packaging</h3>
+      <p>All data comes from <strong>high quality source data packages</strong>
+      and is <strong>versioned</strong> using git so that all changes are
+      visible and datasets can be collaboratively maintained.</p>
+    </div>
+  </div>
+
+  <h3>Data Packages</h3>
+  <p>All datasets start in source form as "data packages" with these stored in
+  a git repo on GitHub. Data packages are designed to be <strong>really
+    simple</strong> but to have <strong>just enough structure</strong> to be
+  usable by tools. You can check out <a
+    href="http://github.com/datasets/gdp">an existing, exemplar data package
+    (GDP) on GitHub here</a>.</p>
+
+  <h4>Structure</h4>
+  <p>A Data Package has the following structure on disk:</p>
+  <pre>
+# README in markdown format. Used to generate a short summary (first sentence),
+# longer summary (first paragraph) and general description (complete file)
+README.md
+# metadata and data schemas for this data package
+datapackage.json
+# directory for all data files (CSV)
+data/
+..../my-data-file.csv
+..../...more...files...
+# directory for scripts for processing and cleaning data
+scripts/
+......./process.py
+</pre>
+  <h4>datapackage.json</h4>
+  <p><code>datapackage.json</code> is the central file in a Data Package as it
+  provides both general metadata and schema information in a structured form
+  that is machine usable. It is a JSON file with the following struture:</p>
+  <pre>{
+  "metadata": {
+    ...
+  },
+  "schemas": {
+    "data/my-data-file.csv": {
+      fields: [
+      ]
+    }
+  }
+}</pre>
+
+  <footer>
+    <p>
+      This service is run by the <a href="http://okfn.org">Open
+        Knowledge Foundation</a>
+      &ndash;
+      <a href="http://github.com/okfn/referencedata">Source Code</a>
+      &ndash;
+      <a href="http://opendefinition.org/ossd/" title="Open Online Software Service">
+        <img src="http://assets.okfn.org/images/ok_buttons/os_80x15_orange_grey.png" alt="" border="" />
+      </a>
+    </p>
+  </footer>
+  </div><!-- /content -->
+</div><!-- /container -->
+</body>
+</html>
+
