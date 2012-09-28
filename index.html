@@ -101,18 +101,10 @@ scripts/
   <h4>datapackage.json</h4>
   <p><code>datapackage.json</code> is the central file in a Data Package as it
   provides both general metadata and schema information in a structured form
-  that is machine usable. It is a JSON file with the following struture:</p>
-  <pre>{
-  "metadata": {
-    ...
-  },
-  "schemas": {
-    "data/my-data-file.csv": {
-      fields: [
-      ]
-    }
-  }
-}</pre>
+  that is machine usable. It is a JSON file and full details of its structure are in the <a href="http://www.dataprotocols.org/en/latest/data-packages.html">data packages specification</a>.</p>
+
+  <h4>Data files</h4>
+  <p>All data must be provided as CSV files (UTF8 encoded) and there should be <strong>only one</strong> data file in a data package.</p>
 
   <footer>
     <p>
