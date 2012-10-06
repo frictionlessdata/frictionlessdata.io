@@ -13,6 +13,13 @@ jQuery(document).ready(function($) {
       return item;
     }
   });
+
+  var catalog = new Catalog.Models.Catalog();
+  window.catalog = new Catalog.Views.Application({
+    model: catalog,
+    el: $('body')
+  });
+  Backbone.history.start();
 });
 
 function search(q) {
