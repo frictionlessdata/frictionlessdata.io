@@ -13,6 +13,9 @@ my.Views.Application = Backbone.View.extend({
     this.router.route('', 'home', function() {
       self.switchView('home');
     });
+    this.router.route('about', 'about', function() {
+      self.switchView('about');
+    });
     this.router.route('dataset/:id', 'dataset', function(id) {
       self.datasetShow(id);
     });

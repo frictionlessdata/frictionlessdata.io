@@ -28,6 +28,10 @@ footer {
   border-top: solid 1px #eee;
 }
 
+.navbar .nav > li > a {
+  padding-top: 12px;
+}
+
 .nav-logo img {
   margin-top: -4px;
   margin-right: -5px;
