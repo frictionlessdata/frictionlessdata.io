@@ -72,7 +72,7 @@ my.Views.Dataset = Backbone.View.extend({
         </div> \
         <div class="span4"> \
           <div class="actions"> \
-            <a href="{{download_url}}" class="btn btn-large"><i class="icon-download-alt"></i>Download</a> \
+            <a href="{{download_url}}" class="btn btn-large"><i class="icon-download-alt"></i> Download</a> \
           </div> \
           <div class="source">Source: {{source}}</div> \
           <ul class="keywords"> \
