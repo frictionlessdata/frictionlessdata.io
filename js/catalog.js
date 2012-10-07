@@ -19,6 +19,13 @@ my.Views.Application = Backbone.View.extend({
     this.router.route('dataset/:id', 'dataset', function(id) {
       self.datasetShow(id);
     });
+
+    // initialize various views
+    this.searchView = new my.Views.Search({
+      model: this.model,
+      el: this.el.find('.view.home .placeholder-search')
+    });
+    this.searchView.render();
   },
 
   // Helpers
@@ -30,9 +37,6 @@ my.Views.Application = Backbone.View.extend({
     $('.view.' + name).show();
     var toNavigateTo = (name == 'home') ? '' : name;
     this.router.navigate(toNavigateTo);
-  },
-
-  home: function() {
   },
 
   datasetShow: function(id) {
@@ -66,6 +70,8 @@ my.Views.DatasetList = Backbone.View.extend({
 
   initialize: function() {
     this.el = $(this.el);
+    _.bindAll(this);
+    this.model.bind('all', this.render);
   },
 
   render: function() {
@@ -79,7 +85,60 @@ my.Views.DatasetList = Backbone.View.extend({
   }
 });
 
-my.Models.Catalog = Backbone.Collection.extend({
+my.Views.Search = Backbone.View.extend({
+  template: ' \
+    <div class="search"> \
+      <form class="form-horizontal dataset-search" autocomplete="off"> \
+        <input type="text" name="q" placeholder="Search datasets" class="search-query js-dataset-query span5" autocomplete="off" /> \
+      </form> \
+      <div class="row"> \
+        <div class="results span8"> \
+        </div> \
+        <div class="sidebar span4"> \
+        </div> \
+      </div> \
+    </div> \
+  ',
+
+  events: {
+    'submit .dataset-search': 'onSearchSubmit'
+  },
+
+  initialize: function() {
+    this.$el = $(this.el);
+    // current search results
+    this.results = new my.Models.DatasetList();
+    this.resultsView = new my.Views.DatasetList({
+      model: this.results
+    });
+  },
+
+  render: function() {
+    this.$el.html(this.template);
+    this.$el.find('.results').append(this.resultsView.el);
+
+    this.$el.find('.js-dataset-query').typeahead({
+      source: _.pluck([], 'title'),
+      updater: function(item) {
+        return item;
+      }
+    });
+  },
+
+  onSearchSubmit: function(e) {
+    var self = this;
+    e.preventDefault();
+    var q = $(e.target).find('input').val();
+    this.model.search(q, function(error, result) {
+      self.results.reset(result);
+    });
+  }
+});
+
+my.Models.Catalog = Backbone.Model.extend({
+  search: function(q, callback) {
+    callback(null, this.get('datasets'));
+  }
 });
 
 my.Models.Dataset = recline.Model.Dataset.extend({

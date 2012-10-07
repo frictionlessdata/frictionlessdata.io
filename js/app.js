@@ -1,23 +1,7 @@
 jQuery(document).ready(function($) {
-  $('.dataset-search').submit(function(e) {
-    e.preventDefault();
-    var q = $(e.target).find('input').val();
-    var datasets = search(q);
-    var view = new Catalog.Views.DatasetList({
-      model: new Catalog.Models.DatasetList(datasets)
-    });
-    view.render();
-    $('.datasets .results').append(view.el);
+  var catalog = new Catalog.Models.Catalog({
+    datasets: DATASETS
   });
-
-  $('.js-dataset-query').typeahead({
-    source: _.pluck(DATASETS, 'title'),
-    updater: function(item) {
-      return item;
-    }
-  });
-
-  var catalog = new Catalog.Models.Catalog();
   window.catalog = new Catalog.Views.Application({
     model: catalog,
     el: $('body')
