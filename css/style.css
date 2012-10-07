@@ -85,12 +85,12 @@ footer {
   font-style: italic;
 }
 
-.dataset.summary ul.keywords {
+.dataset ul.keywords {
   list-style-type: none;
   margin: 0;
 }
 
-.dataset.summary ul.keywords li {
+.dataset ul.keywords li {
   display: inline;
   padding: 1px 4px 2px;
   -webkit-border-radius: 3px;
@@ -105,5 +105,23 @@ footer {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background: #55A1CE;
   margin-right: 3px;
+}
+
+
+/********************************************************************
+  * Dataset Show
+  *******************************************************************/
+
+.dataset.show .logo {
+  width: 100px;
+  float: right;
+}
+
+.dataset.show .source {
+  font-style: italic;
+}
+
+.dataset.show .actions {
+  margin-bottom: 10px;
 }
 

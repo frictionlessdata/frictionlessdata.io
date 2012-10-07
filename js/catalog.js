@@ -16,7 +16,7 @@ my.Views.Application = Backbone.View.extend({
     this.router.route('about', 'about', function() {
       self.switchView('about');
     });
-    this.router.route('dataset/:id', 'dataset', function(id) {
+    this.router.route('dataset/:name', 'dataset', function(id) {
       self.datasetShow(id);
     });
 
@@ -35,20 +35,69 @@ my.Views.Application = Backbone.View.extend({
     this.el.removeClass().addClass('current-view- '+name);
     this.el.find('.view').hide();
     $('.view.' + name).show();
-    var toNavigateTo = (name == 'home') ? '' : name;
-    this.router.navigate(toNavigateTo);
   },
 
-  datasetShow: function(id) {
-    var view = new my.Views.Dataset({
+  setTitle: function(title) {
+    document.title = title;
+    this.el.find('.page-header h1').html(title);
+  },
+
+  // Views
+  // -------
+
+
+  datasetShow: function(name) {
+    var self = this;
+    this.model.getByName(name, function(err, dataset) {
+      var view = new my.Views.Dataset({
+        model: dataset
+      });
+      view.render();
+      self.el.find('.view.dataset').empty().append(view.el);
+      self.setTitle(dataset.get('title'));
+      self.switchView('dataset');
     });
-    view.render();
-    // append el
-    this.switchView('dataset');
   }
 });
 
 my.Views.Dataset = Backbone.View.extend({
+  template: ' \
+    <div class="dataset show"> \
+      <div class="row"> \
+        <div class="span8"> \
+          {{#image}} \
+          <img src="{{image}}" alt="{{title}}" class="logo" /> \
+          {{/image}} \
+          <div class="description">{{description}}</div> \
+        </div> \
+        <div class="span4"> \
+          <div class="actions"> \
+            <a href="{{download_url}}" class="btn btn-large"><i class="icon-ok"></i>Download</a> \
+          </div> \
+          <div class="source">Source: {{source}}</div> \
+          <ul class="keywords"> \
+            {{#keywords}} \
+            <li>{{.}} \
+            {{/keywords}} \
+          </ul> \
+        </div> \
+      </div> \
+    <div> \
+  ',
+
+  initialize: function() {
+    this.$el = $(this.el);
+    _.bindAll(this);
+  },
+
+  render: function() {
+    var self = this;
+    var data = this.model.toJSON();
+    data.download_url = data.files[0].url;
+    var rendered = Mustache.render(self.template, data);
+    this.$el.append(rendered);
+    return this;
+  }
 });
 
 my.Views.DatasetList = Backbone.View.extend({
@@ -138,6 +187,14 @@ my.Views.Search = Backbone.View.extend({
 my.Models.Catalog = Backbone.Model.extend({
   search: function(q, callback) {
     callback(null, this.get('datasets'));
+  },
+
+  getByName: function(name, callback) {
+    var out = _.find(this.get('datasets'), function(dataset) {
+      return (name === dataset.name)
+    });
+    var ds = new my.Models.Dataset(out);
+    callback(null, ds);
   }
 });
 

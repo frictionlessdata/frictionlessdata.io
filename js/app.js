@@ -30,7 +30,14 @@ var DATASETS = [
     "keywords": [ "GDP", "World", "Gross Domestic Product", "Time series" ],
     "version": "2011",
     "image": "http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png",
-    "source": "World Bank and OECD"
+    "source": "World Bank and OECD",
+    "files": [
+      {
+        "url": "https://github.com/datasets/gdp/raw/master/data/gdp.csv",
+        "fields": [
+        ]
+      }
+    ]
   },
   {
     "title": "ISO 3166-2: 2 Digit Country Codes",
