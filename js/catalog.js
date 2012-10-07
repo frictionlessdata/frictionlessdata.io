@@ -3,7 +3,7 @@ var Catalog = {
   Views: {}
 };
 
-(function(my) {
+(function(my, $) {
 my.Views.Application = Backbone.View.extend({
   initialize: function () {
     var self = this;
@@ -32,6 +32,9 @@ my.Views.Application = Backbone.View.extend({
     this.router.navigate(toNavigateTo);
   },
 
+  home: function() {
+  },
+
   datasetShow: function(id) {
     var view = new my.Views.Dataset({
     });
@@ -44,8 +47,47 @@ my.Views.Application = Backbone.View.extend({
 my.Views.Dataset = Backbone.View.extend({
 });
 
+my.Views.DatasetList = Backbone.View.extend({
+  templateDataset: ' \
+    <div class="dataset summary"> \
+      {{#image}} \
+      <img src="{{image}}" alt="{{title}}" class="logo" /> \
+      {{/image}} \
+      <h3><a href="#dataset/{{name}}">{{title}}</a></h3> \
+      <div class="description">{{description}}</div> \
+      <div class="source">Source: {{source}}</div> \
+      <ul class="keywords"> \
+        {{#keywords}} \
+        <li>{{.}} \
+        {{/keywords}} \
+      </ul> \
+    <div> \
+  ',
+
+  initialize: function() {
+    this.el = $(this.el);
+  },
+
+  render: function() {
+    var self = this;
+    this.el.html('');
+    this.model.each(function(dataset) {
+      var rendered = Mustache.render(self.templateDataset, dataset.toJSON());
+      self.el.append(rendered);
+    });
+    return this;
+  }
+});
+
 my.Models.Catalog = Backbone.Collection.extend({
 });
 
-}(Catalog));
+my.Models.Dataset = recline.Model.Dataset.extend({
+});
+
+my.Models.DatasetList = Backbone.Collection.extend({
+  model: my.Models.Dataset
+});
+
+}(Catalog, jQuery));
 

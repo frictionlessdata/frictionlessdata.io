@@ -1,10 +1,13 @@
 jQuery(document).ready(function($) {
-  displaySearchResults(search());
-
   $('.dataset-search').submit(function(e) {
     e.preventDefault();
     var q = $(e.target).find('input').val();
-    displaySearchResults(search(q));
+    var datasets = search(q);
+    var view = new Catalog.Views.DatasetList({
+      model: new Catalog.Models.DatasetList(datasets)
+    });
+    view.render();
+    $('.datasets .results').append(view.el);
   });
 
   $('.js-dataset-query').typeahead({
@@ -20,35 +23,14 @@ jQuery(document).ready(function($) {
     el: $('body')
   });
   Backbone.history.start();
+
+  $('.dataset-search').submit();
 });
 
 function search(q) {
   // crude regex on titles?
   return DATASETS;
 }
-
-function displaySearchResults(datasets) {
-  $('.datasets .results').html('');
-  _.each(datasets, function(dataset) {
-    $('.datasets .results').append(Mustache.render(datasetTemplate, dataset));
-  });
-}
-
-var datasetTemplate = ' \
-  <div class="dataset summary"> \
-    {{#image}} \
-    <img src="{{image}}" alt="{{title}}" class="logo" /> \
-    {{/image}} \
-    <h3><a href="#dataset/{{name}}">{{title}}</a></h3> \
-    <div class="description">{{description}}</div> \
-    <div class="source">Source: {{source}}</div> \
-    <ul class="keywords"> \
-      {{#keywords}} \
-      <li>{{.}} \
-      {{/keywords}} \
-    </ul> \
-  <div> \
-';
 
 var DATASETS = [
   {
