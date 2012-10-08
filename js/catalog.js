@@ -185,20 +185,53 @@ my.Views.Search = Backbone.View.extend({
 });
 
 my.Models.Catalog = Backbone.Model.extend({
+  initialize: function() {
+    this.github = new Github({});
+    this.datasets = new my.Models.DatasetList();
+  },
+
   search: function(q, callback) {
-    callback(null, this.get('datasets'));
+    callback(null, this.datasets.toJSON());
   },
 
   getByName: function(name, callback) {
-    var out = _.find(this.get('datasets'), function(dataset) {
-      return (name === dataset.name)
+    var self = this;
+    var out = this.datasets.get(name);
+    if (!out) {
+      this.getFromGithub(name, function(err, out) {
+        var ds = new my.Models.Dataset(out);
+        // it's possible we were retrieving simultaneously
+        if (self.datasets.get(name)) {
+          self.datasets.remove(ds);
+          self.datasets.add(ds);
+        }
+        callback(null, ds);
+      });
+    } else {
+      var ds = new my.Models.Dataset(out);
+      callback(null, ds);
+    }
+  },
+
+  getFromGithub: function(name, callback) {
+    var repo = this.github.getRepo('datasets', name);
+    repo.read('master', 'datapackage.json', function(err, file) {
+      var datapackage = JSON.parse(file);
+      var meta = datapackage.metadata;
+      delete datapackage.metadata;
+      _.extend(datapackage, meta);
+      datapackage.id = datapackage.name;
+      datapackage.github_url = 'https://github.com/datasets/' + name;
+      // _.each(datapackage.files, function(info) {
+      //  if (!info.url) {
+      //  }
+      // });
+      callback(null, datapackage);
     });
-    var ds = new my.Models.Dataset(out);
-    callback(null, ds);
   }
 });
 
-my.Models.Dataset = recline.Model.Dataset.extend({
+my.Models.Dataset = Backbone.Model.extend({
 });
 
 my.Models.DatasetList = Backbone.Collection.extend({
