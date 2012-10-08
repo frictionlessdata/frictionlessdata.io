@@ -125,3 +125,11 @@ footer {
   margin-bottom: 10px;
 }
 
+.dataset.show .viewer .recline-slickgrid {
+  margin-top: 20px;
+}
+
+.dataset.show .viewer .recline-slickgrid {
+  height: 500px;
+}
+

@@ -82,6 +82,7 @@ my.Views.Dataset = Backbone.View.extend({
           </ul> \
         </div> \
       </div> \
+      <div class="viewer"></div> \
     <div> \
   ',
 
@@ -96,7 +97,29 @@ my.Views.Dataset = Backbone.View.extend({
     data.download_url = data.files[0].url;
     var rendered = Mustache.render(self.template, data);
     this.$el.append(rendered);
+    this._loadViewer();
     return this;
+  },
+
+  _loadViewer: function() {
+    var $viewer = this.$el.find('.viewer'); 
+    var file = this.model.get('files')[0];
+    var reclineInfo = $.extend(true, {}, file);
+    $viewer.html('<img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
+    var github = new Github({});
+    var repo = github.getRepo('datasets', this.model.get('name'));
+    repo.read('master', file.path, function(err, data) {
+      // slice to remove first row as we already have field info
+      reclineInfo.records = recline.Backend.CSV.parseCSV(data).slice(1);
+      var table = new recline.Model.Dataset(reclineInfo);
+      table.query({size: reclineInfo.records.length});
+      var grid = new recline.View.SlickGrid({
+        model: table
+      });
+      $viewer.empty().append(grid.el);
+      grid.visible = true;
+      grid.render();
+    });
   }
 });
 
