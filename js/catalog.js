@@ -202,9 +202,9 @@ my.Models.Catalog = Backbone.Model.extend({
         var ds = new my.Models.Dataset(out);
         // it's possible we were retrieving simultaneously
         if (self.datasets.get(name)) {
-          self.datasets.remove(ds);
-          self.datasets.add(ds);
+          self.datasets.remove(ds, {silent: true});
         }
+        self.datasets.add(ds);
         callback(null, ds);
       });
     } else {
@@ -222,10 +222,11 @@ my.Models.Catalog = Backbone.Model.extend({
       _.extend(datapackage, meta);
       datapackage.id = datapackage.name;
       datapackage.github_url = 'https://github.com/datasets/' + name;
-      // _.each(datapackage.files, function(info) {
-      //  if (!info.url) {
-      //  }
-      // });
+      _.each(datapackage.files, function(info) {
+        if (!info.url) {
+          info.url = datapackage.github_url.replace('github.com', 'raw.github.com') + '/master/' + info.path;
+        }
+      });
       callback(null, datapackage);
     });
   }
