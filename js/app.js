@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
   Backbone.history.start();
 
   // retrieve datasets ...
-  var datasetNames = ['gdp'];
+  var datasetNames = ['gdp', 'us-cpi'];
   var retrieved = 0;
   _.each(datasetNames, function(name) {
     catalog.getByName(name, function(err, ds) {
