@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Reference Data - an Open Data Service from the Open Knowledge Foundation</title>
+  <title> 
+    {% block title%}Home{% endblock %}
+    - Reference Data
+    - an Open Data Service from the Open Knowledge Foundation
+  </title>
   <meta name="description" content="">
   <meta name="author" content="Open Knowledge Foundation">
 
@@ -41,12 +45,14 @@
 
 <div class="container">
 <div class="content">
+  {% block page_title %}
   <div class="page-header">
     <h1>
       Open Reference Data
       <small>Key datasets in high quality, easy-to-use and <a href="http://opendefinition.org/" title="open data defined">open</a> form</small>
     </h1>
   </div>
+  {% endblock %}
 
   {% block content %}{% endblock %}
 
