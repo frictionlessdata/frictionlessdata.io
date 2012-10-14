@@ -20,8 +20,8 @@ def search():
     total = len(datasets)
     return render_template('search.html', q=q, datasets=datasets, total=total)
 
-@app.route('/dataset/<id>')
-def dataset(id):
+@app.route('/<owner>/<id>')
+def dataset(owner, id):
     dataset = catalog.get(id)
     dataset.download_url = dataset.files[0].url
     raw_data_file = dataset.files[0].dictize()
