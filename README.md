@@ -20,6 +20,12 @@ See it in action at http://data.okfn.org/
 
 Note that you will need to install the [Heroku toolbelt](https://toolbelt.heroku.com/) to carry out the `heroku` commands below.
 
+### Create a Profile
+
+Open Procfile and add:
+  
+    web: python datahub/web.py
+
 ### Create the application on Heroku
 
 *Skip this step if the application is already deployed*
