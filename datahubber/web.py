@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
-app = Flask(__name__)
+import json
 
 from catalog import catalog
+
+app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -13,11 +15,19 @@ def about():
 
 @app.route("/search")
 def search():
-    catalog.load(DATASETS)
     q = request.args.get('q', '')
     datasets = catalog.query(q)
     total = len(datasets)
     return render_template('search.html', q=q, datasets=datasets, total=total)
+
+@app.route('/dataset/<id>')
+def dataset(id):
+    dataset = catalog.get(id)
+    dataset.download_url = dataset.files[0].url
+    raw_data_file = dataset.files[0].dictize()
+    raw_data_file['dataset_name'] = dataset.id
+    return render_template('dataset.html', dataset=dataset,
+            raw_data_file=raw_data_file)
 
 
 DATASETS = {
@@ -28,6 +38,8 @@ DATASETS = {
         'us-cpi'
     ]
 }
+catalog.load(DATASETS)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

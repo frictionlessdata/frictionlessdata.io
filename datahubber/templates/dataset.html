@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{dataset.title}} - Dataset
+{% endblock %}
+
+
+{% block content %}
+<div class="dataset show">
+  <div class="row">
+    <div class="span8">
+      <img src="{{dataset.image or
+        'http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png'}}"
+        alt="{{dataset.title}}" class="logo" />
+      <div class="description">{{dataset.description}}</div>
+    </div>
+    <div class="span4">
+      <div class="actions">
+        <a href="{{dataset.download_url}}" class="btn btn-large"><i class="icon-download-alt"></i> Download</a>
+      </div>
+      <div class="source">Source: {{dataset.source}}</div>
+      <ul class="keywords">
+        {% for kw in dataset.keywords %}
+        <li>{{kw}}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="viewer"></div>
+<div>
+<script type="text/javascript">
+  var DataFileData = {{ raw_data_file|tojson|safe }};
+</script>
+{% endblock %}

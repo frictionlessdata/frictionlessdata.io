@@ -2,12 +2,7 @@ import urllib
 import json
 
 
-class Base(object):
-    def __init__(self, **kwargs):
-        for kw, val in kwargs.items():
-            setattr(self, kw, val)
-
-class Catalog(Base):
+class Catalog(object):
     def __init__(self):
         self._loaded = False
         self._cache = {
@@ -18,23 +13,21 @@ class Catalog(Base):
             return
         for key in datasets:
             for id_ in datasets[key]:
-                ds = self.get(id_)
+                ds = self._load(id_)
                 ds.owner = key
                 self._cache[id_] = ds
 
     def get(self, id_):
-        if id_ in self._cache:
-            return self._cache[id_]
-        else:
-            return self._get(id_)
+        return self._cache.get(id_, None)
 
     def query(self, q=''):
         # TODO: actual search
         return self._cache.values()
 
-    def _get(self, id_):
+    def _load(self, id_):
         url = 'https://raw.github.com/datasets/' + id_ + '/master/' + \
             'datapackage.json'
+        # TODO: deal with 404s gracefully
         datapackage = json.load(urllib.urlopen(url))
         meta = datapackage.get('metadata', {})
         dataset = Dataset(**meta)
@@ -43,11 +36,19 @@ class Catalog(Base):
         dataset.github_url = 'https://github.com/datasets/' + dataset.name
         for info in datapackage['files']:
             df = DataFile(**info)
-            if(not hasattr(df, 'url')):
+            if (not df.url):
                 df.url = dataset.github_url.replace('github.com',
                         'raw.github.com') + '/master/' + df.path;
             dataset.files.append(df)
         return dataset
+
+
+class Base(dict):
+    def __getattr__(self, attr):
+        return self.get(attr, None)
+
+    def __setattr__(self, attr, val):
+        self[attr] = val
 
 
 class Dataset(Base):
@@ -57,7 +58,8 @@ class Dataset(Base):
 
 
 class DataFile(Base):
-    pass
+    def dictize(self):
+        return self
 
 
 catalog = Catalog()
