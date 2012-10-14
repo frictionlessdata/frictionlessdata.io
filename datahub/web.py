@@ -2,9 +2,8 @@ from flask import Flask, render_template, request
 import json
 import os
 
+from core import app
 from catalog import catalog
-
-app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -43,5 +42,6 @@ catalog.load(DATASETS)
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=os.environ.get('PORT', 5000))
+    app.run(debug=app.config['DEBUG'], host=app.config['HOST'],
+            port=app.config['PORT'])
 
