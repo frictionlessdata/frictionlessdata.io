@@ -38,12 +38,27 @@ footer {
 }
 
 /********************************************************************
-  * Form
+  * Search Form
   *******************************************************************/
 
 .dataset-search {
-  display: inline;
-  display: none;
+  margin: 50px 0;
+}
+
+.dataset-search input {
+  margin: auto;
+  width: 500px;
+  display: block;
+}
+
+/********************************************************************
+  * Search Results
+  *******************************************************************/
+
+.search .sidebar h3:first-child {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 /********************************************************************
@@ -61,6 +76,7 @@ footer {
 .dataset.summary .logo {
   width: 50px;
   float: right;
+  margin-left: 5px;
 }
 
 .dataset.summary h3 {

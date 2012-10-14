@@ -13,7 +13,6 @@ jQuery(document).ready(function($) {
     catalog.getByName(name, function(err, ds) {
       retrieved += 1;
       if (retrieved == datasetNames.length) {
-        $('.dataset-search').submit();
       }
     });
   });

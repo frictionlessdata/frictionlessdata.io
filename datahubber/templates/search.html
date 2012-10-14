@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+Search  
+{% endblock %}
+
+
+{% block content %}
+<div class="search">
+  <form class="form-horizontal dataset-search" autocomplete="off">
+    <input type="text" name="q" value="{{q}}"
+    placeholder="Search datasets" autocomplete="off"
+    class="search-query js-dataset-query" />
+  </form>
+  <div class="row">
+    <div class="results span6 offset1">
+      {% for dataset in datasets %}
+        <div class="dataset summary">
+          <img src="{{dataset.image or
+            'http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png'}}"
+            alt="{{dataset.title}}" class="logo" />
+          <h3><a href="dataset/{{dataset.name}}">{{dataset.title}}</a></h3>
+          <div class="description">{{dataset.description}}</div>
+          <div class="source">Source: {{dataset.source}}</div>
+          <ul class="keywords">
+            {% for kw in dataset.keywords %}
+            <li>{{kw}}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="sidebar span3">
+      <h3>{{ total }} datasets found</h3>
+    </div>
+  </div>
+</div>
+{% endblock %}

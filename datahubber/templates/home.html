@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+    <form class="form-horizontal dataset-search" autocomplete="off"
+      method="GET" action="{{ url_for('search') }}">
+      <input type="text" name="q" placeholder="Search datasets" class="search-query js-dataset-query span5" autocomplete="off" />
+    </form>
+
+    <hr />
+
     <div class="row">
       <div class="span4">
         <h3>High Quality Essential Data</h3>
@@ -22,9 +30,4 @@
       </div>
     </div>
 
-    <hr />
-
-    <h2>Datasets</h2>
-    <div class="placeholder-search">
-    </div>
 {% endblock %}
