@@ -1,5 +1,5 @@
 from nose.tools import assert_equal
-import datahubber.catalog as catalog
+import datahub.catalog as catalog
 
 def test__load():
     c = catalog.Catalog()
