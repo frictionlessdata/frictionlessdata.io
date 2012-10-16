@@ -36,6 +36,8 @@ tutorial](https://devcenter.heroku.com/articles/python#deploy-to-heroku).
     # replace {app-name} with the name of your app
     heroku create {app-name}
     git push heroku master
+    # now point at our config
+    heroku config:set DATAHUB_SETTINGS=/app/heroku_settings.py
     heroku ps:scale web=1
 
 ## To deploy (already created):
