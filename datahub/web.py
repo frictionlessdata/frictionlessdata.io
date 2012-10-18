@@ -7,7 +7,9 @@ from catalog import catalog
 
 @app.route("/")
 def home():
-    return render_template('home.html')
+    datasets = catalog.query()
+    total = len(datasets)
+    return render_template('home.html', datasets=datasets, total=total)
 
 @app.route("/about")
 def about():

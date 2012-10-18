@@ -1,13 +1,7 @@
 {% extends "base.html" %}
+{% import '_snippets.html' as snippets %}
 
 {% block content %}
-
-    <form class="form-horizontal dataset-search" autocomplete="off"
-      method="GET" action="{{ url_for('search') }}">
-      <input type="text" name="q" placeholder="Search datasets" class="search-query js-dataset-query span5" autocomplete="off" />
-    </form>
-
-    <hr />
 
     <div class="row">
       <div class="span4">
@@ -27,6 +21,25 @@
         <p>All data comes from <strong>high quality source data packages</strong>
         and is <strong>versioned</strong> using git so that all changes are
         visible and datasets can be collaboratively maintained.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+      <div class="span6 offset3">
+        <form class="form-horizontal dataset-search" autocomplete="off"
+          method="GET" action="{{ url_for('search') }}">
+          <input type="text" name="q" placeholder="Search datasets" class="search-query js-dataset-query span5" autocomplete="off" />
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="results span6 offset3">
+        <h3>{{ total }} datasets found</h3>
+        {% for dataset in datasets %}
+          {{ snippets.dataset_summary(dataset) }}
+        {% endfor %}
       </div>
     </div>
 
