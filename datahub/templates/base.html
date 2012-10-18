@@ -45,13 +45,12 @@
 
 <div class="container">
 <div class="content">
-  {% block page_title %}
   <div class="page-header">
     <h1>
-      Key datasets in high quality, easy-to-use and <a href="http://opendefinition.org/" title="open data defined">open</a> form</small>
+      {% block page_title %}
+      {% endblock %}
     </h1>
   </div>
-  {% endblock %}
 
   {% block content %}{% endblock %}
 
