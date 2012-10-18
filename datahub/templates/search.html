@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import '_snippets.html' as snippets %}
 
 {% block title %}
 Search  
@@ -13,25 +14,11 @@ Search
     class="search-query js-dataset-query" />
   </form>
   <div class="row">
-    <div class="results span6 offset1">
-      {% for dataset in datasets %}
-        <div class="dataset summary">
-          <img src="{{dataset.image or
-            'http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png'}}"
-            alt="{{dataset.title}}" class="logo" />
-          <h3><a href="{{ url_for('dataset', owner=dataset.owner, id=dataset.id) }}">{{dataset.title}}</a></h3>
-          <div class="description">{{dataset.description}}</div>
-          <div class="source">Source: {{dataset.source}}</div>
-          <ul class="keywords">
-            {% for kw in dataset.keywords %}
-            <li>{{kw}}
-            {% endfor %}
-          </ul>
-        </div>
-      {% endfor %}
-    </div>
-    <div class="sidebar span3">
+    <div class="results span6 offset3">
       <h3>{{ total }} datasets found</h3>
+      {% for dataset in datasets %}
+        {{ snippets.dataset_summary(dataset) }}
+      {% endfor %}
     </div>
   </div>
 </div>
