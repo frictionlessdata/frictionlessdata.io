@@ -35,7 +35,8 @@ DATASETS = {
     ],
     'indicator': [
         'gdp',
-        'us-cpi'
+        'us-cpi',
+        'population'
     ]
 }
 catalog.load(DATASETS)
