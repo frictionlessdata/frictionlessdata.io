@@ -142,11 +142,27 @@ footer {
   margin-bottom: 10px;
 }
 
-.dataset.show .viewer .recline-slickgrid {
+.dataset.show .viewer {
   margin-top: 20px;
 }
 
+.dataset.show .viewer .header {
+  margin-bottom: 10px;
+}
+
 .dataset.show .viewer .recline-slickgrid {
-  height: 500px;
+  height: 400px;
+}
+
+.dataset.show .viewer .navigation {
+  display: none;
+}
+
+.dataset.show .viewer .recline-pager {
+  display: none;
+}
+
+.dataset.show .viewer .header .recline-results-info {
+  margin-left: 0;
 }
 

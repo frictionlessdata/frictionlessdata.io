@@ -35,13 +35,22 @@ my.Views.DataFile = Backbone.View.extend({
       // slice to remove first row as we already have field info
       reclineInfo.records = recline.Backend.CSV.parseCSV(data).slice(1);
       var table = new recline.Model.Dataset(reclineInfo);
-      table.query({size: reclineInfo.records.length});
-      var grid = new recline.View.SlickGrid({
-        model: table
+      var views = [
+        {
+          id: 'grid',
+          label: 'Grid',
+          view: new recline.View.SlickGrid({
+            model: table
+          })
+        }
+      ];
+      var explorer = new recline.View.MultiView({
+        model: table,
+        views: views
       });
-      $viewer.empty().append(grid.el);
-      grid.visible = true;
-      grid.render();
+      $viewer.empty().append(explorer.el);
+
+      table.query({size: reclineInfo.records.length});
     });
     return this;
   }
