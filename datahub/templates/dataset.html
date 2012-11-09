@@ -24,7 +24,7 @@
       </div>
       <div class="source">Source: {{dataset.source}}</div>
       <ul class="keywords">
-        {% for kw in dataset.keywords %}
+        {% for kw in dataset.keywords or [] %}
         <li>{{kw}}
         {% endfor %}
       </ul>
