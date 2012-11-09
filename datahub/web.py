@@ -34,11 +34,7 @@ def dataset(owner, id):
 
 DATASETS = {
     'reference': [
-    ],
-    'indicator': [
-        'gdp',
-        'us-cpi',
-        'population'
+        'cofog'
     ]
 }
 catalog.load(DATASETS)
