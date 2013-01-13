@@ -11,10 +11,9 @@ class Catalog(object):
     def load(self, datasets):
         if self._loaded:
             return
-        for key in datasets:
-            for id_ in datasets[key]:
-                ds = self._load(id_)
-                ds.owner = key
+        for id_ in datasets:
+            ds = self._load(id_)
+            if ds:
                 self._cache[id_] = ds
 
     def get(self, id_):
@@ -28,7 +27,11 @@ class Catalog(object):
         url = 'https://raw.github.com/datasets/' + id_ + '/master/' + \
             'datapackage.json'
         # TODO: deal with 404s gracefully
-        datapackage = json.load(urllib.urlopen(url))
+        try:
+            datapackage = json.load(urllib.urlopen(url))
+        except:
+            print('Failed to load %s from %s' % (id_, url))
+            return None
         meta = datapackage.get('metadata', {})
         dataset = Dataset(**meta)
         dataset.datapackage_url = url

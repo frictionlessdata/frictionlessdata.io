@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import json
 import os
+import urllib
 
 from core import app
 from catalog import catalog
@@ -22,22 +23,21 @@ def search():
     total = len(datasets)
     return render_template('search.html', q=q, datasets=datasets, total=total)
 
-@app.route('/<owner>/<id>')
-def dataset(owner, id):
+@app.route('/<id>')
+def dataset(id):
     dataset = catalog.get(id)
-    dataset.download_url = dataset.files[0].url
-    raw_data_file = dataset.files[0].dictize()
-    raw_data_file['dataset_name'] = dataset.id
+    if dataset.files:
+        dataset.download_url = dataset.files[0].url
+        raw_data_file = dataset.files[0].dictize()
+        raw_data_file['dataset_name'] = dataset.id
     return render_template('dataset.html', dataset=dataset,
             raw_data_file=raw_data_file)
 
 
-DATASETS = {
-    'reference': [
-        'cofog'
-    ]
-}
-catalog.load(DATASETS)
+dataset_list_url = 'https://raw.github.com/datasets/registry/master/list.txt'
+dataset_list = urllib.urlopen(dataset_list_url).read().split('\n')
+print dataset_list
+catalog.load(dataset_list)
 
 
 if __name__ == "__main__":
