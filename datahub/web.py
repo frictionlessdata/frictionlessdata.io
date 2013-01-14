@@ -34,10 +34,7 @@ def dataset(id):
             raw_data_file=raw_data_file)
 
 
-dataset_list_url = 'https://raw.github.com/datasets/registry/master/list.txt'
-dataset_list = urllib.urlopen(dataset_list_url).read().split('\n')
-print dataset_list
-catalog.load(dataset_list)
+catalog.load(app.config['DATA_PACKAGES_INDEX'])
 
 
 if __name__ == "__main__":

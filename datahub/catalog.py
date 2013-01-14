@@ -8,11 +8,14 @@ class Catalog(object):
         self._cache = {
         }
 
-    def load(self, datasets):
-        if self._loaded:
-            return
-        for id_ in datasets:
-            ds = self._load(id_)
+    def load(self, url):
+        try:
+            dps = json.load(urllib.urlopen(url))
+        except:
+            print('Failed to load Index from %s' % url)
+            raise
+        for id_ in dps:
+            ds = self._load(dps[id_])
             if ds:
                 self._cache[id_] = ds
 
@@ -23,25 +26,12 @@ class Catalog(object):
         # TODO: actual search
         return self._cache.values()
 
-    def _load(self, id_):
-        url = 'https://raw.github.com/datasets/' + id_ + '/master/' + \
-            'datapackage.json'
-        # TODO: deal with 404s gracefully
-        try:
-            datapackage = json.load(urllib.urlopen(url))
-        except:
-            print('Failed to load %s from %s' % (id_, url))
-            return None
-        meta = datapackage.get('metadata', {})
-        dataset = Dataset(**meta)
-        dataset.datapackage_url = url
-        dataset.id = dataset.name
-        dataset.github_url = 'https://github.com/datasets/' + dataset.name
-        for info in datapackage['files']:
+    def _load(self, dict_):
+        if not 'id' in dict_:
+            dict_['id'] = dict_.get('name', 'no-id')
+        dataset = Dataset(**dict_)
+        for info in dict_['data']:
             df = DataFile(**info)
-            if (not df.url):
-                df.url = dataset.github_url.replace('github.com',
-                        'raw.github.com') + '/master/' + df.path;
             dataset.files.append(df)
         return dataset
 
