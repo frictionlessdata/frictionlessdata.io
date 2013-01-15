@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import '_snippets.html' as snippets %}
 
 {% block title %}
 {{dataset.title}} - Dataset
@@ -22,7 +23,7 @@
       <div class="actions">
         <a href="{{dataset.download_url}}" class="btn btn-large"><i class="icon-download-alt"></i> Download</a>
       </div>
-      <div class="source">Source: {{dataset.source}}</div>
+      <div class="source">Source: {{snippets.listify(dataset.sources)}}</div>
       <ul class="keywords">
         {% for kw in dataset.keywords or [] %}
         <li>{{kw}}

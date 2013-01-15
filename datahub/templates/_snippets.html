@@ -5,11 +5,17 @@
       alt="{{dataset.title}}" class="logo" />
     <h3><a href="{{ url_for('dataset', id=dataset.id) }}">{{dataset.title}}</a></h3>
     <div class="description">{{dataset.description}}</div>
-    <div class="source">Source: {{dataset.source}}</div>
+    <div class="source">Source: {{listify(dataset.sources)}}</div>
     <ul class="keywords">
       {% for kw in dataset.keywords or [] %}
       <li>{{kw}}
       {% endfor %}
     </ul>
   </div>
+{%- endmacro %}
+
+{% macro listify(list_) -%}
+  {% for item in list_ or [] %}
+  <a href="{{item.web}}">{{item.name}}</a>
+  {% endfor %}
 {%- endmacro %}
