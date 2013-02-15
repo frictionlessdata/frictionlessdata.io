@@ -1,6 +1,6 @@
 Ultra-lightweight DataHub running off datasets stored in GitHub.
 
-See it in action at http://data.okfn.org/
+See it in action at <http://datasets.okfnlabs.org/>
 
 
 ## Installing
