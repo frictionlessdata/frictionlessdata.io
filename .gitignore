@@ -2,3 +2,5 @@
 sandbox/*
 *.pyc
 *.egg-info
+.monitor
+node_modules

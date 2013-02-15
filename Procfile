@@ -1,2 +1,2 @@
-web: python datahub/web.py
+web: node app.js
 
