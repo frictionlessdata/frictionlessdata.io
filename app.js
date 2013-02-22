@@ -23,7 +23,6 @@ env.express(app);
 
 app.get('/', function(req, res) {
   datasets = catalog.query();
-  console.log(datasets.length);
   total = datasets.length;
   res.render('home.html', {
     total: total,
