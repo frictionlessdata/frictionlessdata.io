@@ -11,6 +11,9 @@ Catalog.prototype.load = function(datapackages) {
     if (!dp.id) {
       dp.id = dp.name || 'no-id';
     }
+    if (dp.files && dp.files.length > 0) {
+      dp.download_url = dp.files[0].url;
+    }
     that._cache[id] = dp;
   }
 }
@@ -34,7 +37,8 @@ Catalog.prototype.get = function(id) {
 Catalog.prototype.query = function(q) {
   var that = this;
   // TODO: actual search
-  return Object.keys(this._cache).map(function(key) { return that._cache[key]
+  return Object.keys(this._cache).map(function(key) {
+    return that._cache[key];
   });
 }
 

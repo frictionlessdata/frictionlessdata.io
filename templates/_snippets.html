@@ -5,6 +5,12 @@
       alt="{{dataset.title}}" class="logo" />
     <h3><a href="/{{dataset.id}}">{{dataset.title}}</a></h3>
     <div class="description">{{dataset.description}}</div>
+    <div class="actions">
+      <a href="/{{dataset.id}}" class="btn btn-primary btn-small">View &raquo;</a>
+      {% if dataset.download_url %}
+      <a href="{{dataset.download_url}}" class="btn btn-success btn-small">Download CSV &raquo;</a>
+      {% endif %}
+    </div>
     <div class="source">Source: {{listify(dataset.sources)}}</div>
     <ul class="keywords">
       {% for kw in dataset.keywords or [] %}
