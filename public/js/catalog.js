@@ -46,7 +46,8 @@ my.Views.DataFile = Backbone.View.extend({
       ];
       var explorer = new recline.View.MultiView({
         model: table,
-        views: views
+        views: views,
+        sidebarViews: []
       });
       $viewer.empty().append(explorer.el);
 
