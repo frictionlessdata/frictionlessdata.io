@@ -21,7 +21,8 @@
     </div>
     <div class="span4">
       <div class="actions">
-        <a href="{{dataset.download_url}}" class="btn btn-large"><i class="icon-download-alt"></i> Download</a>
+        <a href="{{dataset.download_url}}" class="btn btn-large btn-primary" target="_blank"><i class="icon-download-alt icon-white"></i> Download (CSV)</a>
+        <a href="{{dataset.github_url}}/issues" class="btn" style="float: right;" target="_blank">Issues</a>
       </div>
       <div class="source">Source: {{snippets.listify(dataset.sources)}}</div>
       <ul class="keywords">
