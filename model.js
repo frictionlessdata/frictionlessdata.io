@@ -1,4 +1,5 @@
 var request = require('request');
+var marked = require('marked');
 
 var Catalog = function() {
   this._cache = {};
@@ -13,6 +14,11 @@ Catalog.prototype.load = function(datapackages) {
     }
     if (dp.files && dp.files.length > 0) {
       dp.download_url = dp.files[0].url;
+    }
+    if (dp.readme) {
+      dp.readme_html = marked(dp.readme);
+    } else {
+      dp.readme_html = '';
     }
     that._cache[id] = dp;
   }

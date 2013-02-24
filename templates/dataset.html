@@ -17,7 +17,7 @@
       <img src="{{dataset.image or
         'http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png'}}"
         alt="{{dataset.title}}" class="logo" />
-      <div class="description">{{dataset.description}}</div>
+      <div class="description">{{dataset.description}} &mdash; <a href="#readme">Read more</a></div>
     </div>
     <div class="span4">
       <div class="actions">
@@ -32,6 +32,14 @@
     </div>
   </div>
   <div class="viewer"></div>
+  <div class="row moreinfo">
+    <div class="span8">
+      <h2 id="readme">README</h2>
+      <div class="readme">{{dataset.readme_html}}</div>
+    </div>
+    <div class="span4">
+    </div>
+  </div>
 <div>
 <script type="text/javascript">
   var DataFileData = {{ raw_data_file }};

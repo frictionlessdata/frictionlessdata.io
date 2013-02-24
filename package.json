@@ -4,7 +4,8 @@
   , "dependencies": {
       "express": "3.x",
       "nunjucks": "0.1.8",
-      "request": ""
+      "request": "",
+      "marked": ""
   },
   "engines": {
     "node": "0.8.x",

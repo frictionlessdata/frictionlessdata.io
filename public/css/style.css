@@ -6,6 +6,10 @@ body {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 }
 
+blockquote p {
+  font-size: 14px;
+}
+
 .content {
   background-color: #fff;
   padding: 20px;
@@ -139,6 +143,7 @@ footer {
 .dataset.show .logo {
   width: 100px;
   float: right;
+  margin-left: 3px;
 }
 
 .dataset.show .source {
@@ -173,3 +178,22 @@ footer {
   margin-left: 0;
 }
 
+.recline-data-explorer .data-view-container {
+  margin-right: 0;
+}
+
+.moreinfo {
+  margin-top: 10px;
+}
+
+.readme {
+  font-size: 16px;
+}
+
+.readme h2 {
+  font-size: 22px;
+}
+
+.readme h3 {
+  font-size: 20px;
+}
