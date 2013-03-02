@@ -4,38 +4,22 @@
 About
 {% endblock %}
 
+{% block page_title %}
+<div style="font-weight: normal; text-align: center;">
+  Our <strong>mission</strong> is to
+  <br />
+  Make it as <strong>simple as possible</strong>
+  <br />
+  to get the <strong>data you want</strong>
+  <br />
+  into the <strong>tool of your choice</strong>
+</div>
+{% endblock %}
+
 {% block content %}
-    <h3>Data Packages</h3>
-    <p>All datasets start in source form as "<a
-      href="http://www.dataprotocols.org/en/latest/data-packages.html">data
-      packages</a>" stored in
-    a git repo on GitHub. Data packages are designed to be <strong>very
-      simple</strong> but still have <strong>just enough structure</strong> to be
-    usable by tools. You can check out <a
-      href="http://github.com/datasets/gdp">an existing, exemplar data package
-      (GDP) on GitHub here</a>.</p>
-
-    <h4>Structure</h4>
-    <p>A Data Package has the following structure on disk:</p>
-    <pre>
-  # README in markdown format. Used to generate a short summary (first sentence),
-  # longer summary (first paragraph) and general description (complete file)
-  README.md
-  # metadata and data schemas for this data package
-  datapackage.json
-  # directory for all data files (CSV)
-  data/
-  ..../my-data-file.csv
-  ..../...more...files...
-  # directory for scripts for processing and cleaning data
-  scripts/
-  ......./process.py
-  </pre>
-    <h4>datapackage.json</h4>
-    <p><code>datapackage.json</code> is the central file in a Data Package as it
-    provides both general metadata and schema information in a structured form
-    that is machine usable. It is a JSON file and full details of its structure are in the <a href="http://www.dataprotocols.org/en/latest/data-packages.html">data packages specification</a>.</p>
-
-    <h4>Data files</h4>
-    <p>All data must be provided as CSV files (UTF8 encoded) and there should be <strong>only one</strong> data file in a data package.</p>
+<div class="row">
+  <div class="span6 offset3">
+    <iframe src="https://docs.google.com/presentation/d/1-BLImNBv2RtEkFVq_DdWjy05baHfprWHHdXZiMrmihQ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="580" height="464" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
+</div>
 {% endblock %}

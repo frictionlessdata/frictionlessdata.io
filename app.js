@@ -34,6 +34,11 @@ app.get('/about', function(req, res) {
   res.render('about.html', {});
 });
 
+app.get('/about/contribute', function(req, res) {
+  res.render('contribute.html', {});
+});
+
+
 app.get('/search', function(req, res) {
   q = req.query.q || '';
   // datasets = catalog.query(q)

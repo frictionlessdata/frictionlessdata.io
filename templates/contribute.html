@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contribute
+{% endblock %}
+
+{% block page_title %}
+Contribute to the Datasets Project
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="span6 offset3">
+    <h2>Contributing Datasets</h2>
+    <p>Anyone can help contribute datasets to the project, either via just suggesting new datasets (and providing relevant information) or by preparing a dataset in the required form.</p>
+
+    <p><strong>There are lots of ways to participate in the project other than contributing datasets</strong>:</p>
+    <ul>
+      <li>Improving and extending this site - see the <a href="https://github.com/okfn/datasets.okfnlabs.org/issues">issues list on github</a></li>
+      <li>Coordinating the contribution process - please <a href="http://okfnlabs.org/contact/">get in touch</a>.</li>
+      <li>Tools integration - we want to make it one click (or one line) to use datasets from the Datasets Project in all data tools. Interested? Please <a href="http://okfnlabs.org/contact/">get in touch on the mailing list</a>.</li>
+      <li>Promotion and engagement - we need to let the data community know what we're doing. Help us spread the word. Just <a href="http://okfnlabs.org/contact/">get in touch via email, twitter or the mailing list</a>.</li> 
+    </ul>
+
+    <h4>Suggest a Dataset</h4>
+    <p>To propose a dataset for addition you <a href="https://github.com/datasets/registry/issues/new">open an issue in the Registry</a> with the details of the proposed dataset.</p>
+
+    <h4>Preparing and Submitting a Dataset</h4>
+    <p>The key steps are:</p>
+    <ul>
+      <li>Prepare the dataset &ndash; <a href="#prepare">detailed instructions below</a></li>
+      <li>Open an issue for review &ndash; the submission will be reviewed against the <a href="#assessment">assessment criteria</a></li>
+      <li>On approval: add to the <a href="https://github.com/datasets/registry">registry list</a></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="span6 offset3">
+    <h3 id="prepare">Preparing a Dataset</h3>
+    <p>All datasets start in source form as "<a
+      href="http://www.dataprotocols.org/en/latest/data-packages.html">data
+      packages</a>" stored in
+    a git repo on GitHub. Data packages are designed to be <strong>very
+      simple</strong> but still have <strong>just enough structure</strong> to be
+    usable by tools. You can check out <a
+      href="http://github.com/datasets/gdp">an existing, exemplar data package
+      (GDP) on GitHub here</a>.</p>
+
+    <h4>Structure</h4>
+    <p>A Data Package has the following structure on disk:</p>
+    <pre>
+datapackage.json   # metadata and data schemas for this data package
+README.md          # README in markdown format
+data/              # directory for all data files (CSV)
+scripts/           # scripts for processing and cleaning data
+  </pre>
+    <h4>datapackage.json</h4>
+    <p><code>datapackage.json</code> is the central file in a Data Package as it
+    provides both general metadata and schema information in a structured form
+    that is machine usable. It is a JSON file and full details of its structure are in the <a href="http://www.dataprotocols.org/en/latest/data-packages.html">data packages specification</a>.</p>
+
+    <h4>Data files</h4>
+    <p>All data must be provided as CSV files (UTF8 encoded) and there should be <strong>only one</strong> data file in a data package.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6 offset3">
+    <h3 id="assessment">Assessment Criteria</h3>
+    <p>For dataset to become officially published &ndash; and therefore featured on this site &ndash; it is assessed against the following criteria:</p>
+    <ul>
+      <li>Quality - the dataset must be well structured</li>
+      <li>Relevance and importance - the focus at present is on indicators and reference data</li>
+      <li>Ongoing support - it should have a maintainer</li>
+      <li>Openness - datasets should be openly licensed in accordance with the Open Definition</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
