@@ -2,29 +2,54 @@ Ultra-lightweight DataHub running off datasets stored in GitHub.
 
 See it in action at <http://datasets.okfnlabs.org/>
 
+## Implementation Notes
+
+* Very simple. Just one or two simple web pages
+* DataStore and API
+  
+  - May be optional for MVP?
+  - SQL-backed (Use "SqlStore" stuff from CKAN?)
+  - JSON RESTful API
+  - Refine reconciliation support
+  - Build on CKAN DataStore ...
+
+* Web interface
+
+  - Big list on the front page
+  - per-datasets page /{dataset-name}-{id}/... 
+  - Scrollable table of the data with search (?)
+  - Links to download of CSV and full API instructions
+  - (?) URL for each element /{dataset}/id/{element-id}/
+  - Add .json, .{...} for each item
+
+How to implement?
+
+* Pure JS (or Node or Flask?)
+* Why Not Use CKAN?
+
+  * We may use CKAN at some point BUT to start with ...
+  * Want very simple structure (2 pages!)
+  * JS only (keep it really simple)
+  * Don't need CKAN's full power
+  * CKAN somewhat more complex to deploy
+
 
 ## Installing
 
-1. Install Python and pip
+Requires NodeJS (>= v0.8).
 
-2. Install the requirements into a virtualenv:
+Install the requirements (in package.json):
 
-      pip install -r requirements.txt
+    npm install .
 
-3. Run the web application:
+Run the web application locally:
 
-      python datahub/web.py
+    node app.js
 
 
 ## Deployment to Heroku
 
 Note that you will need to install the [Heroku toolbelt](https://toolbelt.heroku.com/) to carry out the `heroku` commands below.
-
-### Create a Profile
-
-Open Procfile and add:
-  
-    web: python datahub/web.py
 
 ### Create the application on Heroku
 
@@ -37,7 +62,6 @@ tutorial](https://devcenter.heroku.com/articles/python#deploy-to-heroku).
     heroku create {app-name}
     git push heroku master
     # now point at our config
-    heroku config:set DATAHUB_SETTINGS=/app/heroku_settings.py
     heroku ps:scale web=1
 
 ## To deploy (already created):
