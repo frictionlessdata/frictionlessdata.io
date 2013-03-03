@@ -28,8 +28,8 @@ How to implement?
 * Why Not Use CKAN?
 
   * We may use CKAN at some point BUT to start with ...
-  * Want very simple structure (2 pages!)
-  * JS only (keep it really simple)
+  * Want very simple structure (just a few pages)
+  * Preference for JS only (lots of browser JS)
   * Don't need CKAN's full power
   * CKAN somewhat more complex to deploy
 
