@@ -31,11 +31,7 @@ var env = new nunjucks.Environment(new nunjucks.FileSystemLoader('templates'));
 env.express(app);
 
 app.get('/', function(req, res) {
-  datasets = catalog.query();
-  total = datasets.length;
-  res.render('home.html', {
-    total: total,
-    datasets: datasets
+  res.render('index.html', {
   });
 })
 
@@ -47,16 +43,24 @@ app.get('/about/contribute', function(req, res) {
   res.render('contribute.html', {});
 });
 
+app.get('/data', function(req, res) {
+  datasets = catalog.query();
+  total = datasets.length;
+  res.render('data/index.html', {
+    total: total,
+    datasets: datasets
+  });
+})
 
-app.get('/search', function(req, res) {
+app.get('/data/search', function(req, res) {
   q = req.query.q || '';
   // datasets = catalog.query(q)
   datasets = [];
   total = datasets.length;
-  res.render('search.html', {q: q, datasets: datasets, total: total});
+  res.render('data/search.html', {q: q, datasets: datasets, total: total});
 });
 
-app.get('/:id', function(req, res) {
+app.get('/data/:id', function(req, res) {
   var id = req.params.id;
   var dataset = catalog.get(id)
   if (!dataset) {
@@ -67,7 +71,7 @@ app.get('/:id', function(req, res) {
       var raw_data_file = dataset.files[0];
       raw_data_file.dataset_name = dataset.id;
   }
-  res.render('dataset.html', {
+  res.render('data/dataset.html', {
     dataset: dataset,
     raw_data_file: JSON.stringify(raw_data_file)
   });
