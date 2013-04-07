@@ -3,10 +3,10 @@
     <img src="{{dataset.image or
       'http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png'}}"
       alt="{{dataset.title}}" class="logo" />
-    <h3><a href="/{{dataset.id}}">{{dataset.title}}</a></h3>
+    <h3><a href="/data/{{dataset.id}}">{{dataset.title}}</a></h3>
     <div class="description">{{dataset.description}}</div>
     <div class="actions">
-      <a href="/{{dataset.id}}" class="btn btn-primary btn-small">View &raquo;</a>
+      <a href="/data/{{dataset.id}}" class="btn btn-primary btn-small">View &raquo;</a>
       {% if dataset.download_url %}
       <a href="{{dataset.download_url}}" class="btn btn-success btn-small">Download CSV &raquo;</a>
       {% endif %}
