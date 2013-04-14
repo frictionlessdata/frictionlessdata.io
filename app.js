@@ -80,9 +80,8 @@ app.get('/data/:id', function(req, res) {
   if (!dataset) {
     res.send(404, 'Not Found');
   }
-  if (dataset.files && dataset.files.length > 0) {
-      dataset.download_url = dataset.files[0].url;
-      var raw_data_file = dataset.files[0];
+  if (dataset.resources && dataset.resources.length > 0) {
+      var raw_data_file = dataset.resources[0];
       raw_data_file.dataset_name = dataset.id;
   }
   res.render('data/dataset.html', {

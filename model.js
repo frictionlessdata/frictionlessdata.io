@@ -12,8 +12,10 @@ Catalog.prototype.load = function(datapackages) {
     if (!dp.id) {
       dp.id = dp.name || 'no-id';
     }
-    if (dp.files && dp.files.length > 0) {
-      dp.download_url = dp.files[0].url;
+    if (dp.resources && dp.resources.length > 0) {
+      dp.download_url = dp.resources[0].url;
+    } else {
+      dp.download_url = '';
     }
     if (dp.readme) {
       dp.readme_html = marked(dp.readme);
