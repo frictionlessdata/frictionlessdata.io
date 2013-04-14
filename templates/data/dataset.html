@@ -18,12 +18,14 @@
         'http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png'}}"
         alt="{{dataset.title}}" class="logo" />
       <div class="description">{{dataset.description}} &mdash; <a href="#readme">Read more</a></div>
+      <div class="actions">
+        <div class="btn-group">
+          <a href="{{dataset.download_url}}" class="btn btn-info" target="_blank"><i class="icon-download-alt"></i> Data (CSV)</a>
+          <a href="{{dataset.name}}.json" class="btn btn-warning">DataPackage . JSON</a>
+        </div>
+      </div>
     </div>
     <div class="span4">
-      <div class="actions">
-        <a href="{{dataset.download_url}}" class="btn btn-large btn-primary" target="_blank"><i class="icon-download-alt icon-white"></i> Download (CSV)</a>
-        <a href="{{dataset.github_url}}/issues" class="btn" style="float: right;" target="_blank">Issues</a>
-      </div>
       <div class="source">Source: {{snippets.listify(dataset.sources)}}</div>
       <ul class="keywords">
         {% for kw in dataset.keywords or [] %}
