@@ -65,6 +65,15 @@ app.get('/data/search', function(req, res) {
   res.render('data/search.html', {q: q, datasets: datasets, total: total});
 });
 
+app.get('/data/:id.json', function(req, res) {
+  var id = req.params.id;
+  var dataset = catalog.get(id)
+  if (!dataset) {
+    res.send(404, 'Not Found');
+  }
+  res.json(dataset);
+});
+
 app.get('/data/:id', function(req, res) {
   var id = req.params.id;
   var dataset = catalog.get(id)
