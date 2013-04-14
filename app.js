@@ -43,6 +43,11 @@ app.get('/about/contribute', function(req, res) {
   res.render('contribute.html', {});
 });
 
+app.get('/standards', function(req, res) {
+  res.render('/standards/index.html', {});
+});
+
+
 app.get('/data', function(req, res) {
   datasets = catalog.query();
   total = datasets.length;
