@@ -83,6 +83,7 @@ app.get('/data/:id', function(req, res) {
   if (dataset.resources && dataset.resources.length > 0) {
       var raw_data_file = dataset.resources[0];
       raw_data_file.dataset_name = dataset.id;
+      raw_data_file.fields = raw_data_file.schema.fields;
   }
   res.render('data/dataset.html', {
     dataset: dataset,
