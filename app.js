@@ -2,6 +2,7 @@ var express = require('express')
   , path = require('path')
   , fs = require('fs')
   , nunjucks = require('nunjucks')
+  , request = require('request')
   ;
 
 var app = express();
@@ -72,6 +73,16 @@ app.get('/data/:id.json', function(req, res) {
     res.send(404, 'Not Found');
   }
   res.json(dataset);
+});
+
+app.get('/data/:id.csv', function(req, res) {
+  var id = req.params.id;
+  var dataset = catalog.get(id)
+  if (!dataset || !dataset.resources.length > 0) {
+    res.send(404, 'Not Found');
+  }
+  var url = dataset.resources[0].url;
+  request.get(url).pipe(res);
 });
 
 app.get('/data/:id', function(req, res) {
