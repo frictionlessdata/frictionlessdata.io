@@ -2,7 +2,6 @@ html, body {
   background: url('http://okfnlabs.org/ddc-resources/img/pattern.png');
 }
 body {
-  padding-top: 40px;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
