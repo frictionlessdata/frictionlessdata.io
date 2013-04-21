@@ -162,6 +162,24 @@ footer {
   margin-top: 10px;
 }
 
+.resource-summary table {
+  font-size: 13px;
+}
+
+.resource-summary table thead th {
+  background-color: #ebebeb;
+  background-image: -moz-linear-gradient(#fcfcfc, #ebebeb);
+  background-image: -webkit-linear-gradient(#fcfcfc, #ebebeb);
+  background-image: linear-gradient(#fcfcfc, #ebebeb);
+  background-repeat: repeat-x;
+}
+
+.resource-summary table th,
+.resource-summary table td
+{
+  padding: 2px 6px;
+}
+
 .dataset.show .viewer {
   margin-top: 20px;
 }
