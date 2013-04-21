@@ -100,9 +100,11 @@ app.get('/data/:id', function(req, res) {
     resource.backend = 'csv';
     resource.fields = resource.schema.fields;
   }
+  var dataViews = dataset.views || [];
   res.render('data/dataset.html', {
     dataset: dataset,
-    raw_data_file: JSON.stringify(resource)
+    raw_data_file: JSON.stringify(resource),
+    dataViews: JSON.stringify(dataViews)
   });
 });
 

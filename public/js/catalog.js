@@ -29,22 +29,33 @@ my.Views.DataFile = Backbone.View.extend({
     var reclineInfo = this.model.attributes;
     $viewer.html('Loading View <img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
     var table = new recline.Model.Dataset(reclineInfo);
+    console.log(DataViews);
     table.fetch().done(function() {
-      var views = [
-        {
+      var gridView = {
           id: 'grid',
           label: 'Grid',
-          view: new recline.View.SlickGrid({
-            model: table,
-            state: {
-              fitColumns: true
-            }
-          })
+          type: 'SlickGrid',
+          state: {
+            fitColumns: true
+          }
+        };
+      DataViews.push(gridView); 
+      var viewsForRecline = _.map(DataViews, function(viewInfo) {
+        var out = _.clone(viewInfo);
+        console.log(recline.View[viewInfo.type]);
+        out.view = new recline.View[viewInfo.type]({
+          model: table,
+          state: viewInfo.state
+        });
+        if (!out.label) {
+          out.label = out.id;
         }
-      ];
+        return out;
+      });
+
       var explorer = new recline.View.MultiView({
         model: table,
-        views: views,
+        views: viewsForRecline,
         sidebarViews: []
       });
       $viewer.empty().append(explorer.el);
