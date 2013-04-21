@@ -92,13 +92,17 @@ app.get('/data/:id', function(req, res) {
     res.send(404, 'Not Found');
   }
   if (dataset.resources && dataset.resources.length > 0) {
-      var raw_data_file = dataset.resources[0];
-      raw_data_file.dataset_name = dataset.id;
-      raw_data_file.fields = raw_data_file.schema.fields;
+    // Get the primary resource for use in JS
+    // deep copy and then "fix" in various ways
+    var resource = JSON.parse(JSON.stringify(dataset.resources[0]));
+    resource.dataset_name = dataset.id;
+    resource.url = '/data/' + id + '.csv';
+    resource.backend = 'csv';
+    resource.fields = resource.schema.fields;
   }
   res.render('data/dataset.html', {
     dataset: dataset,
-    raw_data_file: JSON.stringify(raw_data_file)
+    raw_data_file: JSON.stringify(resource)
   });
 });
 

@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+jQuery(window).load(function() {
   window.catalog = new Catalog.Views.Application({
     el: $('body')
   });

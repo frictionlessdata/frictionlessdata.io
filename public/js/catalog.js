@@ -26,21 +26,19 @@ my.Views.DataFile = Backbone.View.extend({
 
   render: function() {
     var $viewer = this.$el;
-    var file = this.model.attributes;
-    var reclineInfo = $.extend(true, {}, file);
-    $viewer.html('<img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
-    var github = new Github({});
-    var repo = github.getRepo('datasets', this.model.get('dataset_name'));
-    repo.read('master', file.path, function(err, data) {
-      // slice to remove first row as we already have field info
-      reclineInfo.records = recline.Backend.CSV.parseCSV(data).slice(1);
-      var table = new recline.Model.Dataset(reclineInfo);
+    var reclineInfo = this.model.attributes;
+    $viewer.html('Loading View <img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
+    var table = new recline.Model.Dataset(reclineInfo);
+    table.fetch().done(function() {
       var views = [
         {
           id: 'grid',
           label: 'Grid',
           view: new recline.View.SlickGrid({
-            model: table
+            model: table,
+            state: {
+              fitColumns: true
+            }
           })
         }
       ];
@@ -51,7 +49,7 @@ my.Views.DataFile = Backbone.View.extend({
       });
       $viewer.empty().append(explorer.el);
 
-      table.query({size: reclineInfo.records.length});
+      table.query({size: table.recordCount});
     });
     return this;
   }
