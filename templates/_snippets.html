@@ -1,7 +1,6 @@
 {% macro dataset_summary(dataset) -%}
   <div class="dataset summary">
-    <img src="{{dataset.image or
-      'http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png'}}"
+    <img src="http://assets.okfn.org/p/data.okfn.org/img/icon-data-package.png"
       alt="{{dataset.title}}" class="logo" />
     <h3><a href="/data/{{dataset.id}}">{{dataset.title}}</a></h3>
     <div class="description">{{dataset.description}}</div>
