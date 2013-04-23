@@ -48,6 +48,9 @@ app.get('/standards', function(req, res) {
   res.render('/standards/index.html', {});
 });
 
+app.get('/tools', function(req, res) {
+  res.render('/tools/index.html', {});
+});
 
 app.get('/data', function(req, res) {
   datasets = catalog.query();
