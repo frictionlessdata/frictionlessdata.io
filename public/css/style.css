@@ -42,10 +42,23 @@ footer {
 }
 
 .okfn-ribbon {
-  top: 0;
+  top: -10px;
   right: 0;
   position: fixed;
   z-index: 100000;
+}
+
+.sign-up-top {
+  background: #fcf8e3;
+  padding: 8px;
+  font-size: 16px;
+  color: #c09853;
+  text-align: center;
+}
+
+.sign-up-top form {
+  margin-left: 10px;
+  display: inline;
 }
 
 /********************************************************************
