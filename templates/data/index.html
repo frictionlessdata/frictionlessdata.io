@@ -10,8 +10,8 @@
     <div class="row">
       <div class="span4">
         <h3>High Quality &amp; Reliable</h3>
-        <p>We have sourced, normalized and quality checked a set of <strong>key
-          reference datasets such as country codes, currencies, GDP and
+        <p>We are sourcing, normalizing and quality checking a set of <strong>key
+          reference and indidcator datasets such as country codes, currencies, GDP and
           population</strong>.</p>
       </div>
       <div class="span4">
@@ -40,6 +40,9 @@
     </div>
     <div class="row">
       <div class="results span6 offset3">
+        <div class="alert alert-success" style="text-align: center;">
+          <strong>Please note</strong> we have only <strong>just begun adding data</strong> to the registry &amp; we welcome <strong><a href="/about/contribute">suggestions and contributions &raquo;</a></strong>
+        </div>
         <!--h3>{{ total }} datasets found</h3-->
         {% for dataset in datasets %}
           {{ snippets.dataset_summary(dataset) }}

@@ -12,7 +12,12 @@ Contribute Datasets
 <div class="row">
   <div class="span6 offset3">
     <h2>Contributing Datasets</h2>
-    <p>Anyone can help contribute datasets to the project, either via just suggesting new datasets (and providing relevant information) or by preparing a dataset in the required form.</p>
+    <p>Anyone can suggest or contribute data to the project. Note that:</p>
+    <ul>
+      <li>We are not a general registry for data &ndash; we have specific criteria for what we'll accept</li>
+      <li>We package data rather than create it &ndash; our focus is to take source data and ensure it is of high quality and in a standard form</li>
+      <li>We preserve a clean separation between the data source, the dta package and this registry &ndash; for example, data packages are stored in git repos hosted separately (preferably github)</li>
+    </ul>
 
     <h4>Suggest a Dataset</h4>
     <p>To propose a dataset for addition you <a href="https://github.com/datasets/registry/issues/new">open an issue in the Registry</a> with the details of the proposed dataset.</p>
@@ -29,9 +34,9 @@ Contribute Datasets
 <div class="row">
   <div class="span6 offset3">
     <h3 id="prepare">Preparing a Dataset</h3>
-    <p>All datasets start in source form as "<a
+    <p>All datasets MUST be provided in source form as "<a
       href="http://www.dataprotocols.org/en/latest/data-packages.html">data
-      packages</a>" preferably in <a href="http://www.dataprotocols.org/en/latest/simple-data-format.html">Simple Data Format</a>. We also recommend storing in
+      packages</a>" and SHOULD be in <a href="http://www.dataprotocols.org/en/latest/simple-data-format.html">Simple Data Format</a>. We also recommend storing in
     a git repo on GitHub. Simple Data Format Data Packages are designed to be <strong>very
       simple</strong> but still have <strong>just enough structure</strong> to be
     usable by tools. You can check out <a
@@ -63,7 +68,7 @@ my-data.csv        # one or more data files in CSV format
       <li>Quality - the dataset must be well structured</li>
       <li>Relevance and importance - the focus at present is on indicators and reference data</li>
       <li>Ongoing support - it should have a maintainer</li>
-      <li>Openness - datasets should be openly licensed in accordance with the Open Definition</li>
+      <li>Openness - data should be <a href="http://opendefinition.org/">open data</a> and openly licensed in accordance with the <a href="http://opendefinition.org/">Open Definition</a></li>
     </ul>
   </div>
 </div>
