@@ -42,7 +42,6 @@ footer {
 }
 
 .okfn-ribbon {
-  top: -10px;
   right: 0;
   position: fixed;
   z-index: 100000;
