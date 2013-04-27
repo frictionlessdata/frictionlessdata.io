@@ -192,8 +192,9 @@ footer {
   margin-left: 3px;
 }
 
-.dataset.show .source {
+.dataset.show .source, .dataset.show .homepage {
   font-style: italic;
+  font-size: 85%;
 }
 
 .dataset.show .actions {
