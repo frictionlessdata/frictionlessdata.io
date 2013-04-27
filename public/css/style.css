@@ -201,6 +201,10 @@ footer {
   margin-top: 10px;
 }
 
+.dataset.show .actions .btn {
+  font-size: 12px;
+}
+
 .resource-summary table {
   font-size: 13px;
 }
