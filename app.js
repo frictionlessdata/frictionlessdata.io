@@ -52,6 +52,28 @@ app.get('/tools', function(req, res) {
   res.render('/tools/index.html', {});
 });
 
+// /tools/creator.json?name=abc&title=
+app.get('/tools/creator.json', function(req, res) {
+  var out = {};
+  out.name = req.query.name || ''; 
+  out.title = req.query.title || '';
+  out.description = req.query.description || '';
+  out.licenses = [{
+      'id': 'odc-pddl',
+      'name': 'Public Domain Dedication and License',
+      'version': '1.0',
+      'url': 'http://opendatacommons.org/licenses/pddl/1.0/'
+  }];
+  out.resources = [];
+  if ('resource.url' in req.query) {
+    var tmp = {
+      url: req.query['resource.url']
+    }
+    out.resources.push(tmp);
+  }
+  res.json(out);
+});
+
 app.get('/data', function(req, res) {
   datasets = catalog.query();
   total = datasets.length;
