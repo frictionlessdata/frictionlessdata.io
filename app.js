@@ -91,7 +91,7 @@ app.get('/data/search', function(req, res) {
   res.render('data/search.html', {q: q, datasets: datasets, total: total});
 });
 
-app.get('/data/:id.json', function(req, res) {
+app.get('/data/:id/datapackage.json', function(req, res) {
   var id = req.params.id;
   var dataset = catalog.get(id)
   if (!dataset) {
