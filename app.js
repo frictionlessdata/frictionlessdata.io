@@ -134,8 +134,8 @@ app.get('/data/:id', function(req, res) {
 });
 
 var model = require('./model.js');
-// TODO: put this in a config
-var url = 'http://raw.github.com/datasets/registry/master/index.json';
+var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/index.json';
+var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;
 var catalog = new model.Catalog();
 
 catalog.loadURL(url, function(err) {

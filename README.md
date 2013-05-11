@@ -1,6 +1,9 @@
-Ultra-lightweight DataHub running off datasets stored in GitHub.
+The code behind <http://data.okfn.org>.
 
-See it in action at <http://datasets.okfnlabs.org/>
+Core is an ultra-lightweight Data Hub running off [data packages][dp].
+
+[dp]: http://data.okfn.org/standards/data-package/
+
 
 ## Implementation Notes
 
@@ -45,6 +48,11 @@ Install the requirements (in package.json):
 Run the web application locally:
 
     node app.js
+
+If you want to customize the catalog file you run off set the environment
+variable:
+
+    export CATALOG_URL={url-to-your-data-package-catalog}
 
 
 ## Deployment to Heroku
