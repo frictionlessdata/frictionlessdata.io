@@ -6,8 +6,12 @@
       "nunjucks": "0.1.8",
       "request": "",
       "marked": ""
-  },
-  "engines": {
+  }
+  , "devDependencies": {
+    "supertest": "",
+    "mocha": ""
+  }
+  , "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
   }
