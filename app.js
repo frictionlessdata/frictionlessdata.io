@@ -66,12 +66,35 @@ app.get('/tools/creator.json', function(req, res) {
   }];
   out.resources = [];
   if ('resource.url' in req.query) {
+    var resurl = req.query['resource.url'];
     var tmp = {
-      url: req.query['resource.url']
+      url: resurl
     }
     out.resources.push(tmp);
+    var infourl = 'http://jsonpdataproxy.appspot.com/?url=' + resurl + '&max-results=5&guess-types=1&format=json';
+    request(infourl, function(err, response, body) {
+      if (err) {
+        res.json({error: 'failed to load info on url ' + url});
+      } else {
+        var info = JSON.parse(body);
+        var jtsmap = {
+          'Decimal': 'number',
+          'DateTime': 'date',
+          'String': 'string'
+        }
+        var fields = info.metadata.fields.map(function(field) {
+          field.type = field.type in jtsmap ? jtsmap[field.type] : field.type;
+          return field;
+        });
+        out.resources[0].schema = {
+          fields: info.metadata.fields
+        };
+        res.json(out);
+      }
+    });
+  } else {
+    res.json(out);
   }
-  res.json(out);
 });
 
 app.get('/data', function(req, res) {
@@ -146,4 +169,6 @@ catalog.loadURL(url, function(err) {
     console.log("Listening on " + app.get('port'));
   });
 });
+
+exports.app = app;
 

@@ -23,8 +23,15 @@ describe('GET /tools/creator', function(){
       .expect('Content-Type', /json/)
       .end(function(err, res) {
         if (err) done(err);
+
         var out = res.body;
+        assert.equal(out.licenses[0].id, 'odc-pddl');
+        assert.equal(out.name, '');
+
+        var res = out.resources[0];
         assert.equal(out.resources[0].url, gpurl);
+        assert.equal(res.schema.fields[0].type, 'date');
+        assert.equal(res.schema.fields[1].type, 'number');
         done();
       });
   })
