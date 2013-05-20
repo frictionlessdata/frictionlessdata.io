@@ -1,53 +1,44 @@
 {% extends "base.html" %}
 {% import '_snippets.html' as snippets %}
 
-{% block page_title %}
-  Key datasets in high quality, easy-to-use and <a href="http://opendefinition.org/" title="open data defined">open</a> form
-{% endblock %}
-
 {% block content %}
+<!-- form class="form-horizontal dataset-search" autocomplete="off"
+  method="GET" action="/search">
+  <input type="text" name="q" placeholder="Search datasets" class="search-query js-dataset-query span5" autocomplete="off" />
+</form-->
 
+<div class="row">
+  <div class="results span8">
+    <!--h3>{{ total }} datasets found</h3-->
+    {% for dataset in datasets %}
+      {{ snippets.dataset_summary(dataset) }}
+    {% endfor %}
+  </div>
+  <div class="span4">
+    <div class="alert alert-success">
+      <strong>Please note</strong> we are at an <strong>early stage of adding datasets</strong>  &amp; we welcome <strong><a href="/about/contribute#data">suggestions and contributions &raquo;</a></strong>
+    </div>
     <div class="row">
       <div class="span4">
-        <h3>High Quality &amp; Reliable</h3>
+        <h4>High Quality &amp; Reliable</h4>
         <p>We are sourcing, normalizing and quality checking a set of <strong>key
           reference and indicator datasets such as country codes, currencies, GDP and
           population</strong>.</p>
       </div>
       <div class="span4">
-        <h3>Standard Form &amp; Bulk Access</h3>
+        <h4>Standard Form &amp; Bulk Access</h4>
         <p>All the datasets are provided in a <strong>standardized</strong> form
         and can be accessed in <strong>bulk as CSV</strong> together with a simple <strong>JSON
           schema</strong>.</p>
       </div>
       <div class="span4">
-        <h3>Versioned & Packaged</h3>
+        <h4>Versioned & Packaged</h4>
         <p>All data is in <strong>data packages</strong>
         and is <strong>versioned</strong> using git so all changes are
         visible and data can be <strong>collaboratively maintained</strong>.</p>
       </div>
     </div>
-
-    <hr />
-
-    <div class="row">
-      <div class="span6 offset3">
-        <!-- form class="form-horizontal dataset-search" autocomplete="off"
-          method="GET" action="/search">
-          <input type="text" name="q" placeholder="Search datasets" class="search-query js-dataset-query span5" autocomplete="off" />
-        </form-->
-      </div>
-    </div>
-    <div class="row">
-      <div class="results span6 offset3">
-        <div class="alert alert-success" style="text-align: center;">
-          <strong>Please note</strong> we have only <strong>just begun adding data</strong> to the registry &amp; we welcome <strong><a href="/about/contribute">suggestions and contributions &raquo;</a></strong>
-        </div>
-        <!--h3>{{ total }} datasets found</h3-->
-        {% for dataset in datasets %}
-          {{ snippets.dataset_summary(dataset) }}
-        {% endfor %}
-      </div>
-    </div>
+  </div>
+</div>
 
 {% endblock %}

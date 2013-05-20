@@ -5,18 +5,46 @@ Contribute
 {% endblock %}
 
 {% block page_title %}
-Contribute Datasets
+Contribute
 {% endblock %}
 
 {% block content %}
 <div class="row">
-  <div class="span6 offset3">
-    <h2>Contributing Datasets</h2>
-    <p>Anyone can suggest or contribute data to the project. Note that:</p>
+  <div class="span8">
+    <p>This project is a <strong>community-driven</strong> effort of <a href="http://okfnlabs.org/" title="Open Knowledge Foundation Labs">Open Knowledge Foundation Labs</a>.</p>
+    <p><strong>Anyone can get involved and contributions are welcome</strong>. The main area of work is <strong><a href="#data">preparing data</a></strong> but there's also important work to be done on <strong>tools</strong> and <strong>outreach</strong>:</p>
+
+    <div class="row">
+      <div class="span4">
+        <h4>Tools &amp; Integration</h4>
+        <p>We want to make it one click or one line to create or use data provided in our <a href="/standards">standard formats</a> in any relevant tool or application. Help make this happen &ndash; <a href="https://github.com/okfn/data.okfn.org/issues?labels=Tools">check out the issues &raquo;</a></p>
+      </div>
+      <div class="span4">
+        <h4>Outreach</h4>
+        <p>We need to engage users and tell relevant communities what we're doing.</p>
+        <p>Want to help make this happen? <a href="http://okfnlabs.org/contact/">Get in touch &raquo;</a></p> 
+      </div>
+    </div>
+  </div>
+  <div class="span4">
+    <h4 style="margin-top: 0;">Join the Discussion</h4>
+    <p>Join the disucssion on our mailing list:</p>
+    <form action="http://lists.okfn.org/mailman/subscribe/okfn-labs"
+      action="POST" class="form-inline">
+      <input type="text" class="input-medium" name="email" placeholder="Email">
+      <button type="submit" class="btn">Sign up</button>
+    </form>
+  </div>
+</div>
+
+<div class="row" id="data">
+  <div class="span8">
+    <h3>Data</h3>
+    <p>Anyone can help prepare and maintain datasets. Note that:</p>
     <ul>
-      <li>We are not a general registry for data &ndash; we have specific criteria for what we'll accept</li>
+      <li>We are not a general registry for data &ndash; we have <a href="#criteria">specific criteria</a> for what we want</li>
       <li>We package data rather than create it &ndash; our focus is to take source data and ensure it is of high quality and in a standard form</li>
-      <li>We preserve a clean separation between the data source, the dta package and this registry &ndash; for example, data packages are stored in git repos hosted separately (preferably github)</li>
+      <li>We preserve a clean separation between the data source, the data package and this registry &ndash; for example, data packages are stored in git repos hosted separately (preferably github)</li>
     </ul>
 
     <h4>Suggest a Dataset</h4>
@@ -30,9 +58,7 @@ Contribute Datasets
       <li>On approval: add to the <a href="https://github.com/datasets/registry">registry list</a></li>
     </ul>
   </div>
-</div>
-<div class="row">
-  <div class="span6 offset3">
+  <div class="span9">
     <h3 id="prepare">Preparing a Dataset</h3>
     <p>All datasets MUST be provided in source form as "<a
       href="http://www.dataprotocols.org/en/latest/data-packages.html">data
@@ -58,11 +84,8 @@ my-data.csv        # one or more data files in CSV format
     <h4>Data files</h4>
     <p>All data must be provided as CSV files (UTF8 encoded). We recommend having <strong>only one</strong> data file in a data package. See the <a href="http://www.dataprotocols.org/en/latest/simple-data-format.html">Simple Data Format specification</a> for more information.</p>
   </div>
-</div>
-
-<div class="row">
-  <div class="span6 offset3">
-    <h3 id="assessment">Assessment Criteria</h3>
+  <div class="span9">
+    <h3 id="criteria">Assessment Criteria</h3>
     <p>For dataset to become officially published &ndash; and therefore featured on this site &ndash; it is assessed against the following criteria:</p>
     <ul>
       <li>Quality - the dataset must be well structured</li>

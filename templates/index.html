@@ -1,59 +1,13 @@
 {% extends "base.html" %}
 
-{% block page_title %}
-<div style="font-weight: normal; text-align: center;">
-  <strong>Our Mission is a World of Frictionless Data</strong>
-  <br />
-  &mdash;
-  <br />
-  Our <strong>immediate goal</strong> is to
-  <br />
-  make it as <strong>simple as possible</strong>
-  <br />
-  to get the <strong>data you want</strong>
-  <br />
-  into the <strong>tool of your choice</strong>
-</div>
-{% endblock %}
-
 {% block content %}
-<div class="row">
-  <div class="span4">
-    <h3><a href="data">Quality Data &raquo;</a></h3>
-    <p>Key datasets prepared, curated, quality-checked and packaged ready to download or access</p>
-  </div>
-  <div class="span4">
-    <h3><a href="tools">Tooling &amp; Plugins &raquo;</a></h3>
-    <p>Simple tooling and plugins to integrate into your existing applications and workflows. Publish and use data from Excel, R, Hadoop or whatever tool you use
-  </div>
-  <div class="span4">
-    <h3><a href="/standards">Simple Standards &raquo;</a></h3>
-    <p>A few select standards focused on tabular data. Standards give us a common structure which is essential to tooling and integration.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="span6 offset3">
-    <h2>Get Involved</h2>
-    <h4>Tools &amp; Plugins</h4>
-    <p>We want to make it one click or one line to create or use data in any relevant tool or application.</p>
-    <p>Interested in helping make this happen? <a href="https://github.com/okfn/data.okfn.org/issues?labels=Tools">Check out the issues &raquo;</a></p>
-    <h4>Outreach</h4>
-    <p>We need to engage users and tell relevant communities what we're doing.</p>
-    <p>Want to help make this happen? <a href="http://okfnlabs.org/contact/">Get in touch &raquo;</a></p> 
-    <h4>Packaging Data</h4>
-    <p>Help us prepare and package data in the recommended formats.</p>
-    <p><a href="about/contribute">Find our more &raquo;</a></p>
-
-    <h4>Join the Discussion</h4>
-    <p>Want to discuss any of this? Join the okfn-labs mailing list:</p>
-    <form action="http://lists.okfn.org/mailman/subscribe/okfn-labs"
-      action="POST" class="form-inline">
-      <input name="fullname" placeholder="Name" type="text">
-      <input type="text" class="input-medium" name="email" placeholder="Email">
-      <button type="submit" class="btn">Sign up</button>
-    </form>
-  </div>
+<div class="hero-unit">
+  <h1>
+    We're providing key datasets in high quality, easy-to-use and <a href="http://opendefinition.org/" title="open data defined">open</a> form
+    <a href="/data" class="btn btn-large">Get Data &raquo;</a>
+    <a href="/about/contribute" class="btn btn-large">Contribute &raquo;</a>
+    <a href="/about" class="btn btn-large">Find out More &raquo;</a>
+  </h1>
 </div>
 
 {% endblock %}
