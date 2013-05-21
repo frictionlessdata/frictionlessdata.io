@@ -1,28 +1,14 @@
-html, body {
-  background: url('http://okfnlabs.org/ddc-resources/img/pattern.png');
-}
-body {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+@import url('http://okfnlabs.org/css/labs.css');
+
+.navbar .brand {
+  margin-top: 11px;
+  color: #333;
+  text-shadow: 0px 1px 0px #ffffff;
+  font-size: 32px;
 }
 
 blockquote p {
   font-size: 16px;
-}
-
-.content {
-  background-color: #fff;
-  padding: 20px;
-  margin: 0 -20px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-          box-shadow: 0 1px 2px rgba(0,0,0,.15);
-}
-
-.page-header {
-  background-color: #f5f5f5;
-  padding: 20px 20px 10px;
-  margin: -20px -20px 20px;
 }
 
 footer {
@@ -32,22 +18,8 @@ footer {
   border-top: solid 1px #eee;
 }
 
-.navbar .nav > li > a {
-  padding-top: 12px;
-}
-
-.nav-logo img {
-  margin-top: -4px;
-  margin-right: -5px;
-}
-
-.okfn-ribbon {
-  right: 0;
-  position: fixed;
-  z-index: 100000;
-}
-
 .sign-up-top {
+  display: none;
   background: #fcf8e3;
   padding: 8px;
   font-size: 16px;
@@ -62,7 +34,7 @@ footer {
 
 .feedback {
   position: fixed;
-  right: 4px;
+  right: 1px;
   top: 250px;
   width: 44px;
   -webkit-transform: rotate(90deg);

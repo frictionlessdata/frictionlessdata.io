@@ -15,8 +15,10 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-  <link href="/vendor/bootstrap/2.1.1/bootstrap-combined.min.css" rel="stylesheet">
+  <!-- link href="/vendor/bootstrap/2.1.1/bootstrap-combined.min.css" rel="stylesheet"-->
+  <link href="http://okfnlabs.org/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="http://okfnlabs.org/css/bootstrap-responsive.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="/vendor/recline/vendor/slickgrid/2.0.1/slick.grid.css">
   <link rel="stylesheet" href="/vendor/recline/css/flot.css">
   <!--[if lte IE 8]>
@@ -30,9 +32,18 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-<div class="okfn-ribbon">
-  <a href="http://okfnlabs.org/" target="_blank" title="An Open Knowledge Foundation Labs project">An Open Knowledge Foundation Project</a>
+<!-- OKF Panel -->
+<div class="absolute-okf-panel">
+  <div id="okf-panel" class="collapse">
+    <iframe src="http://assets.okfn.org/themes/okfn/okf-panel.html" scrolling="no"></iframe>
+  </div>
+  <div class="container">
+    <div class="okfn-ribbon">
+      <a href="http://okfn.org/" data-toggle="collapse" data-target="#okf-panel" title="Part of the Open Knowledge Foundation Network">An Open Knowledge Foundation Site</a>
+    </div>
+  </div>
 </div>
+<!-- End OKF Panel -->
 <div class="sign-up-top">
 <div class="container">
   <span>This project is a <strong>community-driven</strong> effort from <a href="http://okfnlabs.org/" title="Open Knowledge Foundation Labs">OKFN Labs</a> &ndash; sign up now to get involved</span>
@@ -48,21 +59,12 @@
   <div class="navbar-inner">
     <div class="container">
       <a class="brand" href="/">data.okfn.org</a>
-      <ul class="nav">
-        <li class="divider-vertical"></li>
-        <li><a href="/data">Data</a></li>
-        <li class="divider-vertical"></li>
-        <li><a href="/standards">Standards</a></li>
-        <li class="divider-vertical"></li>
-        <li><a href="/tools">Tools</a></li>
-        <li class="divider-vertical"></li>
-      </ul>
       <ul class="nav pull-right">
-        <li class="divider-vertical"></li>
+        <li><a href="/data">Data</a></li>
+        <li><a href="/standards">Standards</a></li>
+        <li><a href="/tools">Tools</a></li>
         <li><a href="/about">About</a></li>
-        <li class="divider-vertical"></li>
-        <li><a href="/about/contribute">Contribute Data</a></li>
-        <li class="divider-vertical"></li>
+        <li><a href="/about/contribute">Contribute</a></li>
         <li><a href="https://twitter.com/okfnlabs" title="Open Knowledge Foundation Labs on Twitter">@okfnlabs</a></li>
       </ul>
     </div>
