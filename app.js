@@ -54,7 +54,7 @@ app.get('/tools', function(req, res) {
 });
 
 // /tools/creator.json?name=abc&title=
-app.get('/tools/creator.json', function(req, res) {
+app.get('/tools/dp/create.json', function(req, res) {
   var out = {};
   out.name = req.query.name || ''; 
   out.title = req.query.title || '';
@@ -75,9 +75,13 @@ app.get('/tools/creator.json', function(req, res) {
     var infourl = 'http://jsonpdataproxy.appspot.com/?url=' + resurl + '&max-results=5&guess-types=1&format=json';
     request(infourl, function(err, response, body) {
       if (err) {
-        res.json({error: 'failed to load info on url ' + url});
+        res.json(500, {error: 'failed to load info on url ' + url});
       } else {
         var info = JSON.parse(body);
+        if (info.error) {
+          res.json(500, info);
+          return
+        }
         var jtsmap = {
           'Decimal': 'number',
           'DateTime': 'date',
@@ -96,6 +100,10 @@ app.get('/tools/creator.json', function(req, res) {
   } else {
     res.json(out);
   }
+});
+
+app.get('/tools/dp/create', function(req, res) {
+  res.render('tools/dp/create.html');
 });
 
 app.get('/tools/dp/validate.json', function(req, res) {
