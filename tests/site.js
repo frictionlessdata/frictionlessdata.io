@@ -5,10 +5,10 @@ var request = require('supertest')
 
 var app = require('../app.js').app;
 
-describe('GET /tools/creator', function(){
+describe('GET /tools/dp/create.json', function(){
   it('respond with json', function(done){
     request(app)
-      .get('/tools/creator.json')
+      .get('/tools/dp/create.json')
       .expect('Content-Type', /json/)
       .expect(200, done);
   })
@@ -17,7 +17,7 @@ describe('GET /tools/creator', function(){
 describe('GET /tools/creator', function(){
   it('responds with correct json', function(done){
     var gpurl = 'https://raw.github.com/datasets/gold-prices/master/data/data.csv';
-    var url = '/tools/creator.json?resource.url=' + gpurl;
+    var url = '/tools/dp/create.json?resource.url=' + gpurl;
     request(app)
       .get(url)
       .expect('Content-Type', /json/)
