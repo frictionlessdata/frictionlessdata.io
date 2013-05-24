@@ -3,6 +3,7 @@ var express = require('express')
   , fs = require('fs')
   , nunjucks = require('nunjucks')
   , request = require('request')
+  , tools = require('./tools.js')
   ;
 
 var app = express();
@@ -95,6 +96,17 @@ app.get('/tools/creator.json', function(req, res) {
   } else {
     res.json(out);
   }
+});
+
+app.get('/tools/dp/validate.json', function(req, res) {
+  request(req.query.url, function(err, response, body) {
+    if (err) {
+      res.send(500, err.toString());
+    } else {
+      var out = tools.dpValidate(body);
+      res.json(out);
+    }
+  });
 });
 
 app.get('/data', function(req, res) {

@@ -36,3 +36,30 @@ describe('GET /tools/creator', function(){
       });
   })
 })
+
+describe('GET /tools/dp/validate', function(){
+  it('responds with correct json', function(done){
+    var url = '/tools/dp/validate.json';
+    url += '?url=' + 'https://raw.github.com/datasets/gold-prices/master/datapackage.json';
+    request(app)
+      .get(url)
+      .expect('Content-Type', /json/)
+      .end(function(err, res) {
+        if (err) done(err);
+
+        var out = res.body;
+        assert.equal(out.length, 0);
+        done();
+      });
+  })
+  it('fails with 500', function(done){
+    var url = '/tools/dp/validate.json';
+    url += '?url=' + 'http://localhost:9999';
+    request(app)
+      .get(url)
+      .expect('Error: connect ECONNREFUSED')
+      .expect(500, done)
+    ;
+  })
+})
+
