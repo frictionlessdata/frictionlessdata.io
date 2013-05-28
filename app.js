@@ -177,7 +177,7 @@ app.get('/data/:id', function(req, res) {
 });
 
 var model = require('./model.js');
-var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/index.json';
+var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/datapackage-index.json';
 var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;
 var catalog = new model.Catalog();
 
