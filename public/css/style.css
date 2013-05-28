@@ -173,7 +173,11 @@ footer {
   margin-top: 10px;
 }
 
-.dataset.show .actions .btn {
+.dataset.show .sidebar .btn-group {
+  margin-top: 10px;
+}
+
+.dataset.show .sidebar .btn-group .btn {
   font-size: 12px;
 }
 

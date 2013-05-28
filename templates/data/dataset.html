@@ -21,9 +21,7 @@
 
       <div class="actions">
         <div class="btn-group">
-          <a href="{{dataset.name}}.csv" class="btn btn-info" target="_blank"><i class="icon-download-alt"></i> Data (CSV)</a>
-          <a href="{{dataset.name}}/datapackage.json" class="btn btn-warning">DataPackage . JSON</a>
-          <a href="https://github.com/datasets/{{dataset.name}}/issues/new" class="btn" target="_blank"><i class="icon-exclamation-sign"></i> Report an Issue</a>
+          <a href="{{dataset.name}}.csv" class="btn btn-large btn-primary" target="_blank"><i class="icon-download-alt icon-white"></i> Download Data (CSV) &raquo;</a>
         </div>
       </div>
 
@@ -52,7 +50,7 @@
       </div>
 
     </div>
-    <div class="span4">
+    <div class="span4 sidebar">
       <div class="homepage">Home page: <a href="https://github.com/datasets/{{dataset.name}}">github.com/datasets/{{dataset.name}}</a></div>
       <div class="source">Source: {{snippets.listify(dataset.sources)}}</div>
       <ul class="keywords">
@@ -60,6 +58,10 @@
         <li>{{kw}}
         {% endfor %}
       </ul>
+      <div class="btn-group">
+        <a href="{{dataset.name}}/datapackage.json" class="btn btn-small btn-warning"><i class="icon-download-alt icon-white"></i> Data Package Info</a>
+        <a href="https://github.com/datasets/{{dataset.name}}/issues/new" class="btn btn-small" target="_blank"><i class="icon-exclamation-sign icon-white"></i> Report an Issue</a>
+      </div>
     </div>
   </div>
   <div class="viewer"></div>
