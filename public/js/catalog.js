@@ -29,8 +29,12 @@ my.Views.DataFile = Backbone.View.extend({
     var reclineInfo = this.model.attributes;
     $viewer.html('Loading View <img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
     var table = new recline.Model.Dataset(reclineInfo);
-    console.log(DataViews);
     table.fetch().done(function() {
+      if (reclineInfo.fields) {
+        // HACK - TODO fix in recline
+        table.fields = new recline.Model.FieldList(reclineInfo.fields);
+        table.set({fields: reclineInfo.fields});
+      }
       var gridView = {
           id: 'grid',
           label: 'Grid',
@@ -42,7 +46,6 @@ my.Views.DataFile = Backbone.View.extend({
       DataViews.push(gridView); 
       var viewsForRecline = _.map(DataViews, function(viewInfo) {
         var out = _.clone(viewInfo);
-        console.log(recline.View[viewInfo.type]);
         out.view = new recline.View[viewInfo.type]({
           model: table,
           state: viewInfo.state
