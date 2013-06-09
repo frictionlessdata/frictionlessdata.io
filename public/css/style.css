@@ -1,10 +1,19 @@
 @import url('http://okfnlabs.org/css/labs.css');
 
 .navbar .brand {
-  margin-top: 11px;
+  margin-top: 8px;
   color: #333;
   text-shadow: 0px 1px 0px #ffffff;
-  font-size: 32px;
+  font-size: 25px;
+}
+
+.navbar .nav {
+  margin-top: 10px;
+}
+
+.okfn-ribbon a {
+  height: 70px;
+  background-position: center -30px;
 }
 
 blockquote p {
