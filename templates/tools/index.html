@@ -1,29 +1,35 @@
 {% extends "base.html" %}
 
-{% block page_title %}
-Tools and Plugins - integrate into your application and workflows
+{% block title %}
+Tools and Plugins
 {% endblock %}
 
 {% block content %}
+<h1>Tools and Plugins for working with Data Packages</h1>
 <div class="row">
   <div class="span8">
-    <h2>Existing Tools</h2>
-    <h3>Excel</h3>
+    <h2>Using With ...</h2>
+    <h3>Using with Excel</h3>
     <p>For the present: just open the CSV file! See <a href="https://github.com/okfn/data.okfn.org/issues/41">this open issue for Excel Import macro</a>.</p>
 
-    <h3>R Client</h3>
-    <p><a href="https://github.com/QBRC/RODProt">R Open Data Protocols Library with support for Data Packages and Simple Data Format</a></p>
-
-    <h3>Google Spreadsheets</h3>
+    <h3>Using with Google Spreadsheets</h3>
     <p><a href="https://github.com/okfn/data.okfn.org/issues/24">Google Spreadsheet Import</a> (in progress)</p>
 
-    <h3>Postgresql</h3>
-    <p>A simple <a href="https://github.com/okfn/dptools/blob/master/bin/load-postgresql.py">python script (no deps) to load into Postgresql</a></p>
-    <script src="http://gist-it.appspot.com/github/okfn/dptools/blob/master/bin/load-postgresql.py"></script>
 
-    <h3>SQLite</h3>
-    <p>A simple <a href="https://github.com/okfn/dptools/blob/master/bin/load-sqlite.py">python script (no deps) to load into SQLite</a></p>
-    <script src="http://gist-it.appspot.com/github/okfn/dptools/blob/master/bin/load-sqlite.py"></script>
+    <h3>Using with R and R Client</h3>
+    <p><a href="https://github.com/QBRC/RODProt">R Open Data Protocols Library with support for Data Packages and Simple Data Format</a></p>
+
+    <h3>Using with Postgresql</h3>
+    <p>There's a <a href="https://github.com/okfn/dptools/blob/master/bin/load-postgresql.py">python script (with no dependenciess) to load a Simple Data Format Data Package into Postgresql</a></p>
+
+    <h3>Using with SQLite</h3>
+    <p>There is a simple <a href="https://github.com/okfn/dptools/blob/master/bin/load-sqlite.py">python script (no dependencies) to load a Simple Data Format Data Package into SQLite</a></p>
+
+    <hr />
+
+    <h2>General Tools</h2>
+    <h3>Data Package Creator</h3>
+    <p>Creating a Data Package means creating a <code>datapackage.json</code> file. We provide an <a href="/tools/dp/create">online application which will auto create your datapackage.json from a provided data file</a>.</p>
 
     <h3>Git Data Viewer</h3>
     <p>
@@ -33,6 +39,7 @@ Tools and Plugins - integrate into your application and workflows
       <a href='https://github.com/theodi/git-data-viewer'>source code</a>.
     </p>
 
+    <h2>Libraries</h2>
     <h3>datapackage (python module)</h3>
     <p>
       A module useful for loading and managing data packages in Python.
@@ -44,10 +51,16 @@ Tools and Plugins - integrate into your application and workflows
     <p>
       The <a href="https://github.com/tryggvib/datapackage">source code</a> is a available under the <a href="https://www.gnu.org/licenses/gpl" title="GNU GEneral Public License version 3">GPL</a>.
     </p>
+
+    <h3>R Library</h3>
+    <p><a href="https://github.com/QBRC/RODProt">R Library with support for Data Packages and Simple Data Format</a></p>
+
   </div>
   <div class="span4">
-    <h2>Want to help out?</h2>
-    <p><a href="https://github.com/okfn/data.okfn.org/issues?labels=Tools&state=open">Open issues are here &raquo;</a></p>
+    <div class="well">
+      <h3>Want to contribute?</h3>
+      <p>We want to make it one click or one line to create or use data provided in our <a href="/standards">standard formats</a> in any relevant tool or application. Help make this happen &ndash; <a href="https://github.com/okfn/data.okfn.org/issues?labels=Tools">check out the issues &raquo;</a></p>
+    </div>
 
   </div>
 </div>
