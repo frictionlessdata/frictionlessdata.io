@@ -25,30 +25,6 @@
         </div>
       </div>
 
-      <h3>Data Summary</h3>
-      <div class="resource-summary">
-        <table class="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>Field</th>
-              <th>Order</th>
-              <th>Type (Format)</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for field in dataset.resources[0].schema.fields %}
-            <tr>
-              <th>{{field.id}}</th>
-              <td>{{loop.index}}</td>
-              <td class="type type-{{field.type}}">{{field.type}} {% if field.format %}({{field.format}}) {% endif %}</td>
-              <td>{{field.description}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-
     </div>
     <div class="span4 sidebar">
       <div class="homepage">Home page: <a href="https://github.com/datasets/{{dataset.name}}">github.com/datasets/{{dataset.name}}</a></div>
@@ -64,7 +40,33 @@
       </div>
     </div>
   </div>
+
   <div class="viewer"></div>
+
+  <div class="resource-summary">
+    <h2>Data Fields Summary</h2>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Order</th>
+          <th>Type (Format)</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for field in dataset.resources[0].schema.fields %}
+        <tr>
+          <th>{{field.id}}</th>
+          <td>{{loop.index}}</td>
+          <td class="type type-{{field.type}}">{{field.type}} {% if field.format %}({{field.format}}) {% endif %}</td>
+          <td>{{field.description}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
   <div class="row moreinfo">
     <div class="span8">
       <h2 id="readme">README</h2>
