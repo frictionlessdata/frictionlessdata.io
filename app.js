@@ -3,7 +3,6 @@ var express = require('express')
   , fs = require('fs')
   , nunjucks = require('nunjucks')
   , request = require('request')
-  , csv = require('csv')
   , marked = require('marked')
 
   , tools = require('./tools.js')
