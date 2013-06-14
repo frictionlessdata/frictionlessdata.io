@@ -3,6 +3,9 @@ var express = require('express')
   , fs = require('fs')
   , nunjucks = require('nunjucks')
   , request = require('request')
+  , csv = require('csv')
+  , marked = require('marked')
+
   , tools = require('./tools.js')
   ;
 
@@ -60,6 +63,26 @@ app.get('/about/contribute', function(req, res) {
 
 app.get('/standards', function(req, res) {
   res.render('/standards/index.html', {});
+});
+
+app.get('/standards/data-package', function(req, res) {
+  fs.readFile('templates/standards/data-package.md', 'utf8', function(err, text) {
+    var content = marked(text);
+    res.render('base.html', {
+      title: 'Data Package - Standards',
+      content: content
+    });
+  });
+});
+
+app.get('/standards/simple-data-format', function(req, res) {
+  fs.readFile('templates/standards/simple-data-format.md', 'utf8', function(err, text) {
+    var content = marked(text);
+    res.render('base.html', {
+      title: 'Simple Data Format - Standards',
+      content: content
+    });
+  });
 });
 
 app.get('/tools', function(req, res) {
