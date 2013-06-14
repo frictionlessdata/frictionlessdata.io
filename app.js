@@ -32,6 +32,19 @@ app.configure(function(){
 var env = new nunjucks.Environment(new nunjucks.FileSystemLoader('templates'));
 env.express(app);
 
+// middleware to add trailing slash
+app.use(function(req, res, next) {
+  if(req.url.substr(-1) === '/' && req.url.length > 1) {
+    res.redirect(301, req.url.slice(0, req.url.length-1));
+  }
+  else {
+    next();
+  }
+});
+
+//////////////////////////////////////////////////
+// Begin app
+
 app.get('/', function(req, res) {
   res.render('index.html', {
   });
