@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title> 
-    {% block title%}Home{% endblock %}
+    {% block title%}{{title}}{% endblock %}
     - data.okfn.org
     - Frictionless Data
   </title>
@@ -79,7 +79,7 @@
     </h1>
   </div>
 
-  {% block content %}{% endblock %}
+  {% block content %}{{content}}{% endblock %}
 
   <footer>
     <p>
