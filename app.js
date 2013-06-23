@@ -4,6 +4,7 @@ var express = require('express')
   , nunjucks = require('nunjucks')
   , request = require('request')
   , marked = require('marked')
+  , csv = require('csv')
 
   , tools = require('./tools.js')
   ;
@@ -101,37 +102,40 @@ app.get('/tools/dp/create.json', function(req, res) {
       'url': 'http://opendatacommons.org/licenses/pddl/1.0/'
   }];
   out.resources = [];
-  if ('resource.url' in req.query) {
-    var resurl = req.query['resource.url'];
+  if ('url' in req.query || 'resource.url' in req.query) {
+    var resurl = req.query['url'] || req.query['resource.url'];
     var tmp = {
       url: resurl
     }
     out.resources.push(tmp);
-    var infourl = 'http://jsonpdataproxy.appspot.com/?url=' + resurl + '&max-results=5&guess-types=1&format=json';
-    request(infourl, function(err, response, body) {
-      if (err) {
-        res.json(500, {error: 'failed to load info on url ' + url});
-      } else {
-        var info = JSON.parse(body);
-        if (info.error) {
-          res.json(500, info);
-          return
-        }
-        var jtsmap = {
-          'Decimal': 'number',
-          'DateTime': 'date',
-          'String': 'string'
-        }
-        var fields = info.metadata.fields.map(function(field) {
-          field.type = field.type in jtsmap ? jtsmap[field.type] : field.type;
-          return field;
-        });
-        out.resources[0].schema = {
-          fields: info.metadata.fields
-        };
-        res.json(out);
-      }
-    });
+    var stream = request(resurl);
+    var parser = csv();
+      parser.from.stream(stream)
+          .transform(function(data, idx, callback) {
+            if (idx==0) {
+              var fields = data.map(function(field) {
+                // field.type = field.type in jtsmap ? jtsmap[field.type] : field.type;
+                return {
+                  id: field,
+                  type: 'string'
+                }
+              });
+              out.resources[0].schema = {
+                fields: fields
+              };
+              res.json(out);
+              throw new Error('Stop parsing');
+            }
+            if (idx <= 5) console.log(idx);
+          }, {parallel: 1})
+        .on('error', function(err) {
+          parser.pause();
+          // do these for good measure ...
+          stream.pause();
+          stream.destroy();
+          res.send(500, err);
+        })
+        ;
   } else {
     res.json(out);
   }

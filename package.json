@@ -12,7 +12,8 @@
       "nunjucks": "0.1.8",
       "request": "",
       "marked": "",
-      "JSV": ""
+      "JSV": "",
+      "csv": ""
   }
   , "devDependencies": {
     "supertest": "",

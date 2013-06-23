@@ -30,8 +30,10 @@ describe('GET /tools/creator', function(){
 
         var res = out.resources[0];
         assert.equal(out.resources[0].url, gpurl);
-        assert.equal(res.schema.fields[0].type, 'date');
-        assert.equal(res.schema.fields[1].type, 'number');
+        // assert.equal(res.schema.fields[0].type, 'date');
+        // assert.equal(res.schema.fields[1].type, 'number');
+        assert.equal(res.schema.fields[0].type, 'string');
+        assert.equal(res.schema.fields[1].type, 'string');
         done();
       });
   })
