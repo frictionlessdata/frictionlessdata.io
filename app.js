@@ -1,12 +1,8 @@
 var express = require('express')
   , path = require('path')
-  , fs = require('fs')
   , nunjucks = require('nunjucks')
-  , request = require('request')
-  , marked = require('marked')
-  , csv = require('csv')
 
-  , tools = require('./tools.js')
+  , routes = require('./routes')
   ;
 
 var app = express();
@@ -45,182 +41,27 @@ app.use(function(req, res, next) {
   }
 });
 
-//////////////////////////////////////////////////
-// Begin app
 
-app.get('/', function(req, res) {
-  res.render('index.html', {
-  });
-})
+app.get('/', routes.home);
+app.get('/about', routes.about);
+app.get('/about/contribute', routes.contribute);
+app.get('/standards', routes.standards);
+app.get('/standards/data-package', routes.standardsDataPackage);
+app.get('/standards/simple-data-format', routes.standardsSimpleDataFormat);
+app.get('/tools', routes.tools);
+app.get('/tools/dp/create.json', routes.toolsDpCreateJSON);
+app.get('/tools/dp/create', routes.toolsDpCreate);
+app.get('/tools/dp/validate.json', routes.toolsDpValidateJSON);
+app.get('/data', routes.data);
+app.get('/data/search', routes.dataSearch);
+app.get('/data/:id/datapackage.json', routes.dataShowJSON);
+app.get('/data/:id.csv', routes.dataShowCSV);
+app.get('/data/:id', routes.dataShow);
 
-app.get('/about', function(req, res) {
-  res.render('about.html', {});
-});
-
-app.get('/about/contribute', function(req, res) {
-  res.render('contribute.html', {});
-});
-
-app.get('/standards', function(req, res) {
-  res.render('/standards/index.html', {});
-});
-
-app.get('/standards/data-package', function(req, res) {
-  fs.readFile('templates/standards/data-package.md', 'utf8', function(err, text) {
-    var content = marked(text);
-    res.render('base.html', {
-      title: 'Data Package - Standards',
-      content: content
-    });
-  });
-});
-
-app.get('/standards/simple-data-format', function(req, res) {
-  fs.readFile('templates/standards/simple-data-format.md', 'utf8', function(err, text) {
-    var content = marked(text);
-    res.render('base.html', {
-      title: 'Simple Data Format - Standards',
-      content: content
-    });
-  });
-});
-
-app.get('/tools', function(req, res) {
-  res.render('/tools/index.html', {});
-});
-
-// /tools/creator.json?name=abc&title=
-app.get('/tools/dp/create.json', function(req, res) {
-  var out = {};
-  out.name = req.query.name || ''; 
-  out.title = req.query.title || '';
-  out.description = req.query.description || '';
-  out.licenses = [{
-      'id': 'odc-pddl',
-      'name': 'Public Domain Dedication and License',
-      'version': '1.0',
-      'url': 'http://opendatacommons.org/licenses/pddl/1.0/'
-  }];
-  out.resources = [];
-  if ('url' in req.query || 'resource.url' in req.query) {
-    var resurl = req.query['url'] || req.query['resource.url'];
-    var tmp = {
-      url: resurl
-    }
-    out.resources.push(tmp);
-    var stream = request(resurl);
-    var parser = csv();
-      parser.from.stream(stream)
-          .transform(function(data, idx, callback) {
-            if (idx==0) {
-              var fields = data.map(function(field) {
-                // field.type = field.type in jtsmap ? jtsmap[field.type] : field.type;
-                return {
-                  id: field,
-                  type: 'string'
-                }
-              });
-              out.resources[0].schema = {
-                fields: fields
-              };
-              res.json(out);
-              throw new Error('Stop parsing');
-            }
-            if (idx <= 5) console.log(idx);
-          }, {parallel: 1})
-        .on('error', function(err) {
-          parser.pause();
-          // do these for good measure ...
-          stream.pause();
-          stream.destroy();
-          res.send(500, err);
-        })
-        ;
-  } else {
-    res.json(out);
-  }
-});
-
-app.get('/tools/dp/create', function(req, res) {
-  res.render('tools/dp/create.html');
-});
-
-app.get('/tools/dp/validate.json', function(req, res) {
-  request(req.query.url, function(err, response, body) {
-    if (err) {
-      res.send(500, err.toString());
-    } else {
-      var out = tools.dpValidate(body);
-      res.json(out);
-    }
-  });
-});
-
-app.get('/data', function(req, res) {
-  datasets = catalog.query();
-  total = datasets.length;
-  res.render('data/index.html', {
-    total: total,
-    datasets: datasets
-  });
-})
-
-app.get('/data/search', function(req, res) {
-  q = req.query.q || '';
-  // datasets = catalog.query(q)
-  datasets = [];
-  total = datasets.length;
-  res.render('data/search.html', {q: q, datasets: datasets, total: total});
-});
-
-app.get('/data/:id/datapackage.json', function(req, res) {
-  var id = req.params.id;
-  var dataset = catalog.get(id)
-  if (!dataset) {
-    res.send(404, 'Not Found');
-  }
-  res.json(dataset);
-});
-
-app.get('/data/:id.csv', function(req, res) {
-  var id = req.params.id;
-  var dataset = catalog.get(id)
-  if (!dataset || !dataset.resources.length > 0) {
-    res.send(404, 'Not Found');
-  }
-  var url = dataset.resources[0].url;
-  request.get(url).pipe(res);
-});
-
-app.get('/data/:id', function(req, res) {
-  var id = req.params.id;
-  var dataset = catalog.get(id)
-  if (!dataset) {
-    res.send(404, 'Not Found');
-  }
-  if (dataset.resources && dataset.resources.length > 0) {
-    // Get the primary resource for use in JS
-    // deep copy and then "fix" in various ways
-    var resource = JSON.parse(JSON.stringify(dataset.resources[0]));
-    resource.dataset_name = dataset.id;
-    resource.url = '/data/' + id + '.csv';
-    resource.backend = 'csv';
-    resource.fields = resource.schema.fields;
-  }
-  var dataViews = dataset.views || [];
-  res.render('data/dataset.html', {
-    dataset: dataset,
-    raw_data_file: JSON.stringify(resource),
-    dataViews: JSON.stringify(dataViews)
-  });
-});
-
-var model = require('./model.js');
 var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/datapackage-index.json';
 var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;
-var catalog = new model.Catalog();
 
-catalog.loadURL(url, function(err) {
+routes.catalog.loadURL(url, function(err) {
   if (err) {
     console.error('Failed to load dataset info');
   }
