@@ -52,6 +52,8 @@ app.get('/tools', routes.tools);
 app.get('/tools/dp/create.json', routes.toolsDpCreateJSON);
 app.get('/tools/dp/create', routes.toolsDpCreate);
 app.get('/tools/dp/validate.json', routes.toolsDpValidateJSON);
+app.get('/tools/dp/view', routes.toolsDpView);
+app.get('/tools/dataproxy', routes.toolsDataProxy);
 app.get('/data', routes.data);
 app.get('/data/search', routes.dataSearch);
 app.get('/data/:id/datapackage.json', routes.dataShowJSON);

@@ -10,6 +10,10 @@ var fs = require('fs')
 var catalog = new model.Catalog();
 exports.catalog = catalog;
 
+// ========================================================
+// Core content
+// ========================================================
+
 exports.home = function(req, res) {
   res.render('index.html', {
   });
@@ -46,6 +50,10 @@ exports.standardsSimpleDataFormat = function(req, res) {
     });
   });
 };
+
+// ========================================================
+// Tools
+// ========================================================
 
 exports.tools = function(req, res) {
   res.render('/tools/index.html', {});
@@ -117,6 +125,43 @@ exports.toolsDpValidateJSON = function(req, res) {
     }
   });
 };
+
+exports.toolsDpView = function(req, res) {
+  var url = req.query.url;
+  if (!url) {
+    res.send('hello world');
+  } else {
+    tools.load(url, function(err, dpkg) {
+      if (err) {
+        res.send('<p>There was an error.</p>\n\n' + err.message);
+        return;
+      }
+
+      if (dpkg.resources && dpkg.resources.length > 0) {
+        var resource = dpkg.resources[0];
+        resource.backend = 'csv';
+        resource.url = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
+        resource.fields = resource.schema.fields;
+      }
+      var dataViews = dpkg.views || [];
+      res.render('data/dataset.html', {
+        dataset: dpkg,
+        raw_data_file: JSON.stringify(resource),
+        dataViews: JSON.stringify(dataViews)
+      });
+    });
+  }
+};
+
+// proxy data
+exports.toolsDataProxy = function(req, res) {
+  var url = req.query.url;
+  request.get(url).pipe(res);
+}
+
+// ========================================================
+// Data section
+// ========================================================
 
 exports.data = function(req, res) {
   datasets = catalog.query();
