@@ -5,10 +5,10 @@ var request = require('supertest')
 
 var app = require('../app.js').app;
 
-describe('GET /tools/dp/create.json', function(){
+describe('GET /tools/create.json', function(){
   it('respond with json', function(done){
     request(app)
-      .get('/tools/dp/create.json')
+      .get('/tools/create.json')
       .expect('Content-Type', /json/)
       .expect(200, done);
   })
@@ -17,7 +17,7 @@ describe('GET /tools/dp/create.json', function(){
 describe('GET /tools/creator', function(){
   it('responds with correct json', function(done){
     var gpurl = 'https://raw.github.com/datasets/gold-prices/master/data/data.csv';
-    var url = '/tools/dp/create.json?resource.url=' + gpurl;
+    var url = '/tools/create.json?resource.url=' + gpurl;
     request(app)
       .get(url)
       .expect('Content-Type', /json/)
@@ -39,9 +39,9 @@ describe('GET /tools/creator', function(){
   })
 })
 
-describe('GET /tools/dp/validate', function(){
+describe('GET /tools/validate', function(){
   it('responds with correct json', function(done){
-    var url = '/tools/dp/validate.json';
+    var url = '/tools/validate.json';
     url += '?url=' + 'https://raw.github.com/datasets/gold-prices/master/datapackage.json';
     request(app)
       .get(url)
@@ -55,7 +55,7 @@ describe('GET /tools/dp/validate', function(){
       });
   })
   it('fails with 500', function(done){
-    var url = '/tools/dp/validate.json';
+    var url = '/tools/validate.json';
     url += '?url=' + 'http://localhost:9999';
     request(app)
       .get(url)
@@ -66,9 +66,9 @@ describe('GET /tools/dp/validate', function(){
 })
 
 
-describe('GET /tools/dp/view', function(){
+describe('GET /tools/view', function(){
   it('responds with correct info', function(done){
-    var url = '/tools/dp/view';
+    var url = '/tools/view';
     url += '?url=' + 'https://raw.github.com/datasets/gold-prices/master/datapackage.json';
     request(app)
       .get(url)
@@ -82,7 +82,7 @@ describe('GET /tools/dp/view', function(){
       });
   })
   it('fails with 500 on bad input url', function(done){
-    var url = '/tools/dp/view';
+    var url = '/tools/view';
     url += '?url=' + 'http://localhost:9999';
     request(app)
       .get(url)
