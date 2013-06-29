@@ -16,6 +16,7 @@ exports.catalog = catalog;
 
 exports.home = function(req, res) {
   res.render('index.html', {
+    title: 'Home'
   });
 };
 
