@@ -30,11 +30,6 @@ my.Views.DataFile = Backbone.View.extend({
     $viewer.html('Loading View <img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
     var table = new recline.Model.Dataset(reclineInfo);
     table.fetch().done(function() {
-      if (reclineInfo.fields) {
-        // HACK - TODO fix in recline
-        table.fields = new recline.Model.FieldList(reclineInfo.fields);
-        table.set({fields: reclineInfo.fields});
-      }
       var gridView = {
           id: 'grid',
           label: 'Grid',
