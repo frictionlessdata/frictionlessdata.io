@@ -117,7 +117,11 @@ exports.toolsDpCreate = function(req, res) {
 };
 
 exports.toolsDpValidateJSON = function(req, res) {
-  request(req.query.url, function(err, response, body) {
+  // handle base urls as well as full urls
+  var dpurl = req.query.url.replace(/datapackage.json$/, '');
+  var dpurl = dpurl.replace(/\/$/, '');
+  dpurl += '/datapackage.json';
+  request(dpurl, function(err, response, body) {
     if (err) {
       res.send(500, err.toString());
     } else {
