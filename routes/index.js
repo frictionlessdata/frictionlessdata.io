@@ -122,7 +122,16 @@ exports.toolsDpValidateJSON = function(req, res) {
       res.send(500, err.toString());
     } else {
       var out = tools.dpValidate(body);
-      res.json(out);
+      if (out.length == 0) {
+        return res.json({
+          valid: true
+        });
+      } else {
+        res.json({
+          valid: false,
+          errors: out
+        });
+      }
     }
   });
 };
