@@ -163,7 +163,7 @@ footer {
 }
 
 .dataset ul.keywords li {
-  display: inline;
+  display: inline-block;
   padding: 1px 4px 2px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -190,9 +190,12 @@ footer {
   margin-left: 3px;
 }
 
+.dataset.show .sidebar {
+  font-size: 90%;
+}
+
 .dataset.show .source, .dataset.show .homepage {
   font-style: italic;
-  font-size: 85%;
 }
 
 .dataset.show .actions {

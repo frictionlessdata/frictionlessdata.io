@@ -29,6 +29,11 @@
     <div class="span4 sidebar">
       <div class="homepage">Home page: <a href="https://github.com/datasets/{{dataset.name}}">github.com/datasets/{{dataset.name}}</a></div>
       <div class="source">Source: {{snippets.listify(dataset.sources)}}</div>
+      <div class="license">
+        <a href="{{dataset.licenses[0].url}}">{{dataset.licenses[0].name or dataset.licenses[0].id}}</a>
+        <br />
+        <img src="http://assets/images/buttons/od_80x15_blue.png" />
+      </div>
       <ul class="keywords">
         {% for kw in dataset.keywords or [] %}
         <li>{{kw}}
