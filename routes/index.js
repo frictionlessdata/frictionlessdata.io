@@ -29,7 +29,7 @@ exports.contribute = function(req, res) {
 };
 
 exports.standards = function(req, res) {
-  res.render('/standards/index.html', {});
+  res.render('/standards/index.html', {title: 'Standards'});
 };
 
 exports.standardsDataPackage = function(req, res) {
