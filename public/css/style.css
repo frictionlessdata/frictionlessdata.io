@@ -1,5 +1,9 @@
 @import url('http://okfnlabs.org/css/labs.css');
 
+body {
+  line-height: 22px;
+}
+
 .navbar .brand {
   margin-top: 8px;
   color: #333;
@@ -71,6 +75,9 @@ footer {
   background-color: #ddd;
 }
 
+.page-header {
+  margin-bottom: 20px;
+}
 
 /********************************************************************
   * Search Form
@@ -165,6 +172,7 @@ footer {
 .dataset ul.keywords li {
   display: inline-block;
   padding: 1px 4px 2px;
+  margin-top: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -191,11 +199,16 @@ footer {
 }
 
 .dataset.show .sidebar {
-  font-size: 90%;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .dataset.show .source, .dataset.show .homepage {
   font-style: italic;
+}
+
+.dataset.show .keywords {
+  margin-top: 8px;
 }
 
 .dataset.show .actions {
@@ -256,15 +269,7 @@ footer {
 }
 
 .readme {
-  font-size: 16px;
-  white-space: pre;           /* CSS 2.0 */
-  white-space: pre-wrap;      /* CSS 2.1 */
-  white-space: pre-line;      /* CSS 3.0 */
-  white-space: -pre-wrap;     /* Opera 4-6 */
-  white-space: -o-pre-wrap;   /* Opera 7 */
-  white-space: -moz-pre-wrap; /* Mozilla */
-  white-space: -hp-pre-wrap;  /* HP Printers */
-  word-wrap: break-word;      /* IE 5+ */
+  font-size: 14px;
 }
 
 .readme h2 {
