@@ -5,19 +5,20 @@ body {
 }
 
 .navbar .brand {
-  margin-top: 8px;
+  margin-top: 0px;
   color: #333;
-  text-shadow: 0px 1px 0px #ffffff;
-  font-size: 25px;
+  text-shadow: 0px 1px 1px #ffffff;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 .navbar .nav {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .okfn-ribbon a {
-  height: 70px;
-  background-position: center -30px;
+  height: 60px;
+  background-position: center -40px;
 }
 
 blockquote p {
@@ -96,6 +97,10 @@ footer {
 /********************************************************************
   * Front page
   *******************************************************************/
+
+.hero-unit {
+  background: transparent;
+}
 
 .hero-unit div.buttons {
   margin-top: 30px;
