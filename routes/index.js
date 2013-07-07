@@ -143,7 +143,7 @@ exports.toolsDpValidateJSON = function(req, res) {
 exports.toolsDpView = function(req, res) {
   var url = req.query.url;
   if (!url) {
-    res.send('hello world');
+    res.render('tools/dp/view.html');
   } else {
     tools.load(url, function(err, dpkg) {
       if (err) {
@@ -158,10 +158,11 @@ exports.toolsDpView = function(req, res) {
         resource.fields = resource.schema.fields;
       }
       var dataViews = dpkg.views || [];
-      res.render('data/dataset.html', {
+      res.render('tools/dp/view.html', {
         dataset: dpkg,
         raw_data_file: JSON.stringify(resource),
-        dataViews: JSON.stringify(dataViews)
+        dataViews: JSON.stringify(dataViews),
+        url: url
       });
     });
   }

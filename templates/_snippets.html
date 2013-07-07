@@ -24,3 +24,80 @@
   <a href="{{item.web}}">{{item.name}}</a>
   {% endfor %}
 {%- endmacro %}
+
+{% macro dataset_show(dataset, raw_data_file, dataViews) -%}
+<div class="dataset show">
+  <div class="row">
+    <div class="span8">
+      <img src="{{dataset.image or
+        'http://assets.okfn.org/p/data.okfn.org/img/icon-data-package.png'}}"
+        alt="{{dataset.title}}" class="logo" />
+      <div class="description">{{dataset.description}} &mdash; <a href="#readme">Read more</a></div>
+
+      <div class="actions">
+        <div class="btn-group">
+          <a href="{{dataset.name}}.csv" class="btn btn-large btn-primary" target="_blank"><i class="icon-download-alt icon-white"></i> Download Data (CSV) &raquo;</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="span4 sidebar">
+      <div class="homepage">Home page: <a href="https://github.com/datasets/{{dataset.name}}">github.com/datasets/{{dataset.name}}</a></div>
+      <div class="source">Source: {{listify(dataset.sources)}}</div>
+      <div class="license">
+        <a href="{{dataset.licenses[0].url}}">{{dataset.licenses[0].name or dataset.licenses[0].id}}</a>
+        <br />
+        <img src="http://assets/images/buttons/od_80x15_blue.png" />
+      </div>
+      <ul class="keywords">
+        {% for kw in dataset.keywords or [] %}
+        <li>{{kw}}
+        {% endfor %}
+      </ul>
+      <div class="btn-group">
+        <a href="{{dataset.name}}/datapackage.json" class="btn btn-small btn-warning"><i class="icon-download-alt icon-white"></i> Data Package Info</a>
+        <a href="https://github.com/datasets/{{dataset.name}}/issues/new" class="btn btn-small" target="_blank"><i class="icon-exclamation-sign icon-white"></i> Report an Issue</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="viewer"></div>
+
+  <div class="resource-summary">
+    <h2>Data Fields Summary</h2>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Order</th>
+          <th>Type (Format)</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for field in dataset.resources[0].schema.fields %}
+        <tr>
+          <th>{{field.id}}</th>
+          <td>{{loop.index}}</td>
+          <td class="type type-{{field.type}}">{{field.type}} {% if field.format %}({{field.format}}) {% endif %}</td>
+          <td>{{field.description}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row moreinfo">
+    <div class="span8">
+      <h2 id="readme">README</h2>
+      <div class="readme">{{dataset.readme_html}}</div>
+    </div>
+    <div class="span4">
+    </div>
+  </div>
+<div>
+<script type="text/javascript">
+  var DataFileData = {{ raw_data_file }};
+  var DataViews = {{ dataViews }};
+</script>
+{%- endmacro %}

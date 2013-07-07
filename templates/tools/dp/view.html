@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import '_snippets.html' as snippets %}
+
+{% block title %}
+Data Package Viewer - Tools
+{% endblock %}
+
+{% block content %}
+<h1>
+  DataPackage Viewer
+</h1>
+<form class="form js-info form-inline" action="" method="GET">
+  <input type="text" name="url" placeholder="Link to data package" class="span6" value="{{url}}" />
+  <button class="btn">Go</button>
+</form>
+
+{% if url %}
+<hr />
+<h2>{{dataset.title}}</h2>
+{{snippets.dataset_show(dataset, raw_data_file, dataViews)}}
+{% endif %}
+
+{% endblock %}
+
