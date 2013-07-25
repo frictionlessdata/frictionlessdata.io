@@ -13,8 +13,8 @@ Data Package Creator - Tools
   <button class="btn">Go</button>
 </form>
 
+<a href="/tools/create.json" class="js-apiurl">Raw JSON URL (API)</a>
 <textarea class="result span8" style="height: 400px; display: block;"></textarea>
-<a href="/tools/dp/create.json" class="js-apiurl">API URL (raw JSON)</a>
 
 {% endblock %}
 
@@ -24,7 +24,7 @@ Data Package Creator - Tools
   jQuery('form.js-info').submit(function(e) {
     e.preventDefault();
     var url = $('form.js-info input').val();
-    var api = '/tools/dp/create.json?resource.url=' + url;
+    var api = '/tools/create.json?resource.url=' + url;
     $('.js-apiurl').attr('href', api);
     $.get(api, function(data) {
       var $o = $('.result');
