@@ -67,6 +67,8 @@ exports.load = function(datapackage_url, cb) {
       cb({message: 'datapackage.json is invalid JSON. Details: ' + e.message});
       return;
     }
+
+    // now dig up and use README if it exists
     var readme_url = base + 'README.md'
     request(readme_url, function(err, resp, body) {
       if (!err) {
@@ -76,6 +78,13 @@ exports.load = function(datapackage_url, cb) {
       cb(null, datapackage); 
     });
   });
+};
+
+exports.normalizeDataPackageUrl = function(url) {
+  var ghNotRaw = 'https://github.com';
+  if (url.indexOf(ghNotRaw) != -1 && url.indexOf('datapackage.json') == -1) {
+    url = url.replace(ghNotRaw, 'https://raw.github.com') + '/datapackage.json';
+  }
 };
 
 // url = url to datapackage.json or the root directory in which it is contained
