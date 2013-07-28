@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import '_snippets.html' as snippets %}
+
+{% block title %}
+{{dataset.title}} - {{username}} / {{dataset.name}}
+{% endblock %}
+
+{% block content %}
+<h1>
+  <a href="/community/{{username}}">{{username}}</a> / <strong>{{dataset.name}}</strong>
+</h1>
+<hr />
+<h2>
+  {{dataset.title}}
+</h2>
+{{snippets.dataset_show(dataset, raw_data_file, dataViews)}}
+{% endblock %}
+

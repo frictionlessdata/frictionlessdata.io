@@ -59,6 +59,9 @@ app.get('/data/search', routes.dataSearch);
 app.get('/data/:id/datapackage.json', routes.dataShowJSON);
 app.get('/data/:id.csv', routes.dataShowCSV);
 app.get('/data/:id', routes.dataShow);
+// Community
+app.get('/community/:username/:repo', routes.communityDataView);
+app.get('/community/:username', routes.communityUser);
 
 var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/datapackage-index.json';
 var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;

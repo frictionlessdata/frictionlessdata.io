@@ -237,3 +237,40 @@ exports.dataShow = function(req, res) {
   });
 };
 
+// ========================================================
+// Community Data
+// ========================================================
+
+exports.communityDataView = function(req, res) {
+  var username = req.params.username;
+  var url = 'https://raw.github.com/' +
+    [username, req.params.repo, 'master', 'datapackage.json'].join('/');
+  tools.load(url, function(err, dpkg) {
+    if (err) {
+      res.send('<p>There was an error.</p>\n\n' + err.message);
+      return;
+    }
+
+    if (dpkg.resources && dpkg.resources.length > 0) {
+      var resource = dpkg.resources[0];
+      resource.backend = 'csv';
+      resource.url = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
+      resource.fields = resource.schema.fields;
+    }
+    var dataViews = dpkg.views || [];
+    res.render('community/dataset.html', {
+      username: username,
+      dataset: dpkg,
+      raw_data_file: JSON.stringify(resource),
+      dataViews: JSON.stringify(dataViews),
+      url: url
+    });
+  });
+};
+
+exports.communityUser = function(req, res) {
+  var username = req.params.username;
+  res.render('community/user.html', {
+    username: username
+  });
+};
