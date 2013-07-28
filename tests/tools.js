@@ -1,5 +1,5 @@
 var assert = require('assert')
-  tools = require('../tools.js')
+  tools = require('../lib/tools.js')
   ;
 
 describe('validate', function() {

@@ -3,8 +3,8 @@ var fs = require('fs')
   , marked = require('marked')
   , csv = require('csv')
 
-  , tools = require('../tools.js')
-  , model = require('../model.js')
+  , tools = require('../lib/tools.js')
+  , model = require('../lib/model.js')
   ;
 
 var catalog = new model.Catalog();
