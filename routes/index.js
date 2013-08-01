@@ -88,6 +88,7 @@ exports.toolsDpCreateJSON = function(req, res) {
                 // field.type = field.type in jtsmap ? jtsmap[field.type] : field.type;
                 return {
                   id: field,
+                  description: '',
                   type: 'string'
                 }
               });
