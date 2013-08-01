@@ -262,6 +262,10 @@ footer {
   display: none;
 }
 
+.recline-slickgrid .slick-row .slick-cell {
+  font-size: 12px;
+}
+
 .dataset.show .viewer .header .recline-results-info {
 }
 
