@@ -32,7 +32,7 @@ my.Views.DataFile = Backbone.View.extend({
     table.fetch().done(function() {
       var gridView = {
           id: 'grid',
-          label: 'Grid',
+          label: 'Table',
           type: 'SlickGrid',
           state: {
             fitColumns: true
