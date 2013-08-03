@@ -26,7 +26,7 @@ describe('validate', function() {
 
 var dpin = {
   "name": "gold-prices",
-  "readme": "Abc\n\nXyz",
+  "readme": "Abc *em*\n\nXyz",
   "resources": [
     {
       "path": "data/data.csv",
@@ -46,6 +46,8 @@ var dpin = {
     }
   ]
 };
+var dpin2 = JSON.parse(JSON.stringify(dpin));
+dpin2.readme = 'Abc *em*\nzzz\n\nXYZ';
 var sourceUrl = 'https://raw.github.com/datasets/gold-prices/master/datapackage.json'; 
 var sourceUrlBase = 'https://raw.github.com/datasets/gold-prices/master/'; 
 
@@ -53,7 +55,11 @@ describe('normalize', function() {
   it('works in basic case', function() {
     dpout = tools.normalize(dpin, sourceUrl);
     assert.equal(dpout.resources[0].url, sourceUrlBase + 'data/data.csv');
-    assert.equal(dpout.description, 'Abc');
+    assert.equal(dpout.description, 'Abc em');
+  });
+  it('checking description', function() {
+    dpout = tools.normalize(dpin2, sourceUrl);
+    assert.equal(dpout.description, 'Abc em\nzzz');
   });
 });
 
