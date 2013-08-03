@@ -42,10 +42,10 @@
 
     </div>
     <div class="span4 sidebar">
-      <div class="homepage">Home page: <a href="https://github.com/datasets/{{dataset.name}}">github.com/datasets/{{dataset.name}}</a></div>
-      <div class="source">Source: {{listify(dataset.sources)}}</div>
+      <div class="homepage"><i class="icon-home"></i> <a href="{{dataset.homepage}}" title="Home Page">{{ dataset.homepage.replace('https://', '')}}</a></div>
+      <div class="source">Sources: {{listify(dataset.sources)}}</div>
       <div class="license">
-        <a href="{{dataset.licenses[0].url}}">{{dataset.licenses[0].name or dataset.licenses[0].id}}</a>
+        <i class="icon-legal"></i> <a href="{{dataset.licenses[0].url}}" title="Available under the following License">{{dataset.licenses[0].name or dataset.licenses[0].id}}</a>
         <br />
         <a href="http://opendefinition.org" title="This data is open data as per the Open Definition"><img src="http://assets/images/buttons/od_80x15_blue.png" /></a>
       </div>

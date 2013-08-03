@@ -56,6 +56,7 @@ describe('normalize', function() {
     dpout = tools.normalize(dpin, sourceUrl);
     assert.equal(dpout.resources[0].url, sourceUrlBase + 'data/data.csv');
     assert.equal(dpout.description, 'Abc em');
+    assert.equal(dpout.homepage, 'https://github.com/datasets/gold-prices');
   });
   it('checking description', function() {
     dpout = tools.normalize(dpin2, sourceUrl);
