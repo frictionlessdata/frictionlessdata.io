@@ -12,9 +12,6 @@ describe('GET /tools/create.json', function(){
       .expect('Content-Type', /json/)
       .expect(200, done);
   })
-});
-
-describe('GET /tools/creator', function(){
   it('responds with correct json', function(done){
     var gpurl = 'https://raw.github.com/datasets/gold-prices/master/data/data.csv';
     var url = '/tools/create.json?resource.url=' + gpurl;
@@ -50,7 +47,7 @@ describe('GET /tools/validate', function(){
         if (err) done(err);
 
         var out = res.body;
-        assert.equal(out.length, 0);
+        assert.deepEqual(out, {valid: true});
         done();
       });
   })
