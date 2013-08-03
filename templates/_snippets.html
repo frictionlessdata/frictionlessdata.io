@@ -21,7 +21,10 @@
 
 {% macro listify(list_) -%}
   {% for item in list_ or [] %}
-  <a href="{{item.web}}">{{item.name}}</a>
+  <a href="{{item.web}}" title="Uses data from {{item.name}}" target="_blank">
+    {{item.name}}
+    <i class="icon-external-link"></i>
+  </a>
   {% endfor %}
 {%- endmacro %}
 
@@ -36,22 +39,25 @@
 
       <div class="actions">
         <div class="btn-group">
-          <a href="{{dataset.name}}.csv" class="btn btn-large btn-primary" target="_blank"><i class="icon-download-alt icon-white"></i> Download Data (CSV) &raquo;</a>
+          <a href="{{dataset.name}}.csv" class="btn btn-large btn-primary" target="_blank"><i class="icon-download-alt icon-white"></i> Download Data (CSV)</a>
         </div>
       </div>
 
     </div>
     <div class="span4 sidebar">
-      <div class="homepage"><i class="icon-home"></i> <a href="{{dataset.homepage}}" title="Home Page">{{ dataset.homepage.replace('https://', '')}}</a></div>
-      <div class="source">Sources: {{listify(dataset.sources)}}</div>
+      <div class="btn-group">
+        <a href="{{dataset.name}}/datapackage.json" class="btn btn-small"><i class="icon-download-alt"></i> Metadata</a></a>
+        <a href="https://github.com/datasets/{{dataset.name}}/issues/new" class="btn btn-small" target="_blank"><i class="icon-exclamation-sign icon-white"></i> Report an Issue</a>
+      </div>
+      <div class="homepage truncate"><i class="icon-home"></i> <a href="{{dataset.homepage}}" title="Home Page">{{ dataset.homepage.replace('https://', '')}}</a></div>
       <div class="license">
         <i class="icon-legal"></i> <a href="{{dataset.licenses[0].url}}" title="Available under the following License">{{dataset.licenses[0].name or dataset.licenses[0].id}}</a>
         <br />
         <a href="http://opendefinition.org" title="This data is open data as per the Open Definition"><img src="http://assets/images/buttons/od_80x15_blue.png" /></a>
       </div>
-      <div class="btn-group">
-        <a href="{{dataset.name}}/datapackage.json" class="btn btn-small btn-warning"> Data Package Info</a>
-        <a href="https://github.com/datasets/{{dataset.name}}/issues/new" class="btn btn-small" target="_blank"><i class="icon-exclamation-sign icon-white"></i> Report an Issue</a>
+      <div class="source">
+        <h5>Sources</h5>
+        {{listify(dataset.sources)}}
       </div>
     </div>
   </div>

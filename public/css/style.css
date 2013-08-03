@@ -204,12 +204,27 @@ footer {
 }
 
 .dataset.show .sidebar {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 20px;
 }
 
-.dataset.show .source, .dataset.show .homepage {
+.dataset.show .source {
   font-style: italic;
+}
+
+.dataset.show .source h5 {
+  margin-bottom: 0;
+  font-style: normal;
+}
+
+.dataset.show .homepage {
+  max-width: 250px;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dataset.show .keywords {
@@ -221,7 +236,7 @@ footer {
 }
 
 .dataset.show .sidebar .btn-group {
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .dataset.show .sidebar .btn-group .btn {
