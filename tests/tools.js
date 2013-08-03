@@ -1,5 +1,6 @@
 var assert = require('assert')
-  tools = require('../lib/tools.js')
+  , fs = require('fs')
+  , tools = require('../lib/tools.js')
   ;
 
 describe('validate', function() {
@@ -92,3 +93,67 @@ describe('load', function() {
   });
 });
 
+describe('create', function() {
+  it('works with basics', function(done) {
+    tools.create({}, function(error, out) {
+      assert('name' in out, 'name not in output');
+      assert('title' in out, 'name not in output');
+      assert.deepEqual(out.licenses[0], {
+        'id': 'odc-pddl',
+        'name': 'Public Domain Dedication and License',
+        'version': '1.0',
+        'url': 'http://opendatacommons.org/licenses/pddl/1.0/'
+      });
+      assert.deepEqual(out.resources, []);
+      done();
+    });
+  });
+  it('resources from url are ok', function(done) {
+    var url = 'https://raw.github.com/datasets/s-and-p-500-companies/master/data/constituents-financials.csv';
+    tools.create({url: url}, function(error, out) {
+      assert(error === null);
+      assert(out.resources.length, 1);
+      var res = out.resources[0];
+      var schema = res.schema;
+      delete res.schema;
+      assert.deepEqual(res, {
+        url: url,
+        name: 'constituents-financials',
+        format: 'csv',
+        mediatype: 'text/csv',
+      });
+      assert.equal(schema.fields.length, 15);
+      done();
+    });
+  });
+  it('works with a bad resource url', function(done) {
+    var url = 'https://raw.github.com/datasets/s-and-p-500-companies/master/data/constituents-financials.csv' + '-bad-url';
+    tools.create({url: url}, function(error, out) {
+      assert(error);
+      done();
+    });
+  });
+});
+
+describe('createJsonTableSchema', function() {
+  it('works', function(done) {
+    var stream = fs.createReadStream('tests/data/test.csv');
+    tools.createJsonTableSchema(stream, function(error, out) {
+      assert.deepEqual(out, {
+        fields: [
+          {
+            id: 'A',
+            description: '',
+            type: 'string'
+          },
+          {
+            id: 'B',
+            description: '',
+            type: 'string'
+          }
+        ]
+      });
+      done();
+    });
+  });
+});

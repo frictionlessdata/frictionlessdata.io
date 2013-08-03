@@ -63,54 +63,13 @@ exports.tools = function(req, res) {
 // /tools/creator.json?name=abc&title=
 exports.toolsDpCreateJSON = function(req, res) {
   var out = {};
-  out.name = req.query.name || ''; 
-  out.title = req.query.title || '';
-  out.description = req.query.description || '';
-  out.licenses = [{
-      'id': 'odc-pddl',
-      'name': 'Public Domain Dedication and License',
-      'version': '1.0',
-      'url': 'http://opendatacommons.org/licenses/pddl/1.0/'
-  }];
-  out.resources = [];
-  if ('url' in req.query || 'resource.url' in req.query) {
-    var resurl = req.query['url'] || req.query['resource.url'];
-    var tmp = {
-      url: resurl
+  tools.create(req.query, function(error, dp) {
+    if (error) {
+      res.send(500, error)
+    } else {
+      res.json(dp);
     }
-    out.resources.push(tmp);
-    var stream = request(resurl);
-    var parser = csv();
-      parser.from.stream(stream)
-          .transform(function(data, idx, callback) {
-            if (idx==0) {
-              var fields = data.map(function(field) {
-                // field.type = field.type in jtsmap ? jtsmap[field.type] : field.type;
-                return {
-                  id: field,
-                  description: '',
-                  type: 'string'
-                }
-              });
-              out.resources[0].schema = {
-                fields: fields
-              };
-              res.json(out);
-              throw new Error('Stop parsing');
-            }
-            if (idx <= 5) console.log(idx);
-          }, {parallel: 1})
-        .on('error', function(err) {
-          parser.pause();
-          // do these for good measure ...
-          stream.pause();
-          stream.destroy();
-          res.send(500, err);
-        })
-        ;
-  } else {
-    res.json(out);
-  }
+  });
 };
 
 exports.toolsDpCreate = function(req, res) {
