@@ -31,9 +31,6 @@ the CSV files (e.g. data types of columns etc).
 [sdf]: /standards/simple-data-format
 
 
-Example
--------
-
 A minimal example Data Package would look like this on disk:
 
     datapackage.json
@@ -43,15 +40,37 @@ A minimal example Data Package would look like this on disk:
 Any number of additional files such as a README, scripts (for processing or analyzing the
 data) and other material may be provided but are not required.
 
-Several exemplar data packages can be found in the [datasets organization on
-github][datasets], including:
+<a id="examples" name="examples"></a>
 
-* [World GDP][]
-* [ISO 3166-2 country codes][]
+## Examples
+
+Many exemplar data packages can be found in the [datasets organization on
+github][datasets]. Specific examples:
+
+### [World GDP][]
+
+A Data Package which includes the data locally in the repo (data is CSV).
+
+<script src="http://gist-it.appspot.com/github/datasets/gdp/blob/master/datapackage.json"></script>
+
+### [S&P 500 Companies Data][sp500]
+
+[sp500]: https://github.com/datasets/s-and-p-500-companies
+
+This is an example with more than one resource in the data package.
+
+<script src="http://gist-it.appspot.com/github/datasets/s-and-p-500-companies/blob/master/datapackage.json"></script>
+
+### [TopoJSON example][topojson]
+
+This data package has TopoJSON and the data is external to the repo.
+
+<script src="http://gist-it.appspot.com/github/datasets/ex-topojson/blob/master/datapackage.json"></script>
 
 [datasets]: https://github.com/datasets
 [World GDP]: https://github.com/datasets/gdp 
 [ISO 3166-2 country codes]: https://github.com/datasets/country-codes
+[topojson]: https://github.com/datasets/ex-topojson
 
 
 ## datapackage.json

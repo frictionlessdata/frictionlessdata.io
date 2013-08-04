@@ -63,11 +63,25 @@ A simple datapackage.json for this data would be:
       ]
     }
 
-## Examples
+<h2 id="examples">Live Examples</h2>
 
-<https://github.com/datasets/gdp/blob/master/datapackage.json>
+There are many examples of Simple Data Format data packages in the [datasets organization on github][datasets]. Specific examples:
+
+[datasets]: https://github.com/datasets
+
+### [World GDP][]
+
+[World GDP]: https://github.com/datasets/gdp 
 
 <script src="http://gist-it.appspot.com/github/datasets/gdp/blob/master/datapackage.json"></script>
+
+### [S&P 500 Companies Data][sp500]
+
+[sp500]: https://github.com/datasets/s-and-p-500-companies
+
+This is an example with more than one resource in the data package.
+
+<script src="http://gist-it.appspot.com/github/datasets/s-and-p-500-companies/blob/master/datapackage.json"></script>
 
 
 <h2 id="csv">CSVs</h2>
@@ -75,7 +89,7 @@ A simple datapackage.json for this data would be:
 CSVs are plain text files with commas separating each column and each row on
 one line (normally!). CSVs can be produced and consumed by almost all tools
 including spreadsheet programmes like Excel and databases like MySQL. Read more
-on [Wikiepedia][wp].
+on [Wikipedia][wp].
 
 CSVs for SDF **must** use the utf8 character encoding.
 

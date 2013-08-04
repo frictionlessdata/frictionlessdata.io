@@ -1,31 +1,67 @@
 {% extends "base.html" %}
 
 {% block page_title %}
-Standards - decoupling publishers and consumers
+Standards - Decoupling Publishers and Consumers
 {% endblock %}
 
 {% block content %}
-<div class="row">
-  <div class="span6">
-    <h2>Data Package and Simple Data Format</h2>
-    <p>We provide two new standards for data "transport". These are essential to the overall approach allowing us to decouple publishers from consumers. Publishers can publish data packages from their tools and consumers can load the data into their (different) tools.</p>
+<div class="row standards">
+  <div class="span7">
 
-  <img src="http://assets.okfn.org/p/data.okfn.org/img/the-idea.png" alt="" />
-</div>
-<div class="span6">
-<h3>Overview of the formats</h3>
+<p>We provide two new standards for data "transport": <strong><a href="/standards/data-package">Data Package</a></strong> and <strong><a href="/standards/simple-data-format">Simple Data Format</a></strong>.</p>
+
+<img src="https://docs.google.com/drawings/d/1SZxJ00WEp3iK5fqljc-yumalRePmwdaaH98_8uJYlbs/pub?w=350&h=345" alt="Overview" style="margin-left: 5px; width: 200px; float: right;" />
+
 <p>These standards are <strong>ultra-lightweight</strong>, RFC-style specifications. They build <strong>heavily on prior work</strong> (e.g. JSON, DSPL, JSON-LD, CommonJS/Debian/PyPI packaging). <strong>Simplicity and practicality</strong> were guiding design criteria.</p>
 
-<img src="https://docs.google.com/drawings/d/1SZxJ00WEp3iK5fqljc-yumalRePmwdaaH98_8uJYlbs/pub?w=382&h=377" alt="Overview" style="margin: auto; display: block; width: 200px; float: right;" />
-
-<p>The following diagram provides a schematic relationship of the main components.</p>
-
 <h3><a href="/standards/data-package">Data package</a></h3>
-<p>Minimal wrapping, agnostic about the data its "packaging", designed for extension. This flexibility is good as it can be used as a transport for pretty much any kind of data but it also limits integration and tooling. <a href="standards/data-package">Read the quick introduction to Data Packages &raquo;</a></p>
+<ul>
+  <li>Minimal wrapping around data</li>
+  <li>Can 'package' any kind of data</li>
+  <li>Designed for extension &ndash; you can add your own additional structure and metadata</li>
+</ul>
+<p>Data Package's flexibility means it can be used as a "transport" for any
+kind of data. However, this also limits the possibilities for tool integration (e.g. loading a data package into a database automatically). This limitation is addressed by extending Data Package &ndash; for example, Simple Data Format does this for tabular data.</p>
+<p><a href="/standards/data-package">Read the Data Packages overview &raquo;</a></p>
 
 <h3><a href="/standards/simple-data-format">Simple data format (SDF)</a></h3>
-<p>Focuses on tabular data only and extends data package (data in simple data format is a data package) by requiring data to be "good" CSVs and the provision of a simple JSON-based schema to describe them ("JSON Table Schema"). <a href="/standards/simple-data-format">Read the quick introduction to Simple Data Format &raquo;</a></p>
+<ul>
+  <li>Designed for tabular data</li>
+  <li>Extends data package (data in simple data format is a data package)</li>
+  <li>Requires data to be "good" CSVs</li>
+  <li>Provides a simple JSON-based schema to describe them ("JSON Table Schema")</li>
+</ul>
+<p><a href="/standards/simple-data-format">Read the Simple Data Format overview &raquo;</a></p>
 
+<h2>The Motivation</h2>
+<p>The idea behind Data Package and Simple Data Format is to <strong>decouple</strong> data publishers and consumers and make it easier to build standard tooling: publishers can publish their data as a data package from their favourite app or tool and a consumer can load that package into their (different) favourite tool.</p>
+    
+  <a href="http://assets.okfn.org/p/data.okfn.org/img/the-idea.png"><img src="http://assets.okfn.org/p/data.okfn.org/img/the-idea.png" alt="" class="shadow" style="width: 80%; margin-top: 20px;" /></a>
+  <p style="text-align: center; font-size: 85%;">Diagram to illustrate the key decoupling concept &ndash; you can read more in the original <a href="http://blog.okfn.org/2013/04/24/frictionless-data-making-it-radically-easier-to-get-stuff-done-with-data/">Frictionless Data post</a>.</p>
 </div>
+
+<div class="span4 offset1">
+  <div class="well">
+  <h3 style="margin-top: 0;">Quick Start</h3>
+
+  <h4>Data Package</h4>
+  <ul>
+    <li><a href="/standards/data-package">Overview</a></li>
+    <li><a href="/standards/data-package#examples">Examples</a></li>
+  </ul> 
+  <h4>Simple Data Format</h4>
+  <ul>
+    <li><a href="/standards/simple-data-format">Overview</a></li>
+    <li><a href="/standards/simple-data-format#examples">Examples</a></li>
+  </ul>
+
+  <h4>Tools</h4>
+  <ul>
+    <li><a href="/tools/create">Create a Data Package from your existing data</a></li>
+    <li><a href="/tools/view">View a Data Package</a></li>
+  </ul>
+</div>
+</div>
+
 </div> <!-- /row -->
 {% endblock %}
