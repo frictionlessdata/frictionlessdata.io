@@ -56,7 +56,7 @@ exports.standardsCsv = function(req, res) {
   fs.readFile('templates/standards/csv.md', 'utf8', function(err, text) {
     var content = marked(text);
     res.render('base.html', {
-      title: 'CSV - Standards',
+      title: 'CSV / Comma Separated Variables - Standards',
       content: content
     });
   });
