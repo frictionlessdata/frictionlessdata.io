@@ -124,6 +124,7 @@ exports.toolsDpView = function(req, res) {
       if (dpkg.resources && dpkg.resources.length > 0) {
         var resource = dpkg.resources[0];
         resource.backend = 'csv';
+        dpkg.download_url = resource.url;
         resource.url = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
         resource.fields = resource.schema.fields;
       }
@@ -196,6 +197,7 @@ exports.dataShow = function(req, res) {
     var resource = JSON.parse(JSON.stringify(dataset.resources[0]));
     resource.dataset_name = dataset.id;
     resource.url = '/data/' + id + '.csv';
+    dataset.download_url = resource.url;
     resource.backend = 'csv';
     resource.fields = resource.schema.fields;
   }
@@ -224,6 +226,8 @@ exports.communityDataView = function(req, res) {
     if (dpkg.resources && dpkg.resources.length > 0) {
       var resource = dpkg.resources[0];
       resource.backend = 'csv';
+      // direct link for the moment
+      dpkg.download_url = resource.url;
       resource.url = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
       resource.fields = resource.schema.fields;
     }
@@ -244,3 +248,4 @@ exports.communityUser = function(req, res) {
     username: username
   });
 };
+
