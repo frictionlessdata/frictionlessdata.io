@@ -1,6 +1,17 @@
 jQuery(window).load(function() {
-  window.catalog = new Catalog.Views.Application({
-    el: $('body')
+  // set up data find typeahead
+  $.getJSON('/data.json', function(data) {
+    var sources = _.pluck(data.datasets, 'title');
+    $('.navbar .typeahead').typeahead({
+      source: sources,
+      updater: function(item) {
+        var _id = _.filter(data.datasets, function(ds) {
+          return (ds.title == item);
+        })[0].id
+          ;
+        window.location = '/data/' + _id;
+      }
+    });
   });
 
   var isDatasetShow = ($('.dataset.show').length > 0);
