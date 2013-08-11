@@ -89,3 +89,22 @@ describe('GET /tools/view', function(){
   })
 })
 
+describe('GET /data.json', function(){
+  it('works', function(done){
+    var url = '/data.json';
+    request(app)
+      .get(url)
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .end(function(err, res) {
+        if (err) done(err);
+
+        var out = res.body;
+        assert.equal(out.total, 15);
+        var ds = out.datasets[0];
+        assert.equal(ds.name, 'bond-yields-uk-10y');
+
+        done();
+      });
+  });
+});

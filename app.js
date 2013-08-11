@@ -59,6 +59,7 @@ app.get('/tools/view', routes.toolsDpView);
 app.get('/tools/dataproxy', routes.toolsDataProxy);
 // Data
 app.get('/data', routes.data);
+app.get('/data.json', routes.dataJson);
 app.get('/data/search', routes.dataSearch);
 app.get('/data/:id/datapackage.json', routes.dataShowJSON);
 app.get('/data/:id.csv', routes.dataShowCSV);

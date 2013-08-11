@@ -158,6 +158,15 @@ exports.data = function(req, res) {
   });
 };
 
+exports.dataJson = function(req, res) {
+  datasets = catalog.query();
+  total = datasets.length;
+  res.json({
+    total: total,
+    datasets: datasets
+  });
+};
+
 exports.dataSearch = function(req, res) {
   q = req.query.q || '';
   // datasets = catalog.query(q)
