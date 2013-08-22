@@ -48,6 +48,27 @@ structure of CSV files. Key options are:
 You can read more in the [CSV Dialect Description Format][csvddf] which all
 defines a small JSON-oriented structure for specifying what options a CSV uses.
 
+## CSVs and Git
+
+Make these changes to config files:
+
+    # ~/.config/git/attributes
+    *.csv diff=csv
+
+    # ~/.gitconfig
+    [diff "csv"]
+      wordRegex = [^,\n]+[,\n]|[,]
+
+Then do:
+
+    git diff --word-diff
+    # make it even nicer
+    git diff --word-diff --color-words
+
+Credit for these fixups to [contributors on this question on
+StackExchange](http://opendata.stackexchange.com/questions/748/is-there-a-git-for-data)
+and to [James Smith](http://floppy.org.uk/).
+
 ## Links
 
 Specifications and overviews:
