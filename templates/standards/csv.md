@@ -1,5 +1,7 @@
 # CSV = Comma Separated Variables
 
+<div class="alert alert-info" style="max-width: 400px;">This page is a work in progress. <a href="#contribute">Contributions are welcome &raquo;</a>.</div>
+
 This page provides an overview CSV (Comma Separated Variables) format for data.
 
 CSV is a very old, very simple and very common 'standard' for (tabular) data.
@@ -68,7 +70,9 @@ defines a small JSON-oriented structure for specifying what options a CSV uses.
 * No support for relationships between different "tables" (this is similar to
   the previous point - again see [Simple Data Format][sdf] for a way to address
   this with additional schema information) information)
-* Works best for tabular data - not good for data with nesting or other specific 
+* Works best for tabular data - not good for data with nesting or where
+  structure is not especially tabular (though remember most data can be put
+  into tabular form if you try hard enough!)
 
 ### Links
 
@@ -140,7 +144,8 @@ Nothing in standard lib yet and best option seems to be:
 
 ### CSVs and Git
 
-Get git to handle CSV diffs in a sensible way (very useful if you are [using git or another version control system to store data][git-for-data]).
+Get git to handle CSV diffs in a sensible way (very useful if you are [using
+git or another version control system to store data][git-for-data]).
 
 Make these changes to config files:
 
@@ -161,7 +166,7 @@ Credit for these fixups to [contributors on this question on
 StackExchange](http://opendata.stackexchange.com/questions/748/is-there-a-git-for-data)
 and to [James Smith](http://floppy.org.uk/).
 
-<a href="//prose.io/#okfn/data.okfn.org/edit/master/templates/standards/csv.md" target="_blank" class="btn">Edit Page</a>
+<a name="contribute" href="//prose.io/#okfn/data.okfn.org/edit/master/templates/standards/csv.md" target="_blank" class="btn">Contributions Welcome - Edit this Page</a>
 
 [rfc]: http://tools.ietf.org/html/rfc4180
 [csvddf]: http://www.dataprotocols.org/en/latest/csv-dialect.html
