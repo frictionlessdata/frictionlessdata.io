@@ -165,7 +165,7 @@ Then do:
 
 Credit for these fixups to [contributors on this question on
 StackExchange](http://opendata.stackexchange.com/questions/748/is-there-a-git-for-data)
-and to [James Smith](http://floppy.org.uk/).
+and to [James Smith](http://theodi.org/blog/adapting-git-simple-data).
 
 <a name="contribute" href="//prose.io/#okfn/data.okfn.org/edit/master/templates/standards/csv.md" target="_blank" class="btn">Contributions Welcome - Edit this Page</a>
 
