@@ -20,6 +20,7 @@ world.
 Key points are:
 
 * CSV is probably the simplest possible structured format for data
+* CSV strikes a delicate balance, remaining readable by both machines & humans
 * CSV is a two dimentsional structure consisting of rows of data each row
   containing multiple cells. Rows are (usually) separated by line terminators
   so each row corresponds to one line. Cells within a row are separated by
