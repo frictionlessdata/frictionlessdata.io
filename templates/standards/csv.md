@@ -1,12 +1,21 @@
 # CSV = Comma Separated Variables
 
-This page provides an overview CSV = Comma Separated Variables.
+This page provides an overview CSV (Comma Separated Variables) format for data.
 
 CSV is a very old, very simple and very common 'standard' for (tabular) data.
 There isn't really a formal standard for it - although there is now an
 [RFC][rfc] (from 2005).
 
-Key points:
+CSV is supported by a **huge** number of tools from spreadsheets like Excel,
+OpenOffice and Google Docs to complex databases to almost all programming
+languages. As such it is probably the most widely supported data format in the
+world.
+
+----
+
+## The Format
+
+Key points are:
 
 * CSV is probably the simplest possible structured format for data
 * CSV is a two dimentsional structure consisting of rows of data each row
@@ -23,7 +32,7 @@ Key points:
 
 [cldw]: https://github.com/rgrp/command-line-data-wrangling
 
-## What a CSV looks like
+### What a CSV looks like
 
 If you open up a CSV file in a text editor it would look something like:
 
@@ -36,7 +45,7 @@ the same number of columns in each row). Now how 2nd column in last line is
 "quoted" because the content of that column contain a "," which we have to
 escape so it does not clash with the "," separating columns.
 
-## Dialects of CSVs
+### Dialects of CSVs
 
 As mentioned above CSV files actually have quite a bit of variation in the
 structure of CSV files. Key options are:
@@ -48,7 +57,90 @@ structure of CSV files. Key options are:
 You can read more in the [CSV Dialect Description Format][csvddf] which all
 defines a small JSON-oriented structure for specifying what options a CSV uses.
 
-## CSVs and Git
+### What is Bad about CSV?
+
+* CSV lacks any way to specify type information: that is, there is no way to
+  distinguish "1" the string from 1 the number. (This shortcoming can be
+  addressed by adding some form of simple schema. See e.g. [Simple Data
+  Format][sdf] for an approach whereby CSV is combined with a schema or you can
+  even inline schema information - see [Linked CSV][linked-csv] for an example
+  of this approach).
+* No support for relationships between different "tables" (this is similar to
+  the previous point - again see [Simple Data Format][sdf] for a way to address
+  this with additional schema information) information)
+* Works best for tabular data - not good for data with nesting or other specific 
+
+### Links
+
+Specifications and overviews:
+
+* [RFC specification of CSV][rfc]
+* [CSV Dialect Description Format][csvddf]
+* [CSV on Wikipedia][wiki]
+
+----
+
+## Tools
+
+The great thing about CSV is the huge level of tool support. The following is
+not intended to be comprehensive but is more at the electic end of the spectrum.
+
+### Desktop
+
+All spreadsheet programmes including Excel, OpenOffice, Google Docs
+Spreadsheets supporting opening, editing and saving CSVs.
+
+### View a CSV file in your Browser
+
+You can view a CSV file (saving you the hassle of downloading it and opening
+it). Options include:
+
+* You can use datapipes: <http://datapipes.okfnlabs.org/csv/html>
+
+  Just paste your CSV file and away you go.
+
+* Install this [Chrome Browser Extension][chrome-csv]. This can be used both
+  for online files and for files on your local disk (if you open them with your
+  browser!)
+
+### Unix Command Line Manipulation
+
+See
+
+* Using [unix command line tools on CSV][cldw]
+* The wonderful [csvkit][] (python)
+
+### Power Tools
+
+* [OpenRefine][] is a powerful tool for editing and manipulating data and works
+  very well with CSV
+* [Data Explorer][datax] supports importing CSVs and manipulating and changing
+  them using javascript in the browser
+
+### Libraries
+
+This is heavily biased towards python!
+
+#### Python
+
+* Built in csv library is good
+* The wonderful [csvkit][] (python)
+* [messytables][] (python) - convert lots of badly structured data into CSV (or
+  other formats)
+
+#### Node
+
+Nothing in standard lib yet and best option seems to be:
+
+* <https://github.com/wdavidw/node-csv>
+
+----
+
+## Tips and Tricks
+
+### CSVs and Git
+
+Get git to handle CSV diffs in a sensible way (very useful if you are [using git or another version control system to store data][git-for-data]).
 
 Make these changes to config files:
 
@@ -69,24 +161,16 @@ Credit for these fixups to [contributors on this question on
 StackExchange](http://opendata.stackexchange.com/questions/748/is-there-a-git-for-data)
 and to [James Smith](http://floppy.org.uk/).
 
-## Links
-
-Specifications and overviews:
-
-* [RFC specification of CSV][rfc]
-* [CSV Dialect Description Format][csvddf]
-* [CSV on Wikipedia][wiki]
-
-Tools:
-
-* Using [unix command line tools on CSV][cldw]
-* The wonderful [csvkit][] (python)
-* [messytables][] (python) - convert lots of badly structured data into CSV (or
-  other formats)
+<a href="//prose.io/#okfn/data.okfn.org/edit/master/templates/standards/csv.md" target="_blank" class="btn">Edit Page</a>
 
 [rfc]: http://tools.ietf.org/html/rfc4180
 [csvddf]: http://www.dataprotocols.org/en/latest/csv-dialect.html
 [wiki]: http://en.wikipedia.org/wiki/Comma-separated_values
 [csvkit]: http://csvkit.readthedocs.org/
 [messytables]: http://messytables.readthedocs.org
+[git-for-data]: http://blog.okfn.org/2013/07/02/git-and-github-for-data/
+[sdf]: http://data.okfn.org/standards/simple-data-format
+[linked-csv]: http://jenit.github.io/linked-csv/
+[chrome-csv]: https://chrome.google.com/webstore/detail/recline-csv-viewer/ibfcfelnbfhlbpelldnngdcklnndhael
+[OpenRefine]: http://openrefine.org/
 
