@@ -1,8 +1,8 @@
-# CSV = Comma Separated Variables
+# CSV = Comma Separated Values
 
 <div class="alert alert-info" style="max-width: 400px;">This page is a work in progress. <a href="#contribute">Contributions are welcome &raquo;</a>.</div>
 
-This page provides an overview CSV (Comma Separated Variables) format for data.
+This page provides an overview CSV (Comma Separated Values) format for data.
 
 CSV is a very old, very simple and very common 'standard' for (tabular) data.
 There isn't really a formal standard for it - although there is now an
