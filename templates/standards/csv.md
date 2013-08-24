@@ -167,7 +167,7 @@ Credit for these fixups to [contributors on this question on
 StackExchange](http://opendata.stackexchange.com/questions/748/is-there-a-git-for-data)
 and to [James Smith](http://floppy.org.uk/).
 
-<a name="contribute" href="//prose.io/#okfn/data.okfn.org/edit/master/templates/standards/csv.md" target="_blank" class="btn">Contributions Welcome - Edit this Page</a>
+<a name="contribute" href="//github.com/okfn/data.okfn.org/blob/master/templates/standards/csv.md" target="_blank" class="btn">Contributions Welcome - Edit this Page</a>
 
 [rfc]: http://tools.ietf.org/html/rfc4180
 [csvddf]: http://www.dataprotocols.org/en/latest/csv-dialect.html
