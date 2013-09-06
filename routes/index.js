@@ -199,6 +199,7 @@ exports.dataShow = function(req, res) {
   var dataset = catalog.get(id)
   if (!dataset) {
     res.send(404, 'Not Found');
+    return;
   }
   if (dataset.resources && dataset.resources.length > 0) {
     // Get the primary resource for use in JS
