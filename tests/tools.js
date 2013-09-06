@@ -63,6 +63,10 @@ describe('normalize', function() {
     dpout = tools.normalize(dpin2, sourceUrl);
     assert.equal(dpout.description, 'Abc em\nzzz');
   });
+  it('sets names for resources', function() {
+    dpout = tools.normalize(dpin, sourceUrl);
+    assert.equal(dpout.resources[0].name, 'data');
+  });
 });
 
 describe('load', function() {
