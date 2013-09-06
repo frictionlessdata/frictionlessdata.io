@@ -259,11 +259,41 @@ footer .projects img {
   font-size: 12px;
 }
 
-.resource-summary table {
-  font-size: 13px;
+.resource-listing {
+  padding: 3px;
+  background: #eee;
+  border-radius: 3px;
 }
 
-.resource-summary table thead th {
+.resource-listing table {
+  background: #f8f8f8;
+  margin-bottom: 0;
+}
+
+.resource-listing table th,
+.resource-listing table td
+{
+  padding: 6px 8px;
+}
+
+.resource-listing .download a {
+  max-width: 300px;
+}
+
+.resource-info {
+  margin-top: 20px;
+}
+
+.resource-info h3 {
+  margin-bottom: 10px;
+}
+
+table.resource-summary {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+table.resource-summary thead th {
   background-color: #ebebeb;
   background-image: -moz-linear-gradient(#fcfcfc, #ebebeb);
   background-image: -webkit-linear-gradient(#fcfcfc, #ebebeb);
@@ -271,11 +301,12 @@ footer .projects img {
   background-repeat: repeat-x;
 }
 
-.resource-summary table th,
-.resource-summary table td
+table.resource-summary th,
+table.resource-summary td
 {
   padding: 2px 6px;
 }
+
 
 .dataset.show .viewer {
   margin-top: 20px;

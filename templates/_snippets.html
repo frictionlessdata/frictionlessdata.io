@@ -66,19 +66,38 @@
 
   <div class="viewer"></div>
 
-  <div class="resource-summary">
-    <h2>Data Fields Summary</h2>
-    <table class="table table-bordered table-striped">
+  <div class="resources">
+    <h2>Data Resources</h2>
+    <div class="resource-listing">
+      <table class="table resource-listing">
+        <thead></thead>
+        <tbody>
+          {% for resource in dataset.resources %}
+          <tr>
+            <td><a href="#resource-{{resource.name}}"><i class="icon-file-text-alt"></i> {{resource.name}}</a></td>
+            <td>{{resource.title}}</td>
+            <td>{{resource.format}}</td>
+            <td class="download truncate"><a href="{{resource.url}}"><i class="icon-download-alt"></i> Download</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% for resource in dataset.resources %}
+    <div class="resource-info">
+    <h3 id="resource-{{resource.name}}"><i class="icon-file-text-alt"></i> {{resource.name}}</h3>
+    <table class="table table-bordered table-striped resource-summary">
       <thead>
         <tr>
-          <th>Field</th>
+          <th>Field Name</th>
           <th>Order</th>
           <th>Type (Format)</th>
           <th>Description</th>
         </tr>
       </thead>
       <tbody>
-        {% for field in dataset.resources[0].schema.fields %}
+        {% for field in resource.schema.fields %}
         <tr>
           <th>{{field.id}}</th>
           <td>{{loop.index}}</td>
@@ -88,6 +107,8 @@
         {% endfor %}
       </tbody>
     </table>
+    </div>
+    {% endfor %} <!-- end of resource for loop -->
   </div>
 
   <div class="row moreinfo">
