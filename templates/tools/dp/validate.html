@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+Data Package Validator - Tools
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Data Package Validator</h1>
+</div>
+
+<form class="form js-info" action="">
+  <input type="text" name="url" value="{{url}}" placeholder="Paste link to your datapackage.json here" class="span6" />
+  <br />
+  <button class="btn">Validate</button>
+</form>
+
+{% if url %}
+<div class="well results">
+<h2>
+  Status: 
+  {% if result.valid %}
+  <span class="label label-success"
+    style="font-size: 19px;">
+  Valid
+  {% else %}
+  <span class="label label-important"
+    style="font-size: 19px;">
+  Invalid
+  {% endif %}
+  </span>
+</h2>
+
+<ul>
+{% for error in result.errors %}
+  <li>{{error.message}}</li>
+{% endfor %}
+</ul>
+{% endif %}
+</div>
+{% endblock %}
+

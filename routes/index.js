@@ -91,23 +91,23 @@ exports.toolsDpValidateJSON = function(req, res) {
   var dpurl = req.query.url.replace(/datapackage.json$/, '');
   var dpurl = dpurl.replace(/\/$/, '');
   dpurl += '/datapackage.json';
-  request(dpurl, function(err, response, body) {
-    if (err) {
-      res.send(500, err.toString());
-    } else {
-      var out = tools.dpValidate(body);
-      if (out.length == 0) {
-        return res.json({
-          valid: true
-        });
-      } else {
-        res.json({
-          valid: false,
-          errors: out
-        });
-      }
-    }
+  tools.validateUrl(dpurl, function(data) {
+    res.json(data);
   });
+};
+
+exports.toolsDpValidate = function(req, res) {
+  var url = req.query.url;
+  if (!url) {
+    res.render('tools/dp/validate.html');
+  } else {
+    tools.validateUrl(url, function(data) {
+      res.render('tools/dp/validate.html', {
+        url: url,
+        result: data
+      });
+    });
+  }
 };
 
 exports.toolsDpView = function(req, res) {

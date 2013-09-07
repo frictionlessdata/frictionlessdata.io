@@ -47,17 +47,20 @@ describe('GET /tools/validate', function(){
         if (err) done(err);
 
         var out = res.body;
-        assert.deepEqual(out, {valid: true});
+        assert.deepEqual(out, {
+          valid: true,
+          errors: []
+        });
         done();
       });
   })
-  it('fails with 500', function(done){
+  it('fails', function(done){
     var url = '/tools/validate.json';
     url += '?url=' + 'http://localhost:9999';
     request(app)
       .get(url)
-      .expect('Error: connect ECONNREFUSED')
-      .expect(500, done)
+      .expect({valid: false, errors: [{message: 'Error: connect ECONNREFUSED'}]})
+      .expect(200, done)
     ;
   })
 })

@@ -55,6 +55,7 @@ app.get('/tools', routes.tools);
 app.get('/tools/create.json', routes.toolsDpCreateJSON);
 app.get('/tools/create', routes.toolsDpCreate);
 app.get('/tools/validate.json', routes.toolsDpValidateJSON);
+app.get('/tools/validate', routes.toolsDpValidate);
 app.get('/tools/view', routes.toolsDpView);
 app.get('/tools/dataproxy', routes.toolsDataProxy);
 // Data
