@@ -8,31 +8,44 @@ Tools and Plugins
 <div class="page-header">
   <h1>
     Tools and Plugins for working with Data Packages
+    <br />
+    <small>Including tools for creating, viewing, validating, and publishing</small>
   </h1>
 </div>
-<div class="row">
+
+<div class="row main-tools">
+  <div class="span4">
+    <div class="well">
+      <h3>View</h3>
+      <p>View any Data Package online using the online <a href="/tools/view">Data Package viewer</a>.</p>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="well">
+      <h3>Create</h3>
+      <p>Create the <code>datapackage.json</code> file for your Data Package using the online <a href="/tools/create">datapackage.json creator</a>.</p>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="well">
+      <h3>Validate</h3>
+      <p>In progress ...</p>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row tools">
   <div class="span8">
-    <h2>General Tools</h2>
-
-    <h3>Data Package Viewer</h3>
-    <p>View any Data Package online using our online <a href="/tools/view">Data Package viewer tool</a>.</p>
-
-    <h3>Data Package Creator</h3>
-    <p>Creating a Data Package means creating a <code>datapackage.json</code> file. We provide an <a href="/tools/create">online application which will auto create your datapackage.json from a provided data file</a>.</p>
-
-    <h3>Git Data Package Viewer</h3>
-    <p>
-      The ODI's <a href="http://git-viewer.labs.theodi.org/">Git Data Viewer</a> 
-      can preview Data Packages stored in git repositories.
-      See also the <a href='http://theodi.org/blog/git-data-publishing'>blog post</a> and 
-      <a href='https://github.com/theodi/git-data-viewer'>source code</a>.
-    </p>
-
-    <hr />
-
     <h2>Using With ...</h2>
+
+    <div class="alert">
+      These "Using with" examples require <a href="/standards/simple-data-format">Simple Data Format Data Packages</a> where the data in the Data Package is stored in CSV (all the <a href="/data">datasets on this website</a> are in this format)
+    </div>
+
     <h3>Using with Excel</h3>
-    <p>For the present: just open the CSV file! See <a href="https://github.com/okfn/data.okfn.org/issues/41">this open issue for Excel Import macro</a>.</p>
+    <p>For Excel you can just open the CSV file! See <a href="https://github.com/okfn/data.okfn.org/issues/41">this open issue for Excel Import macro</a>.</p>
 
     <h3>Using with Google Spreadsheets</h3>
     <p><a href="https://github.com/okfn/data.okfn.org/issues/24">Google Spreadsheet Import</a> (in progress)</p>
@@ -65,13 +78,26 @@ Tools and Plugins
     <h3>R Library</h3>
     <p><a href="https://github.com/QBRC/RODProt">R Library with support for Data Packages and Simple Data Format</a></p>
 
+    <hr />
+
+    <h2>Other Tools</h2>
+
+    <h3>Git Data Package Viewer</h3>
+    <p>
+      The ODI's <a href="http://git-viewer.labs.theodi.org/">Git Data Viewer</a> 
+      can preview Data Packages stored in git repositories.
+      See also the <a href='http://theodi.org/blog/git-data-publishing'>blog post</a> and 
+      <a href='https://github.com/theodi/git-data-viewer'>source code</a>.
+    </p>
   </div>
   <div class="span4">
     <div class="well">
-      <h3>Want to contribute?</h3>
-      <p>We want to make it one click or one line to create or use data provided in our <a href="/standards">standard formats</a> in any relevant tool or application. Help make this happen &ndash; <a href="https://github.com/okfn/data.okfn.org/issues?labels=Tools">check out the issues &raquo;</a></p>
+      Have a new tool to add to this page? Please let us know by <a
+        href="https://github.com/okfn/data.okfn.org/issues">opening an
+        issue</a> or <a
+        href="https://github.com/okfn/data.okfn.org/blob/master/templates/tools/index.html">directly
+        adding it here</a>
     </div>
-
   </div>
 </div>
 
