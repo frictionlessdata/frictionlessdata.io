@@ -25,7 +25,11 @@ blockquote p {
   font-size: 14px;
 }
 
-.well h3 {
+.well>:first-child, .alert>:first-child {
+  margin-top: 0;
+}
+
+.sidebar>:first-child {
   margin-top: 0;
 }
 

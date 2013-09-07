@@ -1,86 +1,78 @@
 # Data Packages
 
+<div class="row">
+<div class="span8">
+
+<div><!-- has to be here or markdown conversion does not work --></div>
+
 A Data Package (or DataPackage) is a simple way of "packaging" up data.
 
 To create a Data Package, all you need to do is place a "descriptor" file named
 `datapackage.json` in the top-level directory of your set of data files.
 
-**Motivating Use Case**
+#### Why Data Packages? How Can They Help?
+
+Imagine a situation such as the following:
 
 * You have a set of data files in a directory (and subdirectories) - whether
   locally or online
-* You want to provide basic info for this collection (the "dataset")
+* You want to provide basic info for this collection (the "dataset") - perhaps
+  you want to publish this data for others, or simply to manage it better
+  yourself
 * Information like: author, license, list of files in the dataset (and possibly
   info on those files, like a schema)
 
-The data package approach provides a *very* simple, but standardized and
-extensible, way for you to do this.
+The Data Package approach provides a **very simple**, **web friendly**, 
+**standardized** and **extensible**, way for you to do this.
 
-<div class="alert alert-info">
-The Data Protocols website has a full **[RFC-style specification of Data
-Package format][spec]** to complement this quick introduction.
-</div>
-
-<div class="alert alert-info">
-**[Simple Data Format][sdf]** builds on Data Package by requiring that the data
-files be CSV and using the `datapackage.json` to describe key information about
-the CSV files (e.g. data types of columns etc).
-</div>
-
-[spec]: http://www.dataprotocols.org/en/latest/data-packages.html
-[sdf]: /standards/simple-data-format
-
+## Getting Started
 
 A minimal example Data Package would look like this on disk:
 
     datapackage.json
-    # a data file (CSV in this case)
+    # a data file (CSV in this case but could be any type of data)
     data.csv
+    # (Optional!) A README (in markdown format)
+    README.md
 
-Any number of additional files such as a README, scripts (for processing or analyzing the
-data) and other material may be provided but are not required.
-
-<a id="examples" name="examples"></a>
-
-## Examples
-
-Many exemplar data packages can be found in the [datasets organization on
-github][datasets]. Specific examples:
-
-### [World GDP][]
-
-A Data Package which includes the data locally in the repo (data is CSV).
-
-<script src="http://gist-it.appspot.com/github/datasets/gdp/blob/master/datapackage.json"></script>
-
-### [S&P 500 Companies Data][sp500]
-
-[sp500]: https://github.com/datasets/s-and-p-500-companies
-
-This is an example with more than one resource in the data package.
-
-<script src="http://gist-it.appspot.com/github/datasets/s-and-p-500-companies/blob/master/datapackage.json"></script>
-
-### [TopoJSON example][topojson]
-
-This data package has TopoJSON and the data is external to the repo.
-
-<script src="http://gist-it.appspot.com/github/datasets/ex-topojson/blob/master/datapackage.json"></script>
-
-[datasets]: https://github.com/datasets
-[World GDP]: https://github.com/datasets/gdp 
-[ISO 3166-2 country codes]: https://github.com/datasets/country-codes
-[topojson]: https://github.com/datasets/ex-topojson
-
+Any number of additional files such as more data files, scripts (for processing
+or analyzing the data) and other material may be provided but are not required.
 
 ## datapackage.json
 
-`datapackage.json` is the central file in a Data Package. It provides:
+`datapackage.json` is the file that makes a Data Package a Data Package
+(and is the only required file). It provides:
 
-* General metadata such as the name of the package, its license, its publisher etc
-* A list of the data files (resources) included in this data package along with information on those files (e.g. size and schema)
+* General metadata such as the name of the package, its license, its publisher
+  etc
+* A "manifest" in the the form of a list of the data resources (data files)
+  included in this data package along with information on those files (e.g.
+  size and schema)
+    
+As its file extension indicates it must be a [JSON][] file. Here's a very
+minimal example of a `datapackage.json` file:
 
-Here is an illustrative example of a datapackage JSON file::
+    {
+      "name": "a-unique-human-readable-and-url-usable-identifier",
+      "title": "A nice title",
+      "resources": [{
+        # see below for what a resource descriptor looks like
+      }]
+    }
+
+[JSON]: http://www.json.org/
+
+Here is a much more extensive example of a datapackage JSON file:
+
+<div class="alert alert-info">
+**Note:** a complete list of potential attributes and their meaning can be found in the
+[full Data Package spec][spec].
+</div>
+
+<div class="alert alert-info">
+**Note:** the Data Package format is **extensible** in that it allows you add
+your own attributes to the `datapackage.json`
+</div>
 
     {
       "name": "a-unique-human-readable-and-url-usable-identifier",
@@ -112,15 +104,18 @@ Here is an illustrative example of a datapackage JSON file::
       }],
       "dependencies": {
         "data-package-name": ">=1.0"
-      }
+      },
       "resources": [
         {
+          ... see below ...
         }
-      ]
+      ],
+      # this is an attribute that is not part of the data package spec
+      # you can add your own attributes to a datapackage.json
+      "my-own-attribute": "data-packages-are-awesome"
     }
-    
 
-<h2 id="resources">Resources</h2>
+<h3 id="resources">Resources</h3>
 
 You list data files in the resources entry of the datapackage.json.
 
@@ -129,4 +124,73 @@ You list data files in the resources entry of the datapackage.json.
       path: "relative-path-to-file" # e.g. data/mydata.csv
       url: "online url" # e.g http://mysite.org/some-data.csv
     }
+
+## Tools
+
+There is a growing set of [online and offline tools][tools] for working with Data
+Packages including tools for creating, viewing, validating, publishing and
+managing Data Packages. See the [Data Package tools page for more][tools].
+
+[tools]: /tools/
+
+
+<h2 id="examples">Examples</h2>
+
+Many exemplar data packages can be found in the [datasets organization on
+github][datasets]. Specific examples:
+
+### [World GDP][]
+
+A Data Package which includes the data locally in the repo (data is CSV).
+
+<script src="http://gist-it.appspot.com/github/datasets/gdp/blob/master/datapackage.json"></script>
+
+### [S&P 500 Companies Data][sp500]
+
+[sp500]: https://github.com/datasets/s-and-p-500-companies
+
+This is an example with more than one resource in the data package.
+
+<script src="http://gist-it.appspot.com/github/datasets/s-and-p-500-companies/blob/master/datapackage.json"></script>
+
+### [TopoJSON example][topojson]
+
+This data package has TopoJSON and the data is external to the repo.
+
+<script src="http://gist-it.appspot.com/github/datasets/ex-topojson/blob/master/datapackage.json"></script>
+
+[datasets]: https://github.com/datasets
+[World GDP]: https://github.com/datasets/gdp 
+[ISO 3166-2 country codes]: https://github.com/datasets/country-codes
+[topojson]: https://github.com/datasets/ex-topojson
+
+</div>
+
+<div class="span4 sidebar">
+<div class="well">
+<h3>Full Spec</h3>
+<div></div>
+
+There is a full **[RFC-style specification of Data Package format][spec]**
+on the Data Protocols website to complement this quick introduction.
+
+### Love CSV? Meet Simple Data Format
+
+**[Simple Data Format][sdf]** extends Data Packages for case where data in Data
+Package is CSV. It supports providing additional information such as data types
+of CSV columns.
+
+[spec]: http://www.dataprotocols.org/en/latest/data-packages.html
+[sdf]: /standards/simple-data-format
+
+### Tools
+
+There is a growing set of [online and offline tools][tools] for working with Data
+Packages including tools for creating, viewing, validating, publishing and
+managing Data Packages. See the [Data Package tools page for more][tools].
+
+</div>
+</div>
+
+</div>
 
