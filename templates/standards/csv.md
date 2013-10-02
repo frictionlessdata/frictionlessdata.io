@@ -43,15 +43,17 @@ If you open up a CSV file in a text editor it would look something like:
     1,2,3
     4,"5,3",6
 
-Here there are 3 rows each of 3 columns (note a CSV file does not have to have
-the same number of columns in each row). Now how 2nd column in last line is
-"quoted" because the content of that column contain a "," which we have to
-escape so it does not clash with the "," separating columns.
+Here there are 3 rows each of 3 columns. Notice how the second column in the last line is
+"quoted" because the content of that value actually contains a "," character. Without
+the quotes this character would be interpreted as a column separator. To avoid this
+confusion we put quotes around the whole value. The result is that we have 3 rows each
+of 3 columns (Note a CSV file does not *have* to have
+the same number of columns in each row)
 
 ### Dialects of CSVs
 
-As mentioned above CSV files actually have quite a bit of variation in the
-structure of CSV files. Key options are:
+As mentioned above CSV files actually can have quite a bit of variation in
+structure. Key options are:
 
 * Delimiter: rather than ',' can be ';', '\t' (tab), '|' etc
 * Record / line terminator: is '\n' (unix), '\n\r' (dos) or something else ...
