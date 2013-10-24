@@ -47,7 +47,9 @@
     <div class="span4 sidebar">
       <div class="btn-group">
         <a href="{{dataset.name}}/datapackage.json" class="btn btn-small"><i class="icon-download-alt"></i> Metadata</a></a>
-        <a href="https://github.com/datasets/{{dataset.name}}/issues/new" class="btn btn-small" target="_blank"><i class="icon-exclamation-sign icon-white"></i> Report an Issue</a>
+        {% if dataset.bugs and dataset.bugs.url %}
+        <a href="{{dataset.bugs.url}}" class="btn btn-small" target="_blank"><i class="icon-exclamation-sign icon-white"></i> Report an Issue</a>
+        {% endif %}
       </div>
       <div class="homepage truncate"><i class="icon-home"></i> <a href="{{dataset.homepage}}" title="Home Page">{{ dataset.homepage.replace('https://', '')}}</a></div>
       <div class="license">
