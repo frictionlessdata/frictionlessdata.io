@@ -3,7 +3,7 @@ var fs = require('fs')
   , marked = require('marked')
   , csv = require('csv')
 
-  , tools = require('../lib/tools.js')
+  , tools = require('datapackage')
   , model = require('../lib/model.js')
   ;
 
