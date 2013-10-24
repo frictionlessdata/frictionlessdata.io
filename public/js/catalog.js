@@ -28,6 +28,13 @@ my.Views.DataFile = Backbone.View.extend({
     var $viewer = this.$el;
     var reclineInfo = this.model.attributes;
     $viewer.html('Loading View <img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
+    // fix up for recline which needs ids on the fields and fields directly on resources
+    reclineInfo.fields = _.map(reclineInfo.schema.fields, function(field) {
+      if (field.name && !field.id) {
+        field.id = field.name;
+      }
+      return field;
+    });
     var table = new recline.Model.Dataset(reclineInfo);
     table.fetch().done(function() {
       var gridView = {

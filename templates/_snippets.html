@@ -99,7 +99,7 @@
       <tbody>
         {% for field in resource.schema.fields %}
         <tr>
-          <th>{{field.id}}</th>
+          <th>{{field.name}}</th>
           <td>{{loop.index}}</td>
           <td class="type type-{{field.type}}">{{field.type}} {% if field.format %}({{field.format}}) {% endif %}</td>
           <td>{{field.description}}</td>
