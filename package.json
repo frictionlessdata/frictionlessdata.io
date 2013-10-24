@@ -13,7 +13,8 @@
       "request": "",
       "marked": "",
       "JSV": "",
-      "csv": ""
+      "csv": "",
+      "datapackage": ""
   }
   , "devDependencies": {
     "supertest": "",
