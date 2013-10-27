@@ -1,7 +1,6 @@
 var express = require('express')
   , path = require('path')
   , nunjucks = require('nunjucks')
-
   , routes = require('./routes')
   ;
 
@@ -69,7 +68,7 @@ app.get('/data/:id', routes.dataShow);
 app.get('/community/:username/:repo', routes.communityDataView);
 app.get('/community/:username', routes.communityUser);
 
-var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/datapackage-index.json';
+var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/datapackage-list.txt';
 var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;
 
 routes.catalog.loadURL(url, function(err) {

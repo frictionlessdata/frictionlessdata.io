@@ -54,6 +54,11 @@ variable:
 
     export CATALOG_URL={url-to-your-data-package-catalog}
 
+A data package catalog should be a list of data package urls, one per line.
+Here's an example (used to run data.okfn.org):
+
+<https://raw.github.com/datasets/registry/master/datapackage-list.txt>
+
 
 ## Deployment to Heroku
 
