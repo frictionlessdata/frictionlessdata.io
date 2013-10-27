@@ -5,38 +5,6 @@ Core is an ultra-lightweight Data Hub running off [data packages][dp].
 [dp]: http://data.okfn.org/standards/data-package/
 
 
-## Implementation Notes
-
-* Very simple. Just one or two simple web pages
-* DataStore and API
-  
-  - May be optional for MVP?
-  - SQL-backed (Use "SqlStore" stuff from CKAN?)
-  - JSON RESTful API
-  - Refine reconciliation support
-  - Build on CKAN DataStore ...
-
-* Web interface
-
-  - Big list on the front page
-  - per-datasets page /{dataset-name}-{id}/... 
-  - Scrollable table of the data with search (?)
-  - Links to download of CSV and full API instructions
-  - (?) URL for each element /{dataset}/id/{element-id}/
-  - Add .json, .{...} for each item
-
-How to implement?
-
-* Pure JS (or Node or Flask?)
-* Why Not Use CKAN?
-
-  * We may use CKAN at some point BUT to start with ...
-  * Want very simple structure (just a few pages)
-  * Preference for JS only (lots of browser JS)
-  * Don't need CKAN's full power
-  * CKAN somewhat more complex to deploy
-
-
 ## Installing
 
 Requires NodeJS (>= v0.8).
@@ -98,4 +66,38 @@ Do the following:
     heroku domains:add {your-domain-name}
 
 Now CNAME your domain to {myapp}.herokuapp.com
+
+-----
+
+## Design and Implementation Notes
+
+* Very simple. Just one or two simple web pages
+* DataStore and API
+  
+  - May be optional for MVP?
+  - SQL-backed (Use "SqlStore" stuff from CKAN?)
+  - JSON RESTful API
+  - Refine reconciliation support
+  - Build on CKAN DataStore ...
+
+* Web interface
+
+  - Big list on the front page
+  - per-datasets page /{dataset-name}-{id}/... 
+  - Scrollable table of the data with search (?)
+  - Links to download of CSV and full API instructions
+  - (?) URL for each element /{dataset}/id/{element-id}/
+  - Add .json, .{...} for each item
+
+How to implement?
+
+* Pure JS (or Node or Flask?)
+* Why Not Use CKAN?
+
+  * We may use CKAN at some point BUT to start with ...
+  * Want very simple structure (just a few pages)
+  * Preference for JS only (lots of browser JS)
+  * Don't need CKAN's full power
+  * CKAN somewhat more complex to deploy
+
 
