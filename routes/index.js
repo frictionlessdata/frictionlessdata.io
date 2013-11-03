@@ -121,16 +121,14 @@ exports.toolsDpView = function(req, res) {
         return;
       }
 
-      if (dpkg.resources && dpkg.resources.length > 0) {
-        var resource = dpkg.resources[0];
-        resource.backend = 'csv';
-        dpkg.download_url = resource.url;
-        resource.url = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
-      }
+      dpkg.resources.forEach(function(resource, idx) {
+        // set special local url for use in javascript
+        resource.localurl = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
+      });
       var dataViews = dpkg.views || [];
       res.render('tools/dp/view.html', {
         dataset: dpkg,
-        raw_data_file: JSON.stringify(resource),
+        jsonDataPackage: JSON.stringify(dpkg),
         dataViews: JSON.stringify(dataViews),
         url: url
       });
@@ -183,13 +181,28 @@ exports.dataShowJSON = function(req, res) {
   res.json(dataset);
 };
 
+// we support paths like
+// /{dataset-id}/r/{name}.csv
+// where name is either resource name or index of the resource
 exports.dataShowCSV = function(req, res) {
-  var id = req.params.id;
+  var id = req.params.id
+    , resourceName = req.params.name
+    , resourceIndex = 0
+    ;
   var dataset = catalog.get(id)
   if (!dataset || !dataset.resources.length > 0) {
     res.send(404, 'Not Found');
   }
-  var url = dataset.resources[0].url;
+  if (resourceName.match('^\d+$')) {
+    resourceIndex = parseInt(resourceName)
+  } else {
+    dataset.resources.forEach(function(res, idx) {
+      if (res.name === resourceName) {
+        resourceIndex = idx;
+      }
+    });
+  }
+  var url = dataset.resources[resourceIndex].url;
   request.get(url).pipe(res);
 };
 
@@ -200,6 +213,8 @@ exports.dataShow = function(req, res) {
     res.send(404, 'Not Found');
     return;
   }
+  // deep copy
+  dataset = JSON.parse(JSON.stringify(dataset));
   if (dataset.resources && dataset.resources.length > 0) {
     // Get the primary resource for use in JS
     // deep copy and then "fix" in various ways
@@ -210,10 +225,15 @@ exports.dataShow = function(req, res) {
     resource.backend = 'csv';
     resource.fields = resource.schema.fields;
   }
+  dataset.resources.forEach(function(resource, idx) {
+    // set special local url for use in javascript
+    var resourceName = resource.name || idx;
+    resource.localurl = '/data/' + id + '/r/' + resourceName + '.csv';
+  });
   var dataViews = dataset.views || [];
   res.render('data/dataset.html', {
     dataset: dataset,
-    raw_data_file: JSON.stringify(resource),
+    jsonDataPackage: JSON.stringify(dataset),
     dataViews: JSON.stringify(dataViews)
   });
 };
@@ -232,19 +252,15 @@ exports.communityDataView = function(req, res) {
       return;
     }
 
-    if (dpkg.resources && dpkg.resources.length > 0) {
-      var resource = dpkg.resources[0];
-      resource.backend = 'csv';
-      // direct link for the moment
-      dpkg.download_url = resource.url;
-      resource.url = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
-      resource.fields = resource.schema.fields;
-    }
+    dpkg.resources.forEach(function(resource, idx) {
+      // set special local url for use in javascript
+      resource.localurl = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
+    });
     var dataViews = dpkg.views || [];
     res.render('community/dataset.html', {
       username: username,
       dataset: dpkg,
-      raw_data_file: JSON.stringify(resource),
+      jsonDataPackage: JSON.stringify(dpkg),
       dataViews: JSON.stringify(dataViews),
       url: url
     });

@@ -28,7 +28,7 @@
   {% endfor %}
 {%- endmacro %}
 
-{% macro dataset_show(dataset, raw_data_file, dataViews) -%}
+{% macro dataset_show(dataset, jsonDataPackage, dataViews) -%}
 <div class="dataset show">
   <div class="row">
     <div class="span8">
@@ -39,7 +39,7 @@
 
       <div class="actions">
         <div class="btn-group">
-          <a href="{{dataset.download_url}}" class="btn btn-large btn-primary" target="_blank"><i class="icon-download-alt icon-white"></i> Download Data (CSV)</a>
+          <a href="#data" class="btn btn-large btn-primary"><i class="icon-download-alt icon-white"></i> Download Data</a>
         </div>
       </div>
 
@@ -68,15 +68,15 @@
 
   <div class="viewer"></div>
 
-  <div class="resources">
-    <h2>Data Resources</h2>
+  <div class="resources" id="data">
+    <h2>Data Files</h2>
     <div class="resource-listing">
       <table class="table resource-listing">
         <thead></thead>
         <tbody>
           {% for resource in dataset.resources %}
           <tr>
-            <td><a href="#resource-{{resource.name}}"><i class="icon-file-text-alt"></i> {{resource.name}}</a></td>
+            <td><i class="icon-file-text-alt"></i> <a href="#resource-{{resource.name}}">{{resource.name}}</a></td>
             <td>{{resource.title}}</td>
             <td>{{resource.format}}</td>
             <td class="download truncate"><a href="{{resource.url}}"><i class="icon-download-alt"></i> Download</a></td>
@@ -89,6 +89,10 @@
     {% for resource in dataset.resources %}
     <div class="resource-info">
     <h3 id="resource-{{resource.name}}"><i class="icon-file-text-alt"></i> {{resource.name}}</h3>
+
+    <div class="show-recline-grid" data-resource-index="{{loop.index0}}"></div>
+
+    <h4>Field Information</h4>
     <table class="table table-bordered table-striped resource-summary">
       <thead>
         <tr>
@@ -109,6 +113,7 @@
         {% endfor %}
       </tbody>
     </table>
+
     </div>
     {% endfor %} <!-- end of resource for loop -->
   </div>
@@ -123,7 +128,7 @@
   </div>
 <div>
 <script type="text/javascript">
-  var DataFileData = {{ raw_data_file }};
+  var DataPackageData = {{ jsonDataPackage }};
   var DataViews = {{ dataViews }};
 </script>
 {%- endmacro %}

@@ -26,16 +26,9 @@ my.Views.DataFile = Backbone.View.extend({
 
   render: function() {
     var $viewer = this.$el;
-    var reclineInfo = this.model.attributes;
     $viewer.html('Loading View <img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
-    // fix up for recline which needs ids on the fields and fields directly on resources
-    reclineInfo.fields = _.map(reclineInfo.schema.fields, function(field) {
-      if (field.name && !field.id) {
-        field.id = field.name;
-      }
-      return field;
-    });
-    var table = new recline.Model.Dataset(reclineInfo);
+    var resourceIndex = 0;
+    var table = my.dataPackageResourceToDataset(this.model.toJSON(), resourceIndex);
     table.fetch().done(function() {
       var gridView = {
           id: 'grid',
@@ -92,6 +85,28 @@ my.Views.Search = Backbone.View.extend({
 
 my.Models.DataFile = Backbone.Model.extend({
 });
+
+// convert a Data Package structure to a recline.Model.Dataset
+my.dataPackageResourceToDataset = function(dataPackage, resourceIndex) {
+  if (!resourceIndex) {
+    resourceIndex = 0;
+  }
+  var reclineInfo = dataPackage.resources[resourceIndex];
+  reclineInfo.backend = 'csv';
+  // Recline expects fields at top level
+  reclineInfo.fields = _.map(reclineInfo.schema.fields, function(field) {
+    if (field.name && !field.id) {
+      field.id = field.name;
+    }
+    return field;
+  });
+  if (reclineInfo.localurl) {
+    reclineInfo.remoteurl = reclineInfo.url;
+    reclineInfo.url = reclineInfo.localurl;
+  }
+  var dataset = new recline.Model.Dataset(reclineInfo);
+  return dataset;
+}
 
 }(Catalog, jQuery));
 

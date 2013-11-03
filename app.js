@@ -62,7 +62,7 @@ app.get('/data', routes.data);
 app.get('/data.json', routes.dataJson);
 app.get('/data/search', routes.dataSearch);
 app.get('/data/:id/datapackage.json', routes.dataShowJSON);
-app.get('/data/:id.csv', routes.dataShowCSV);
+app.get('/data/:id/r/:name.csv', routes.dataShowCSV);
 app.get('/data/:id', routes.dataShow);
 // Community
 app.get('/community/:username/:repo', routes.communityDataView);
