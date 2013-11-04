@@ -25,6 +25,11 @@ Imagine a situation such as the following:
 The Data Package approach provides a **very simple**, **web friendly**, 
 **standardized** and **extensible**, way for you to do this.
 
+<div class="alert alert-info">
+Note: there is a full **[RFC-style specification of Data Package format][spec]**
+on the Data Protocols website to complement this quick introduction.
+</div>
+
 ## Getting Started
 
 A minimal example Data Package would look like this on disk:
