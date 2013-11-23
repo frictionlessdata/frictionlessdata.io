@@ -20,10 +20,6 @@ exports.home = function(req, res) {
   });
 };
 
-exports.about = function(req, res) {
-  res.render('about.html', {});
-};
-
 exports.contribute = function(req, res) {
   res.render('contribute.html', {});
 };
