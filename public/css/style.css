@@ -10,13 +10,31 @@ body {
   text-transform: uppercase;
 }
 
+.navbar .brand img {
+  height: 45px;
+  margin-top: -7px;
+}
+
 .navbar .nav {
   margin-top: 0px;
+}
+
+.navbar .nav li {
+  line-height: 27px;
+  font-size: 20px;
+}
+
+.navbar-search {
+  margin-top: 8px;
 }
 
 .okfn-ribbon a {
   height: 60px;
   background-position: center -40px;
+}
+
+.content {
+  padding-top: 0;
 }
 
 blockquote p {
@@ -93,6 +111,7 @@ footer .projects img {
   font-weight: bold;
   color: #333;
   text-align: left;
+  font-size: 40px;
 }
 
 /* Custom scroll-bars */
