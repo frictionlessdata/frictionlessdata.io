@@ -43,7 +43,8 @@ app.use(function(req, res, next) {
 
 app.get('/', routes.home);
 app.get('/about/contribute', routes.contribute);
-// Community
+app.get('/publish', routes.publish);
+// Standards and patterns
 app.get('/standards', routes.standards);
 app.get('/standards/data-package', routes.standardsDataPackage);
 app.get('/standards/simple-data-format', routes.standardsSimpleDataFormat);
