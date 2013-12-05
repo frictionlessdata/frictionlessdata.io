@@ -1,12 +1,17 @@
-# CSV = Comma Separated Values
-
-<div class="alert alert-info" style="max-width: 400px;">This page is a work in progress. <a href="#contribute">Contributions are welcome &raquo;</a>.</div>
+<div class="page-header">
+  <div style="float: right;">
+    <a name="contribute" href="//github.com/okfn/data.okfn.org/blob/master/views/standards/csv.md" target="_blank" class="btn btn-success">Contributions Welcome - Edit this Page &gt;</a>
+  </div>
+  <h1>
+    CSV &ndash; Comma Separated Values
+  </h1>
+</div>
 
 This page provides an overview CSV (Comma Separated Values) format for data.
 
-CSV is a very old, very simple and very common 'standard' for (tabular) data.
-There isn't really a formal standard for it - although there is now an
-[RFC][rfc] (from 2005).
+CSV is a very old, very simple and very common "standard" for (tabular) data.
+We say "standard" in quotes because there was never a formal standard for CSV
+- though in 2005 someone put together a [RFC][rfc] for it.
 
 CSV is supported by a **huge** number of tools from spreadsheets like Excel,
 OpenOffice and Google Docs to complex databases to almost all programming
@@ -169,8 +174,6 @@ Credit for these fixups to [contributors on this question on
 StackExchange](http://opendata.stackexchange.com/questions/748/is-there-a-git-for-data)
 and to [James Smith](http://theodi.org/blog/adapting-git-simple-data).
 
-<a name="contribute" href="//github.com/okfn/data.okfn.org/blob/master/templates/standards/csv.md" target="_blank" class="btn">Contributions Welcome - Edit this Page</a>
-
 [rfc]: http://tools.ietf.org/html/rfc4180
 [csvddf]: http://www.dataprotocols.org/en/latest/csv-dialect.html
 [wiki]: http://en.wikipedia.org/wiki/Comma-separated_values
@@ -181,4 +184,6 @@ and to [James Smith](http://theodi.org/blog/adapting-git-simple-data).
 [linked-csv]: http://jenit.github.io/linked-csv/
 [chrome-csv]: https://chrome.google.com/webstore/detail/recline-csv-viewer/ibfcfelnbfhlbpelldnngdcklnndhael
 [OpenRefine]: http://openrefine.org/
+[datax]: http://explorer.okfnlabs.org/
+
 
