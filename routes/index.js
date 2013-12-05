@@ -39,7 +39,7 @@ exports.standards = function(req, res) {
 };
 
 exports.standardsDataPackage = function(req, res) {
-  fs.readFile('templates/standards/data-package.md', 'utf8', function(err, text) {
+  fs.readFile('views/standards/data-package.md', 'utf8', function(err, text) {
     var content = marked(text);
     res.render('base.html', {
       title: 'Data Package - Standards',
@@ -49,7 +49,7 @@ exports.standardsDataPackage = function(req, res) {
 };
 
 exports.standardsSimpleDataFormat = function(req, res) {
-  fs.readFile('templates/standards/simple-data-format.md', 'utf8', function(err, text) {
+  fs.readFile('views/standards/simple-data-format.md', 'utf8', function(err, text) {
     var content = marked(text);
     res.render('base.html', {
       title: 'Simple Data Format - Standards',
@@ -59,7 +59,7 @@ exports.standardsSimpleDataFormat = function(req, res) {
 };
 
 exports.standardsCsv = function(req, res) {
-  fs.readFile('templates/standards/csv.md', 'utf8', function(err, text) {
+  fs.readFile('views/standards/csv.md', 'utf8', function(err, text) {
     var content = marked(text);
     res.render('base.html', {
       title: 'CSV / Comma Separated Variables - Standards',
