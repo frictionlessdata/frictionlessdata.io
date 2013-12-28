@@ -24,6 +24,10 @@ exports.contribute = function(req, res) {
   res.render('contribute.html', {});
 };
 
+exports.roadmap = function(req, res) {
+  renderMarkdown('doc/roadmap.md', 'Roadmap', res);
+};
+
 exports.publish = function(req, res) {
   fs.readFile('doc/publish-tabular.md', 'utf8', function(err, text) {
     var content = marked(text);
@@ -279,4 +283,14 @@ exports.communityUser = function(req, res) {
     username: username
   });
 };
+
+function renderMarkdown(filepath, title, res) {
+  fs.readFile(filepath, 'utf8', function(err, text) {
+    var content = marked(text);
+    res.render('doc.html', {
+      title: title,
+      content: content
+    });
+  });
+}
 

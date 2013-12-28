@@ -44,6 +44,7 @@ app.use(function(req, res, next) {
 app.get('/', routes.home);
 app.get('/about/contribute', routes.contribute);
 app.get('/publish', routes.publish);
+app.get('/roadmap', routes.roadmap);
 // Standards and patterns
 app.get('/standards', routes.standards);
 app.get('/standards/data-package', routes.standardsDataPackage);
