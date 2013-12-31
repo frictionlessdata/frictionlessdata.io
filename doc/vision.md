@@ -8,37 +8,31 @@ We think getting some key pieces in place can reduce friction enough to lead to 
 
 We think this because there's a multiplier here that means relatively small changes can have big effects. This multiplier is Network effects: the utility of a particular standard, pattern or even tool depends on how many other people are using it. This means that creating a critical mass of use around the tooling and standards will have a huge effect. This isn't easy. But after working on these issues for nearly a decade we think the time is right.
 
-## What do we want to do?
+# What do we want to do?
 
-There are 3 broad areas that work needs to be done in:
+There are 3 broad areas that we propose to work in which we outline here. Full and further details can be found in the [Roadmap][].
 
-- Infrastructure and tools
-- Patterns and standards
-- Outreach and adoption
+[Roadmap]: http://data.okfn.org/roadmap/
 
-[Aside] this last is especially important: as we emphasized, network effects matter and currently the ecosystem very balkanized (there's the R folks over here, the data portals over there, the map-reduce folks over there ...).
+We also should emphasize the important role that outreach and engagement will play in all areas. As we pointed out above, network effects matter and so its not just about building the better mouse-trap but getting lots of people to use that mouse-trap.
 
-Being more specific we are focusing our activity in the following "projects":
+At present, the ecosystem is rather balkanized -- there's the R folks over here, the data portals over there, the map-reduce folks over there ... -- and we're going to need to evangelize the ideas and benefits to build adoption and the positive feedback that creates.
 
-### Data Package standard - the "Data Package" project
+## Data Package standard - the "Data Package" project
 
 - The basic pattern for preparing data
 - Mininum viable standard
 - Extensible to tabular and geodata
 - Provision of documentation and complementary tools (essential)
 
-### Publish and "Install" - the "Registry and Tool" project
+## Publish and "Install" - the "Registry and Tool" project
 
-- Integrate (plugins etc) - its got to be incredibly easy to use "packaged" data
+- Integrate (plugins etc) - its got to be incredibly easy to share and use "packaged" data
+- Also includes work on syncing data
 - The value add e.g. dependencies
 - Data more diverse than code so more work here
 
-### Provide essential data - the "Datasets Project"
-
-- Helps to socialize and demonstrate data package concepts
-- Source of data to use (high quality, needed and useful)
-
-### Process, clean, fix, store - the "Infrastructure Project"
+## Process, clean, fix, store - the "Infrastructure Project"
 
 - More miscellaneous than other "projects" but important
 - Process, cleaning storing etc are tied together (storage and fixing are related - versioning, patching etc)
@@ -46,9 +40,7 @@ Being more specific we are focusing our activity in the following "projects":
 - There's a lot here so this won't be about creating a much that is new
 - Instead its about joining up what's there, about creating and sharing patterns that work
 
-## Principles
-
-From first Frictionless Data post
+# Principles
 
 * Lightweight
 * Simple
@@ -56,7 +48,7 @@ From first Frictionless Data post
 * Distributed
 * Open
 
-## Stories and Analogies
+# Stories and Analogies
 
 * with logistics - food packaging and processing / ingredients for cooking (cf [Frictionless Post][friction]).
 * with logistics - containerization (original metaphor for Frictionless post
