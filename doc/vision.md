@@ -1,7 +1,3 @@
-# Building a frictionless data ecosystem
-
-# The Vision
-
 There's too much friction working with data - friction getting data, friction processing data, friction sharing data.
 
 This friction stops people doing stuff - stops them creating, sharing, collaborating, using (especially amongst distributed communities). It kills the cycles of find, improve, share that would make for a dynamic, productive and *attractive* (open) data ecosystem.

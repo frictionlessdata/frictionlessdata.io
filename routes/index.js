@@ -25,7 +25,7 @@ exports.contribute = function(req, res) {
 };
 
 exports.roadmap = function(req, res) {
-  renderMarkdown('doc/roadmap.md', 'Roadmap', res);
+  exports.renderMarkdown('doc/roadmap.md', 'Roadmap', res);
 };
 
 exports.publish = function(req, res) {
@@ -284,7 +284,7 @@ exports.communityUser = function(req, res) {
   });
 };
 
-function renderMarkdown(filepath, title, res) {
+exports.renderMarkdown = function(filepath, title, res) {
   fs.readFile(filepath, 'utf8', function(err, text) {
     var content = marked(text);
     res.render('doc.html', {
