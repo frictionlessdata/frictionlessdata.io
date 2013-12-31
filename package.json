@@ -14,7 +14,8 @@
       "marked": "",
       "JSV": "",
       "csv": "",
-      "datapackage": "git://github.com/okfn/datapackage.js#master"
+      "datapackage": "0.3.0",
+      "datapackage-read": ""
   }
   , "devDependencies": {
     "supertest": "",
