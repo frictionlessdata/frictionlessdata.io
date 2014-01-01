@@ -46,7 +46,7 @@ app.get('/about/contribute', routes.contribute);
 app.get('/publish', routes.publish);
 app.get('/roadmap', routes.roadmap);
 app.get('/vision', function(req, res) {
-  routes.renderMarkdown('doc/vision.md', 'Our Vision for a Frictionless Data Ecosystem', res);
+  routes.renderMarkdown('doc/vision.md', 'A Frictionless Data Ecosystem', res);
 });
 // Standards and patterns
 app.get('/standards', routes.standards);
