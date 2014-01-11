@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% macro roadmapItem(item) -%}
+<div class="item well">
+  <h4>{{item.Title}}
+    <div style="float: right;" class="priority">
+      <span class="badge
+      {% if item.Priority == 3 %}
+        badge-important
+      {% elif item.Priority == 2 %}
+        badge-warning
+      {% else %}
+        badge-success
+      {% endif %}
+      "
+      title="Priority"
+      >
+      {{item.Priority}}
+      </span>
+    </div>
+    <small>[{{item.ID}}]</small>
+  </h4>
+  <ul class="metainfo">
+    <li><i class="icon-link" title="Implementation"></i> <a href="{{item.URL}}">{{item.URL}}</a></li>
+    <li><i class="icon-user" title="Owner"></i>
+      {% if item.Owner %}
+        {{item.Owner}}
+      {% else %}
+        No owner yet! <a href="/about/contribute/">Claim it &raquo;</a>
+      {% endif %}
+    </li>
+    <li><i class="icon-exclamation-sign" title="Issue(s)"></i> <a href="{{item.Issue}}">{{item.Issue}}</a></li>
+  </ul>
+  <div class="progress">
+    <div class="bar" style="width: {{item.Progress}}%;" title="{{item.Progress}}"></div>{{item.Progress}}% 
+  </div>
+  <div class="desc">
+    {{item.Description}}
+  </div>
+</div>
+{%- endmacro %}
+
+
+{% block content %}
+<div class="page-header">
+  <h1 style="text-align: center;">
+    Roadmap
+  </h1>
+</div>
+<div class="row">
+  <div class="span8 offset2">
+    <img src="https://docs.google.com/drawings/d/1td7wmG54wbxCpS7kb5clPLyqESwHHTBvuxlIIRd-x5k/pub?w=942&amp;h=708" style="width: 100%;" />
+    <p style="text-align: center; font-size: 90%;">High-level overview of the components. A detailed overview is below.</p>
+  </div>
+</div>
+
+<div class="row roadmap-details">
+  <div class="span4">
+    <h3>Standards</h3>
+    <p>Lightweight, RFC-style proposals and patterns focused on "Data Package" and associated formats.</p>
+
+    {% for item in streams[0].items %} {{ roadmapItem(item) }} {% endfor %}
+  </div>
+  <div class="span8">
+    <h3>Tooling and Integration</h3>
+    <p>Tooling and integration to make it easy to publish and use data (packages). We subdivide this area into:</p>
+
+    <ul>
+      <li>"Core Tools" - libraries and specific infrastructure such as a registry</li>
+      <li>"Integration" - making it very easy to share and use "packaged" data from standard tools</li>
+    </ul>
+
+    <div class="row">
+      <div class="span4">
+        <h3>Core Tools</h3>
+        {% for item in streams[1].items %} {{ roadmapItem(item) }} {% endfor %}
+      </div>
+      <div class="span4">
+        <h3>Integration</h3>
+        {% for item in streams[2].items %} {{ roadmapItem(item) }} {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6 offset3">
+    <h3>Documentation, Outreach and Community</h3>
+    <p>Engaging and evangelizing around the concepts, standards and tooling</p>
+    {% for item in streams[3].items %} {{ roadmapItem(item) }} {% endfor %}
+  </div>
+  <div class="span6 offset3">
+    <h3>Related, Additional Activities</h3>
+    <p>There are a variety of additional related activities we would like to see undertaken but which are not part of the primary roadmap. We list some of these here.</p>
+
+    {% for item in streams[4].items %} {{ roadmapItem(item) }} {% endfor %}
+  </div>
+</div>
+
+<p><a href="https://docs.google.com/a/okfn.org/spreadsheet/ccc?key=0AqR8dXc6Ji4JdFJlMkZKbDRZT2RWWG9RV0wtcWo2c2c#gid=0">Source Roadmap Spreadsheet</a></p>
+
+{% endblock %}
+

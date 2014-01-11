@@ -2,6 +2,7 @@ var fs = require('fs')
   , request = require('request')
   , marked = require('marked')
   , csv = require('csv')
+  , underscore = require('underscore')
 
   , tools = require('datapackage')
   , model = require('../lib/model.js')
@@ -24,8 +25,65 @@ exports.contribute = function(req, res) {
   res.render('contribute.html', {});
 };
 
+// crude cache
+var _roadmapData = null;
+
 exports.roadmap = function(req, res) {
-  exports.renderMarkdown('doc/roadmap.md', 'Roadmap', res);
+  var roadmapSheet = 'https://docs.google.com/spreadsheet/pub?key=0AqR8dXc6Ji4JdFJlMkZKbDRZT2RWWG9RV0wtcWo2c2c&single=true&gid=0&output=csv';
+  
+  if (_roadmapData === null) {
+    var stream = request(roadmapSheet);
+    csv()
+      .from.stream(stream)
+      .to.array(function(data, count) {
+        var headers = data[0];
+        _roadmapData = data.slice(1).map(function(row) {
+          var out = underscore.object(headers, row);
+          out.Description = marked(out.Description);
+          out.Comment = marked(out.Comment);
+          return out;
+        });
+        doRender()
+      })
+    ;
+  } else {
+    doRender();
+  }
+
+  function doRender() {
+    var streams = [
+      {
+        title: 'Standards'
+      },
+      {
+        title: 'Core Tools'
+      },
+      {
+        title: 'Integration'
+      },
+      {
+        title: 'Outreach'
+      },
+      {
+        title: 'Extras'
+      }
+    ];
+    function filterByStream(stream) {
+      return _roadmapData.filter(function(row) {
+        return row.Stream === stream;
+      });
+    }
+    
+    streams.forEach(function(stream) {
+      stream.items = filterByStream(stream.title);
+    });
+    console.log(streams[0].items[0]);
+    res.render('roadmap.html', {
+      title: 'Roadmap',
+      roadmap: _roadmapData,
+      streams: streams
+    });
+  }
 };
 
 exports.publish = function(req, res) {

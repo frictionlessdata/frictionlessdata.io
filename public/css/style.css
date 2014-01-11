@@ -430,3 +430,17 @@ img.shadow {
   margin-bottom: 20px;
 
 }
+
+/********************************************************************
+  * Roadmap
+  *******************************************************************/
+
+.roadmap-details .item {
+  font-size: 90%;
+}
+
+.roadmap-details .item .metainfo {
+  list-style-type: none;
+  margin-left: 0;
+}
+
