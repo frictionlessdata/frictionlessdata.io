@@ -8,6 +8,9 @@ We need to make an ecosystem that, like open-source for software, is useful and 
 
 We think that by getting a few key pieces in place we can reduce friction enough to revolutionize how the (open) data ecosystem operates with massively improved data quality, utilization and sharing.
 
+<img src="http://assets.okfn.org/p/data.okfn.org/img/the-idea.png" alt="" />
+<p style="text-align: center; font-size: 85%;">Diagram illustrating the key decoupling concept &ndash; you can read more in the original <a href="http://blog.okfn.org/2013/04/24/frictionless-data-making-it-radically-easier-to-get-stuff-done-with-data/">Frictionless Data post</a>.</p>
+
 We think this because there's a multiplier here that means relatively small changes can have big effects. This multiplier is Network effects: the utility of a particular standard, pattern or even tool depends on how many other people are using it. This means that creating a critical mass of use around the tooling and standards will have a huge effect. This isn't easy. But after working on these issues for nearly a decade we think the time is right.
 
 ## A Metaphor
@@ -20,13 +23,16 @@ What do we need to do for the working with data to be like cooking today - where
 
 The answer: radical improvements in the “logistics” of data associated with specialisation and standardisation. In analogy with food we need standard systems of “measurement”, packaging, and transport so that its easy to get data from its original source into the application where I can start working with it.
 
-# What do we want to do?
+# What We Want To Do
 
 We start with an advantage: unlike for physical goods transporting digital information from one computer to another is very cheap!
 
 This means the focus can be on standardizing and simplifying the process of getting data from one application to another (or one form to another).
 
 The following gives an overview of the main areas of work. There is more detail in the [Roadmap][].
+
+<a href="/roadmap/"><img src="https://docs.google.com/drawings/d/1td7wmG54wbxCpS7kb5clPLyqESwHHTBvuxlIIRd-x5k/pub?w=942&amp;h=708" style="width: 100%;" alt="" /></a>
+<p style="text-align: center; font-size: 85%;">High-level overview of the components. See the <a href="/roadmap">Roadmap</a> for more detail.</p>
 
 [Roadmap]: http://data.okfn.org/roadmap/
 
@@ -98,13 +104,18 @@ Many of these are shared with (and build on) activity in other areas but as a wh
 
 ## What an Ecosystem Looks Like
 
-From [Building the (Open) Data Ecosystem][ecosystem]
+### From [Building the (Open) Data Ecosystem][ecosystem]
 
-<img src="http://farm6.staticflickr.com/5149/5564991102_fcf972d056_z.jpg" alt="" style="max-width: 48%; max-height: 400px;" />
+<div class="row">
+  <div class="span3">
+    <img src="http://farm6.staticflickr.com/5149/5564991102_fcf972d056_z.jpg" alt="" style="width: 100%;" />
+  </div>
+  <div class="span3">
+    <img src="http://farm6.static.flickr.com/5296/5564414863_bafa3e82b7.jpg" alt="" style="width: 100%;" />
+  </div>
+</div>
 
-<img src="http://farm6.static.flickr.com/5296/5564414863_bafa3e82b7.jpg" alt="" style="max-width: 48%; max-height: 400px;" />
-
-From @maxogden's [Dat Project][dat]
+### From @maxogden's [Dat Project][dat]
 
 [dat]: https://github.com/maxogden/dat
 
