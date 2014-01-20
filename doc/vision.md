@@ -21,7 +21,7 @@ But with data we're still largely stuck at this early stage: every time you want
 
 What do we need to do for the working with data to be like cooking today - where you get to spend your time making the cake (creating insights) not preparing and collecting the ingredients (digging up and cleaning data)?
 
-The answer: radical improvements in the “logistics” of data associated with specialisation and standardisation. In analogy with food we need standard systems of “measurement”, packaging, and transport so that its easy to get data from its original source into the application where I can start working with it.
+The answer: radical improvements in the "logistics2 of data associated with specialisation and standardisation. In analogy with food we need standard systems of "measurement", packaging, and transport so that its easy to get data from its original source into the application where I can start working with it.
 
 # What We Want To Do
 
@@ -89,54 +89,4 @@ Our approach has these distinguishing features:
 * Distributed and not tied to a given tool or project - this is not about creating a central data marketplace or similar setup. It's about creating a basic framework that would enable anyone to publish and use datasets more easily and without going through a central broker.
 
 Many of these are shared with (and build on) activity in other areas but as a whole we believe this provides a different, and especially powerful, approach.
-
---------
-
-# Appendix
-
-## Stories and Analogies
-
-* with logistics - food packaging and processing / ingredients for cooking (cf [Frictionless Post][friction]).
-* with logistics - containerization (original metaphor for Frictionless post
-  but replaced by food as more immediate)
-* Analogy with libraries and packaging in code
-
-
-## What an Ecosystem Looks Like
-
-### From [Building the (Open) Data Ecosystem][ecosystem]
-
-<div class="row">
-  <div class="span3">
-    <img src="http://farm6.staticflickr.com/5149/5564991102_fcf972d056_z.jpg" alt="" style="width: 100%;" />
-  </div>
-  <div class="span3">
-    <img src="http://farm6.static.flickr.com/5296/5564414863_bafa3e82b7.jpg" alt="" style="width: 100%;" />
-  </div>
-</div>
-
-### From @maxogden's [Dat Project][dat]
-
-[dat]: https://github.com/maxogden/dat
-
-<img src="https://github.com/maxogden/dat/raw/master/img/dat-diagram.png" />
-
-## Data Pipelines
-
-Data Pipeline Overview from School of Data Workshop May 2012 (Drawing by Stefan Urbanek)
-
-<img src="http://farm8.staticflickr.com/7073/7177017539_f8bfce4075_c.jpg" alt="" />
-
-Data Pipeline Detail from School of Data Workshop May 2012 (Drawing by Stefan Urbanek)
-
-<img src="http://farm8.staticflickr.com/7235/7176971829_753699235a_b.jpg" alt="" />
-
-## References
-
-* [Frictionless Data: making it radically easier to get stuff done with data][friction]
-* [Building the (Open) Data Ecosystem][ecosystem]
-
-[friction]: http://blog.okfn.org/2013/04/24/frictionless-data-making-it-radically-easier-to-get-stuff-done-with-data/
-[ecosystem]: http://blog.okfn.org/2011/03/31/building-the-open-data-ecosystem/
-
 
