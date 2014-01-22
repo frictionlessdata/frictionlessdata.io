@@ -42,7 +42,10 @@ app.use(function(req, res, next) {
 
 
 app.get('/', routes.home);
-app.get('/about/contribute', routes.contribute);
+app.get('/about/contribute', function(req, res) {
+  res.redirect('/contribute');
+});
+app.get('/contribute', routes.contribute);
 app.get('/publish', routes.publish);
 app.get('/roadmap', routes.roadmap);
 app.get('/vision', function(req, res) {
