@@ -48,6 +48,9 @@ app.get('/about/contribute', function(req, res) {
 app.get('/contribute', routes.contribute);
 app.get('/publish', routes.publish);
 app.get('/roadmap', routes.roadmap);
+app.get('/roadmap/core-datasets', function(req, res) {
+  res.render('core-datasets.html', {title: 'Core Datasets'});
+});
 app.get('/vision', function(req, res) {
   routes.renderMarkdown('doc/vision.md', 'A Frictionless Data Ecosystem', res);
 });
