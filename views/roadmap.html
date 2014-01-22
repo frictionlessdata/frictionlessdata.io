@@ -2,40 +2,45 @@
 
 {% macro roadmapItem(item) -%}
 <div class="item well">
-  <h4>{{item.Title}}
-    <div style="float: right;" class="priority">
-      <span class="badge
-      {% if item.Priority == 3 %}
-        badge-important
-      {% elif item.Priority == 2 %}
-        badge-warning
-      {% else %}
-        badge-success
-      {% endif %}
-      "
-      title="Priority"
-      >
-      {{item.Priority}}
-      </span>
+  <h4>
+    {% if item.URL %}
+    <a href="{{item.URL}}">
+      {{item.Title}}
+    </a>
+    {% else %}
+      {{item.Title}}
+    {% endif %}
+    <div style="float: right;">
+      <a href="#" title="more-info" class="js-more-info"><i class="icon-info-sign"></i></a>
     </div>
-    <small>[{{item.ID}}]</small>
   </h4>
-  <ul class="metainfo">
-    <li><i class="icon-link" title="Implementation"></i> <a href="{{item.URL}}">{{item.URL}}</a></li>
-    <li><i class="icon-user" title="Owner"></i>
-      {% if item.Owner %}
-        {{item.Owner}}
-      {% else %}
-        No owner yet! <a href="/about/contribute/">Claim it &raquo;</a>
-      {% endif %}
-    </li>
-    <li><i class="icon-exclamation-sign" title="Issue(s)"></i> <a href="{{item.Issue}}">{{item.Issue}}</a></li>
-  </ul>
   <div class="progress">
     <div class="bar" style="width: {{item.Progress}}%;" title="{{item.Progress}}"></div>{{item.Progress}}% 
   </div>
-  <div class="desc">
-    {{item.Description}}
+  <div class="moreinfo" style="display: none;">
+    <ul class="metainfo">
+      {% if item.URL %}
+      <li>
+        <i class="icon-link" title="Implementation"></i>
+        <a href="{{item.URL}}">{{item.URL}}</a>
+      </li>
+      {% endif %}
+      <li><i class="icon-user" title="Owner"></i>
+        {% if item.Owner %}
+          {{item.Owner}}
+        {% else %}
+          No owner yet! <a href="/about/contribute/">Claim it &raquo;</a>
+        {% endif %}
+      </li>
+      {% if item.Issue %}
+      <li>
+        <i class="icon-exclamation-sign" title="Issue(s)"></i> <a href="{{item.Issue}}">{{item.Issue}}</a>
+      </li>
+      {% endif %}
+    </ul>
+    <div class="desc">
+      {{item.Description}}
+    </div>
   </div>
 </div>
 {%- endmacro %}
@@ -61,34 +66,29 @@
 
     {% for item in streams[0].items %} {{ roadmapItem(item) }} {% endfor %}
   </div>
-  <div class="span8">
+  <div class="span4">
     <h3>Tooling and Integration</h3>
-    <p>Tooling and integration to make it easy to publish and use data (packages). We subdivide this area into:</p>
+    <p>Tooling and integration to make it easy to publish and use data (packages). Divided into:</p>
 
     <ul>
-      <li>"Core Tools" - libraries and specific infrastructure such as a registry</li>
-      <li>"Integration" - making it very easy to share and use "packaged" data from standard tools</li>
+      <li>Core Tools - libraries and specific infrastructure such as a registry</li>
+      <li>Integration - making it easy to share and use "packaged" data from standard tools</li>
     </ul>
 
-    <div class="row">
-      <div class="span4">
-        <h3>Core Tools</h3>
-        {% for item in streams[1].items %} {{ roadmapItem(item) }} {% endfor %}
-      </div>
-      <div class="span4">
-        <h3>Integration</h3>
-        {% for item in streams[2].items %} {{ roadmapItem(item) }} {% endfor %}
-      </div>
-    </div>
+    <h3>Core Tools</h3>
+    {% for item in streams[1].items %} {{ roadmapItem(item) }} {% endfor %}
+
+    <h3>Integration</h3>
+    {% for item in streams[2].items %} {{ roadmapItem(item) }} {% endfor %}
+  </div>
+  <div class="span4">
+    <h3>Community</h3>
+    <p>Documentation and outreach to engage, evangelize and build adoption around the concepts, standards and tooling</p>
+    {% for item in streams[3].items %} {{ roadmapItem(item) }} {% endfor %}
   </div>
 </div>
 
 <div class="row">
-  <div class="span6 offset3">
-    <h3>Documentation, Outreach and Community</h3>
-    <p>Engaging and evangelizing around the concepts, standards and tooling</p>
-    {% for item in streams[3].items %} {{ roadmapItem(item) }} {% endfor %}
-  </div>
   <div class="span6 offset3">
     <h3>Related, Additional Activities</h3>
     <p>There are a variety of additional related activities we would like to see undertaken but which are not part of the primary roadmap. We list some of these here.</p>
@@ -99,5 +99,16 @@
 
 <p><a href="https://docs.google.com/a/okfn.org/spreadsheet/ccc?key=0AqR8dXc6Ji4JdFJlMkZKbDRZT2RWWG9RV0wtcWo2c2c#gid=0">Source Roadmap Spreadsheet</a></p>
 
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $('a.js-more-info').click(function(e) {
+    e.preventDefault();
+    $(e.target).closest('.item').find('.moreinfo').toggle();  
+  });
+});
+</script>
 {% endblock %}
 
