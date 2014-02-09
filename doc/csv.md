@@ -10,13 +10,13 @@
 This page provides an overview CSV (Comma Separated Values) format for data.
 
 CSV is a very old, very simple and very common "standard" for (tabular) data.
-We say "standard" in quotes because there was never a formal standard for CSV
-- though in 2005 someone put together a [RFC][rfc] for it.
+We say "standard" in quotes because there was never a formal standard for CSV,
+though in 2005 someone did put together a [RFC][rfc] for it.
 
 CSV is supported by a **huge** number of tools from spreadsheets like Excel,
 OpenOffice and Google Docs to complex databases to almost all programming
-languages. As such it is probably the most widely supported data format in the
-world.
+languages. As such it is probably the most widely supported structured data
+format in the world.
 
 ----
 
