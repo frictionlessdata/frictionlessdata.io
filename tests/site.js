@@ -5,6 +5,37 @@ var request = require('supertest')
 
 var app = require('../app.js').app;
 
+describe('Content', function(){
+  it('home page', function(done){
+    request(app)
+      .get('/')
+      .expect(200)
+      .end(function(err, res) {
+        checkContent(res, 'Home');
+        done();
+      })
+      ;
+  });
+  it('home page', function(done){
+    request(app)
+      .get('/standards/data-package')
+      .expect(200)
+      .end(function(err, res) {
+        checkContent(res, 'Data Package');
+        done();
+      })
+      ;
+  });
+});
+
+function checkContent(res, expected) {
+  var found = res.text.match(expected)
+  if (!found) {
+    console.log(res.text);
+    assert(false, '<<' + expected + '>> not found in page');
+  }
+}
+
 describe('GET /tools/create.json', function(){
   it('respond with json', function(done){
     request(app)

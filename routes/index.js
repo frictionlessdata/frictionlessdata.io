@@ -100,30 +100,30 @@ exports.standards = function(req, res) {
 };
 
 exports.standardsDataPackage = function(req, res) {
-  fs.readFile('views/standards/data-package.md', 'utf8', function(err, text) {
+  fs.readFile('doc/data-package.md', 'utf8', function(err, text) {
     var content = marked(text);
     res.render('base.html', {
-      title: 'Data Package - Standards',
+      title: 'Introduction to Data Packages',
       content: content
     });
   });
 };
 
 exports.standardsSimpleDataFormat = function(req, res) {
-  fs.readFile('views/standards/simple-data-format.md', 'utf8', function(err, text) {
+  fs.readFile('doc/tabular-data-package.md', 'utf8', function(err, text) {
     var content = marked(text);
     res.render('base.html', {
-      title: 'Simple Data Format - Standards',
+      title: 'Introduction to Tabular Data Packages',
       content: content
     });
   });
 };
 
 exports.standardsCsv = function(req, res) {
-  fs.readFile('views/standards/csv.md', 'utf8', function(err, text) {
+  fs.readFile('doc/csv.md', 'utf8', function(err, text) {
     var content = marked(text);
     res.render('base.html', {
-      title: 'CSV / Comma Separated Variables - Standards',
+      title: 'Introduction to CSV (Comma Separated Variables)',
       content: content
     });
   });
