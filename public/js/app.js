@@ -31,15 +31,21 @@ jQuery(window).load(function() {
       var resourceIndex = $($el).data('resource-index');
       var reclineDataset = Catalog.dataPackageResourceToDataset(DataPackageData, idx);
       reclineDataset.fetch().done(function() {
-        var gridView = new recline.View.SlickGrid({
-          model: reclineDataset,
+        var multiViewGridView = new recline.View.MultiView({
           el: $el,
-          state: {
-            fitColumns: true
-          }
+          model: reclineDataset,
+          views: [{
+            id: 'grid',
+            label: 'Data Table',
+            view: new recline.View.SlickGrid({
+              model: reclineDataset,
+              state: {
+                fitColumns: true
+              }
+            })
+          }],
+          sidebarViews: []
         });
-        gridView.visible = true;
-        gridView.render();
         reclineDataset.query({size: reclineDataset.recordCount});
       });
     });

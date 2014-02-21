@@ -357,8 +357,12 @@ table.resource-summary td
   padding: 2px 6px;
 }
 
-.dataset.show .show-recline-grid.recline-slickgrid {
+.dataset.show .show-recline-grid .recline-slickgrid {
   height: 400px;
+}
+
+.dataset.show .show-recline-grid .recline-pager {
+  display: none;
 }
 
 .dataset.show .viewer {
