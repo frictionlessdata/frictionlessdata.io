@@ -1,6 +1,8 @@
-# Documentation, Guides and Patterns
+# Guides and Docs
 
 ## Publishing Data
+
+Tutorials on how to publish data as data packages.
 
 * [Publish Tabular Data][tabular]
 * [Publish Geospatial Data (Geodata)][geodata]
@@ -17,5 +19,4 @@
 [dp]: /doc/data-package
 [tabular]: /doc/tabular-data-package
 [csv]: /doc/csv
-
 
