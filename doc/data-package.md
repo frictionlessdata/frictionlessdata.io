@@ -1,10 +1,5 @@
 # Data Packages
 
-<div class="row">
-<div class="span8">
-
-<div><!-- has to be here or markdown conversion does not work --></div>
-
 A Data Package (or DataPackage) is a simple way of "packaging" up data.
 
 To create a Data Package, all you need to do is place a "descriptor" file named
@@ -25,9 +20,22 @@ Imagine a situation such as the following:
 The Data Package approach provides a **very simple**, **web friendly**, 
 **standardized** and **extensible**, way for you to do this.
 
-<div class="alert alert-info">
-Note: there is a full **[RFC-style specification of Data Package format][spec]**
+<div class="row">
+<div class="span2">
+<h3>Full Spec</h3>
+There is a full **<a href="http://www.dataprotocols.org/data-packages/">RFC-style specification of Data Package format</a>**
 on the Data Protocols website to complement this quick introduction.
+</div>
+<div class="span2">
+<h3>Tabular Data</h3>
+**<a href="/doc/tabular-data-package/">Tabular Data Package</a>** extends Data Packages for tabular data. It supports providing additional information such as data types
+of columns.
+</div>
+<div class="span2">
+<h3>Tools</h3>
+There is a growing set of <a href="/tools">online and offline tools</a> for working with Data
+Packages including for creating, viewing and validating.
+</div>
 </div>
 
 ## Getting Started
@@ -168,34 +176,6 @@ This data package has TopoJSON and the data is external to the repo.
 [World GDP]: https://github.com/datasets/gdp 
 [ISO 3166-2 country codes]: https://github.com/datasets/country-codes
 [topojson]: https://github.com/datasets/ex-topojson
-
-</div>
-
-<div class="span4 sidebar">
-<div class="well">
-<h3>Full Spec</h3>
-<div></div>
-
-There is a full **[RFC-style specification of Data Package format][spec]**
-on the Data Protocols website to complement this quick introduction.
-
-### Love CSV? Meet Simple Data Format
-
-**[Simple Data Format][sdf]** extends Data Packages for case where data in Data
-Package is CSV. It supports providing additional information such as data types
-of CSV columns.
-
-[spec]: http://www.dataprotocols.org/en/latest/data-packages.html
-[sdf]: /standards/simple-data-format
-
-### Tools
-
-There is a growing set of [online and offline tools][tools] for working with Data
-Packages including tools for creating, viewing, validating, publishing and
-managing Data Packages. See the [Data Package tools page for more][tools].
-
-</div>
-</div>
 
 </div>
 

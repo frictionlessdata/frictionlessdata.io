@@ -1,11 +1,4 @@
-<div class="page-header">
-  <div style="float: right;">
-    <a name="contribute" href="//github.com/okfn/data.okfn.org/blob/master/views/standards/csv.md" target="_blank" class="btn btn-success">Contributions Welcome - Edit this Page &gt;</a>
-  </div>
-  <h1>
-    CSV &ndash; Comma Separated Values
-  </h1>
-</div>
+# CSV &ndash; Comma Separated Values
 
 This page provides an overview CSV (Comma Separated Values) format for data.
 

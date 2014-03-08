@@ -448,3 +448,9 @@ img.shadow {
   margin-left: 0;
 }
 
+.contribute-btn {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+}
+

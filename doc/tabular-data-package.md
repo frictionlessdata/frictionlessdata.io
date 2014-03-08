@@ -1,20 +1,31 @@
-# Simple Data Format (SDF)
+# Tabular Data Packages
 
-<div class="row">
-<div class="span8">
-<div><!-- has to be here or markdown conversion does not work --></div>
-
-Simple Data Format is a simple structure for publishing and sharing data with
+Tabular Data Package is a simple structure for publishing and sharing tabular data with
 the following key features:
 
 * **Data** is stored in <a href="#csv">CSV (comma separated values)</a>
   files
-* **"Metadata"** about the dataset both general (e.g. title, author) and the
+* **Metadata** about the dataset both general (e.g. title, author) and the
   specific data files (e.g. schema) is stored in a single JSON file named
-  **datapackage.json** which follows the [Data Package spec][dp]
+  **datapackage.json** which follows the [Data Package format][dp]
+
+As suggested by the name, Tabular Data Packages extend and specialize the [Data Package][dp] format for the specific case where the data is tabular.
 
 [dp]: ../data-package
 [spec]: http://www.dataprotocols.org/en/latest/simple-data-format.html
+
+<div class="row">
+<div class="span3">
+<h3>Full Spec</h3>
+There is a full **<a href="http://www.dataprotocols.org/simple-data-format/">RFC-style specification of Tabular Data Package</a>**
+on the Data Protocols website to complement this quick introduction.
+</div>
+<div class="span3">
+<h3>Tools</h3>
+There is a growing set of <a href="/tools">online and offline tools</a> for working with Tabular Data
+Packages including tools for creating, viewing and validating.
+</div>
+</div>
 
 
 ## Simple Example
@@ -155,22 +166,3 @@ This is an example with more than one resource in the data package.
 
 <script src="http://gist-it.appspot.com/github/datasets/s-and-p-500-companies/blob/master/datapackage.json"></script>
 
-</div>
-<div class="span4 sidebar">
-<div class="well">
-<h3>Full Spec</h3>
-<div></div>
-
-There is a full **[RFC-style specification of Simple Data Format][spec]**
-on the Data Protocols website to complement this quick introduction.
-
-### Tools
-
-There is a growing set of [online and offline tools][tools] for working with Simple Data Format Data
-Packages including tools for creating, viewing, validating and publishing them.
-
-[tools]: /tools/
-</div>
-</div>
-
-</div>

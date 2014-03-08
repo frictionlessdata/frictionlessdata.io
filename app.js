@@ -56,9 +56,12 @@ app.get('/vision', function(req, res) {
 });
 // Standards and patterns
 app.get('/standards', routes.standards);
-app.get('/standards/data-package', routes.standardsDataPackage);
-app.get('/standards/simple-data-format', routes.standardsSimpleDataFormat);
-app.get('/standards/csv', routes.standardsCsv);
+app.get('/standards/data-package', redirect('/doc/data-package'));
+app.get('/standards/simple-data-format', redirect('/doc/tabular-data-package'));
+app.get('/standards/csv', redirect('/doc/csv'));
+// Docs (patterns, standards etc)
+app.get('/doc', routes.doc);
+app.get('/doc/:page', routes.doc);
 // Tools
 app.get('/tools', routes.tools);
 app.get('/tools/create.json', routes.toolsDpCreateJSON);
@@ -77,6 +80,12 @@ app.get('/data/:id', routes.dataShow);
 // Community
 app.get('/community/:username/:repo', routes.communityDataView);
 app.get('/community/:username', routes.communityUser);
+
+function redirect(url) {
+  return function(req, res) {
+    res.redirect(url);
+  }
+}
 
 var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/datapackage-list.txt';
 var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;

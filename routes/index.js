@@ -99,32 +99,26 @@ exports.standards = function(req, res) {
   res.render('/standards/index.html', {title: 'Standards'});
 };
 
-exports.standardsDataPackage = function(req, res) {
-  fs.readFile('doc/data-package.md', 'utf8', function(err, text) {
+exports.doc = function(req, res) {
+  var page = req.params.page || 'index';
+  var filepath = 'doc/' + page + '.md'
+  if (!fs.existsSync(filepath)) {
+    res.send(404);
+    return;
+  }
+  fs.readFile(filepath, 'utf8', function(err, text) {
+    var lines  = text.split('\n')
+    var title = '';
+    if (lines[0].indexOf('#') === 0) {
+      title = lines[0].replace(/#+\s+/g, '');
+      text  = lines.slice(1).join('\n');
+    }
     var content = marked(text);
-    res.render('base.html', {
-      title: 'Introduction to Data Packages',
-      content: content
-    });
-  });
-};
-
-exports.standardsSimpleDataFormat = function(req, res) {
-  fs.readFile('doc/tabular-data-package.md', 'utf8', function(err, text) {
-    var content = marked(text);
-    res.render('base.html', {
-      title: 'Introduction to Tabular Data Packages',
-      content: content
-    });
-  });
-};
-
-exports.standardsCsv = function(req, res) {
-  fs.readFile('doc/csv.md', 'utf8', function(err, text) {
-    var content = marked(text);
-    res.render('base.html', {
-      title: 'Introduction to CSV (Comma Separated Variables)',
-      content: content
+    var githubPath = '//github.com/okfn/data.okfn.org/blob/master/' + filepath;
+    res.render('doc.html', {
+      title: title,
+      content: content,
+      githubPath: githubPath
     });
   });
 };
