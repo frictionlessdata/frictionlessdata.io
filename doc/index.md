@@ -20,3 +20,9 @@ Tutorials on how to publish data as data packages.
 [tabular]: /doc/tabular-data-package
 [csv]: /doc/csv
 
+## Vision and Roadmap
+
+* [Vision](/vision)
+* [Roadmap](/roadmap)
+* [Roadmap - Core Datasets](/roadmap/core-datasets)
+
