@@ -19,7 +19,7 @@ Key points are:
 
 * CSV is probably the simplest possible structured format for data
 * CSV strikes a delicate balance, remaining readable by both machines & humans
-* CSV is a two dimentsional structure consisting of rows of data each row
+* CSV is a two dimensional structure consisting of rows of data, each row
   containing multiple cells. Rows are (usually) separated by line terminators
   so each row corresponds to one line. Cells within a row are separated by
   commans (hence the C(ommmas) part)
@@ -46,11 +46,11 @@ Here there are 3 rows each of 3 columns. Notice how the second column in the las
 the quotes this character would be interpreted as a column separator. To avoid this
 confusion we put quotes around the whole value. The result is that we have 3 rows each
 of 3 columns (Note a CSV file does not *have* to have
-the same number of columns in each row)
+the same number of columns in each row).
 
 ### Dialects of CSVs
 
-As mentioned above CSV files actually can have quite a bit of variation in
+As mentioned above, CSV files can have quite a bit of variation in
 structure. Key options are:
 
 * Delimiter: rather than ',' can be ';', '\t' (tab), '|' etc
