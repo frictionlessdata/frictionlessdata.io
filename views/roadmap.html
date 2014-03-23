@@ -11,7 +11,8 @@
       {{item.Title}}
     {% endif %}
     <div style="float: right;">
-      <a href="#" title="more-info" class="js-more-info"><i class="icon-info-sign"></i></a>
+      <a href="#" title="More info" class="js-more-info"><i class="icon-info-sign"></i></a>
+      <a href="#{{item.slug}}" name="{{item.slug}}"><i class="icon-link" title="Link to this item"></i></a>
     </div>
   </h4>
   <div class="progress">
@@ -21,7 +22,7 @@
     <ul class="metainfo">
       {% if item.URL %}
       <li>
-        <i class="icon-link" title="Implementation"></i>
+        <i class="icon-external-link-sign" title="Implementation"></i>
         <a href="{{item.URL}}">{{item.URL}}</a>
       </li>
       {% endif %}
@@ -29,17 +30,17 @@
         {% if item.Owner %}
           {{item.Owner}}
         {% else %}
-          No owner yet! <a href="/about/contribute/">Claim it &raquo;</a>
+          No owner yet! <a href="{{item.Issue or '/about/contribute/'}}">Claim it &raquo;</a>
         {% endif %}
       </li>
-      {% if item.Issue %}
-      <li>
-        <i class="icon-exclamation-sign" title="Issue(s)"></i> <a href="{{item.Issue}}">{{item.Issue}}</a>
-      </li>
-      {% endif %}
     </ul>
     <div class="desc">
       {{item.Description}}
+      {% if item.Issue %}
+      <p>
+        <a href="{{item.Issue}}">Tracking issue &raquo;</a>
+      </p>
+      {% endif %}
     </div>
   </div>
 </div>

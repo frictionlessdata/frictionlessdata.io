@@ -40,6 +40,7 @@ exports.roadmap = function(req, res) {
         _roadmapData = data.slice(1).map(function(row) {
           var out = underscore.object(headers, row);
           out.Description = marked(out.Description);
+          out.slug = out.Title.toLowerCase().replace(/ /g, '-');
           return out;
         });
         doRender()
