@@ -77,7 +77,11 @@ wordpress website, to dropbox or anywhere else. The one important thing is that:
       http://your.website.com/mydatapackage/data.csv
   
   This can be a problem with services like e.g. Google Drive where files in a
-  given folder don't have a web address that relates to that folder. The reason we need to preserve relative paths is that your 
+  given folder don't have a web address that relates to that folder. The reason
+  we need to preserve relative paths is that when using the Data Package client
+  software will compute the full path from the location of the datapackage.json
+  itself plus the relative path for the file give in the datapackage.json
+  resources section.
 
 ----
 
