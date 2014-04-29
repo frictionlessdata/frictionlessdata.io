@@ -9,33 +9,33 @@
 <div class="row standards">
   <div class="span7">
 
-<p>We provide two new standards for data "transport": <strong><a href="/standards/data-package">Data Package</a></strong> and <strong><a href="/standards/simple-data-format">Simple Data Format</a></strong>.</p>
+<p>We provide two new standards for data "transport": <strong><a href="/doc/data-package">Data Package</a></strong> and <strong><a href="/doc/tabular-data-package">Tabular Data Package</a></strong>.</p>
 
 <img src="https://docs.google.com/drawings/d/1SZxJ00WEp3iK5fqljc-yumalRePmwdaaH98_8uJYlbs/pub?w=350&h=345" alt="Overview" style="margin-left: 5px; width: 200px; float: right;" />
 
 <p>These standards are <strong>ultra-lightweight</strong>, RFC-style specifications. They build <strong>heavily on prior work</strong> (e.g. JSON, DSPL, JSON-LD, CommonJS/Debian/PyPI packaging). <strong>Simplicity and practicality</strong> were guiding design criteria.</p>
 
-<h3><a href="/standards/data-package">Data package</a></h3>
+<h3><a href="/doc/data-package">Data package</a></h3>
 <ul>
   <li>Minimal wrapping around data</li>
   <li>Can 'package' any kind of data</li>
   <li>Designed for extension &ndash; you can add your own additional structure and metadata</li>
 </ul>
 <p>Data Package's flexibility means it can be used as a "transport" for any
-kind of data. However, this also limits the possibilities for tool integration (e.g. loading a data package into a database automatically). This limitation is addressed by extending Data Package &ndash; for example, Simple Data Format does this for tabular data.</p>
-<p><a href="/standards/data-package">Read the Data Packages overview &raquo;</a></p>
+kind of data. However, this also limits the possibilities for tool integration (e.g. loading a data package into a database automatically). This limitation is addressed by extending Data Package &ndash; for example, Tabular Data Package does this for tabular data.</p>
+<p><a href="/doc/data-package">Read the Data Packages overview &raquo;</a></p>
 
-<h3><a href="/standards/simple-data-format">Simple data format (SDF)</a></h3>
+<h3><a href="/doc/tabular-data-package">Tabular Data Package</a></h3>
 <ul>
   <li>Designed for tabular data</li>
-  <li>Extends data package (data in simple data format is a data package)</li>
+  <li>Extends data package (data in tabular data package is a data package)</li>
   <li>Requires data to be "good" CSVs</li>
   <li>Provides a simple JSON-based schema to describe them ("JSON Table Schema")</li>
 </ul>
-<p><a href="/standards/simple-data-format">Read the Simple Data Format overview &raquo;</a></p>
+<p><a href="/doc/tabular-data-package">Read the Tabular Data Package overview &raquo;</a></p>
 
 <h2>The Motivation</h2>
-<p>The idea behind Data Package and Simple Data Format is to <strong>decouple</strong> data publishers and consumers and make it easier to build standard tooling: publishers can publish their data as a data package from their favourite app or tool and a consumer can load that package into their (different) favourite tool.</p>
+<p>The idea behind Data Package and Tabular Data Package is to <strong>decouple</strong> data publishers and consumers and make it easier to build standard tooling: publishers can publish their data as a data package from their favourite app or tool and a consumer can load that package into their (different) favourite tool.</p>
     
   <a href="http://assets.okfn.org/p/data.okfn.org/img/the-idea.png"><img src="http://assets.okfn.org/p/data.okfn.org/img/the-idea.png" alt="" class="shadow" style="width: 80%; margin-top: 20px;" /></a>
   <p style="text-align: center; font-size: 85%;">Diagram to illustrate the key decoupling concept &ndash; you can read more in the original <a href="http://blog.okfn.org/2013/04/24/frictionless-data-making-it-radically-easier-to-get-stuff-done-with-data/">Frictionless Data post</a>.</p>
@@ -47,17 +47,17 @@ kind of data. However, this also limits the possibilities for tool integration (
 
   <h4>Data Package</h4>
   <ul>
-    <li><a href="/standards/data-package">Overview</a></li>
-    <li><a href="/standards/data-package#examples">Examples</a></li>
+    <li><a href="/doc/data-package">Overview</a></li>
+    <li><a href="/doc/data-package#examples">Examples</a></li>
   </ul> 
-  <h4>Simple Data Format</h4>
+  <h4>Tabular Data Package</h4>
   <ul>
-    <li><a href="/standards/simple-data-format">Overview</a></li>
-    <li><a href="/standards/simple-data-format#examples">Examples</a></li>
+    <li><a href="/doc/tabular-data-package">Overview</a></li>
+    <li><a href="/doc/tabular-data-package#examples">Examples</a></li>
   </ul>
   <h4>CSV / Comma Separated Variables</h4>
   <ul>
-    <li><a href="/standards/csv">Overview</a></li>
+    <li><a href="/doc/csv">Overview</a></li>
   </ul>
 
   <h4>Tools</h4>
