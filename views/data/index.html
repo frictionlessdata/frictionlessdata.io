@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 {% import '_snippets.html' as snippets %}
 
-{% block title %}Data Listing{% endblock %}
+{% block title %}Data Packages Listing{% endblock %}
 
 {% block content %}
 
 <div class="hero-unit">
-  <h1>
-    <strong>Key datasets</strong>
-    in <strong>high quality</strong>,
-    <strong>easy-to-use</strong> &amp; <strong><a href="http://opendefinition.org/" title="open data defined">open</a></strong> form
+  <h1 style="text-align: center;">
+    <strong>Find Data Packages</strong>
     <!-- form class="form-horizontal dataset-search" autocomplete="off"
       method="GET" action="/search">
       <input type="text" name="q" placeholder="Search datasets" class="search-query typeahead span5" autocomplete="off" />
@@ -18,36 +16,17 @@
 </div>
 
 <div class="row">
-  <div class="results span8">
-    <!--h3>{{ total }} datasets found</h3-->
-    {% for dataset in datasets %}
+  <div class="results span6">
+    <h3>Official <a href="/roadmap/core-datasets">&quot;Core&quot;</a> Datasets ({{ coreDatasets.length }})</h3>
+    {% for dataset in coreDatasets %}
       {{ snippets.dataset_summary(dataset) }}
     {% endfor %}
   </div>
-  <div class="span4">
-    <div class="alert alert-success">
-      We are at an <strong>early stage of adding datasets</strong> &ndash; <strong><a href="/about/contribute#data">suggestions and contributions are welcome &raquo;</a></strong>
-    </div>
-    <div class="row">
-      <div class="span4">
-        <h4>High Quality &amp; Reliable</h4>
-        <p>We are sourcing, normalizing and quality checking a set of <strong>key
-          reference and indicator datasets such as country codes, currencies, GDP and
-          population</strong>.</p>
-      </div>
-      <div class="span4">
-        <h4>Standard Form &amp; Bulk Access</h4>
-        <p>All the datasets are provided in a <strong>standardized</strong> form
-        and can be accessed in <strong>bulk as CSV</strong> together with a simple <strong>JSON
-          schema</strong>.</p>
-      </div>
-      <div class="span4">
-        <h4>Versioned & Packaged</h4>
-        <p>All data is in <strong>data packages</strong>
-        and is <strong>versioned</strong> using git so all changes are
-        visible and data can be <strong>collaboratively maintained</strong>.</p>
-      </div>
-    </div>
+  <div class="span6">
+    <h3>All Community Datasets ({{ total }})</h3>
+    {% for dataset in datasets %}
+      {{ snippets.dataset_summary(dataset) }}
+    {% endfor %}
   </div>
 </div>
 

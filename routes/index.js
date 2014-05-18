@@ -209,11 +209,15 @@ exports.toolsDataProxy = function(req, res) {
 // ========================================================
 
 exports.data = function(req, res) {
-  datasets = catalog.query();
+  datasets = catalog.query().filter(function(dp) {
+    return !dp.isCore;
+  });
+  coreDatasets = catalog.byOwner('core');
   total = datasets.length;
   res.render('data/index.html', {
     total: total,
-    datasets: datasets
+    datasets: datasets,
+    coreDatasets: coreDatasets
   });
 };
 
