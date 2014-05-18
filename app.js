@@ -78,8 +78,10 @@ app.get('/data/:owner/:id/datapackage.json', routes.dataShowJSON);
 app.get('/data/:owner/:id/r/:name.csv', routes.dataShowCSV);
 app.get('/data/:owner/:id', routes.dataShow);
 // Community
-app.get('/community/:username/:repo', routes.communityDataView);
-app.get('/community/:username', routes.communityUser);
+app.get('/community/:username/:repo', function(req, res) {
+  var url = '/data/' + req.params.username + '/' + req.params.repo;
+  res.redirect(url);
+});
 
 function redirect(url) {
   return function(req, res) {
