@@ -236,7 +236,7 @@ exports.dataSearch = function(req, res) {
 
 exports.dataShowJSON = function(req, res) {
   var id = req.params.id;
-  var dataset = catalog.get(id)
+  var dataset = catalog.get(req.params.owner, id)
   if (!dataset) {
     res.send(404, 'Not Found');
   }
@@ -251,7 +251,7 @@ exports.dataShowCSV = function(req, res) {
     , resourceName = req.params.name
     , resourceIndex = 0
     ;
-  var dataset = catalog.get(id)
+  var dataset = catalog.get(req.params.owner, id)
   if (!dataset || !dataset.resources.length > 0) {
     res.send(404, 'Not Found');
   }
@@ -269,28 +269,20 @@ exports.dataShowCSV = function(req, res) {
 };
 
 exports.dataShow = function(req, res) {
-  var id = req.params.id;
-  var dataset = catalog.get(id)
+  var id = req.params.id
+    , owner = req.params.owner
+    ;
+  var dataset = catalog.get(req.params.owner, id)
   if (!dataset) {
     res.send(404, 'Not Found');
     return;
   }
   // deep copy
   dataset = JSON.parse(JSON.stringify(dataset));
-  if (dataset.resources && dataset.resources.length > 0) {
-    // Get the primary resource for use in JS
-    // deep copy and then "fix" in various ways
-    var resource = JSON.parse(JSON.stringify(dataset.resources[0]));
-    resource.dataset_name = dataset.id;
-    resource.url = '/data/' + id + '.csv';
-    dataset.download_url = resource.url;
-    resource.backend = 'csv';
-    resource.fields = resource.schema.fields;
-  }
   dataset.resources.forEach(function(resource, idx) {
     // set special local url for use in javascript
     var resourceName = resource.name || idx;
-    resource.localurl = '/data/' + id + '/r/' + resourceName + '.csv';
+    resource.localurl = '/data/' + owner + '/' + id + '/r/' + resourceName + '.csv';
   });
   var dataViews = dataset.views || [];
   res.render('data/dataset.html', {

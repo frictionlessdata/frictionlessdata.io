@@ -90,10 +90,16 @@ wordpress website, to dropbox or anywhere else. The one important thing is that:
 ### Add a README
 
 A README is a text file giving (human-readable) information about your dataset.
-You can include anything you like but standard practice is to start with a
-short description of the dataset and to include data specific information in a
-Data section, information on preparing the data in a section called Prepartion
-and data on permissions and licensing in a section called Licensing.
+You can include anything you like but standard practice is to:
+
+* Start with a short description of the dataset (the first sentence and first
+  paragraph should be extractable to provide short standalone descriptions)
+* **Data** section: put data specific information about the data in a Data
+  section 
+* **Preparation** section: put information on preparing the data in a
+  Preparation section
+* **Licensing** section: put informatoin on permissions and licensing go in a
+  Licensing section
 
 The README should be a plain text file (no word or rich text etc) and we
 recommend using markdown to allow for some formatting. If markdown is used the

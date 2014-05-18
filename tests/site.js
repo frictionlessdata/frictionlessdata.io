@@ -16,9 +16,9 @@ describe('Content', function(){
       })
       ;
   });
-  it('home page', function(done){
+  it('data package page', function(done){
     request(app)
-      .get('/standards/data-package')
+      .get('/doc/data-package')
       .expect(200)
       .end(function(err, res) {
         checkContent(res, 'Data Package');
@@ -68,6 +68,7 @@ describe('GET /tools/create.json', function(){
 })
 
 describe('GET /tools/validate', function(){
+  this.timeout(5000);
   it('responds with correct json', function(done){
     var url = '/tools/validate.json';
     url += '?url=' + 'https://raw.github.com/datasets/gold-prices/master/datapackage.json';
@@ -98,6 +99,7 @@ describe('GET /tools/validate', function(){
 
 
 describe('GET /tools/view', function(){
+  this.timeout(5000);
   it('responds with correct info', function(done){
     var url = '/tools/view';
     url += '?url=' + 'https://raw.github.com/datasets/gold-prices/master/datapackage.json';

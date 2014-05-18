@@ -74,9 +74,9 @@ app.get('/tools/dataproxy', routes.toolsDataProxy);
 app.get('/data', routes.data);
 app.get('/data.json', routes.dataJson);
 app.get('/data/search', routes.dataSearch);
-app.get('/data/:id/datapackage.json', routes.dataShowJSON);
-app.get('/data/:id/r/:name.csv', routes.dataShowCSV);
-app.get('/data/:id', routes.dataShow);
+app.get('/data/:owner/:id/datapackage.json', routes.dataShowJSON);
+app.get('/data/:owner/:id/r/:name.csv', routes.dataShowCSV);
+app.get('/data/:owner/:id', routes.dataShow);
 // Community
 app.get('/community/:username/:repo', routes.communityDataView);
 app.get('/community/:username', routes.communityUser);
@@ -87,10 +87,12 @@ function redirect(url) {
   }
 }
 
-var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/datapackage-list.txt';
+var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/github-list.txt';
+var CORE_CATALOG_DEFAULT = '';
 var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;
+var coreUrl = process.env.CORE_CATALOG_URL || CORE_CATALOG_DEFAULT;
 
-routes.catalog.loadURL(url, function(err) {
+routes.catalog.loadUrl(url, coreUrl, function(err) {
   if (err) {
     console.error('Failed to load dataset info');
   }
