@@ -77,6 +77,7 @@ app.get('/data/search', routes.dataSearch);
 app.get('/data/:owner/:id/datapackage.json', routes.dataShowJSON);
 app.get('/data/:owner/:id/r/:name.csv', routes.dataShowCSV);
 app.get('/data/:owner/:id', routes.dataShow);
+app.get('/data/:owner', routes.communityUser);
 // Community
 app.get('/community/:username/:repo', function(req, res) {
   var url = '/data/' + req.params.username + '/' + req.params.repo;

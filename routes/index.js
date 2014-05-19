@@ -300,33 +300,16 @@ exports.dataShow = function(req, res) {
 // Community Data
 // ========================================================
 
-exports.communityDataView = function(req, res) {
-  var username = req.params.username;
-  var url = 'https://raw.github.com/' +
-    [username, req.params.repo, 'master', 'datapackage.json'].join('/');
-  tools.load(url, function(err, dpkg) {
-    if (err) {
-      res.send('<p>There was an error.</p>\n\n' + err.message);
-      return;
-    }
-
-    dpkg.resources.forEach(function(resource, idx) {
-      // set special local url for use in javascript
-      resource.localurl = '/tools/dataproxy/?url=' + encodeURIComponent(resource.url);
-    });
-    var dataViews = dpkg.views || [];
-    res.render('community/dataset.html', {
-      username: username,
-      dataset: dpkg,
-      jsonDataPackage: JSON.stringify(dpkg),
-      dataViews: JSON.stringify(dataViews),
-      url: url
-    });
-  });
-};
-
 exports.communityUser = function(req, res) {
-  var username = req.params.username;
+  var username = req.params.owner;
+
+  // sort of hacky here for backwards compatability
+  // we use to have url structure /data/{dataset-name}
+  if (username in catalog._cache['core']) {
+    res.redirect('/data/core/' + username);
+    return;
+  }
+
   res.render('community/user.html', {
     username: username
   });
