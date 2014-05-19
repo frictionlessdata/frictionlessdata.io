@@ -74,6 +74,12 @@ app.get('/tools/dataproxy', routes.toolsDataProxy);
 app.get('/data', routes.data);
 app.get('/data.json', routes.dataJson);
 app.get('/data/search', routes.dataSearch);
+// backwards compatibility
+app.get('/data/:name/datapackage.json', function(req, res) {
+  res.redirect('/data/core/' + req.params.name + '/datapackage.json');
+});
+
+// more data stuff
 app.get('/data/:owner/:id/datapackage.json', routes.dataShowJSON);
 app.get('/data/:owner/:id/r/:name.csv', routes.dataShowCSV);
 app.get('/data/:owner/:id', routes.dataShow);
