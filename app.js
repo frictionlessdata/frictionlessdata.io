@@ -86,7 +86,16 @@ app.get('/data/:owner/:id', routes.dataShow);
 app.get('/data/:owner', routes.communityUser);
 // Community
 app.get('/community/:username/:repo', function(req, res) {
-  var url = '/data/' + req.params.username + '/' + req.params.repo;
+  // hard-coded redirects
+  var repo = req.params.repo;
+  var changes = {
+    'publicbodies': 'public-bodies',
+    'dataset-gla': 'os-gb-local-gla'
+  };
+  if (repo in changes) {
+    repo = changes[repo];
+  }
+  var url = '/data/' + req.params.username + '/' + repo;
   res.redirect(url);
 });
 
