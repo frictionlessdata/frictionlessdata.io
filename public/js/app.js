@@ -16,39 +16,42 @@ jQuery(window).load(function() {
 
   var isDatasetShow = ($('.dataset.show').length > 0);
   if (isDatasetShow) {
-    // DataFileData will be defined in Jinja template
-    if (DataViews.length > 0) {
-      var datafile = new Catalog.Models.DataFile(DataPackageData);
-      var view = new Catalog.Views.DataFile({
-        model: datafile,
-        el: $('.viewer')
-      });
-      view.render();
-    }
-
-    // create a grid view for each resource in the page
-    $('.show-recline-grid').each(function(idx, $el) {
-      var resourceIndex = $($el).data('resource-index');
-      var reclineDataset = Catalog.dataPackageResourceToDataset(DataPackageData, idx);
-      reclineDataset.fetch().done(function() {
-        var multiViewGridView = new recline.View.MultiView({
-          el: $el,
-          model: reclineDataset,
-          views: [{
-            id: 'grid',
-            label: 'Data Table',
-            view: new recline.View.SlickGrid({
-              model: reclineDataset,
-              state: {
-                fitColumns: true
-              }
-            })
-          }],
-          sidebarViews: []
-        });
-        reclineDataset.query({size: reclineDataset.recordCount});
-      });
-    });
+    datasetShowSetup();
   }
 });
 
+function datasetShowSetup() {
+  // DataFileData will be defined in Jinja template
+  if (DataViews.length > 0) {
+    var datafile = new Catalog.Models.DataFile(DataPackageData);
+    var view = new Catalog.Views.DataFile({
+      model: datafile,
+      el: $('.viewer')
+    });
+    view.render();
+  }
+
+  // create a grid view for each resource in the page
+  $('.show-recline-grid').each(function(idx, $el) {
+    var resourceIndex = $($el).data('resource-index');
+    var reclineDataset = Catalog.dataPackageResourceToDataset(DataPackageData, idx);
+    reclineDataset.fetch().done(function() {
+      var multiViewGridView = new recline.View.MultiView({
+        el: $el,
+        model: reclineDataset,
+        views: [{
+          id: 'grid',
+          label: 'Data Table',
+          view: new recline.View.SlickGrid({
+            model: reclineDataset,
+            state: {
+              fitColumns: true
+            }
+          })
+        }],
+        sidebarViews: []
+      });
+      reclineDataset.query({size: reclineDataset.recordCount});
+    });
+  });
+}

@@ -304,7 +304,7 @@ exports.communityUser = function(req, res) {
   var username = req.params.owner;
 
   // sort of hacky here for backwards compatability
-  // we use to have url structure /data/{dataset-name}
+  // we used to have url structure /data/{dataset-name}
   if (username in catalog._cache['core']) {
     res.redirect('/data/core/' + username);
     return;
