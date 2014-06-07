@@ -269,6 +269,7 @@ exports.dataShowCSV = function(req, res) {
     });
   }
   var url = dataset.resources[resourceIndex].url;
+  res.set('Content-Type', 'text/plain');
   request.get(url).pipe(res);
 };
 

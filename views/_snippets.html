@@ -90,7 +90,11 @@
     <div class="resource-info">
     <h3 id="resource-{{resource.name}}"><i class="icon-file-text-alt"></i> {{resource.name}}</h3>
 
-    <div class="show-recline-grid" data-resource-index="{{loop.index0}}"></div>
+    {% if resource.format == 'geojson' %}
+    <div class="js-show-geojson show-geojson" data-resource-index="{{loop.index0}}"></div>
+    {% else %}
+    <div class="js-show-recline-grid show-recline-grid" data-resource-index="{{loop.index0}}"></div>
+    {% endif %}
 
     <h4>Field Information</h4>
     <table class="table table-bordered table-striped resource-summary">

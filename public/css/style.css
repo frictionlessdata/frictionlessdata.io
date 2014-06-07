@@ -392,6 +392,10 @@ table.resource-summary td
   margin-right: 0;
 }
 
+.dataset.show .show-geojson {
+  height: 400px;
+}
+
 .moreinfo {
   margin-top: 10px;
 }

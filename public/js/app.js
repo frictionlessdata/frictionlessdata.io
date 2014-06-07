@@ -32,9 +32,9 @@ function datasetShowSetup() {
   }
 
   // create a grid view for each resource in the page
-  $('.show-recline-grid').each(function(idx, $el) {
+  $('.js-show-recline-grid').each(function(idx, $el) {
     var resourceIndex = $($el).data('resource-index');
-    var reclineDataset = Catalog.dataPackageResourceToDataset(DataPackageData, idx);
+    var reclineDataset = Catalog.dataPackageResourceToDataset(DataPackageData, resourceIndex);
     reclineDataset.fetch().done(function() {
       var multiViewGridView = new recline.View.MultiView({
         el: $el,
@@ -52,6 +52,26 @@ function datasetShowSetup() {
         sidebarViews: []
       });
       reclineDataset.query({size: reclineDataset.recordCount});
+    });
+  });
+
+  $('.js-show-geojson').each(function(idx, $el) {
+    $el = $($el);
+    var resourceIndex = $el.data('resource-index');
+    var resource = DataPackageData.resources[resourceIndex];
+    var dataUrl = resource.localurl || resource.url;
+    // TODO: error handling
+    $.getJSON(dataUrl, function(geoJsonData) {
+      var map = new L.Map($el.get(0));
+      var mapUrl = "//otile{s}-s.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png";
+      var osmAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Tiles Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="//developer.mapquest.com/content/osm/mq_logo.png">';
+      var bg = new L.TileLayer(mapUrl, {maxZoom: 18, attribution: osmAttribution ,subdomains: '1234'});
+      map.addLayer(bg);
+
+      var myLayer = L.geoJson().addTo(map);
+      myLayer.addData(geoJsonData);
+
+      map.fitBounds(myLayer.getBounds());
     });
   });
 }
