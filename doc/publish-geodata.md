@@ -8,8 +8,12 @@ geodata format to use when publishing geodata.
 
 Instead we recommend a few formats and show how you would publish these.
 
-
 ## GeoJSON
+
+Examplar Geo Data Packages using `geojson`:
+
+* [Example Geo Data Package](https://github.com/datasets/ex-geojson), with `multipolygon` and `point` geometry
+* [Traffic signs of Hansbeke, Belgium](https://github.com/peterdesmet/traffic-signs-hansbeke), `point` geometries with described properties
 
 ## TopoJSON
 
