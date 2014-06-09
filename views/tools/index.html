@@ -41,10 +41,10 @@ Tools and Plugins
 
 <div class="row tools">
   <div class="span8">
-    <h2>Using With ...</h2>
+    <h2>Using Tabular Data Packages With ...</h2>
 
     <div class="alert">
-      These "Using with" examples require <a href="/standards/simple-data-format">Simple Data Format Data Packages</a> where the data in the Data Package is stored in CSV (all the <a href="/data">datasets on this website</a> are in this format)
+      These "Using with" examples require <a href="/doc/tabular-data-package">Tabular Data Packages</a> where the data in the Data Package is stored in CSV (all the <a href="/data">datasets on this website</a> are in this format)
     </div>
 
     <h3>Using with Excel</h3>
@@ -55,17 +55,26 @@ Tools and Plugins
 
 
     <h3>Using with R and R Client</h3>
-    <p><a href="https://github.com/QBRC/RODProt">R Open Data Protocols Library with support for Data Packages and Simple Data Format</a></p>
+    <p><a href="https://github.com/QBRC/RODProt">R Open Data Protocols Library with support for Data Packages and Tabular Data Package</a></p>
 
     <h3>Using with Postgresql</h3>
-    <p>There's a <a href="https://github.com/okfn/dptools/blob/master/bin/load-postgresql.py">python script (with no dependenciess) to load a Simple Data Format Data Package into Postgresql</a></p>
+    <p>There's a <a href="https://github.com/okfn/dptools/blob/master/bin/load-postgresql.py">python script (with no dependenciess) to load a Tabular Data Package Data Package into Postgresql</a></p>
 
     <h3>Using with SQLite</h3>
-    <p>There is a simple <a href="https://github.com/okfn/dptools/blob/master/bin/load-sqlite.py">python script (no dependencies) to load a Simple Data Format Data Package into SQLite</a></p>
+    <p>There is a simple <a href="https://github.com/okfn/dptools/blob/master/bin/load-sqlite.py">python script (no dependencies) to load a Tabular Data Packages into SQLite</a></p>
 
     <hr />
 
     <h2>Libraries</h2>
+    <h3>datapackage-* (nodejs)</h3>
+    <p>There is a comprehensive set of NodeJS libraries which are "officially" supported.</p>
+    <ul>
+      <li><a href="https://github.com/okfn/dpm">data package manager (dpm)</a> - overall library and command line</li>
+      <li><a href="https://github.com/okfn/datapackage-init">datapackage-init</a> - create Data Packages by creating <code>datapackage.json</code> files</li>
+      <li><a href="https://github.com/okfn/datapackage-read">datapackage-read</a> - load and access Data Packages (<code>datapackage.json</code>)</li>
+      <li><a href="https://github.com/okfn/datapackage-validate">datapackage-validate</a> - validate Data Packages (<code>datapackage.json</code>)</li>
+    </ul>
+
     <h3>datapackage (python module)</h3>
     <p>
       A module useful for loading and managing data packages in Python.
@@ -79,13 +88,19 @@ Tools and Plugins
     </p>
 
     <h3>R Library</h3>
-    <p><a href="https://github.com/QBRC/RODProt">R Library with support for Data Packages and Simple Data Format</a></p>
+    <p><a href="https://github.com/QBRC/RODProt">R Library with support for Data Packages and Tabular Data Packages</a></p>
 
     <h3>Ruby Library</h3>
     <p><a href="https://github.com/theodi/datapackage.rb">Ruby library</a> for parsing and validating both data packages and simple data format packages.</p>
     <hr />
 
+    <h2>Command Line</h2>
+    <h3>Data Package Manager (dpm)</h3>
+    <p><a href="https://github.com/okfn/dpm">data package manager (dpm)</a> - comprehensive command line tool.</p>
+
     <h2>Other Tools</h2>
+    <h3>Tabular Data Package Data Validator</h3>
+    <p><a href="http://csvlint.io/">CSVLint</a></p>
 
     <h3>Git Data Package Viewer</h3>
     <p>
