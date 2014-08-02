@@ -1,24 +1,31 @@
 jQuery(window).load(function() {
-  // set up data find typeahead
-  $.getJSON('/data.json', function(data) {
-    var sources = _.pluck(data.datasets, 'title');
-    $('.navbar .typeahead').typeahead({
-      source: sources,
-      updater: function(item) {
-        var _id = _.filter(data.datasets, function(ds) {
-          return (ds.title == item);
-        })[0].id
-          ;
-        window.location = '/data/' + _id;
-      }
-    });
-  });
-
   var isDatasetShow = ($('.dataset.show').length > 0);
   if (isDatasetShow) {
     datasetShowSetup();
   }
+
+  var isDatasetSearch = ($('.js-dataset-search').length > 0);
+  if (isDatasetSearch) {
+    datasetSearchSetup();
+  }
 });
+
+function datasetSearchSetup() {
+  // set up data find typeahead
+  $.getJSON('/data.json', function(data) {
+    var sources = _.pluck(data.datasets, 'title');
+    $('.js-dataset-search').typeahead({
+      source: sources,
+      updater: function(item) {
+        var dataset = _.filter(data.datasets, function(ds) {
+          return (ds.title == item);
+        })[0]
+          ;
+        window.location = '/data/' + dataset.owner + '/' + dataset.name;
+      }
+    });
+  });
+}
 
 function datasetShowSetup() {
   // DataFileData will be defined in Jinja template
