@@ -14,6 +14,11 @@ function datasetSearchSetup() {
   // set up data find typeahead
   $.getJSON('/data.json', function(data) {
     var sources = _.pluck(data.datasets, 'title');
+    // turns out we have some data packages with no title
+    // need to filter them out or typeahead fails ...
+    sources = _.filter(sources, function(title) {
+      return Boolean(title);
+    });
     $('.js-dataset-search').typeahead({
       source: sources,
       updater: function(item) {
