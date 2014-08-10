@@ -21,7 +21,7 @@ But with data we're still largely stuck at this early stage: every time you want
 
 What do we need to do for the working with data to be like cooking today - where you get to spend your time making the cake (creating insights) not preparing and collecting the ingredients (digging up and cleaning data)?
 
-The answer: radical improvements in the "logistics2 of data associated with specialisation and standardisation. In analogy with food we need standard systems of "measurement", packaging, and transport so that its easy to get data from its original source into the application where I can start working with it.
+The answer: radical improvements in the logistics of data associated with specialisation and standardisation. In analogy with food we need standard systems of "measurement", packaging, and transport so that its easy to get data from its original source into the application where I can start working with it.
 
 # What We Want To Do
 
