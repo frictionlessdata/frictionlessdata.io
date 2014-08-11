@@ -36,29 +36,30 @@ The idea behind Data Package and Tabular Data Package is to **decouple** data pu
 
 [data-package]: /doc/data-package
 [tabular-data-package]: /doc/tabular-data-package
+[data-package-examples]: /doc/data-package#examples
+[tabular-data-package-examples]: /doc/tabular-data-package#examples
+[tools-create]: /tools/create
+[tools-view]: /tools/view
 
-<div class="span4 offset1">
-  <div class="well">
-  <h3 style="margin-top: 0;">Quick Start</h3>
+<div class="well">
+### Quick start
 
-  <h4>Data Package</h4>
-  <ul>
-    <li><a href="/doc/data-package">Overview</a></li>
-    <li><a href="/doc/data-package#examples">Examples</a></li>
-  </ul> 
-  <h4>Tabular Data Package</h4>
-  <ul>
-    <li><a href="/doc/tabular-data-package">Overview</a></li>
-    <li><a href="/doc/tabular-data-package#examples">Examples</a></li>
-  </ul>
-  <h4>CSV / Comma Separated Variables</h4>
-  <ul>
-    <li><a href="/doc/csv">Overview</a></li>
-  </ul>
+#### Data Package
 
-  <h4>Tools</h4>
-  <ul>
-    <li><a href="/tools/create">Create a Data Package from your existing data</a></li>
-    <li><a href="/tools/view">View a Data Package</a></li>
-  </ul>
+* [Overview](data-package)
+* [Examples](data-package-examples)
+
+#### Tabular Data Package
+
+* [Overview](tabular-data-package)
+* [Examples](tabular-data-package-examples)
+
+#### CSV / Comma Separated Variables</h4>
+
+* [Overview](csv)
+
+#### Tools
+
+* [Create a Data Package from your existing data](tools-create)
+* [View a Data Package](tools-view)
 </div>
