@@ -1,6 +1,6 @@
 {% macro dataset_summary(dataset) -%}
   <div class="dataset summary">
-    <img src="http://assets.okfn.org/p/data.okfn.org/img/icon-data-package.png"
+    <img src="http://assets.okfn.org/p/data/img/icon-128.png"
       alt="{{dataset.title}}" class="logo" />
     <h3><a href="/data/{{dataset.owner}}/{{dataset.id}}">{{dataset.title}}</a></h3>
     <div class="description">{{dataset.description}}</div>
@@ -33,7 +33,7 @@
   <div class="row">
     <div class="span8">
       <img src="{{dataset.image or
-        'http://assets.okfn.org/p/data.okfn.org/img/icon-data-package.png'}}"
+        'http://assets.okfn.org/p/data/img/icon-128.png'}}"
         alt="{{dataset.title}}" class="logo" />
       <div class="description">{{dataset.description}} &mdash; <a href="#readme">Read more</a></div>
 
