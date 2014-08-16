@@ -105,11 +105,6 @@ function redirect(url) {
   }
 }
 
-var CATALOG_URL_DEFAULT = 'http://raw.github.com/datasets/registry/master/github-list.txt';
-var CORE_CATALOG_DEFAULT = 'http://raw.github.com/datasets/registry/master/datapackage-list.txt';
-var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;
-var coreUrl = process.env.CORE_CATALOG_URL || CORE_CATALOG_DEFAULT;
-
 routes.bootApp(function(err) {
   if (err) {
     console.error(err);
