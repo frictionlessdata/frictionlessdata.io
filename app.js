@@ -110,9 +110,10 @@ var CORE_CATALOG_DEFAULT = 'http://raw.github.com/datasets/registry/master/datap
 var url = process.env.CATALOG_URL|| CATALOG_URL_DEFAULT;
 var coreUrl = process.env.CORE_CATALOG_URL || CORE_CATALOG_DEFAULT;
 
-routes.catalog.loadUrl(url, coreUrl, function(err) {
+routes.bootApp(function(err) {
   if (err) {
-    console.error('Failed to load dataset info');
+    console.error(err);
+    throw err;
   }
   app.listen(app.get('port'), function() {
     console.log("Listening on " + app.get('port'));

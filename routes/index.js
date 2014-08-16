@@ -4,12 +4,33 @@ var fs = require('fs')
   , csv = require('csv')
   , underscore = require('underscore')
 
+  , config = require('../lib/config')
   , tools = require('datapackage')
   , model = require('../lib/model.js')
   ;
 
 var catalog = new model.Catalog();
 exports.catalog = catalog;
+
+// ========================================================
+// Boot
+// ========================================================
+
+exports.bootApp = function(cb) {
+  // allow for booting without any data packages
+  if (!config.CATALOG_LIST) {
+    console.warn('Booting without any data packages loaded.');
+    cb();
+    return;
+  }
+
+  catalog.loadUrl(config.CATALOG_LIST, config.CORE_CATALOG_LIST, function(err) {
+    if (err) {
+      console.error('Failed to load dataset info');
+    }
+    cb(err);
+  });
+}
 
 // ========================================================
 // Core content

@@ -2,15 +2,37 @@ The code for the site at <http://data.okfn.org>
 
 ## Installing
 
+### 1. Install dependencies
+
 Requires NodeJS (>= v0.8).
 
 Install the requirements (in package.json):
 
     npm install .
 
-Run the web application locally:
+### Configure
+
+*This is optional - the app will work out of the box with the default
+configuration (see lib/config.js).*
+
+You can configure the app by setting environment variables:
+
+* `CATALOG_LIST`: a URL to a Data Package Catalog List - a txt
+  file with each line being a URL to a Data Package. See e.g.
+  http://raw.github.com/datasets/registry/master/catalog-list.txt
+* `CORE_CATALOG_LIST` same as previous but points to list of [Core Data
+  Packages][core] e.g.
+  http://raw.github.com/datasets/registry/master/datapackage-list.txt
+
+[core]: http://data.okfn.org/roadmap/core-datasets
+
+### Run the web application
+
+Run the web app locally:
 
     node app.js
+
+If you want to do a deployment to Heroku see the next section.
 
 ## Deployment to Heroku
 
