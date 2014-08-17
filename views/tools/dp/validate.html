@@ -37,7 +37,10 @@ Data Package Validator - Tools
 <ul>
 {% for error in result.errors %}
   <li>
-    [{{error.type.toUpperCase()}}] {{error.message}}
+    {% if error.type %}
+    [{{error.type.toUpperCase()}}]
+    {% endif %}
+    {{error.message}}
     {% if error.type == 'json' %}
     (line: {{error.line}}, character: {{error.character}})
     {% endif %}
