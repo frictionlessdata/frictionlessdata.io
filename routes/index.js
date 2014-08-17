@@ -155,18 +155,6 @@ exports.tools = function(req, res) {
   res.render('/tools/index.html', {});
 };
 
-// /tools/creator.json?name=abc&title=
-exports.toolsDpCreateJSON = function(req, res) {
-  var out = {};
-  tools.create(req.query, function(error, dp) {
-    if (error) {
-      res.send(500, error)
-    } else {
-      res.json(dp);
-    }
-  });
-};
-
 exports.toolsDpCreate = function(req, res) {
   res.render('tools/dp/create.html');
 };

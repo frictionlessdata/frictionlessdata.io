@@ -1,11 +1,5 @@
 # API
 
-## Create DataPackage.json
-
-```
-GET /tools/create.json?url=...
-```
-
 ## Validate DataPackage.json
 
 ```

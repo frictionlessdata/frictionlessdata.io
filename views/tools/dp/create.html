@@ -7,30 +7,53 @@ Data Package Creator - Tools
 {% block content %}
 <h1>DataPackage.json Creator</h1>
 
-<form class="form js-info">
-  <input type="text" name="url" placeholder="Paste link to data file here" class="span6" />
-  <br />
-  <button class="btn">Go</button>
-</form>
+  <div class="row">
+    <div class="span6">
+      <form class="form form-horizontal js-dp">
+        <div class="control-group">
+          <label class="control-label">Title</label>
+          <div class="controls">
+            <input type"text" name="title" />
+          </div>
+        </div>
 
-<a href="/tools/create.json" class="js-apiurl">Raw JSON URL (API)</a>
-<textarea class="result span8" style="height: 400px; display: block;"></textarea>
+        <div class="control-group">
+          <label class="control-label">Name</label>
+          <div class="controls">
+            <input type"text" name="name" />
+          </div>
+        </div>
 
+        <div class="control-group">
+          <label class="control-label">License</label>
+          <div class="controls">
+            <select name="license">
+            </select>
+          </div>
+        </div>
+
+        <h3>Add data file (CSV)</h3>
+        <div class="control-group">
+          <label class="control-label">File</label>
+          <div class="controls">
+            <input type="file" />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="span6">
+      <textarea class="js-dpjson" style="height: 100%; min-height: 450px; width: 100%;" placeholder="DataPackage.json JSON will appear here"></textarea>
+    </div>
+  </div>
 {% endblock %}
 
-
 {% block scripts %}
-<script type="text/javascript">
-  jQuery('form.js-info').submit(function(e) {
-    e.preventDefault();
-    var url = $('form.js-info input').val();
-    var api = '/tools/create.json?resource.url=' + url;
-    $('.js-apiurl').attr('href', api);
-    $.get(api, function(data) {
-      var $o = $('.result');
-      $o.val(JSON.stringify(data, null, 2));
-      $o[0].style.height = (25+$o[0].scrollHeight)+"px";
-    });
-  });
-</script>
+<script type="text/javascript" src="http://okfnlabs.org/datapackage-init/demo/bundle.js"></script>
+<script type="text/javascript" src="http://okfnlabs.org/datapackage-init/demo/app.js"></script>
 {% endblock %}
