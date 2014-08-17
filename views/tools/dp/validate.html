@@ -10,6 +10,9 @@ Data Package Validator - Tools
 </div>
 
 <form class="form js-info" action="">
+  <p style="float: right;">
+    <small><a href="/doc/api">API also available</a></small>
+  </p>
   <input type="text" name="url" value="{{url}}" placeholder="Paste link to your datapackage.json here" class="span6" />
   <br />
   <button class="btn">Validate</button>
@@ -33,9 +36,19 @@ Data Package Validator - Tools
 
 <ul>
 {% for error in result.errors %}
-  <li>{{error.message}}</li>
+  <li>
+    [{{error.type.toUpperCase()}}] {{error.message}}
+    {% if error.type == 'json' %}
+    (line: {{error.line}}, character: {{error.character}})
+    {% endif %}
+  </li>
 {% endfor %}
 </ul>
+
+<pre>
+{{errorsAsJson}}
+</pre>
+
 {% endif %}
 </div>
 {% endblock %}

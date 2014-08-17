@@ -7,6 +7,8 @@ var fs = require('fs')
   , config = require('../lib/config')
   , tools = require('datapackage')
   , model = require('../lib/model.js')
+  , spec = require('datapackage-spec')
+  , validate  = require('datapackage-validate')
   ;
 
 var catalog = new model.Catalog();
@@ -171,23 +173,22 @@ exports.toolsDpCreate = function(req, res) {
 
 exports.toolsDpValidateJSON = function(req, res) {
   // handle base urls as well as full urls
-  var dpurl = req.query.url.replace(/datapackage.json$/, '');
-  var dpurl = dpurl.replace(/\/$/, '');
-  dpurl += '/datapackage.json';
-  tools.validateUrl(dpurl, function(data) {
+  var dpurl = spec.parse(req.query.url).dataPackageJsonUrl;
+  validate.validateUrl(dpurl, function(data) {
     res.json(data);
   });
 };
 
 exports.toolsDpValidate = function(req, res) {
-  var url = req.query.url;
+  var url = spec.parse(req.query.url).dataPackageJsonUrl;
   if (!url) {
     res.render('tools/dp/validate.html');
   } else {
-    tools.validateUrl(url, function(data) {
+    validate.validateUrl(url, function(data) {
       res.render('tools/dp/validate.html', {
         url: url,
-        result: data
+        result: data,
+        errorsAsJson: JSON.stringify(data.errors, null, 2)
       });
     });
   }
