@@ -4,11 +4,15 @@
 
 Tutorials on how to publish data as data packages.
 
+* [Publish Data as Data Packages - Introduction][intro]
 * [Publish Tabular Data][tabular]
 * [Publish Geospatial Data (Geodata)][geodata]
+* [Publish Any Kind of Data][any]
 
+[intro]: /doc/publish
 [tabular]: /doc/publish-tabular
-[geodata]: /doc/publish-geodata
+[geodata]: /doc/publish-geo
+[any]: /doc/publish-any
 
 ## Guides to Standards
 

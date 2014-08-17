@@ -46,7 +46,7 @@ app.get('/about/contribute', function(req, res) {
   res.redirect('/contribute');
 });
 app.get('/contribute', routes.contribute);
-app.get('/publish', routes.publish);
+app.get('/publish', redirect('/doc/publish'));
 app.get('/roadmap', routes.roadmap);
 app.get('/roadmap/core-datasets', function(req, res) {
   res.render('core-datasets.html', {title: 'Core Datasets'});

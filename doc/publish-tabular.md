@@ -1,6 +1,6 @@
 ## Publishing Tabular Data
 
-Here's how to publish your tabular data as [Simple Data Format Data
+Here's how to publish your tabular data as [Tabular Data
 Packages][sdf]. There are 4 simple steps:
 
 1. Create a folder (directory) - this folder will hold your "data package"
