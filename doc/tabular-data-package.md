@@ -11,7 +11,7 @@ the following key features:
 
 As suggested by the name, Tabular Data Packages extend and specialize the [Data Package][dp] format for the specific case where the data is tabular.
 
-[dp]: ../data-package
+[dp]: ./data-package
 [spec]: http://www.dataprotocols.org/en/latest/simple-data-format.html
 
 <div class="row">
