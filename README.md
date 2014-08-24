@@ -1,6 +1,14 @@
-The code for the site at <http://data.okfn.org>
+This repo performs a few different purposes:
 
-## Installing
+* An [issue tracker](https://github.com/okfn/data.okfn.org/issues) for
+  Frictionless Data (<http://data.okfn.org/>) activities
+* Source repo for documentation for Frictionless Data project (docs themselves
+  deployed at <http://data.okfn.org/doc/>)
+* The simple NodeJS app that runs the <http://data.okfn.org> website
+
+----
+
+## Installing the App
 
 ### 1. Install dependencies
 
