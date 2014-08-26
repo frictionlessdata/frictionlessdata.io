@@ -45,14 +45,18 @@
 <div class="row" id="contribute">
   <div class="span8 offset2">
     <h2>Contribute</h2>
-    <p>We need help suggesting, preparing and maintaining Data Package datasets. Note that:</p>
+    <p>We need help suggesting, preparing and maintaining a set of "core" datasets as Data Packages. Note that:</p>
     <ul>
-      <li>We are not a general registry for data &ndash; we have <a href="#criteria">specific criteria</a> for what the datasets we list</li>
       <li>We package data rather than create it &ndash; our focus is to take source data and ensure it is of high quality and in a standard form</li>
       <li>We preserve a clean separation between the data source, the data package and this registry &ndash; for example, data packages are stored in git repos hosted separately (preferably github)</li>
     </ul>
 
-    <h4>Suggest a Dataset</h4>
+    <h3 id="shortlist">Shortlisted Datasets</h3>
+    <p>The list of datasets shortlisted for "core" is kept as a list of github issues:</p>
+    <p><a href="https://github.com/datasets/registry/issues">Official list of shortlisted "core" datasets</a></p>
+    <p>Many of the shortlisted datasets need a "Packager" &ndash; someone to help tidy up the data and turn it into a Data Package (see instructions below). If you are interested in helping prep a dataset just comment on the issue and we'll assign it to you.</p>
+
+    <h3>Suggest a Dataset to Shortlist</h3>
     <p>To propose a dataset for addition you <a href="https://github.com/datasets/registry/issues/new">open an issue in the Registry</a> with the details of the proposed dataset.</p>
 
     <h4>Preparing and Submitting a Dataset</h4>
@@ -63,16 +67,16 @@
       <li>On approval: add to the <a href="https://github.com/datasets/registry">registry list</a></li>
     </ul>
 
-    <h3 id="prepare">Preparing a Dataset</h3>
+    <h4 id="prepare">Preparing a Dataset</h4>
     <p>All datasets MUST be provided in source form as "<a
       href="/standards/data-package/">data
-      packages</a>" and if tabular SHOULD be in <a href="/standards/simple-data-format">Simple Data Format</a>. We also recommend storing in
+      packages</a>" and if tabular SHOULD be in <a href="/doc/tabular-data-package">Tabular Data Package</a>. We also recommend storing in
     a git repo on GitHub.</p>
 
     <p>Read the <a href="/publish">Publishing Data Packages guide to find out more</a>.</p>
     
-    <h3 id="criteria">Assessment Criteria</h3>
-    <p>For dataset to become officially published &ndash; and therefore featured on this site &ndash; it is assessed against the following criteria:</p>
+    <h2 id="criteria">Assessment Criteria</h2>
+    <p>For dataset to be designated as "core" it should meet the following criteria:</p>
     <ul>
       <li>Quality - the dataset must be well structured</li>
       <li>Relevance and importance - the focus at present is on indicators and reference data</li>
