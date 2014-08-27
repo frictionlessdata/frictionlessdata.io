@@ -109,16 +109,6 @@ exports.roadmap = function(req, res) {
   }
 };
 
-exports.publish = function(req, res) {
-  fs.readFile('doc/publish-tabular.md', 'utf8', function(err, text) {
-    var content = marked(text);
-    res.render('publish.html', {
-      title: 'Publishing Data',
-      content: content
-    });
-  });
-};
-
 exports.standards = function(req, res) {
   res.render('/standards/index.html', {title: 'Standards'});
 };
