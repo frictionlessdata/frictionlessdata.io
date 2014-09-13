@@ -2,6 +2,8 @@ var fs = require('fs')
   , request = require('request')
   , marked = require('marked')
   , csv = require('csv')
+  , parse = require('csv-parse')
+  , transform = require('stream-transform')
   , underscore = require('underscore')
 
   , config = require('../lib/config')
@@ -248,13 +250,25 @@ exports.dataPackageShowJSON = function(req, res) {
 };
 
 // we support paths like
-// /{dataset-id}/r/{name}.csv
+// /{dataset-id}/r/{name}[(empty)|.csv|.json|.html]
 // where name is either resource name or index of the resource
-exports.dataShowCSV = function(req, res) {
+exports.dataShow = function(req, res) {
   var id = req.params.id
-    , resourceName = req.params.name
+    , resourceFullName = req.params.name
+    , nameParts = resourceFullName.split('.')
+    , extension = nameParts.length > 1 ? nameParts.pop() : ''
+    , resourceName = nameParts.join('.')
+    // TODO: rather than defaulting to 0, let's 404 if we don't match
     , resourceIndex = 0
     ;
+
+  // can have '.' in resource name so have to be careful we did take part of name as extension
+  if (['', 'csv', 'json', 'html'].indexOf(extension) == -1) {
+    extension = '';
+    resourceName += '.' + extension;
+  }
+
+  // identify the resource index
   var dataset = catalog.get(req.params.owner, id)
   if (!dataset || !dataset.resources.length > 0) {
     res.send(404, 'Not Found');
@@ -269,8 +283,45 @@ exports.dataShowCSV = function(req, res) {
     });
   }
   var url = dataset.resources[resourceIndex].url;
-  res.set('Content-Type', 'text/plain');
-  request.get(url).pipe(res);
+
+  if (extension == '') {
+    res.set('Content-Type', 'text/plain');
+    request.get(url).pipe(res);
+  }
+  else if (extension == 'csv') { // TODO: we are assuming the resource is csv here - what if it isn't ...
+    res.set('Content-Type', 'text/plain');
+    request.get(url).pipe(res);
+  } else if (extension == 'json') {
+    // TODO: use any csv dialect description info in the data package to parse
+
+    // problem is we need to add ',' between records and '[' at start and ']' at end
+    // got everything done but the ']' at the end
+//    res.set('Content-Type', 'application/json; charset=utf-8');
+//    var parser = parse({columns: true});
+//    var count = -1;
+//    var transformer = transform(function(data) {
+//      count++;
+//      var out = JSON.stringify(data);
+//      if (count != 0) out = ',\n' + out;
+//      return out;
+//    });
+//    // transformer.on('finish', 
+//    res.write('[\n');
+//    parser.on('finish', function() {
+//      // res.send(']');
+//    });
+//    request.get(url).pipe(parser).pipe(transformer).pipe(res);
+
+    // non-streaming option :-(
+    var parser = parse({columns: true}, function(err, rows) {
+      res.json(rows);
+    });
+    request.get(url).pipe(parser);
+  } else if (extension == 'html') {
+    res.send('TODO');
+  } else {
+    res.send(404, 'Not Found');
+  }
 };
 
 exports.dataPackageShow = function(req, res) {

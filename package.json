@@ -14,6 +14,8 @@
       "marked": "",
       "JSV": "",
       "csv": "",
+      "csv-parse": "",
+      "stream-transform": "",
       "underscore": "",
       "datapackage": "0.3.0",
       "datapackage-spec": "git://github.com/okfn/datapackage-spec",

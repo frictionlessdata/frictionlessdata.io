@@ -80,7 +80,8 @@ app.get('/data/:name/datapackage.json', function(req, res) {
 
 // more data stuff
 app.get('/data/:owner/:id/datapackage.json', routes.dataPackageShowJSON);
-app.get('/data/:owner/:id/r/:name.csv', routes.dataShowCSV);
+// data "API"
+app.get('/data/:owner/:id/r/:name', routes.dataShow);
 app.get('/data/:owner/:id', routes.dataPackageShow);
 app.get('/data/:owner', routes.communityUser);
 // Community
