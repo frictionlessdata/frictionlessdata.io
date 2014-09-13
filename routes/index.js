@@ -343,6 +343,7 @@ exports.dataPackageShow = function(req, res) {
   var dataViews = dataset.views || [];
   res.render('data/dataset.html', {
     dataset: dataset,
+    showDataApi: true,
     jsonDataPackage: JSON.stringify(dataset),
     dataViews: JSON.stringify(dataViews)
   });

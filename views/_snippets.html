@@ -28,7 +28,7 @@
   {% endfor %}
 {%- endmacro %}
 
-{% macro dataset_show(dataset, jsonDataPackage, dataViews) -%}
+{% macro dataset_show(dataset, jsonDataPackage, dataViews, showDataApi) -%}
 <div class="dataset show">
   <div class="row">
     <div class="span8">
@@ -80,6 +80,15 @@
             <td>{{resource.title}}</td>
             <td>{{resource.format}}</td>
             <td class="download truncate"><a href="{{resource.url}}"><i class="icon-download-alt"></i> Download</a></td>
+            {% if showDataApi %}
+            <td class="">
+              [Local:
+              <a href="/data/core/{{dataset.name}}/r/{{resource.name}}.csv"><i class="icon-download-alt"></i> CSV</a>
+              &ndash;
+              <a href="/data/core/{{dataset.name}}/r/{{resource.name}}.json"><i class="icon-download-alt"></i> JSON</a>
+              ]
+            </td>
+            {% endif %}
           </tr>
           {% endfor %}
         </tbody>
