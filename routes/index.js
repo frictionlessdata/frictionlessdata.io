@@ -238,7 +238,7 @@ exports.dataSearch = function(req, res) {
   res.render('data/search.html', {q: q, datasets: datasets, total: total});
 };
 
-exports.dataShowJSON = function(req, res) {
+exports.dataPackageShowJSON = function(req, res) {
   var id = req.params.id;
   var dataset = catalog.get(req.params.owner, id)
   if (!dataset) {
@@ -273,7 +273,7 @@ exports.dataShowCSV = function(req, res) {
   request.get(url).pipe(res);
 };
 
-exports.dataShow = function(req, res) {
+exports.dataPackageShow = function(req, res) {
   var id = req.params.id
     , owner = req.params.owner
     ;
