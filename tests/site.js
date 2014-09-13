@@ -36,37 +36,6 @@ function checkContent(res, expected) {
   }
 }
 
-describe('GET /tools/create.json', function(){
-  it('respond with json', function(done){
-    request(app)
-      .get('/tools/create.json')
-      .expect('Content-Type', /json/)
-      .expect(200, done);
-  })
-  it('responds with correct json', function(done){
-    var gpurl = 'https://raw.github.com/datasets/gold-prices/master/data/data.csv';
-    var url = '/tools/create.json?resource.url=' + gpurl;
-    request(app)
-      .get(url)
-      .expect('Content-Type', /json/)
-      .end(function(err, res) {
-        if (err) done(err);
-
-        var out = res.body;
-        assert.equal(out.licenses[0].id, 'odc-pddl');
-        assert.equal(out.name, '');
-
-        var res = out.resources[0];
-        assert.equal(out.resources[0].url, gpurl);
-        // assert.equal(res.schema.fields[0].type, 'date');
-        // assert.equal(res.schema.fields[1].type, 'number');
-        assert.equal(res.schema.fields[0].type, 'string');
-        assert.equal(res.schema.fields[1].type, 'string');
-        done();
-      });
-  })
-})
-
 describe('GET /tools/validate', function(){
   this.timeout(5000);
   it('responds with correct json', function(done){
