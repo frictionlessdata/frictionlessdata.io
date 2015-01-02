@@ -9,7 +9,7 @@ var fs = require('fs')
   , config = require('../lib/config')
   , tools = require('datapackage')
   , model = require('../lib/model.js')
-  , spec = require('datapackage-spec')
+  , spec = require('datapackage-identifier')
   , validate  = require('datapackage-validate')
   ;
 

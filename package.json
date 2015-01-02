@@ -18,7 +18,7 @@
       "stream-transform": "",
       "underscore": "",
       "datapackage": "0.3.0",
-      "datapackage-spec": "git://github.com/okfn/datapackage-spec",
+      "datapackage-identifier": "git://github.com/okfn/datapackage-identifier",
       "datapackage-validate": ">=0.2.3",
       "datapackage-read": ""
   }
