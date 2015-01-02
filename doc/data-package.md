@@ -23,7 +23,7 @@ The Data Package approach provides a **very simple**, **web friendly**,
 <div class="row">
 <div class="span2">
 <h3>Full Spec</h3>
-There is a full **<a href="http://www.dataprotocols.org/data-packages/">RFC-style specification of Data Package format</a>**
+There is a full **<a href="http://dataprotocols.org/data-packages/">RFC-style specification of Data Package format</a>**
 on the Data Protocols website to complement this quick introduction.
 </div>
 <div class="span2">
@@ -81,6 +81,8 @@ Here is a much more extensive example of a datapackage JSON file:
 **Note:** a complete list of potential attributes and their meaning can be found in the
 [full Data Package spec][spec].
 </div>
+
+[spec]: http://dataprotocols.org/data-packages/
 
 <div class="alert alert-info">
 **Note:** the Data Package format is **extensible** in that it allows you add
