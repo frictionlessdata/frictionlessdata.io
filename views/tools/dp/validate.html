@@ -34,6 +34,7 @@ Data Package Validator - Tools
   </span>
 </h2>
 
+{% if not result.valid %}
 <ul>
 {% for error in result.errors %}
   <li>
@@ -51,6 +52,7 @@ Data Package Validator - Tools
 <pre>
 {{errorsAsJson}}
 </pre>
+{% endif %}
 
 {% endif %}
 </div>
