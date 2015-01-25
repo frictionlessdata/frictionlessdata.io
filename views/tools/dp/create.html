@@ -28,6 +28,10 @@ Data Package Creator - Tools
           <label class="control-label">License</label>
           <div class="controls">
             <select name="license">
+                <option value='' />
+              {% for id, license in licenses %}
+                <option value={{id}}>{{license.title}}</option>
+              {% endfor %}
             </select>
           </div>
         </div>

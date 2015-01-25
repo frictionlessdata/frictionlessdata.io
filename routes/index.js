@@ -11,6 +11,8 @@ var fs = require('fs')
   , model = require('../lib/model.js')
   , spec = require('datapackage-identifier')
   , validate  = require('datapackage-validate')
+
+  , licenses = require('../data/licenses')
   ;
 
 var catalog = new model.Catalog();
@@ -148,7 +150,9 @@ exports.tools = function(req, res) {
 };
 
 exports.toolsDpCreate = function(req, res) {
-  res.render('tools/dp/create.html');
+  res.render('tools/dp/create.html', {
+    licenses: licenses
+  });
 };
 
 exports.toolsDpValidateJSON = function(req, res) {
