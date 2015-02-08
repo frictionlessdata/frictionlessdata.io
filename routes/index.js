@@ -378,3 +378,18 @@ exports.renderMarkdown = function(filepath, title, res) {
   });
 }
 
+// ========================================================
+// Admin Reload
+// ========================================================
+
+exports.adminReload = function(req, res) {
+  catalog.loadUrl(config.CATALOG_LIST, config.CORE_CATALOG_LIST, function(err) {
+    msg = '<p style="background-color: green; padding: 20px;">Reloaded OK &ndash; <a href="/">Back to home page</a></p>';
+    if (err) {
+      console.error('Failed to reload config info');
+      msg = '<p style="background-color: red; padding: 20px;">Failed to reload database.</p> ' + err;
+    }
+    res.send(msg);
+  });
+}
+

@@ -84,7 +84,12 @@ app.get('/data/:owner/:id/datapackage.json', routes.dataPackageShowJSON);
 app.get('/data/:owner/:id/r/:name', routes.dataShow);
 app.get('/data/:owner/:id', routes.dataPackageShow);
 app.get('/data/:owner', routes.communityUser);
-// Community
+
+// Admin
+app.get('/admin/reload', routes.adminReload);
+
+// OLD / OBSOLETE
+// Community redirect
 app.get('/community/:username/:repo', function(req, res) {
   // hard-coded redirects
   var repo = req.params.repo;
