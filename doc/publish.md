@@ -4,18 +4,14 @@
 
 You can publish **any kind of data** as a Data Package.
 
-Turning your existing data into a Data Package is incredibly simple:
+Turning your existing data into a Data Package is incredibly simple.
 
-1. Get your data together in one place
-2. Add a single `datapackage.json` file
-
-That's it!
-
-And once you have packaged up your data making it available for others is as simple as [putting it online][online].
+And once you have packaged up your data making it available for others is as
+simple as [putting it online][online].
 
 [online]: /doc/publish-online
 
-## Start By Choosing One Of The Below Options
+## Start By Choosing One of the Options Below
 
 <div class="row">
   <div class="span2">
