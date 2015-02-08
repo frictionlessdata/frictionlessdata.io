@@ -18,9 +18,9 @@
       "stream-transform": "",
       "underscore": "",
       "datapackage": "0.3.0",
-      "datapackage-identifier": "git://github.com/okfn/datapackage-identifier",
+      "datapackage-identifier": ">=0.3.1",
       "datapackage-validate": ">=0.2.3",
-      "datapackage-read": ""
+      "datapackage-read": ">=0.2.2"
   }
   , "devDependencies": {
     "supertest": "",
