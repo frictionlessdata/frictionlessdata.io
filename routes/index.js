@@ -57,10 +57,8 @@ exports.roadmap = function(req, res) {
   var roadmapSheet = 'https://docs.google.com/spreadsheet/pub?key=0AqR8dXc6Ji4JdFJlMkZKbDRZT2RWWG9RV0wtcWo2c2c&single=true&gid=0&output=csv';
   
   if (_roadmapData === null) {
-    var stream = request(roadmapSheet);
-    csv()
-      .from.stream(stream)
-      .to.array(function(data, count) {
+    var stream = request(roadmapSheet, function(err, resp, body) {
+      csv.parse(body, function(err, data) {
         var headers = data[0];
         _roadmapData = data.slice(1).map(function(row) {
           var out = underscore.object(headers, row);
@@ -70,7 +68,8 @@ exports.roadmap = function(req, res) {
         });
         doRender()
       })
-    ;
+      ;
+    });
   } else {
     doRender();
   }
