@@ -62,46 +62,7 @@ Format][sdf] specs.
 
 ### 4. Put the data package online
 
-You just need to upload the data package (i.e. the files in it) to a suitable location online.
+See [Putting Your Data Package online][online]
 
-One nice option for the more sophisticated is to put this in a git or mercurial
-repo and push it to githuh or similar. But you can also publish to your
-wordpress website, to dropbox or anywhere else. The one important thing is that:
-
-* All the files should be accessible online
-* The relative paths between files should be preserved e.g. if your data
-  package directory had the datapackage.json and a single other csv named
-  data.csv in it (at the root) then online it should look like:
-
-      http://your.website.com/mydatapackage/datapackage.json
-      http://your.website.com/mydatapackage/data.csv
-  
-  This can be a problem with services like e.g. Google Drive where files in a
-  given folder don't have a web address that relates to that folder. The reason
-  we need to preserve relative paths is that when using the Data Package client
-  software will compute the full path from the location of the datapackage.json
-  itself plus the relative path for the file give in the datapackage.json
-  resources section.
-
-----
-
-## Optional Extras
-
-### Add a README
-
-A README is a text file giving (human-readable) information about your dataset.
-You can include anything you like but standard practice is to:
-
-* Start with a short description of the dataset (the first sentence and first
-  paragraph should be extractable to provide short standalone descriptions)
-* **Data** section: put data specific information about the data in a Data
-  section 
-* **Preparation** section: put information on preparing the data in a
-  Preparation section
-* **Licensing** section: put informatoin on permissions and licensing go in a
-  Licensing section
-
-The README should be a plain text file (no word or rich text etc) and we
-recommend using markdown to allow for some formatting. If markdown is used the
-file should be named README.md and otherwise should be named README.txt.
+[online]: /doc/publish-online
 
