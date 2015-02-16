@@ -4,8 +4,8 @@
 
 Data Package names are used in the `name` field of the `datapackage.json`.
 
-(This name is also frequently used for the folder/directory in which the Data
-Package is stored).
+*This name is also frequently used for the folder/directory in which the Data
+Package is stored.*
 
 As per the Data Package spec The name SHOULD be:
 
@@ -13,14 +13,14 @@ As per the Data Package spec The name SHOULD be:
 * use '-' for word separators
 * reasonably concise (3-4 words)
 
-
 ----
 
-## Data Package Directory Names
+
+## Data Package Folder Names
 
 It is standard practice to use the Data Package name (from the
-`datapackage.json`) for the name of the directory in which the Data Package is
-kept.
+`datapackage.json`) for the name of the folder/directory in which the Data
+Package is kept.
 
 If storing in e.g. git(hub) this would also be the the name of the repository.
 
@@ -73,13 +73,17 @@ data, missing values etc.
 
 #### Preparation
 
-Section: put information on preparing the data in a
-  Preparation section. In particular, any instructions about how to run any
-  preparation and processing scripts to generate the data should go here.
+Put information on preparing the data in a Preparation section. In particular,
+any instructions about how to run any preparation and processing scripts to
+generate the data should go here.
 
-#### **License** section: put additional information on the permissions and licensing of the data in the Data Package here.
+#### License
+
+Put additional information on the permissions and licensing of the data in the
+Data Package in the License section.
 
 ### Examples
 
-For examples of standarhttp://data.okfn.org/okfn/core
+For examples of standard READMDS see the Core Datasets at
+http://data.okfn.org/data/
 
