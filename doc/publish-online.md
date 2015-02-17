@@ -64,3 +64,42 @@ Packages.
 Dropbox and similar providers are a little more problematic because they do not
 replicate your local file structure at online URLs.
 
+### Google Drive
+
+The directory structure of a Data Package shared on Google Drive must be flat; that is, the Data Package must not contain any folders.
+
+**OK**
+```
+shared-folder
+|-- datapackage.json
+|-- README.md
+|-- data.csv
+```
+
+**Not OK**
+```
+shared-folder
+|-- datapackage.json
+|-- README.md
+|-- data
+    |-- data.csv
+```
+
+1. Upload your Data Package folder ([help][google-drive-upload])
+
+2. Change your folder's share setting to **Public on the web - Anyone on the Internet can find and view** ([help][google-drive-share-settings])
+
+3. Get a shareable link for your folder ([help][google-drive-share])
+
+4. Find your folder's ID in the link
+  * *Example Link:*
+    * ```https://drive.google.com/open?id=0B-f6D5RM8awSfkdtRWpiTlpxdmhPblJRd2NhdHpHMFZPOFZKcWhpT2NkQlZCUlNWUnFwaHM&authuser=0```
+  * *Example ID:*
+    * ```0B-f6D5RM8awSfkdtRWpiTlpxdmhPblJRd2NhdHpHMFZPOFZKcWhpT2NkQlZCUlNWUnFwaHM```
+
+5. Your ```datapackage.json``` link is ```https://googledrive.com/host/{ID}/datapackage.json```; for example, using the *Example ID* from the previous step, the ```datapackage.json``` link is:
+  * ```https://googledrive.com/host/0B-f6D5RM8awSfkdtRWpiTlpxdmhPblJRd2NhdHpHMFZPOFZKcWhpT2NkQlZCUlNWUnFwaHM/datapackage.json```
+
+[google-drive-upload]: https://support.google.com/drive/answer/2424368
+[google-drive-share-settings]: https://support.google.com/drive/answer/2494886
+[google-drive-share]: https://support.google.com/drive/answer/2494822
