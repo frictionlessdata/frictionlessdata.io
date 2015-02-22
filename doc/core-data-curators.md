@@ -91,3 +91,23 @@ We need people to become the "maintainer" for a given dataset and keep it up to 
 
 [maintainer]: https://github.com/datasets/registry/labels/Status%3A%20Maintainer%20Wanted
 
+----
+
+## Guide for Head Curators
+
+### Intro Email for New Joiners
+
+You are being added to the Core Data Curators mailing list as you indicated your interest in the project through the online form.
+
+This list is announce-only and will be used rarely. General discussion takes place in the public forum:
+
+http://discuss.okfn.org/category/open-knowledge-labs/core-datasets
+
+**Getting Started**
+
+To kick-off your core data curatorship we encourage you to:
+
+1. Introduce yourself in forum here: http://discuss.okfn.org/t/core-data-curators-introductions/145/24
+
+2. Take a look at the Core Data Curators guide: http://data.okfn.org/doc/core-data-curators
+
