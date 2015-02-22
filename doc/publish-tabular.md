@@ -66,3 +66,14 @@ See [Putting Your Data Package online][online]
 
 [online]: /doc/publish-online
 
+----
+
+# Appendix - Examples of Existing Tabular Data Packages
+
+Pay special attention to the scripts directory (and look at the commit logs!) 
+
+- [https://github.com/datasets/finance-vix](https://github.com/datasets/finance-vix) 
+- [https://github.com/datasets/s-and-p-500-companies](https://github.com/datasets/s-and-p-500-companies) 
+- [https://github.com/datasets/co2-fossil-global](https://github.com/datasets/co2-fossil-global) 
+- [https://github.com/datasets/imf-weo](https://github.com/datasets/imf-weo) 
+
