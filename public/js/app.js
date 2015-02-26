@@ -32,15 +32,34 @@ function datasetSearchSetup() {
   });
 }
 
+function findResourceIndex(views, datapackage) {
+  var resourceName = views[0].resourceName || ''
+    , resourceIndex = 0
+    , resources = datapackage.resources || []
+    , len = resources.length
+    , idx = 0
+    ;
+
+  for (; idx < len; idx += 1) {
+    if (resources[idx].name === resourceName) {
+      resourceIndex = idx;
+      break;
+    }
+  }
+
+  return resourceIndex;
+}
+
 function datasetShowSetup() {
   // DataFileData will be defined in Jinja template
   if (DataViews.length > 0) {
     var datafile = new Catalog.Models.DataFile(DataPackageData);
+    var resourceIndex = findResourceIndex(DataViews, DataPackageData);
     var view = new Catalog.Views.DataFile({
       model: datafile,
       el: $('.viewer')
     });
-    view.render();
+    view.render(resourceIndex);
   }
 
   // create a grid view for each resource in the page
