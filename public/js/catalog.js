@@ -24,10 +24,9 @@ my.Views.DataFile = Backbone.View.extend({
     _.bindAll(this);
   },
 
-  render: function() {
+  render: function(resourceIndex) {
     var $viewer = this.$el;
     $viewer.html('Loading View <img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" />');
-    var resourceIndex = 0;
     var table = my.dataPackageResourceToDataset(this.model.toJSON(), resourceIndex);
     table.fetch().done(function() {
       var gridView = {
