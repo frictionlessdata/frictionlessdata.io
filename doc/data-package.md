@@ -125,9 +125,17 @@ your own attributes to the `datapackage.json`
           ... see below ...
         }
       ],
-      # this is an attribute that is not part of the data package spec
-      # you can add your own attributes to a datapackage.json
-      "my-own-attribute": "data-packages-are-awesome"
+      # extend your datapackage.json with attributes that are not
+      # part of the data package spec
+      # we add a views attribute to display Recline Dataset Graph Views
+      # in our Data Package Viewer
+      "views" : [
+        {
+          ... see below ...
+        }
+      ],
+      # you can add your own attributes to a datapackage.json, too
+      "my-own-attribute": "data-packages-are-awesome",
     }
 
 <h3 id="resources">Resources</h3>
@@ -139,6 +147,33 @@ You list data files in the resources entry of the datapackage.json.
       path: "relative-path-to-file" # e.g. data/mydata.csv
       url: "online url" # e.g http://mysite.org/some-data.csv
     }
+
+<h3 id="views">Views</h3>
+
+The [Data Package Viewer](http://data.okfn.org/tools/view) will display a [Recline Dataset Graph View](http://okfnlabs.org/recline/docs/views.html) when a `views` entry is provided in the datapackage.json.
+
+* Include the `resourceName` property if you have more than one resource and want to display a graph for a resource other than the first resource
+
+* In the `state` property
+  * the `group` property is the name of the resource field whose values will be used on the y axis in the `bars` graph type and the x axis in all other graph types
+  * the `series` property is an array of one or more names of resource fields whose values will be used on the x axis in the `bars` graph type and the y axis in all other graph types
+  * the `graphType` may be one of `lines-and-points`, `lines`, `points`, `bars`, or `columns`
+
+```json
+{
+  "id": "graph",
+  "label": "Graph",
+  "resourceName": "a-resource-name",
+  "type": "Graph",
+  "state": {
+    "group": "a-resource-field-name",
+    "series": [
+      "another-resource-field-name"
+    ],
+    "graphType": "lines-and-points"
+  }
+}
+```
 
 ## Tools
 
