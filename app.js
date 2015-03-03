@@ -30,6 +30,10 @@ app.configure(function(){
 var env = new nunjucks.Environment(new nunjucks.FileSystemLoader('views'));
 env.express(app);
 
+env.addFilter('truncateHomepage', function (str) {
+  return str.replace(/^https?:\/\//, '');
+});
+
 // middleware to add trailing slash
 app.use(function(req, res, next) {
   if(req.url.substr(-1) === '/' && req.url.length > 1) {
