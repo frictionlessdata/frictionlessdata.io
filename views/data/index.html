@@ -5,29 +5,31 @@
 
 {% block content %}
 
-<div class="hero-unit">
+<div class="dataset-search">
+<div class="intro jumbotron">
   <h1 style="text-align: center;">
     <strong>Find Data Packages</strong>
-    <form class="form-horizontal dataset-search" autocomplete="off"
+    <form class="form-horizontal search-form" autocomplete="off"
       method="GET" action="">
-      <input type="text" name="q" placeholder="Jump to a data package" class="search-query js-dataset-search typeahead span5" autocomplete="off" />
+      <input type="text" name="q" placeholder="Jump to a data package" class="search-query js-dataset-search typeahead" autocomplete="off" />
     </form>
   </h1>
 </div>
 
 <div class="row">
-  <div class="results span6">
+  <div class="results col-md-6">
     <h3>Official <a href="/roadmap/core-datasets">&quot;Core&quot;</a> Datasets ({{ coreDatasets.length }})</h3>
     {% for dataset in coreDatasets %}
       {{ snippets.dataset_summary(dataset) }}
     {% endfor %}
   </div>
-  <div class="span6">
+  <div class="col-md-6">
     <h3>All Community Datasets ({{ total }})</h3>
     {% for dataset in datasets %}
       {{ snippets.dataset_summary(dataset) }}
     {% endfor %}
   </div>
+</div>
 </div>
 
 {% endblock %}

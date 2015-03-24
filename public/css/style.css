@@ -93,30 +93,6 @@ footer .connect li a {
   background: rgba(150,150,150,0.8);
 }
 
-/********************************************************************
-  * Search Form
-  *******************************************************************/
-
-.dataset-search {
-  margin: 20px 0 20px;
-}
-
-.dataset-search input {
-  margin: auto;
-  width: 500px;
-  display: block;
-}
-
-/********************************************************************
-  * Search Results
-  *******************************************************************/
-
-.search .sidebar h3:first-child {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  text-align: right;
-}
 
 /********************************************************************
   * Home Page
@@ -157,6 +133,31 @@ footer .connect li a {
 .number h3 { color: #3cbaab; display: inline-block;  font-weight: bold;  font-size: 32px; margin: 0; padding: 12px 18px; margin-bottom: 15px;}
 .number h3 span { border: 3px solid #3cbaab;  border-radius: 30px; display: inline-block; font-size: 28px;  margin: 0; padding: 8px 15px;}
 .thumb img{ display:inline-block;}
+
+/********************************************************************
+  * Dataset Search
+  *******************************************************************/
+
+.dataset-search .intro {
+}
+
+.dataset-search .search-form {
+  margin: 20px 0 20px;
+  font-size: 36px;
+}
+
+.dataset-search .search-form input {
+  margin: auto;
+  width: 500px;
+  display: block;
+}
+
+.search .sidebar h3:first-child {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-align: right;
+}
 
 /********************************************************************
   * Dataset Summary
@@ -209,6 +210,7 @@ footer .connect li a {
 .dataset ul.keywords {
   list-style-type: none;
   margin: 0;
+  padding-left: 0;
 }
 
 .dataset ul.keywords li {
