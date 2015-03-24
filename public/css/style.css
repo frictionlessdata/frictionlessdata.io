@@ -1,36 +1,14 @@
-.navbar .brand {
-  margin-top: 0px;
-  color: #333;
-  text-shadow: 0px 1px 1px #ffffff;
-  font-size: 24px;
-  text-transform: uppercase;
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400italic,400,700);
+
+body {
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Lato, Georgia, serif;
 }
 
-.navbar .brand img {
-  height: 45px;
-  margin-top: -7px;
-}
-
-.navbar .nav {
-  margin-top: 0px;
-}
-
-.navbar .nav li {
-  line-height: 27px;
-  font-size: 20px;
-}
-
-.navbar-search {
-  margin-top: 8px;
-}
-
-.okfn-ribbon a {
-  height: 60px;
-  background-position: center -40px;
-}
-
-.content {
-  padding-top: 0;
+h1, h2, h3, h4, h5, h6, .navbar, form, .btn, input, button, select, textarea {
+  font-family: Lato, Arial, sans-serif;
 }
 
 blockquote p {
@@ -45,60 +23,6 @@ blockquote p {
   margin-top: 0;
 }
 
-footer {
-  background-color: #f5f5f5;
-  padding: 20px 20px 20px;
-  margin: 15px -20px -20px;
-  border-top: solid 1px #eee;
-  font-size: 95%;
-}
-
-footer .projects img {
-  height: 25px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.sign-up-top {
-  display: none;
-  background: #fcf8e3;
-  padding: 8px;
-  font-size: 16px;
-  color: #c09853;
-  text-align: center;
-}
-
-.sign-up-top form {
-  margin-left: 10px;
-  display: inline;
-}
-
-.feedback {
-  position: fixed;
-  right: 1px;
-  top: 250px;
-  width: 44px;
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg); 
-  transform: rotate(90deg);
-  z-index: 100;
-}
-
-.feedback a {
-  color: #333;
-  font-weight: bold;
-  font-size: 28px;
-  padding: 5px 10px;
-  background-color: #f5f5f5;
-  border: solid 1px #eee;
-  border-top: none;
-}
-
-.feedback a:hover {
-  text-decoration: none;
-  background-color: #ddd;
-}
-
 .page-header {
   margin-bottom: 20px;
 }
@@ -109,6 +33,53 @@ footer .projects img {
   text-align: left;
   font-size: 40px;
 }
+
+/********************************************************************
+  * Navbar etc
+  *******************************************************************/
+
+.header-top{ background:#f8f8f8; padding:10px 0; display: none; }
+
+.top-link{}
+.top-link ul li a{ color:#3c3c3b; font-size:14px; font-family: 'Lato'; text-decoration:none; }
+.top-search input[type="text"] { background: url("../img/icons/top-search.png") no-repeat scroll 97% 9px rgba(0, 0, 0, 0); padding-right: 33px;}
+
+/* main navbar */
+
+.navbar-nav li a{ color:#3c3c3b; font-size:15px; font-family: 'Lato'; font-weight: bold; }
+.navbar-nav li a:hover{ color:#888; background: none; }
+.mainmenu{}
+
+
+.header-middle { background:#f8f8f8; padding: 15px 0; border-bottom: solid 1px #eee;}
+.header-middle .navbar {
+  margin-bottom: 0;
+}
+.header-middle .logo {
+  margin-top: -3px;
+}
+
+/**/
+.projects-holder{ padding:15px 0;}
+.projects-holder img { height: 50px; }
+
+/**/
+footer{ background:#666666; padding: 25px 0; margin-top: 50px; }
+footer p, footer a { color:#b5b5b5; font-size:14px; }
+footer a:hover { color:#fff; text-decoration: none;}
+footer .connect li a {
+  font-size: 36px;
+}
+
+/**/
+@media (max-width: 480px) {
+	.carousel-content-panel { bottom: 0 !important;}
+	.carousel-content-panel .banner-button .btn-green { font-size: 10px !important; padding: 5px 16px !important;}
+	.carousel-content-panel h6 { font-size: 14px !important;}
+	.carousel-content-panel h2 { font-size: 13px !important;}
+	.carousel-indicators { bottom: 28px !important;}
+}
+
 
 /* Custom scroll-bars */
 ::-webkit-scrollbar {
@@ -126,10 +97,6 @@ footer .projects img {
   * Search Form
   *******************************************************************/
 
-.navbar .search-query {
-  line-height: 20px;
-}
-
 .dataset-search {
   margin: 20px 0 20px;
 }
@@ -138,44 +105,6 @@ footer .projects img {
   margin: auto;
   width: 500px;
   display: block;
-}
-
-/********************************************************************
-  * Front page
-  *******************************************************************/
-
-.hero-unit {
-  background: #eee;
-  padding-top: 40px;
-  margin: -20px -20px 20px;
-}
-
-.hero-unit > div {
-  max-width: 800px;
-  margin: auto;
-}
-
-.hero-unit h1 {
-  letter-spacing: 0;
-}
-
-.hero-unit small {
-  font-size: 30px;
-  line-height: 40px;
-  color: #444;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-.hero-unit div.buttons {
-  margin-top: 30px;
-}
-
-.hero-unit div.buttons a {
-  font-size: 30px;
-  line-height: 34px;
-  width: 185px;
-  padding-bottom: 16px;
 }
 
 /********************************************************************
@@ -188,6 +117,46 @@ footer .projects img {
   line-height: 1;
   text-align: right;
 }
+
+/********************************************************************
+  * Home Page
+  *******************************************************************/
+
+.carousel-content-panel { bottom: 25%; left: 0; position: absolute; width: 100%;}
+.carousel-content-panel h2{ color:#31dac6; font-size:65px; font-weight: bold; }
+.carousel-content-panel h6{ font-size:32px; color:#fff; line-height: 1.2;}
+.carousel-content-panel .banner-button{ padding-top:15px;}
+.btn-green { background: none repeat scroll 0 0 #31dac6; color: #fff;  font-weight: bold; font-size: 22px; padding: 8px 45px;}
+/**/
+.holder{ padding: 30px 0; }
+.holder h2{ color:#3c3c3b; font-size:60px; font-weight: bold; margin-bottom: 25px; }
+.holder h4{ color:#3ca69a; font-size:36px; font-weight: bold;}
+.holder p{ color:#3c3c3b; font-size:18px; line-height:1.5;}
+.holder .row {
+  margin-top: 30px;
+}
+.holder div.icon {
+  text-align: center;
+}
+.holder .fa {
+  font-size: 154px;
+}
+
+.video-holder{ background:#3cbaab; padding:3% 0; color: #fff;}
+.video-holder h4{ color:#fff; font-size:44px; }
+.video-holder h6{ color:#fff; font-size:22px; line-height: 1.4;}
+.key-holder {
+  padding-top: 30px;
+}
+.key-head {
+  margin-top: -15px;
+}
+.key-head h2{ color:#49aba0; font-size:60px; }
+.key-head h2 span{ color:#3c3c3b; font-size:60px; font-weight: bold; }
+.number{}
+.number h3 { color: #3cbaab; display: inline-block;  font-weight: bold;  font-size: 32px; margin: 0; padding: 12px 18px; margin-bottom: 15px;}
+.number h3 span { border: 3px solid #3cbaab;  border-radius: 30px; display: inline-block; font-size: 28px;  margin: 0; padding: 8px 15px;}
+.thumb img{ display:inline-block;}
 
 /********************************************************************
   * Dataset Summary
@@ -264,6 +233,15 @@ footer .projects img {
 /********************************************************************
   * Dataset Show
   *******************************************************************/
+
+/**/
+.data-holder h2{ color:#3c3c3b; font-size:40px; font-family: 'OpenSansExtraBold';} 
+.data-holder .btn-green { background: none repeat scroll 0 0 #31dac6; color: #fff;  font-family: "RadikalMedium"; font-size: 16px; padding: 5px 10px; margin-right:2px;}
+.data-holder .btn-green:hover{ background:#000;}
+.data-holder p.spl{ font-size:13px;}
+.data-holder p.normal{  color:#3c3c3b; font-size:15px; font-family: 'Open Sans'; line-height:1.5;}
+.hide-section { height: 225px; margin-bottom: 20px;  overflow-y: auto;}
+.border{ padding:2%; background:#dddddd; border-left:8px solid #cccccc;}
 
 .dataset.show .logo {
   width: 100px;
@@ -455,4 +433,3 @@ img.shadow {
   top: 100px;
   right: 100px;
 }
-

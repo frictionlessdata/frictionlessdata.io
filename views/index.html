@@ -1,54 +1,142 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div class="hero-unit">
-<div>
-  <img src="http://assets.okfn.org/p/data/img/logo.png" alt="" />
-  <h1>
-    Our goal is a world of frictionless data
-    <br />
-    <small>
-      We're creating <strong>lightweight standards and tooling</strong>
-      <br />
-      to make it <strong>effortless</strong> to <strong>share</strong> and <strong>get</strong> <strong>data</strong>
-    </small>
-    <div class="buttons">
-    <a href="/publish" class="btn btn-large btn-primary">Publish Data</a>
-    <a href="/data" class="btn btn-large btn-success">Get Data</a>
-    <a href="/about/contribute" class="btn btn-large">Get Involved</a>
+<div class="header-bottom">
+  <div id="carousel-banner" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active" style="background: black;">
+        <img src="img/hero-team.jpg" width="100%" alt="..." style="opacity: 0.6;"/>
+        <div class="carousel-content">
+          <div class="container">
+            <div class="carousel-content-panel text-center">
+              <h2>Our Goal is a World of<br/>Frictionless Data </h2>
+              <h6>We're creating lightweight standards and tooling<br/>  to make it effortless to get and share data</h6>
+              <div class="banner-button">
+                <ul class="list-inline">
+                  <li><a href="/publish" class="btn btn-green">Publish Data</a></li>
+                  <li><a href="/data" class="btn btn-green">Get Data</a></li>
+                  <li><a href="/contribute" class="btn btn-green">Get Involved</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
-  </h1>
+  </div>
 </div>
-</div>
+        
+<div class="holder">
+  <div class="container">
+    <div class="title text-center">
+      <h2>What We Are Doing </h2>
+    </div>
 
-<div class="row">
-  <div class="span8 offset2">
-    <iframe src="https://docs.google.com/presentation/d/1oCGB0SipMvwFFWrRcyJXmvlY4mqewj-0mFnJgM44oQI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="564" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <div class="row">
+      <div class="col-sm-5 col-sm-offset-2">
+        <h4>Standards & Patterns</h4>
+        <p>A small set of lightweight 'data package' standards and patterns providing a base structure on which tooling and integration can build.</p>
+      </div>
+      <div class="col-sm-3 icon">
+        <i class="icon-tasks fa"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-sm-offset-2">
+        <i class="icon-cogs fa"></i>
+      </div>
+      <div class="col-sm-5">
+        <h4>Tooling & Integration</h4>
+        <p>Making it easy to use and publish data packages from your existing apps and workflows whether that's Excel, R, or Hadoop!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 col-sm-offset-2">
+        <h4>Outreach & Community</h4>
+        <p>Engaging and evangelizing around the concepts, standards and tooling and building a community of users and contributors.</p>
+      </div>
+      <div class="col-sm-3 icon">
+        <i class="icon-group fa"></i>
+      </div>
+    </div>
   </div>
 </div>
 
-<hr />
-
-<h1 style="text-align: center;">
-  What We Are Doing
-</h1>
-
-<div class="row">
-  <div class="span4">
-    <h3>Standards &amp; Patterns</h3>
-    <p>A small set of lightweight 'data package' standards and patterns providing a base structure on which tooling and integration can build.</p>
-    <p><a href="/standards" class="btn">Read more &raquo;</a></p>
+<div class="video-holder">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <div class="video-content">
+          <h4>Find out more about our Vision</h4>
+          <h6>There's too much friction working with data - friction getting data, friction processing data, friction sharing data.</h6>
+          <p>This friction stops people: stops them creating, sharing, collaborating with data.</p>
+          <p>It stops the cycle of find, improve, share that would make for a dynamic and productive data ecosystem.</p>
+          <p>We need to make an open data ecosystem that, like open-source for software, is useful and attractive to those without any principled interest, the vast majority who simply want the best tool for the job, the easiest route to their goal.</p>
+          <p style="margin-top: 20px;">
+            <a href="/vision" class="btn btn-primary">READ MORE &hellip;</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="video">
+          <a href="/vision"><img src="/img/kontakt.jpg" alt="post" width="564" height="332" class="img-responsive" /></a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="span4">
-    <h3>Tooling &amp; Integration</h3>
-    <p>Making it easy to use and publish data packages from your existing apps and workflows whether that's Excel, R, or Hadoop!</p>
-    <p><a href="/tools" class="btn">Read more &raquo;</a></p>
-  </div>
-  <div class="span4">
-    <h3>Outreach &amp; Community</h3>
-    <p>Engaging and evangelizing around the concepts, standards and tooling and building a community of users and contributors.</p>
-    <p><a href="/about/contribute" class="btn">Read more &raquo;</a></p>
+</div>
+
+<div class="key-holder">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="key-head">
+          <h2>Our Key <br/><span>Principles</span></h2>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="number">
+          <h3><span>1</span> Focus</h3>
+        </div>
+        <div class="num-text">
+          <p>Have a tight focus on one (small) part of the data chain, one specific feature (packaging), a few specific types of data (e.g. tabular).</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="number">
+          <h3><span>2</span> The Web</h3>
+        </div>
+        <div class="num-text">
+          <p>Build for the web. Use formats that are web "native" (JSON) and work naturally with HTTP (e.g. CSV streaming, CSV plain text nature). Distributed not centralized. </p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="number">
+          <h3><span>3</span> Existing Tools</h3>
+        </div>
+        <div class="num-text">
+          <p>Integrate as easily as possible with existing tools both by building integrations and designing for direct use &ndash; for example we like CSV because everyone has a tool that can access CSV.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="number">
+          <h3><span>4</span> Minimalist</h3>
+        </div>
+        <div class="num-text">
+          <p>Do the least possible &ndash; e.g. require only the most essential metadata (but allow for extensibility), data should have nothing extraneous be it blank lines or footnotes.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="number">
+            <h3><span>5</span> Simplicity</h3>
+          </div>
+          <div class="num-text">
+            <p>Use the most basic formats. Add the minimum, do the least needed. This is also a criteria that runs through all other principles.</p>
+          </div>
+      </div>
+    </div>
   </div>
 </div>
 
