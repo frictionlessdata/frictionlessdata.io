@@ -10,7 +10,7 @@ simple as [putting it online][online] or sending an email.
 [online]: /doc/publish-online
 
 <div class="row">
-  <div class="span2">
+  <div class="col-md-4">
     <h3>
       I want to
       <br />
@@ -19,7 +19,7 @@ simple as [putting it online][online] or sending an email.
       and publish &hellip;
     </h3>
   </div>
-  <div class="span4">
+  <div class="col-md-8">
     <div class="well">
       <h3>
         Tabular Data

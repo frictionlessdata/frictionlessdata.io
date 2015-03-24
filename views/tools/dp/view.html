@@ -9,9 +9,11 @@ Data Package Viewer - Tools
 <h1>
   DataPackage Viewer
 </h1>
-<form class="form js-info form-inline" action="" method="GET">
-  <input type="text" name="url" placeholder="Link to data package" class="span6" value="{{url}}" />
-  <button class="btn">Go</button>
+<form class="js-info" action="" method="GET">
+  <div class="form-group">
+    <input type="text" name="url" placeholder="Link to data package" value="{{url}}" class="form-control" />
+  </div>
+  <button class="btn btn-primary">Go</button>
 </form>
 
 {% if url %}

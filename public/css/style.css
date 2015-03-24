@@ -405,10 +405,6 @@ img.shadow {
   * Tools
   *******************************************************************/
 
-.main-tools .well {
-  height: 125px;
-}
-
 .tools h2 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -426,6 +422,7 @@ img.shadow {
 .roadmap-details .item .metainfo {
   list-style-type: none;
   margin-left: 0;
+  padding-left: 0;
 }
 
 .contribute-btn {

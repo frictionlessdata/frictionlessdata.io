@@ -16,7 +16,7 @@
     </div>
   </h4>
   <div class="progress">
-    <div class="bar" style="width: {{item.Progress}}%;" title="{{item.Progress}}"></div>{{item.Progress}}% 
+    <div class="progress-bar" style="width: {{item.Progress}}%;" title="{{item.Progress}}"></div>{{item.Progress}}% 
   </div>
   <div class="moreinfo" style="display: none;">
     <ul class="metainfo">
@@ -54,20 +54,20 @@
   </h1>
 </div>
 <div class="row">
-  <div class="span8 offset2">
+  <div class="col-md-8 col-md-offset-2">
     <img src="https://docs.google.com/drawings/d/1td7wmG54wbxCpS7kb5clPLyqESwHHTBvuxlIIRd-x5k/pub?w=942&amp;h=708" style="width: 100%;" />
     <p style="text-align: center; font-size: 85%;">High-level overview of the components. A detailed overview is below.</p>
   </div>
 </div>
 
 <div class="row roadmap-details">
-  <div class="span4">
+  <div class="col-md-4">
     <h3>Standards</h3>
     <p>Lightweight, RFC-style proposals and patterns focused on "Data Package" and associated formats.</p>
 
     {% for item in streams[0].items %} {{ roadmapItem(item) }} {% endfor %}
   </div>
-  <div class="span4">
+  <div class="col-md-4">
     <h3>Tooling and Integration</h3>
     <p>Tooling and integration to make it easy to publish and use data (packages). Divided into:</p>
 
@@ -82,7 +82,7 @@
     <h3>Integration</h3>
     {% for item in streams[2].items %} {{ roadmapItem(item) }} {% endfor %}
   </div>
-  <div class="span4">
+  <div class="col-md-4">
     <h3>Community</h3>
     <p>Documentation and outreach to engage, evangelize and build adoption around the concepts, standards and tooling</p>
     {% for item in streams[3].items %} {{ roadmapItem(item) }} {% endfor %}
@@ -90,7 +90,7 @@
 </div>
 
 <div class="row">
-  <div class="span6 offset3">
+  <div class="col-md-6 col-md-offset-3">
     <h3>Related, Additional Activities</h3>
     <p>There are a variety of additional related activities we would like to see undertaken but which are not part of the primary roadmap. We list some of these here.</p>
 

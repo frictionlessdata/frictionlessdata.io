@@ -8,53 +8,44 @@ Data Package Creator - Tools
 <h1>DataPackage.json Creator</h1>
 
   <div class="row">
-    <div class="span6">
-      <form class="form form-horizontal js-dp">
-        <div class="control-group">
-          <label class="control-label">Title</label>
-          <div class="controls">
-            <input type"text" name="title" />
-          </div>
+    <div class="col-md-6">
+      <form class="form js-dp">
+        <div class="form-group">
+          <label class="form-label" class="col-md-2">Title</label>
+          <input type"text" name="title" class="form-control" />
         </div>
 
-        <div class="control-group">
-          <label class="control-label">Name</label>
-          <div class="controls">
-            <input type"text" name="name" />
-          </div>
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input type"text" name="name" class="form-control" />
         </div>
 
-        <div class="control-group">
-          <label class="control-label">Description</label>
-          <div class="controls">
-            <textarea name="description" placeholder="Description"></textarea>
-          </div>
+        <div class="form-group">
+          <label class="form-label">Description</label>
+          <textarea name="description" placeholder="Description" class="form-control"></textarea>
         </div>
 
-        <div class="control-group">
-          <label class="control-label">License</label>
-          <div class="controls">
-            <select name="license">
-            </select>
-          </div>
+        <div class="form-group">
+          <label class="form-label">License</label>
+          <select name="license"></select>
         </div>
 
         <h3>Add data file (CSV)</h3>
-        <div class="control-group">
-          <label class="control-label">File</label>
+        <div class="form-group">
+          <label class="form-label">File</label>
           <div class="controls">
             <input type="file"  multiple="multiple" />
           </div>
         </div>
 
-        <div class="control-group">
+        <div class="form-group">
           <div class="controls">
             <button type="submit" class="btn btn-primary">Go</button>
           </div>
         </div>
       </form>
     </div>
-    <div class="span6">
+    <div class="col-md-6">
       <textarea class="js-dpjson" style="height: 100%; min-height: 450px; width: 100%;" placeholder="DataPackage.json JSON will appear here"></textarea>
     </div>
   </div>
