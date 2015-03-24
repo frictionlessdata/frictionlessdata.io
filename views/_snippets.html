@@ -31,7 +31,7 @@
 {% macro dataset_show(dataset, jsonDataPackage, dataViews, showDataApi) -%}
 <div class="dataset show">
   <div class="row">
-    <div class="span8">
+    <div class="col-md-8">
       <img src="{{dataset.image or
         'http://assets.okfn.org/p/data/img/icon-128.png'}}"
         alt="{{dataset.title}}" class="logo" />
@@ -42,11 +42,10 @@
           <a href="#data" class="btn btn-large btn-primary"><i class="icon-download-alt icon-white"></i> Download Data</a>
         </div>
       </div>
-
     </div>
-    <div class="span4 sidebar">
+    <div class="col-md-4 sidebar">
       <div class="btn-group">
-        <a href="{{dataset.name}}/datapackage.json" class="btn btn-small"><i class="icon-download-alt"></i> Metadata</a></a>
+        <a href="{{dataset.name}}/datapackage.json" class="btn btn-small btn-default"><i class="icon-download-alt"></i> Metadata</a></a>
         {% if dataset.bugs and dataset.bugs.url %}
         <a href="{{dataset.bugs.url}}" class="btn btn-small" target="_blank"><i class="icon-exclamation-sign icon-white"></i> Report an Issue</a>
         {% endif %}
@@ -97,51 +96,50 @@
 
     {% for resource in dataset.resources %}
     <div class="resource-info">
-    <h3 id="resource-{{resource.name}}"><i class="icon-file-text-alt"></i> {{resource.name}}</h3>
+      <h3 id="resource-{{resource.name}}"><i class="icon-file-text-alt"></i> {{resource.name}}</h3>
 
     {% if resource.format == 'geojson' %}
-    <div class="js-show-geojson show-geojson" data-resource-index="{{loop.index0}}"></div>
-    {% else %}
-    <div class="js-show-recline-grid show-recline-grid" data-resource-index="{{loop.index0}}"></div>
+      <div class="js-show-geojson show-geojson" data-resource-index="{{loop.index0}}"></div>
+      {% else %}
+      <div class="js-show-recline-grid show-recline-grid" data-resource-index="{{loop.index0}}"></div>
     {% endif %}
 
-    <h4>Field Information</h4>
-    <table class="table table-bordered table-striped resource-summary">
-      <thead>
-        <tr>
-          <th>Field Name</th>
-          <th>Order</th>
-          <th>Type (Format)</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for field in resource.schema.fields %}
-        <tr>
-          <th>{{field.name}}</th>
-          <td>{{loop.index}}</td>
-          <td class="type type-{{field.type}}">{{field.type}} {% if field.format %}({{field.format}}) {% endif %}</td>
-          <td>{{field.description}}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-
+      <h4>Field Information</h4>
+      <table class="table table-bordered table-striped resource-summary">
+        <thead>
+          <tr>
+            <th>Field Name</th>
+            <th>Order</th>
+            <th>Type (Format)</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for field in resource.schema.fields %}
+          <tr>
+            <th>{{field.name}}</th>
+            <td>{{loop.index}}</td>
+            <td class="type type-{{field.type}}">{{field.type}} {% if field.format %}({{field.format}}) {% endif %}</td>
+            <td>{{field.description}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
-    {% endfor %} <!-- end of resource for loop -->
-  </div>
+    {% endfor %}
+  </div> <!-- / resoures -->
 
   <div class="row moreinfo">
-    <div class="span8">
+    <div class="col-md-8">
       <h2 id="readme">README</h2>
       <div class="readme">{{dataset.readme_html}}</div>
     </div>
-    <div class="span4">
-    </div>
+    <div class="col-md-4"></div>
   </div>
-<div>
-<script type="text/javascript">
-  var DataPackageData = {{ jsonDataPackage }};
-  var DataViews = {{ dataViews }};
-</script>
+
+  <script type="text/javascript">
+    var DataPackageData = {{ jsonDataPackage }};
+    var DataViews = {{ dataViews }};
+  </script>
+</div><!-- / dataset show -->
 {%- endmacro %}

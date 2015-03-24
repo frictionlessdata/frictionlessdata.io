@@ -1,3 +1,11 @@
+// tmp monkey patch for jquery 1.11 and slickgrid for recline
+// see https://github.com/mleibman/SlickGrid/issues/518#issuecomment-19272769
+jQuery.browser = {};
+jQuery.browser.mozilla = /mozilla/.test(navigator.userAgent.toLowerCase()) && !/webkit/.test(navigator.userAgent.toLowerCase());
+jQuery.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
+jQuery.browser.opera = /opera/.test(navigator.userAgent.toLowerCase());
+jQuery.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
+
 jQuery(window).load(function() {
   var isDatasetShow = ($('.dataset.show').length > 0);
   if (isDatasetShow) {
