@@ -8,7 +8,7 @@ We need to make an ecosystem that, like open-source for software, is useful and 
 
 We think that by getting a few key pieces in place we can reduce friction enough to revolutionize how the (open) data ecosystem operates with massively improved data quality, utilization and sharing.
 
-<img src="http://assets.okfn.org/p/data.okfn.org/img/the-idea.png" alt="" />
+<img src="http://assets.okfn.org/p/data.okfn.org/img/the-idea.png" alt="" style="width: 100%" />
 <p style="text-align: center; font-size: 85%;">Diagram illustrating the key decoupling concept &ndash; you can read more in the original <a href="http://blog.okfn.org/2013/04/24/frictionless-data-making-it-radically-easier-to-get-stuff-done-with-data/">Frictionless Data post</a>.</p>
 
 We think this because there's a multiplier here that means relatively small changes can have big effects. This multiplier is Network effects: the utility of a particular standard, pattern or even tool depends on how many other people are using it. This means that creating a critical mass of use around the tooling and standards will have a huge effect. This isn't easy. But after working on these issues for nearly a decade we think the time is right.
