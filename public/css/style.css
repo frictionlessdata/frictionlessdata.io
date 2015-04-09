@@ -75,8 +75,8 @@ footer .connect li a {
 @media (max-width: 480px) {
 	.carousel-content-panel { bottom: 0 !important;}
 	.carousel-content-panel .banner-button .btn-green { font-size: 10px !important; padding: 5px 16px !important;}
-	.carousel-content-panel h6 { font-size: 14px !important;}
-	.carousel-content-panel h2 { font-size: 13px !important;}
+	.carousel-content-panel h2 { font-size: 14px !important;}
+	.carousel-content-panel h1 { font-size: 13px !important;}
 	.carousel-indicators { bottom: 28px !important;}
 }
 
@@ -99,8 +99,8 @@ footer .connect li a {
   *******************************************************************/
 
 .carousel-content-panel { bottom: 25%; left: 0; position: absolute; width: 100%;}
-.carousel-content-panel h2{ color:#31dac6; font-size:65px; font-weight: bold; }
-.carousel-content-panel h6{ font-size:32px; color:#fff; line-height: 1.2;}
+.carousel-content-panel h1{ color:#31dac6; font-size:65px; font-weight: bold; }
+.carousel-content-panel h2{ font-size:32px; color:#fff; line-height: 1.2;}
 .carousel-content-panel .banner-button{ padding-top:15px;}
 .btn-green { background: none repeat scroll 0 0 #31dac6; color: #fff;  font-weight: bold; font-size: 22px; padding: 8px 45px;}
 /**/
