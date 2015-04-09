@@ -119,18 +119,15 @@ footer .connect li a {
 }
 
 .video-holder{ background:#3cbaab; padding:3% 0; color: #fff;}
-.video-holder h4{ color:#fff; font-size:44px; }
-.video-holder h6{ color:#fff; font-size:22px; line-height: 1.4;}
+.video-holder h2{ color:#fff; font-size:44px; }
+.video-holder h3{ color:#fff; font-size:22px; line-height: 1.4;}
 .key-holder {
   padding-top: 30px;
 }
-.key-head {
-  margin-top: -15px;
-}
-.key-head h2{ color:#49aba0; font-size:60px; }
-.key-head h2 span{ color:#3c3c3b; font-size:60px; font-weight: bold; }
+.key-holder h2{ color:#49aba0; font-size:60px; margin-bottom: 30px;}
+.key-holder h2 span{ color:#3c3c3b; font-size:60px; font-weight: bold; }
 .number{}
-.number h3 { color: #3cbaab; display: inline-block;  font-weight: bold;  font-size: 32px; margin: 0; padding: 12px 18px; margin-bottom: 15px;}
+.number h3 { color: #3cbaab; display: inline-block;  font-weight: bold;  font-size: 32px; margin: 0; padding: 10px 0 0; margin-bottom: 15px;}
 .number h3 span { border: 3px solid #3cbaab;  border-radius: 30px; display: inline-block; font-size: 28px;  margin: 0; padding: 8px 15px;}
 .thumb img{ display:inline-block;}
 
