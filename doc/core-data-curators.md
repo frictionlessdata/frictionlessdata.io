@@ -91,9 +91,19 @@ We need people to become the "maintainer" for a given dataset and keep it up to 
 
 [maintainer]: https://github.com/datasets/registry/labels/Status%3A%20Maintainer%20Wanted
 
+
+### Core Data Assessment Criteria
+
+For a dataset to be designated as "core" it should meet the following criteria:
+
+* Quality - the dataset must be well structured
+* Relevance and importance - the focus at present is on indicators and reference data
+* Ongoing support - it should have a maintainer
+* Openness - data should be <a href="http://opendefinition.org/">open data</a> and openly licensed in accordance with the <a href="http://opendefinition.org/">Open Definition</a>
+
 ----
 
-## Guide for Head Curators
+## Guide for Managing Curators
 
 ### Intro Email for New Joiners
 

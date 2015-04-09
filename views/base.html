@@ -91,18 +91,19 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-            </div>                                                                                  <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="/tools">Tools</a></li>
-                <li><a href="/data">Data</a></li>
-                <li><a href="/standards">Standards</a></li>
-                <li><a href="/doc/">Docs</a></li>
-                <li><a href="/contribute">Contribute</a></li>
-                <li><a href="/roadmap">Roadmap</a></li>
-                <li><a href="/vision">Vision</a></li>
-                <li><a href="http://okfn.org/"><img src="http://assets.okfn.org/p/okfn/img/okfn-logo-landscape-s.png" alt="logo" style="height: 33px; margin-top: -7px;" /></a></li>
-              </ul>
-            </div>
+              </div>
+              <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/tools">Tools</a></li>
+                  <li><a href="/data">Data</a></li>
+                  <li><a href="/standards">Standards</a></li>
+                  <li><a href="/doc/">Docs</a></li>
+                  <li><a href="/contribute">Contribute</a></li>
+                  <li><a href="/roadmap">Roadmap</a></li>
+                  <li><a href="/vision">Vision</a></li>
+                  <li><a href="http://okfn.org/"><img src="http://assets.okfn.org/p/okfn/img/okfn-logo-landscape-s.png" alt="logo" style="height: 33px; margin-top: -7px;" /></a></li>
+                </ul>
+              </div>
           </nav>
         </div>
       </div>
@@ -111,7 +112,7 @@
 </div>
 </header> 
 
-{% if title == 'Home' %}
+{% if title == 'Home' or title == 'Core Datasets' %}
 {% block content %}{{content}}{% endblock %}
 {% else %}
 <div class="container">
