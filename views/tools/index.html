@@ -55,7 +55,10 @@ Tools and Plugins
 
 
     <h3>Using with R and R Client</h3>
-    <p><a href="https://github.com/QBRC/RODProt">R Open Data Protocols Library with support for Data Packages and Tabular Data Package</a></p>
+    <ul>
+      <li><a href="https://github.com/christophergandrud/dpmr">R Data Package Manager</a> - by Christopher Gandrud</li>
+      <li><a href="https://github.com/QBRC/RODProt">R Open Data Protocols Library</a> - by QRBC</p>
+    </ul>
 
     <h3>Using with Postgresql</h3>
     <p>There is a <a href="https://github.com/okfn/dptools/blob/master/bin/load-postgresql.py">python script (with no dependencies) to load a Tabular Data Package Data Package into Postgresql</a></p>
@@ -65,12 +68,14 @@ Tools and Plugins
 
     <h3>Using with MATLAB</h3>
     <p>
-      There is a MATLAB <a href="http://www.mathworks.com/matlabcentral/fileexchange/47506-read-tabular-data-package">function to read Tabular Data Packages into MATLAB</a>
+      A function to read data from a Tabular Data Package is available for <a href="http://www.mathworks.com/matlabcentral/fileexchange/47506-read-tabular-data-package">
+        download from MATLAB Central's File Exchange</a>.
+      To contribute to the library, see the project's <a href="https://github.com/KrisKusano/datapackage">GitHub repository</a>.
     </p>
 
-    <h3>Using with <a href="http://en.wikipedia.org/wiki/SQL_Server_Integration_Services">SQL Server Integration Services (SSIS)</a></h3>
+    <h3>Using with SQL Server</h3>
     <p>
-      There is a BIML project <a href="https://github.com/bimlscript/BETDPI"> that uses datapackage.json to generate SSIS packages that can load the contents of a Tabular Data Package into a SQL Server database</a>
+      There is a BIML project <a href="https://github.com/bimlscript/BETDPI"> that uses datapackage.json to generate SSIS packages that can load the contents of a Tabular Data Package into a SQL Server database</a>. Find out more about <a href="http://en.wikipedia.org/wiki/SQL_Server_Integration_Services">SQL Server Integration Services (SSIS)</a>.
     </p>
 
     <hr />
@@ -98,39 +103,43 @@ Tools and Plugins
     </p>
 
     <h3>R Library</h3>
-    <p><a href="https://github.com/QBRC/RODProt">R Library with support for Data Packages and Tabular Data Packages</a></p>
+    <p>See previous section</p>
 
     <h3>MATLAB Library</h3>
-    <p>
-      A function to read data from a Tabular Data Package is available for <a href="http://www.mathworks.com/matlabcentral/fileexchange/47506-read-tabular-data-package">
-        download from MATLAB Central's File Exchange</a>.
-      To contribute to the library, see the project's <a href="https://github.com/KrisKusano/datapackage">GitHub repository</a>.
-    </p>
+    <p>See previous section</p>
 
     <h3>Ruby Library</h3>
     <p><a href="https://github.com/theodi/datapackage.rb">Ruby library</a> for parsing and validating both data packages and tabular data packages.</p>
+
     <hr />
 
     <h2>Command Line</h2>
     <h3>Data Package Manager (dpm)</h3>
     <p><a href="https://github.com/okfn/dpm">data package manager (dpm)</a> - comprehensive command line tool.</p>
 
-    <h2>Other Tools</h2>
-    <h3>Using Good Tables</h3>
-    <p>Good Tables is available as both a <a href="https://github.com/okfn/goodtables">Python library</a> and a 
-    <a href="http://goodtables.okfnlabs.org/">web service</a> for validating tabular data and getting actionable information to fix errors.
-    </p>
-    
-    <h3>Tabular Data Package Data Validator</h3>
-    <p><a href="http://csvlint.io/">CSVLint</a></p>
+    <hr />
 
-    <h3>Git Data Package Viewer</h3>
-    <p>
-      The ODI's <a href="http://git-viewer.labs.theodi.org/">Git Data Viewer</a> 
+    <h2>Other Tools</h2>
+    <h3>Data Valiation</h3>
+    <ul>
+      <li>
+        <strong>Good Tables</strong> is both a library and online web service for validating tabular data against a JSON Table Schema. It is available as both a <a href="https://github.com/okfn/goodtables">Python library</a> and a 
+    <a href="http://goodtables.okfnlabs.org/">web service</a> for validating tabular data and getting actionable information to fix errors.
+      </li>
+      <li> 
+        <strong><a href="http://csvlint.io/">CSVLint</a></strong>
+      </li>
+    </ul>
+
+    <h3>Data Package Viewer</h3>
+    <ul>
+      <li>See the viewer linked at the top of this page</li>
+      <li>The ODI's <a href="http://git-viewer.labs.theodi.org/">Git Data Viewer</a> 
       can preview Data Packages stored in git repositories.
       See also the <a href='http://theodi.org/blog/git-data-publishing'>blog post</a> and 
       <a href='https://github.com/theodi/git-data-viewer'>source code</a>.
-    </p>
+      </li>
+
     <h3>JSON Schema Files</h3>
     <p>
       The <a href="https://github.com/dataprotocols/schemas">JSON Schemas for Data Protocol Formats</a> project provides schemas for several of the simple data formats published as part of the <a href="http://dataprotocols.org/">Data Protocols</a> effort. Those schemas include:
@@ -142,6 +151,7 @@ Tools and Plugins
       Visit <a href="https://github.com/dataprotocols/schemas">dataprotocols/schemas</a> for more information.
     </p>
   </div>
+
   <div class="col-md-4">
     <div class="alert alert-info">
       Have a new tool to add to this page? Please let us know by <a
