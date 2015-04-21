@@ -1,4 +1,5 @@
 var fs = require('fs')
+  , util = require('util')
   , request = require('request')
   , marked = require('marked')
   , csv = require('csv')
@@ -121,6 +122,14 @@ exports.doc = function(req, res) {
     res.send(404);
     return;
   }
+
+  renderer = new marked.Renderer();
+  renderer.heading = function (text, level) {
+    var escaped = text.toLowerCase().replace(/[^\w]+/g, '-');
+    return util.format('<h%s>%s <a name="%s" class="anchor" href="#%s"><span class="icon-link header-link"></span></a></h%s>',
+        level, text, escaped, escaped, level);
+  };
+
   fs.readFile(filepath, 'utf8', function(err, text) {
     var lines  = text.split('\n')
     var title = '';
@@ -128,7 +137,7 @@ exports.doc = function(req, res) {
       title = lines[0].replace(/#+\s+/g, '');
       text  = lines.slice(1).join('\n');
     }
-    var content = marked(text);
+    var content = marked(text, {renderer: renderer});
     var githubPath = '//github.com/okfn/data.okfn.org/blob/master/' + filepath;
     res.render('doc.html', {
       title: title,

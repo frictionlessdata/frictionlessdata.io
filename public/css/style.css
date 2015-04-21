@@ -80,6 +80,9 @@ footer .connect li a {
 	.carousel-indicators { bottom: 28px !important;}
 }
 
+/********************************************************************
+  * Misc
+  *******************************************************************/
 
 /* Custom scroll-bars */
 ::-webkit-scrollbar {
@@ -93,6 +96,19 @@ footer .connect li a {
   background: rgba(150,150,150,0.8);
 }
 
+/* header links */
+a .header-link {
+  margin-left: 5px;
+  color: #333;
+  text-decoration: none;
+  font-size: 85%;
+  display: none;
+}
+
+h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, a:hover .header-link, .header-link:hover {
+  display: inline;
+  text-decoration: none;
+}
 
 /********************************************************************
   * Home Page
