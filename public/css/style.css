@@ -114,29 +114,31 @@ h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .h
   * Home Page
   *******************************************************************/
 
-.carousel-content-panel { bottom: 25%; left: 0; position: absolute; width: 100%;}
-.carousel-content-panel h1{ color:#31dac6; font-size:65px; font-weight: bold; }
-.carousel-content-panel h2{ font-size:32px; color:#fff; line-height: 1.2;}
+.carousel-content-panel { bottom: 22%; left: 0; position: absolute; width: 100%;}
+.carousel-content-panel h1{ color:#31dac6; font-size:65px; font-weight: bold; margin-bottom: 25px; }
+.carousel-content-panel h2{ font-size:30px; color:#fff; line-height: 1.2; margin-bottom: 25px; }
 .carousel-content-panel .banner-button{ padding-top:15px;}
 .btn-green { background: none repeat scroll 0 0 #31dac6; color: #fff;  font-weight: bold; font-size: 22px; padding: 8px 45px;}
 /**/
-.holder{ padding: 30px 0; }
-.holder h2{ color:#3c3c3b; font-size:60px; font-weight: bold; margin-bottom: 25px; }
-.holder h4{ color:#3ca69a; font-size:36px; font-weight: bold;}
+.holder{ padding: 30px 0; margin-bottom: 30px; }
+.holder h2{ color:#3c3c3b; font-size:60px; font-weight: bold; margin-bottom: 35px; }
+.holder h4 a { color:#3ca69a; font-size:36px; font-weight: bold;}
 .holder p{ color:#3c3c3b; font-size:18px; line-height:1.5;}
 .holder .row {
   margin-top: 30px;
 }
 .holder div.icon {
   text-align: center;
+  padding-top: 13px;
 }
 .holder .fa {
-  font-size: 154px;
+  font-size: 120px;
 }
 
-.video-holder{ background:#3cbaab; padding:3% 0; color: #fff;}
-.video-holder h2{ color:#fff; font-size:44px; }
+.video-holder{ background:#3cbaab; padding:60px 0; color: #fff;}
+.video-holder h2{ color:#fff; font-size:44px; margin-top: -5px; }
 .video-holder h3{ color:#fff; font-size:22px; line-height: 1.4;}
+
 .key-holder {
   padding-top: 30px;
 }
