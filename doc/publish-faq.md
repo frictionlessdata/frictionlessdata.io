@@ -1,6 +1,6 @@
 # FAQs - Publishing Data Packages
 
-## Naming Data Packages
+## Data Package Names
 
 Data Package names are used in the `name` field of the `datapackage.json`.
 
@@ -12,6 +12,44 @@ As per the Data Package spec The name SHOULD be:
 * lower-case
 * use '-' for word separators
 * reasonably concise (3-4 words)
+
+**Naming conventions**
+
+For country specific datasets:
+
+```
+{topic}                  # e.g. gdp
+{topic}-{2-digit-iso}    # e.g. gdp-us 
+```
+
+For time series data:
+
+```
+[...-]year
+[...-]quarter
+[...-]month
+[...-]day
+```
+
+---
+
+## Resource and File Names
+
+Similar to Data Package Names:
+
+* lower-case
+* use '-' for word separators
+
+Resource names SHOULD, usually, be the same as the name of the associated file
+on disk but without the file extension. e.g.
+
+```
+gdp-quarterly     # resource name
+gdp-quarterly.csv # on disk
+```
+
+Naming conventions of files follow that for data packages in terms of country
+or time series facets.
 
 ----
 
