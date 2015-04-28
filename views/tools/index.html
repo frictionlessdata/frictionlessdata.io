@@ -62,9 +62,15 @@ Tools and Plugins
 
     <h3>Using with Postgresql</h3>
     <p>There is a <a href="https://github.com/okfn/dptools/blob/master/bin/load-postgresql.py">python script (with no dependencies) to load a Tabular Data Package Data Package into Postgresql</a></p>
+    <p>As an alternative you can use the <a href="https://github.com/textkit/datapak">datapak gem</a> (in Ruby w/ ActiveRecord) to load
+       Tabular Data Packages into SQLite.
+    </p>
 
     <h3>Using with SQLite</h3>
     <p>There is a simple <a href="https://github.com/okfn/dptools/blob/master/bin/load-sqlite.py">python script (no dependencies) to load a Tabular Data Packages into SQLite</a></p>
+    <p>As an alternative you can use the <a href="https://github.com/textkit/datapak">datapak gem</a> (in Ruby w/ActiveRecord) to load
+       Tabular Data Packages into Postgresql.
+    </p>
 
     <h3>Using with MATLAB</h3>
     <p>
@@ -110,7 +116,10 @@ Tools and Plugins
 
     <h3>Ruby Library</h3>
     <p><a href="https://github.com/theodi/datapackage.rb">Ruby library</a> for parsing and validating both data packages and tabular data packages.</p>
-
+    <p>You can use the <a href="https://github.com/textkit/datapak">datapak gem</a> to work with tabular data packages
+      (lets you download, load or query datasets using SQL via
+      ActiveRecord - thus, works with any SQL database; defaults to an in-memory SQLite database).
+    </p>
     <hr />
 
     <h2>Command Line</h2>
