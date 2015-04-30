@@ -103,3 +103,8 @@ shared-folder
 [google-drive-upload]: https://support.google.com/drive/answer/2424368
 [google-drive-share-settings]: https://support.google.com/drive/answer/2494886
 [google-drive-share]: https://support.google.com/drive/answer/2494822
+
+
+## Advertise it
+
+One way to advertise the existence of your dataset is to add it to the catalog-list file in the [registry repo](https://github.com/datasets/registry/), it will then automagically appear as a community dataset on the [data.okfn.org](http://data.okfn.org/data) site
