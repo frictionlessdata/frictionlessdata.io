@@ -5,7 +5,7 @@
 Tutorials on how to publish data as data packages.
 
 * [Introduction][intro]
-* [FAQ][faq]
+* [Standards to follow][faq]
 * [Publishing Specific Types of Data][intro]
   * [Tabular Data][tabular]
   * [Geospatial Data (Geodata)][geodata]
