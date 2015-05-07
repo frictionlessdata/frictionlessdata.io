@@ -1,8 +1,18 @@
-# FAQs - Publishing Data Packages
+# Publishing Data Packages - Best practice patterns
 
-## Data Package Names
+This page summarizes the best practice patterns that should be followed when creating a data package. It addresses
+* The Data Package name, 
+* The resource and data file names,
+* The descriptor `datapackage.json`,
+* The Data Package folder names and structure,
+* The README file,
+* Examples of well-structured packages. 
 
-Data Package names are used in the `name` field of the `datapackage.json`.
+Complete specifications are available at http://dataprotocols.org/data-packages.
+
+## Data Package Name
+
+The Data Package name is used in the `name` field of the `datapackage.json`.
 
 *This name is also frequently used for the folder/directory in which the Data
 Package is stored.*
@@ -33,7 +43,7 @@ For time series data:
 
 ---
 
-## Resource and File Names
+## Resource and File Names
 
 Similar to Data Package Names:
 
@@ -53,8 +63,49 @@ or time series facets.
 
 ----
 
+## Descriptor `datapackage.json`
 
-## Data Package Folder Names
+### Alignment
+
+With JSON, data is structured in a nested way through curly and squared brackets. Though the alignment of these structures is not relevant for computer programs, it makes it easier for the human reader if they are properly aligned.
+
+Good alignment:
+```
+{
+  "name": "corruption-perceptions-index",
+  "title": "Corruption Perceptions Index (CPI)",
+  "sources": [
+    {
+      "name": "Transparency International",
+      "web": "http://www.transparency.org/research/cpi/overview"
+    }
+  ],
+...
+}
+```
+
+Bad alignment:
+```
+{
+  "name": "corruption-perceptions-index","title": "Corruption Perceptions Index (CPI)",
+  "sources": 
+  [{
+    "name": "Transparency International",
+    "web": "http://www.transparency.org/research/cpi/overview"}]
+    ,
+...
+}
+```
+
+Please make sure to have your `datapackage.json` well structured to ease the understanding of your Data Package content. The [Online DataPackage.json Creator](http://data.okfn.org/tools/create) can help you create the general structure.  
+
+### Contributors fields
+
+Add the 'contributors' field (original author of the package - see http://dataprotocols.org/data-packages) if you wish to keep the credits for the package.
+
+----
+
+## Data Package Folder Names and Structure
 
 It is standard practice to use the Data Package name (from the
 `datapackage.json`) for the name of the folder/directory in which the Data
@@ -62,10 +113,12 @@ Package is kept.
 
 If storing in e.g. git(hub) this would also be the the name of the repository.
 
+If you include scripts allowing to automate the data extraction process, these should be stored in a `script` folder/directory.
+
 ----
 
 
-## README
+## README
 
 A README is a text file giving (human-readable) information about your dataset.
 
@@ -83,7 +136,7 @@ If markdown is used the file SHOULD be named `README.md` and otherwise SHOULD be
 ### Sections
 
 You can include anything you like in your README. It is standard practice to
-include some or all of the following sections.
+include some (if possible all) of the following sections: **Introduction, Data, Preparation, License**.
 
 We SHOULD NOT include the title of the Data Package at the top of the README.
 
@@ -95,33 +148,45 @@ following markdown in your README:
 ## Data
 ```
 
-#### Introduction
+#### **Introduction**
 
 Start with a short description of the dataset (the first sentence and first
 paragraph should be extractable to provide short standalone descriptions).
 
-Unlike other sections this section SHOULD NOT have a heading as it starts the README. (i.e. you do not
+Unlike other sections **this section SHOULD NOT have a heading** as it starts the README. (i.e. you do not
 need the heading `## Introduction` 
 
-#### Data
+#### **Data**
 
 Put specific information about the data in a Data section. This can be things
 like information about the source of the data, the specific structure of the
 data, missing values etc.
 
-#### Preparation
+#### **Preparation**
 
 Put information on preparing the data in a Preparation section. In particular,
 any instructions about how to run any preparation and processing scripts to
 generate the data should go here.
 
-#### License
+#### **License**
 
 Put additional information on the permissions and licensing of the data in the
 Data Package in the License section.
 
-### Examples
+Since licensing information is often not clear from the data producers, the guideline here is to license the Data Package under the Public Domain Dedication and License, and then to add any relevant information or disclaimers regarding the source data. 
 
-For examples of standard READMDS see the Core Datasets at
-http://data.okfn.org/data/
+See for example 
+* http://data.okfn.org/data/core/corruption-perceptions-index#readme
+* http://data.okfn.org/data/core/geo-nuts-administrative-boundaries#readme 
+
+See also the following thread https://discuss.okfn.org/t/copyright-on-data-sources/189.
+
+----
+
+## Examples
+
+For examples of well-structured Data Package see:
+* For tabular data: http://data.okfn.org/data/core/corruption-perceptions-index
+* For geospatial data: http://data.okfn.org/data/core/geo-nuts-administrative-boundaries
+
 
