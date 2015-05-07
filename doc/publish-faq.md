@@ -1,6 +1,6 @@
-# Publishing Data Packages - Standards
+# Publishing Data Packages - Best practice patterns
 
-This page details the standards that should be followed when creating a data package. It addresses
+This page summarizes the best practice patterns that should be followed when creating a data package. It addresses
 * The Data Package name, 
 * The resource and data file names,
 * The descriptor `datapackage.json`,
@@ -8,7 +8,9 @@ This page details the standards that should be followed when creating a data pac
 * The README file,
 * Examples of well-structured packages. 
 
-## 1) Data Package Name
+Complete specifications are available at http://dataprotocols.org/data-packages.
+
+## Data Package Name
 
 The Data Package name is used in the `name` field of the `datapackage.json`.
 
@@ -41,7 +43,7 @@ For time series data:
 
 ---
 
-## 2) Resource and File Names
+## Resource and File Names
 
 Similar to Data Package Names:
 
@@ -61,7 +63,7 @@ or time series facets.
 
 ----
 
-## 3) Descriptor `datapackage.json`
+## Descriptor `datapackage.json`
 
 ### Alignment
 
@@ -97,13 +99,13 @@ Bad alignment:
 
 Please make sure to have your `datapackage.json` well structured to ease the understanding of your Data Package content. The [Online DataPackage.json Creator](http://data.okfn.org/tools/create) can help you create the general structure.  
 
-### Contributors and maintainers fields
+### Contributors fields
 
-Add the 'contributors' and 'maintainers' fields if you wish to keep the credits for the package.
+Add the 'contributors' field (original author of the package - see http://dataprotocols.org/data-packages) if you wish to keep the credits for the package.
 
 ----
 
-## 4) Data Package Folder Names and Structure
+## Data Package Folder Names and Structure
 
 It is standard practice to use the Data Package name (from the
 `datapackage.json`) for the name of the folder/directory in which the Data
@@ -116,7 +118,7 @@ If you include scripts allowing to automate the data extraction process, these s
 ----
 
 
-## 5) README
+## README
 
 A README is a text file giving (human-readable) information about your dataset.
 
@@ -174,15 +176,17 @@ Data Package in the License section.
 Since licensing information is often not clear from the data producers, the guideline here is to license the Data Package under the Public Domain Dedication and License, and then to add any relevant information or disclaimers regarding the source data. 
 
 See for example 
-* http://data.okfn.org/data/core/country-list#readme 
 * http://data.okfn.org/data/core/corruption-perceptions-index#readme
+* http://data.okfn.org/data/core/geo-nuts-administrative-boundaries#readme 
 
 See also the following thread https://discuss.okfn.org/t/copyright-on-data-sources/189.
 
 ----
 
-## 6) Examples
+## Examples
 
 For examples of well-structured Data Package see:
-* http://data.okfn.org/data/core/corruption-perceptions-index
+* For tabular data: http://data.okfn.org/data/core/corruption-perceptions-index
+* For geospatial data: http://data.okfn.org/data/core/geo-nuts-administrative-boundaries
+
 
