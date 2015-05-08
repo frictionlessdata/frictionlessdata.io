@@ -148,7 +148,7 @@ Here is an example of how the datapackage.json would look in this case:
 
 <h2 id="examples">Examples</h2>
 
-There are many examples of Simple Data Format data packages in the [datasets organization on github][datasets]. Specific examples:
+There are many examples of Tabular Data Packages in the [datasets organization on github][datasets]. Specific examples:
 
 [datasets]: https://github.com/datasets
 
