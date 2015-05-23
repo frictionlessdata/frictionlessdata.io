@@ -1,15 +1,17 @@
 # Publishing Data Packages - Best practice patterns
 
 This page summarizes the best practice patterns that should be followed when creating a data package. It addresses
-* The Data Package name, 
-* The resource and data file names,
-* The descriptor `datapackage.json`,
-* The Data Package folder names and structure,
-* The README file,
-* Examples of well-structured packages. 
+* [The Data Package name](#DataPackageName), 
+* [The resource and data file names](#Resources),
+* [The descriptor `datapackage.json`](#DatapackageJSON),
+* [The Data Package folder names and structure](#FolderStructure),
+* [The README file](#README),
+* [Validate and preview](#ValidatePreview),
+* [Examples of well-structured packages](#Examples). 
 
 Complete specifications are available at http://dataprotocols.org/data-packages.
 
+<a name="DataPackageName"></a>
 ## Data Package Name
 
 The Data Package name is used in the `name` field of the `datapackage.json`.
@@ -43,6 +45,7 @@ For time series data:
 
 ---
 
+<a name="Resources"></a>
 ## Resource and File Names
 
 Similar to Data Package Names:
@@ -63,6 +66,7 @@ or time series facets.
 
 ----
 
+<a name="DatapackageJSON"></a>
 ## Descriptor `datapackage.json`
 
 ### Alignment
@@ -105,6 +109,7 @@ Add the 'contributors' field (original author of the package - see http://datapr
 
 ----
 
+<a name="FolderStructure"></a>
 ## Data Package Folder Names and Structure
 
 It is standard practice to use the Data Package name (from the
@@ -117,7 +122,7 @@ If you include scripts allowing to automate the data extraction process, these s
 
 ----
 
-
+<a name="README"></a>
 ## README
 
 A README is a text file giving (human-readable) information about your dataset.
@@ -183,6 +188,16 @@ See also the following thread https://discuss.okfn.org/t/copyright-on-data-sourc
 
 ----
 
+<a name="ValidatePreview"></a>
+## Validate and preview your Data Package
+
+Use the [Online validator](/tools/validate) to check that your datapackage.json and Data Package are good to go. Simply drop the URL to your Data Package in the input box, and press `Validate`. If everything is fine, `Status: Valid` is returned.
+
+Then use the [Online Data Package viewer app](/tools/view) to have a preview of your Data Package.
+
+----
+
+<a name="Examples"></a>
 ## Examples
 
 For examples of well-structured Data Package see:
