@@ -21,8 +21,8 @@ Tutorials on how to publish data as data packages.
 ## Guides to Standards
 
 * [Data Package][dp]
+  * [Full Data Package specifications](http://dataprotocols.org/data-packages/)
 * [CSV - Comma Separated Values][csv]
-* [Full Data Package specs on DataProtocols](http://dataprotocols.org/data-packages/)
 
 [dp]: /doc/data-package
 [tabular]: /doc/tabular-data-package
