@@ -1,12 +1,13 @@
 # Publishing Data Packages - Best practice patterns
 
 This page summarizes the best practice patterns that should be followed when creating a data package. It addresses
-* The Data Package name, 
-* The resource and data file names,
-* The descriptor `datapackage.json`,
-* The Data Package folder names and structure,
-* The README file,
-* Examples of well-structured packages. 
+* [The Data Package name](#data-package-name), 
+* [The resource and data file names](#resource-and-file-names),
+* [The descriptor `datapackage.json`](#descriptor-code-datapackage-json-code-),
+* [The Data Package folder names and structure](#data-package-folder-names-and-structure),
+* [The README file](#readme),
+* [Validate and preview](#validate-and-preview-your-data-package),
+* [Examples of well-structured packages](#examples). 
 
 Complete specifications are available at http://dataprotocols.org/data-packages.
 
@@ -117,7 +118,6 @@ If you include scripts allowing to automate the data extraction process, these s
 
 ----
 
-
 ## README
 
 A README is a text file giving (human-readable) information about your dataset.
@@ -180,6 +180,14 @@ See for example
 * http://data.okfn.org/data/core/geo-nuts-administrative-boundaries#readme 
 
 See also the following thread https://discuss.okfn.org/t/copyright-on-data-sources/189.
+
+----
+
+## Validate and preview your Data Package
+
+Use the [Online validator](/tools/validate) to check that your datapackage.json and Data Package are good to go. Simply drop the URL to your Data Package in the input box, and press `Validate`. If everything is fine, `Status: Valid` is returned.
+
+Then use the [Online Data Package viewer app](/tools/view) to have a preview of your Data Package.
 
 ----
 
