@@ -45,19 +45,22 @@ Don't worry if you don't know what JSON is - we provide some tools that can
 automatically create your this file for you.
 </div>
 
-There are 2 options for creating the `datapackage.json`:
+There are three options for creating the `datapackage.json`:
 
-Option 1: Use the online [datapackage.json creator tool][creator] - just answer
+**Option 1:** Use the online [datapackage.json creator tool][creator] - just answer
 a few questions and give it your data files and it will spit out a
 datapackage.json for you to include in your project
 
-Option 2: Do it yourself - if you're familiar with JSON you can just create
+**Option 2:** Do it yourself - if you're familiar with JSON you can just create
 this yourself. Take a look at the [Data Package][dp] and [Simple Data
 Format][sdf] specs.
+
+**Option 3:*** Use our [Data Package Manager][dpm] tool for the command line if you are comfortable with that inteface (requires node.js).
 
 [creator]: http://data.okfn.org/tools/create
 [JSON]: http://en.wikipedia.org/wiki/JSON
 [dp]: http://data.okfn.org/standards/data-package
+[dpm]:  https://github.com/okfn/dpm
 [sdf]: http://data.okfn.org/standards/simple-data-format
 
 ### 4. Put the data package online
