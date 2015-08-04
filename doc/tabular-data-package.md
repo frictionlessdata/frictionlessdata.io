@@ -112,7 +112,7 @@ one line (normally!). CSVs can be produced and consumed by almost all tools
 including spreadsheet programmes like Excel and databases like MySQL. Read more
 about [CSVs here][csv].
 
-There are a few specific requirements for CSV files in Simple Data Format:
+There are a few specific requirements for CSV files in Tabular Data Packages:
 
 * They **must** use the utf-8 character encoding.
 * They must be well-formatted - a single header row at the top of the file, no
@@ -123,7 +123,7 @@ There are a few specific requirements for CSV files in Simple Data Format:
 
 #### Delimiters other than Comma
 
-CSV files in Simple Data Format are not absolutely required to have "," as the
+CSV files in Tabular Data Package are not absolutely required to have "," as the
 field delimeter - you can use tab, ";" or any other kind of character. 
 
 If you do use a delimiter other than "," you must specify the info about the
