@@ -1,6 +1,8 @@
 var express = require('express')
   , path = require('path')
   , nunjucks = require('nunjucks')
+  , bodyParser = require('body-parser')
+  , methodOverride = require('method-override')
   , routes = require('./routes')
   ;
 
@@ -14,18 +16,17 @@ var CORSSupport = function(req, res, next) {
   next();
 }
 
-app.configure(function(){
-  app.set('port', process.env.PORT || 5000);
-  app.set('views', __dirname + '/views');
-  // app.set('view engine', 'html');
-  // app.engine('html', require('hbs').__express);
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(CORSSupport);
-  app.use(express.static(path.join(__dirname, 'public')));
-});
+app.set('port', process.env.PORT || 5000);
+app.set('views', __dirname + '/views');
+// app.set('view engine', 'html');
+// app.engine('html', require('hbs').__express);
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(CORSSupport);
+app.use(methodOverride());
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(express.static(path.join(__dirname, 'public')));
 
 var env = new nunjucks.Environment(new nunjucks.FileSystemLoader('views'));
 env.express(app);

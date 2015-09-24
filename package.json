@@ -1,32 +1,34 @@
 {
-    "name": "datahub"
-  , "version": "0.1.0"
-  , "author": "Open Knowledge Foundation <labs@okfn.org>"
-  , "repository": {
+  "name": "datahub",
+  "version": "0.1.0",
+  "author": "Open Knowledge Foundation <labs@okfn.org>",
+  "repository": {
     "type": "git",
     "url": "https://github.com/okfn/data.okfn.org"
-  }
-  , "license": "MIT"
-  , "dependencies": {
-      "express": "3.x",
-      "nunjucks": "0.1.8",
-      "request": "",
-      "marked": "",
-      "JSV": "",
-      "csv": "",
-      "csv-parse": "",
-      "stream-transform": "",
-      "underscore": "",
-      "datapackage": "0.3.0",
-      "datapackage-identifier": ">=0.3.1",
-      "datapackage-validate": ">=0.2.3",
-      "datapackage-read": ">=0.2.2"
-  }
-  , "devDependencies": {
+  },
+  "license": "MIT",
+  "dependencies": {
+    "JSV": "",
+    "body-parser": "^1.14.0",
+    "csv": "",
+    "csv-parse": "",
+    "datapackage": "0.3.0",
+    "datapackage-identifier": ">=0.3.1",
+    "datapackage-read": ">=0.2.2",
+    "datapackage-validate": ">=0.2.3",
+    "express": "3.x",
+    "marked": "",
+    "method-override": "^2.3.5",
+    "nunjucks": "0.1.8",
+    "request": "",
+    "stream-transform": "",
+    "underscore": ""
+  },
+  "devDependencies": {
     "supertest": "",
     "mocha": ""
-  }
-  , "engines": {
+  },
+  "engines": {
     "node": "0.10.x",
     "npm": "1.3.x"
   }
