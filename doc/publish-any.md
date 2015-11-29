@@ -4,7 +4,7 @@ You can publish **all and any kind of data** as Data packages. It's as simple as
 
 1. Get your data together
 2. Add a `datapackage.json` file to wrap those data files up into a useful
-   whole (with key information like the license and title)
+   whole (with key information like the license, title and format)
 3. [optional] Share it with others, for example, by uploading the data package online
 
 ## 1. Get your data together
