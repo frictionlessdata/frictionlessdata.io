@@ -55,7 +55,7 @@ datapackage.json for you to include in your project
 this yourself. Take a look at the [Data Package][dp] and [Simple Data
 Format][sdf] specs.
 
-**Option 3:*** Use our [Data Package Manager][dpm] tool for the command line if you are comfortable with that inteface (requires node.js).
+**Option 3:*** Use our [Data Package Manager][dpm] tool for the command line if you are comfortable with that interface (requires node.js).
 
 [creator]: http://data.okfn.org/tools/create
 [JSON]: http://en.wikipedia.org/wiki/JSON
