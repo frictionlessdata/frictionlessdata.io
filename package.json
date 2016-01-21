@@ -19,7 +19,7 @@
       "underscore": "",
       "datapackage": "0.3.0",
       "datapackage-identifier": ">=0.3.1",
-      "datapackage-validate": ">=0.2.3",
+      "datapackage-validate": "==0.2.3",
       "datapackage-read": ">=0.2.2"
   }
   , "devDependencies": {
