@@ -77,7 +77,7 @@ Our work is based on a few key principles:
 
 # Doesn't this already exist?
 
-You might be thinking: people have been working on data for a while - doesn't something like this already exist? The basic answer is yes and no. People, including many of us here at the Open Knowledge Foundation, have been working on this for quite some time, and there are already some parts of the solution out there.
+You might be thinking: people have been working on data for a while - doesn't something like this already exist? The basic answer is yes and no. People, including many of us here at Open Knowledge International, have been working on this for quite some time, and there are already some parts of the solution out there.
 
 Many of the ideas we're putting forward directly borrow or build on existing work whether in software (around packaging) or in terms of data structures (the semantic web, Google's DSPL etc). What we are doing is bringing these ideas together into one, small, coherent package.
 
