@@ -1,26 +1,14 @@
-# [Frictionless Data][] Ideas and Roadmap Tracker
+# Frictionless Data
 
-We use the [issue tracker of this github repo][issues] to:
+[![Gitter](https://img.shields.io/gitter/room/frictionlessdata/chat.svg)](https://gitter.im/frictionlessdata/chat)
+[![Issues](https://img.shields.io/badge/issue-tracker-orange.svg)](https://github.com/frictionlessdata/project/issues)
+[![In Progress](https://badge.waffle.io/frictionlessdata/project.svg?label=progress&title=In%20Progress)](http://waffle.io/frictionlessdata/project)
 
-* Capture new ideas, suggestions and feedback
-* Prioritize work into a Roadmap
+Frictionless Data is about removing the friction in working with data. We are doing this by developing a set of tools, standards, and best practices for publishing data. 
 
-[Frictionless Data]: http://frictionlessdata.io/
-[roadmap]: http://frictionlessdata.io/community/roadmap/
-[issues]: https://github.com/frictionlessdata/ideas/issues
-[ckan]: http://frictionlessdata.io/
+This is the general issue tracker for the project: https://github.com/frictionlessdata/project/issues
 
-## See the current ideas
-
-Ideas are issues in the tracker: **See the [full list of "open" ideas &raquo;][issues]**
-
-A nicer "columnar" view that is easier to view can be found here:
-
-https://waffle.io/frictionlessdata/ideas
-
-[![Stories in Ready](https://badge.waffle.io/frictionlessdata/ideas.svg?label=ready&title=Ready)](http://waffle.io/frictionlessdata/ideas)
-
-## Want to propose something?
-
-[Create a new idea "issue" here &raquo;](https://github.com/ckan/ideas-and-roadmap/issues/new)
-
+* Frictionless Data: http://frictionlessdata.io/ 
+* Specifications: http://specs.frictionlessdata.io/
+* User Stories: http://frictionlessdata.io/user-stories/
+* Forum: https://discuss.okfn.org/c/frictionless-data
