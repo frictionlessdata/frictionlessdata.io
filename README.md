@@ -9,6 +9,6 @@ Frictionless Data is about removing the friction in working with data. We are do
 This is the general issue tracker for the project: https://github.com/frictionlessdata/project/issues
 
 * Frictionless Data: http://frictionlessdata.io/ 
-* Specifications: http://specs.frictionlessdata.io/
-* User Stories: http://frictionlessdata.io/user-stories/
+* Specifications: http://frictionlessdata.io/specs
+* User Stories: https://trello.com/b/MGC4RpTZ/frictionless-data-user-stories
 * Forum: https://discuss.okfn.org/c/frictionless-data
