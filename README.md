@@ -1,14 +1,11 @@
 # Frictionless Data
 
-[![Gitter](https://img.shields.io/gitter/room/frictionlessdata/chat.svg)](https://gitter.im/frictionlessdata/chat)
-[![Issues](https://img.shields.io/badge/issue-tracker-orange.svg)](https://github.com/frictionlessdata/project/issues)
-[![In Progress](https://badge.waffle.io/frictionlessdata/project.svg?label=progress&title=In%20Progress)](http://waffle.io/frictionlessdata/project)
+Frictionless Data is about removing the friction in working with data. We are doing this by developing a set of software, specifications, and best practices for publishing data. 
 
-Frictionless Data is about removing the friction in working with data. We are doing this by developing a set of tools, standards, and best practices for publishing data. 
-
-This is the general issue tracker for the project: https://github.com/frictionlessdata/project/issues
+This issue tracker is no longer in use. Please create project-related issues in the [Frictionless Data specs issue tracker](https://github.com/frictionlessdata/specs/issues) or the [Frictionless Data website issue tracker](https://github.com/frictionlessdata/website/issues), as appropriate. 
 
 * Frictionless Data: http://frictionlessdata.io/ 
-* Specifications: http://specs.frictionlessdata.io/
+* Specifications: http://frictionlessdata.io/specs
 * User Stories: http://frictionlessdata.io/user-stories/
 * Forum: https://discuss.okfn.org/c/frictionless-data
+* Gitter chat: https://gitter.im/frictionlessdata/chat
