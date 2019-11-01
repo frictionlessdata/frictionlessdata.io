@@ -12,13 +12,12 @@ jobs:
       - name: Commit to the website repository
         env:
           GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
-          WEBSITE_DEPLOY_KEY: ${{ secrets.WEBSITE_DEPLOY_KEY }}
         run: |
           eval "$(ssh-agent -s)"
-          ssh-add - <<< "${WEBSITE_DEPLOY_KEY}"
+          ssh-add - <<< "${{ secrets.WEBSITE_DEPLOY_KEY }}"
           git config --global user.name 'Github Actions'
           git config --global user.email 'github.actions@users.noreply.github.com'
           git clone git@github.com:frictionlessdata/website && cd website
-          echo "${GITHUB_SHA}" >> specs.txt
+          echo "${{ github.SHA }}" >> specs.txt
           git add . && git commit -am "Updated specs.txt"
           git push
