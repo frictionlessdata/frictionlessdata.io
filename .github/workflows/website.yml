@@ -20,5 +20,5 @@ jobs:
           git config --global user.email 'github.actions@users.noreply.github.com'
           git clone git@github.com:frictionlessdata/website && cd website
           echo "${GITHUB_SHA}" >> specs.txt
-          git commit -am "Updated specs.txt"
+          git add . && git commit -am "Updated specs.txt"
           git push
