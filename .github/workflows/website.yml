@@ -6,9 +6,11 @@ on:
       - master
 
 jobs:
-  get-version:
+  website:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v1
       - name: Commit to the website repository
         env:
           GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
