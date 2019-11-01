@@ -2,7 +2,8 @@ name: website
 
 on:
   push:
-    - master
+    branches:
+      - master
 
 jobs:
   get-version:
@@ -10,11 +11,11 @@ jobs:
     steps:
       - name: Commit to the website repository
         env:
-          DEPLOY_KEY: ${{ secrets.WEBSITE_DEPLOY_KEY }}
           GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
+          WEBSITE_DEPLOY_KEY: ${{ secrets.WEBSITE_DEPLOY_KEY }}
         run: |
           eval "$(ssh-agent -s)"
-          ssh-add - <<< "${DEPLOY_KEY}"
+          ssh-add - <<< "${WEBSITE_DEPLOY_KEY}"
           git config --global user.name 'Github Actions'
           git config --global user.email 'github.actions@users.noreply.github.com'
           git clone git@github.com:frictionlessdata/website && cd website
