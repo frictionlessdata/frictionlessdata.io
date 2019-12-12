@@ -17,7 +17,7 @@ def get_view_count(repository_slug, attribute):
 	view_count, the total number of views
 	unique_count, the number of unique visitors
 	"""
-	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/views?access_token=30219fc2e39087b258801a0e6ecf32b78cc970ee'
+	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/views?access_token=ce4e4edc4f68e22152a16f63ea7140050b53e59e'
 	link = url.format(slug)
 
 	link = urlopen(link).read()
@@ -28,7 +28,7 @@ def get_clones(slug):
 	"""Get the statistical results on the analytical endpoint.
 	the total number of clones
 	"""
-	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/clones?access_token=30219fc2e39087b258801a0e6ecf32b78cc970ee'
+	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/clones?access_token=ce4e4edc4f68e22152a16f63ea7140050b53e59e'
 	link = url.format(slug)
 
 	link = urlopen(link).read()
@@ -58,9 +58,10 @@ for repo_name in repo_names:
 	clones = get_clones(slug)
 
 	new_data = {
-		"Repo URL" : link,
+		"Repo link" : link,
 		"Type" : types,
 		"Slug" : slug,
+		"Repo URL" : url,
 		"Title" : title,
 		"Description" : description,
 		"Stars" : stars,
@@ -76,4 +77,4 @@ for repo_name in repo_names:
 with open('frictionless-data-repos.csv', 'w') as csvfile:
 	writer = csv.DictWriter(csvfile, fieldnames=new_data)
 	writer.writeheader()
- 	writer.writerows(list_of_new_data)
+	writer.writerows(list_of_new_data)
