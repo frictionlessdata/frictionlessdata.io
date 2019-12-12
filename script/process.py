@@ -1,7 +1,7 @@
 import csv
 import json
 
-from urllib import urlopen
+from urllib.request import urlopen
 
 import pygithub3
 
@@ -9,15 +9,19 @@ import pygithub3
 organization = 'frictionlessdata'
 
 # Get the repo names of a given organization
+
 gh = pygithub3.Github()
-repo_names = gh.repos.list(user=organization).all()
+
+gh_user = gh.get_user('frictionlessdata')
+
+repo_names = gh_user.get_repos()
 
 def get_view_count(repository_slug, attribute):
 	"""Get the statistical results on the analytical endpoint.
 	view_count, the total number of views
 	unique_count, the number of unique visitors
 	"""
-	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/views?access_token=ce4e4edc4f68e22152a16f63ea7140050b53e59e'
+	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/views?access_token=5bed0fc28795a2617bce39a47977d398c202d7d3'
 	link = url.format(slug)
 
 	link = urlopen(link).read()
@@ -28,7 +32,7 @@ def get_clones(slug):
 	"""Get the statistical results on the analytical endpoint.
 	the total number of clones
 	"""
-	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/clones?access_token=ce4e4edc4f68e22152a16f63ea7140050b53e59e'
+	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/clones?access_token=5bed0fc28795a2617bce39a47977d398c202d7d3'
 	link = url.format(slug)
 
 	link = urlopen(link).read()
@@ -49,7 +53,7 @@ for repo_name in repo_names:
 	link = repo_name.html_url 
 	description = repo_name.description
 	url = repo_name.homepage
-	types = "repo"
+	types = "Repo"
 	stars = repo_name.stargazers_count
 	watchers = repo_name.watchers_count
 	open_issues = repo_name.open_issues_count
