@@ -1,0 +1,10 @@
+certifi==2019.11.28
+chardet==3.0.4
+Deprecated==1.2.7
+idna==2.8
+pygithub3==0.5.1
+PyJWT==1.7.1
+requests==2.22.0
+six==1.13.0
+urllib3==1.25.7
+wrapt==1.11.2

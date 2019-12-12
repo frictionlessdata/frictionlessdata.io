@@ -1,0 +1,104 @@
+{
+  "name": "frictionless-data-repos",
+  "title": "Frictionless data repos",
+  "resources": [
+    {
+      "path": "process.py",
+      "pathType": "local",
+      "name": "process",
+      "format": "py",
+      "encoding": "ISO-8859-1"
+    },
+    {
+      "path": "frictionless-data-repos.csv",
+      "pathType": "local",
+      "name": "frictionless-data-repos",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "ISO-8859-1",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "Watchers",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Title",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Uniques",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Stars",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Repo URL",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Views",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Clones",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Open issues",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Slug",
+            "type": "string",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "pathType": "local",
+      "name": "requirements",
+      "format": "txt",
+      "mediatype": "text/plain",
+      "encoding": "ISO-8859-1"
+    }
+  ],
+  "readme": "This dataset contains all repositories of \"frictionlessdata\" organisation on Github, including their:\n\n* title\n* slug\n* description\n* url \n* type\n* views number\n* clones number\n* unique views number\n* stars number\n* watchers number\n* open issues number \n\n## Data\n\nThe data were obtained from [Github](https://github.com/)\n\n## Preparation\n\nIn the \"script\" directory, there is a file called `process.py` which will generate a csv file, containing all of the data listed above.\n\n## Instructions:\n\n1. Download \"requirements.txt\" and \"process.py\" from the `script` directory\n2. Go to your terminal, navigate to the folder where you saved the files and use the following command to run the dependencies \n\n`pip install -r requirements.txt`\n\n3. Run the process.py script by using the following command\n\n`python process.py`\n\n4. Voilà! You will find a CSV file called `frictionless-data-repos` in the same directory\n\n## License\n\nThis Data Package is made available under the Public Domain Dedication and License v1.0",
+  "description": "This dataset contains all repositories of \"frictionlessdata\" organisation on Github, including their",
+  "licenses": [
+    {
+      "name": "ODC-PDDL",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License"
+    }
+  ]
+}
