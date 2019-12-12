@@ -4,6 +4,7 @@ This dataset contains all repositories of "frictionlessdata" organisation on Git
 * slug
 * description
 * url 
+* link
 * type
 * views number
 * clones number
