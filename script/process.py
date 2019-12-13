@@ -1,18 +1,22 @@
+import os
 import csv
 import json
 
 from urllib.request import urlopen
 
 import pygithub3
+from dotenv import load_dotenv
 
-# Define the name of the organization to be scrapped
-organization = 'frictionlessdata'
+# Setup 
+load_dotenv()
+username = os.environ.get('ORGANIZATION')
+github_token = os.environ.get('GITHUB_TOKEN')
 
 # Get the repo names of a given organization
 
 gh = pygithub3.Github()
 
-gh_user = gh.get_user('frictionlessdata')
+gh_user = gh.get_user(username)
 
 repo_names = gh_user.get_repos()
 
@@ -21,8 +25,7 @@ def get_view_count(repository_slug, attribute):
 	view_count, the total number of views
 	unique_count, the number of unique visitors
 	"""
-	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/views?access_token=5bed0fc28795a2617bce39a47977d398c202d7d3'
-	link = url.format(slug)
+	link = f'https://api.github.com/repos/frictionlessdata/{repository_slug}/traffic/views?access_token={github_token}'
 
 	link = urlopen(link).read()
 	result = json.loads(link)  
@@ -32,9 +35,8 @@ def get_clones(slug):
 	"""Get the statistical results on the analytical endpoint.
 	the total number of clones
 	"""
-	url = 'https://api.github.com/repos/frictionlessdata/{}/traffic/clones?access_token=5bed0fc28795a2617bce39a47977d398c202d7d3'
-	link = url.format(slug)
-
+	link = f'https://api.github.com/repos/frictionlessdata/{slug}/traffic/clones?access_token={github_token}'
+	
 	link = urlopen(link).read()
 	result = json.loads(link)
 	return result['count'] 
