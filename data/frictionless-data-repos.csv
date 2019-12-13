@@ -1,0 +1,89 @@
+Repo link,Type,Slug,Repo URL,Title,Description,Stars,Watchers,Clones,Open issues,Views,Uniques
+https://github.com/frictionlessdata/ckan-datapackage-tools,Repo,ckan-datapackage-tools,,Ckan datapackage tools,A library of useful tools to work with Data Packages in CKAN.,4,4,0,4,26,4
+https://github.com/frictionlessdata/ckanext-datapackager,Repo,ckanext-datapackager,,Ckanext datapackager,CKAN extension for importing and exporting Data Packages,30,30,0,15,58,22
+https://github.com/frictionlessdata/ckanext-validation,Repo,ckanext-validation,,Ckanext validation,Data validation and description with Frictionless Data tools.,17,17,16,21,64,31
+https://github.com/frictionlessdata/ckanext-wprdcpilot,Repo,ckanext-wprdcpilot,,Ckanext wprdcpilot,Small utils extension for the WPRDC pilot,0,0,0,0,1,1
+https://github.com/frictionlessdata/data-quality-cli,Repo,data-quality-cli,https://github.com/okfn/data-quality-dashboard,Data quality cli,CLI for creating databases for Data Quality Dashboards.,14,14,0,3,20,11
+https://github.com/frictionlessdata/data-quality-dashboard,Repo,data-quality-dashboard,,Data quality dashboard,Data Quality Dashboards display statistics on a collection of published data.,27,27,2,10,37,25
+https://github.com/frictionlessdata/data-quality-databases,Repo,data-quality-databases,,Data quality databases,This repo contains databases created with https://github.com/frictionlessdata/data-quality-cli.,2,2,0,0,0,0
+https://github.com/frictionlessdata/data-quality-spec,Repo,data-quality-spec,,Data quality spec,A spec for reporting errors in data quality.,15,15,0,2,16,5
+https://github.com/frictionlessdata/dataflows-aws,Repo,dataflows-aws,,Dataflows aws,AWS integration for dataflows,1,1,0,0,1,1
+https://github.com/frictionlessdata/datapackage-clj,Repo,datapackage-clj,,Datapackage clj,A Clojure library for working with Data Package.,7,7,0,3,6,3
+https://github.com/frictionlessdata/datapackage-go,Repo,datapackage-go,,Datapackage go,A Go library for working with Data Package.,16,16,34,5,39,10
+https://github.com/frictionlessdata/datapackage-java,Repo,datapackage-java,,Datapackage java,A Java library for working with Data Package.,13,13,27,9,43,13
+https://github.com/frictionlessdata/datapackage-js,Repo,datapackage-js,http://frictionlessdata.io/,Datapackage js,A JavaScript library for working with Data Package.,31,31,4,4,63,29
+https://github.com/frictionlessdata/datapackage-php,Repo,datapackage-php,,Datapackage php,A php library for working with Data Package.,7,7,73,14,28,10
+https://github.com/frictionlessdata/datapackage-pipelines,Repo,datapackage-pipelines,https://frictionlessdata.io/,Datapackage pipelines,Framework for processing data packages in pipelines of modular components.,91,91,1,36,87,37
+https://github.com/frictionlessdata/datapackage-pipelines-aws,Repo,datapackage-pipelines-aws,,Datapackage pipelines aws,Datapackage-pipelines integration with AWS,6,6,0,1,0,0
+https://github.com/frictionlessdata/datapackage-pipelines-ckan,Repo,datapackage-pipelines-ckan,,Datapackage pipelines ckan,Data Package Pipelines processors for CKAN,0,0,0,4,6,2
+https://github.com/frictionlessdata/datapackage-pipelines-elasticsearch,Repo,datapackage-pipelines-elasticsearch,,Datapackage pipelines elasticsearch,Datapackage-pipelines integration with Elasticsearch,3,3,0,0,0,0
+https://github.com/frictionlessdata/datapackage-pipelines-github,Repo,datapackage-pipelines-github,,Datapackage pipelines github,Datapackage-pipelines github,2,2,0,1,0,0
+https://github.com/frictionlessdata/datapackage-pipelines-goodtables,Repo,datapackage-pipelines-goodtables,,Datapackage pipelines goodtables,A datapackage-pipelines processor to validate tabular resources using goodtables,2,2,0,0,0,0
+https://github.com/frictionlessdata/datapackage-pipelines-sourcespec-registry,Repo,datapackage-pipelines-sourcespec-registry,,Datapackage pipelines sourcespec registry,Datapackage-pipelines sourcespec registry,0,0,0,0,0,0
+https://github.com/frictionlessdata/datapackage-pipelines-spss,Repo,datapackage-pipelines-spss,,Datapackage pipelines spss,A datapackage-pipelines processor for SPSS data files,1,1,0,0,0,0
+https://github.com/frictionlessdata/datapackage-pipelines-ui-client,Repo,datapackage-pipelines-ui-client,,Datapackage pipelines ui client,,0,0,0,0,1,1
+https://github.com/frictionlessdata/datapackage-pipelines-ui-server,Repo,datapackage-pipelines-ui-server,,Datapackage pipelines ui server,,0,0,0,0,1,1
+https://github.com/frictionlessdata/datapackage-py,Repo,datapackage-py,https://frictionlessdata.io/tools/,Datapackage py,A Python library for working with Data Packages.,135,135,3,17,254,125
+https://github.com/frictionlessdata/datapackage-r,Repo,datapackage-r,,Datapackage r,An R package for working with Data Package.,18,18,0,3,63,50
+https://github.com/frictionlessdata/datapackage-rb,Repo,datapackage-rb,,Datapackage rb,Ruby library and tools for working with datapackages,10,10,3,6,7,7
+https://github.com/frictionlessdata/datapackage-render-js,Repo,datapackage-render-js,http://datahub.io/docs/features/views/,Datapackage render js,View data packages (especially in the browser),12,12,19,8,74,12
+https://github.com/frictionlessdata/datapackage-ui,Repo,datapackage-ui,,Datapackage ui,"A web UI for creating, editing and validating Data Packages.",23,23,3,15,15,6
+https://github.com/frictionlessdata/DataPackage.jl,Repo,DataPackage.jl,,Datapackage.jl,A Julia library for working with Data Package.,6,6,2,10,38,9
+https://github.com/frictionlessdata/datapkg-r,Repo,datapkg-r,,Datapkg r,[DEPRECATED] Please use https://github.com/frictionlessdata/datapackage-r,5,5,2,0,0,0
+https://github.com/frictionlessdata/delimiter,Repo,delimiter,https://delimiter.netlify.com,Delimiter,Edit CSV files in the browser and sync them with GitHub,9,9,1,15,1,1
+https://github.com/frictionlessdata/docs,Repo,docs,https://docs.frictionlessdata.io,Docs,Documentation hub and automation,3,3,7,6,60,5
+https://github.com/frictionlessdata/dpm-js,Repo,dpm-js,,Dpm js,[DEPRECATED] Please use https://datahub.io/docs/features/data-cli,113,113,2,18,2,2
+https://github.com/frictionlessdata/example-continuous-data-integration,Repo,example-continuous-data-integration,,Example continuous data integration,[DEPRECATED] Please use https://goodtables.io,14,14,1,2,22,4
+https://github.com/frictionlessdata/examples,Repo,examples,http://frictionlessdata.io/guides/,Examples,Example Data Packages for use in tutorials,24,24,3,4,74,30
+https://github.com/frictionlessdata/fellows,Repo,fellows,https://fellows.frictionlessdata.io/,Fellows,Website for fellows.frictionlessdata.io Lektor project,2,2,1,1,5,3
+https://github.com/frictionlessdata/forum,Repo,forum,,Forum,"Frictionless Data Forum esp for ""How do I"" type questions",3,3,0,1,25,10
+https://github.com/frictionlessdata/FrictionlessDarwinCore,Repo,FrictionlessDarwinCore,,Frictionlessdarwincore,DarwinCore Archive as Frictionless Data Package,6,6,0,3,24,6
+https://github.com/frictionlessdata/goodtables-js,Repo,goodtables-js,,Goodtables js,Validate tabular data in JavaScript,4,4,2,2,5,5
+https://github.com/frictionlessdata/goodtables-py,Repo,goodtables-py,https://frictionlessdata.io/,Goodtables py,Validate tabular data in Python,213,213,5,30,748,194
+https://github.com/frictionlessdata/goodtables-ui,Repo,goodtables-ui,,Goodtables ui,UI components for goodtables,3,3,0,2,3,2
+https://github.com/frictionlessdata/goodtables-web,Repo,goodtables-web,,Goodtables web,[DEPRECATED] Please use http://try.goodtables.io/,14,14,0,0,1,1
+https://github.com/frictionlessdata/goodtables.io,Repo,goodtables.io,https://goodtables.io,Goodtables.io,Continuous data validation as a service,46,46,1,75,38,30
+https://github.com/frictionlessdata/goodtables.io-example,Repo,goodtables.io-example,http://goodtables.oklabs.org/,Goodtables.io example,[EXAMPLE] Data repository for goodtables.io.,1,1,1,4,0,0
+https://github.com/frictionlessdata/googlesheets-datapackage-tools,Repo,googlesheets-datapackage-tools,,Googlesheets datapackage tools,Tool Fund work to build a Data Package import/export function for Google Sheets. Lead: @stephanmax,5,5,0,1,5,4
+https://github.com/frictionlessdata/notebooks,Repo,notebooks,,Notebooks,Jupyter Notebooks presenting Frictionless Data.,8,8,2,0,2,1
+https://github.com/frictionlessdata/pilot-bcodmo,Repo,pilot-bcodmo,https://github.com/BCODMO/frictionless-usecases,Pilot bcodmo,Pilot with BCO-DMO,0,0,0,0,1,1
+https://github.com/frictionlessdata/pilot-catalyst,Repo,pilot-catalyst,,Pilot catalyst,Pilot with the Catalyst cooperative,2,2,0,3,1,1
+https://github.com/frictionlessdata/pilot-causanatura,Repo,pilot-causanatura,,Pilot causanatura,Pilot project for Programa Matchbox de Engine Room para Causa Natura,1,1,0,1,0,0
+https://github.com/frictionlessdata/pilot-dm4t,Repo,pilot-dm4t,http://www.cs.bath.ac.uk/dm4t/index.shtml,Pilot dm4t,Pilot project with DM4T ,1,1,1,2,23,9
+https://github.com/frictionlessdata/pilot-elife,Repo,pilot-elife,,Pilot elife,Scripts and data for the eLife / Goodtables pilot,3,3,1,0,1,1
+https://github.com/frictionlessdata/pilot-open-archaeology,Repo,pilot-open-archaeology,,Pilot open archaeology,This is a repository for piloting a packaging approach to archaeology data,4,4,1,7,0,0
+https://github.com/frictionlessdata/pilot-pnnl,Repo,pilot-pnnl,https://adbio.pnnl.gov/bioviz/,Pilot pnnl,Pilot project with ADBio PNNL ,1,1,0,3,0,0
+https://github.com/frictionlessdata/pilot-pnnl-user-study,Repo,pilot-pnnl-user-study,https://adbio.pnnl.gov/bioviz/index.html?repo=ADB-User-Study&owner=PNNL-Comp-Mass-Spec&branch=master,Pilot pnnl user study,This User Study Dataset is a subset of a publicly available ovarian cancer proteomics experiment.,1,1,0,0,0,0
+https://github.com/frictionlessdata/pilot-ukds,Repo,pilot-ukds,,Pilot ukds,Pilot UKDS,1,1,1,2,0,0
+https://github.com/frictionlessdata/pilot-wprdc,Repo,pilot-wprdc,,Pilot wprdc,Pilot project with WPRDC,1,1,1,0,0,0
+https://github.com/frictionlessdata/profiles,Repo,profiles,,Profiles,Data package profiles,0,0,1,2,2,2
+https://github.com/frictionlessdata/project,Repo,project,http://frictionlessdata.io/,Project,General issue tracker for the Frictionless Data project.,74,74,4,26,384,28
+https://github.com/frictionlessdata/schemas,Repo,schemas,,Schemas,[DEPRECATED] Please use https://github.com/frictionlessdata/specs,16,16,1,12,28,24
+https://github.com/frictionlessdata/software,Repo,software,https://github.com/orgs/frictionlessdata/projects/2?fullscreen=true,Software,Documentation and issue tracker for the Frictionless Data software,7,7,2,16,7,5
+https://github.com/frictionlessdata/specs,Repo,specs,https://frictionlessdata.io/specs,Specs,Specifications for Frictionless Data.,365,365,9,97,827,461
+https://github.com/frictionlessdata/tableschema-bigquery-py,Repo,tableschema-bigquery-py,,Tableschema bigquery py,"Generate BigQuery tables, load and extract data, based on JSON Table Schema descriptors.",13,13,4,2,58,49
+https://github.com/frictionlessdata/tableschema-ckan-datastore-py,Repo,tableschema-ckan-datastore-py,,Tableschema ckan datastore py,"Generate CKAN DataStore tables, load and extract data, based on Table Schema descriptors.",1,1,0,0,6,2
+https://github.com/frictionlessdata/tableschema-clj,Repo,tableschema-clj,,Tableschema clj,A Clojure library for working with Table Schema.,5,5,0,1,7,2
+https://github.com/frictionlessdata/tableschema-datashape,Repo,tableschema-datashape,,Tableschema datashape,A library to convert JSON Table Schema <--> DataShape.,0,0,0,0,0,0
+https://github.com/frictionlessdata/tableschema-elasticsearch-py,Repo,tableschema-elasticsearch-py,,Tableschema elasticsearch py,Generate Elasticsearch indexes based on Table Schema descriptors.,4,4,0,2,13,12
+https://github.com/frictionlessdata/tableschema-go,Repo,tableschema-go,,Tableschema go,A Go library for working with Table Schema.,25,25,286,6,67,30
+https://github.com/frictionlessdata/tableschema-java,Repo,tableschema-java,,Tableschema java,A Java library for working with Table Schema.,11,11,91,4,222,28
+https://github.com/frictionlessdata/tableschema-js,Repo,tableschema-js,http://frictionlessdata.io/,Tableschema js,A JavaScript library for working with Table Schema.,55,55,8,20,197,41
+https://github.com/frictionlessdata/tableschema-models-js,Repo,tableschema-models-js,,Tableschema models js,An object relational mapper based on Table Schema descriptors.,2,2,1,0,0,0
+https://github.com/frictionlessdata/tableschema-openrefine-py,Repo,tableschema-openrefine-py,,Tableschema openrefine py,"Generate OpenRefine models, load and extract data, based on JSON Table Schema descriptors.",1,1,1,0,0,0
+https://github.com/frictionlessdata/tableschema-pandas-py,Repo,tableschema-pandas-py,,Tableschema pandas py,"Generate Pandas frames, load and extract data, based on JSON Table Schema descriptors.",42,42,1,3,77,37
+https://github.com/frictionlessdata/tableschema-php,Repo,tableschema-php,,Tableschema php,A php library for working with Table Schema.,7,7,0,4,23,11
+https://github.com/frictionlessdata/tableschema-py,Repo,tableschema-py,,Tableschema py,A Python library for working with Table Schema.,171,171,8,17,300,110
+https://github.com/frictionlessdata/tableschema-r,Repo,tableschema-r,https://frictionlessdata.io/software/,Tableschema r,An R library for working with Table Schema.,10,10,1,0,11,7
+https://github.com/frictionlessdata/tableschema-rb,Repo,tableschema-rb,,Tableschema rb,A Ruby library for working with JSON Table Schema. ,8,8,5,5,15,4
+https://github.com/frictionlessdata/tableschema-spss-py,Repo,tableschema-spss-py,,Tableschema spss py,Read and write between SPSS and Table Schema.,4,4,0,1,20,6
+https://github.com/frictionlessdata/tableschema-sql-js,Repo,tableschema-sql-js,https://www.npmjs.com/package/jts-sql-js,Tableschema sql js,"Library for converting JSON Table Schema to an SQL table, for Node and the browser.",6,6,1,5,10,5
+https://github.com/frictionlessdata/tableschema-sql-py,Repo,tableschema-sql-py,,Tableschema sql py,"Generate SQL tables, load and extract data, based on JSON Table Schema descriptors.",48,48,2,5,71,34
+https://github.com/frictionlessdata/tableschema-ui,Repo,tableschema-ui,https://frictionlessdata.github.io/tableschema-ui/,Tableschema ui,"A web UI for creating, editing and validating Table Schemas.",3,3,2,4,9,3
+https://github.com/frictionlessdata/TableSchema.jl,Repo,TableSchema.jl,,Tableschema.jl,A Julia library for working with Table Schema.,5,5,2,5,7,2
+https://github.com/frictionlessdata/tabulator-py,Repo,tabulator-py,https://frictionlessdata.io/tools/,Tabulator py,Consistent interface for stream reading and writing tabular data (csv/xls/json/etc).,146,146,10,22,213,104
+https://github.com/frictionlessdata/testsuite-basic,Repo,testsuite-basic,,Testsuite basic,Testsuite for Frictioinless Data basic implementations.,1,1,1,0,0,0
+https://github.com/frictionlessdata/testsuite-data,Repo,testsuite-data,,Testsuite data,A common set of test data files and data packages for testing Frictionless Data tooling,5,5,28,2,2,2
+https://github.com/frictionlessdata/testsuite-extended,Repo,testsuite-extended,,Testsuite extended,Testsuite for Frictioinless Data extended implementations.,2,2,1,1,2,2
+https://github.com/frictionlessdata/toolfund,Repo,toolfund,http://toolfund.frictionlessdata.io/,Toolfund,Frictionless Data Tool Fund Website,2,2,1,1,2,1
+https://github.com/frictionlessdata/website,Repo,website,http://frictionlessdata.io/,Website,The Frictionless Data website.,33,33,5,33,88,20
