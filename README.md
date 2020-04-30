@@ -1,11 +1,19 @@
-# Frictionless Data
+# Frictionless Data - the Project
 
-Frictionless Data is about removing the friction in working with data. We are doing this by developing a set of software, specifications, and best practices for publishing data. 
+If you want an overview of the project see https://frictionlessdata.io/
 
-This issue tracker is no longer in use. Please create project-related issues in the [Frictionless Data specs issue tracker](https://github.com/frictionlessdata/specs/issues) or the [Frictionless Data website issue tracker](https://github.com/frictionlessdata/website/issues), as appropriate. 
+This repo is managing the project and is more core team focused  :smile:
 
-* Frictionless Data: http://frictionlessdata.io/ 
-* Specifications: http://frictionlessdata.io/specs
-* User Stories: http://frictionlessdata.io/user-stories/
-* Forum: https://discuss.okfn.org/c/frictionless-data
-* Gitter chat: https://gitter.im/frictionlessdata/chat
+* Frictionless Data: https://frictionlessdata.io/ 
+* Specifications: https://specs.frictionlessdata.io/
+* Forum: https://github.com/frictionlessdata/forum
+* Chat: Discord 
+
+## Where to open issues?
+
+Summary:
+
+* Forum: https://github.com/frictionlessdata/forum/issues the default place for anyone out there to open an issue. It means *one* place for people to do that. Forum is a welcoming place where people can open a first issue, have a look around etc. If those issues are substantive they may move elsewhere ... (e.g. i did that with a spec issue recently). But it's a good landing spot.
+  * Also the catch-all for general questions, suggestions, ideas, support requests etc.
+* Project: https://github.com/frictionlessdata/project/issues the default place for core team to organize and plan work, schedule sprints etc. NOT for general discussion, ideas, support etc.
+* Specs: https://github.com/frictionlessdata/specs/issues
