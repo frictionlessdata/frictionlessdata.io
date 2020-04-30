@@ -7,7 +7,7 @@ This repo is managing the project and is more core team focused  :smile:
 * Frictionless Data: https://frictionlessdata.io/ 
 * Specifications: https://specs.frictionlessdata.io/
 * Forum: https://github.com/frictionlessdata/forum
-* Chat: Discord 
+* Chat: Discord https://discord.gg/2UgfM2k
 
 ## Where to open issues?
 
