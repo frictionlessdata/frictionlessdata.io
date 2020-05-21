@@ -19,7 +19,7 @@ Summary:
 * Specs: https://github.com/frictionlessdata/specs/issues
 
 
-## Libraries
+## Libraries Status
 
 An overview of the status of the Frictionless Libraries:
 
