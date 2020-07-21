@@ -8,6 +8,7 @@ As such it is more core team focused :smile:
 * Specifications: https://specs.frictionlessdata.io/
 * Forum: https://github.com/frictionlessdata/forum
 * Chat: Discord https://discord.gg/2UgfM2k
+* Code of Conduct: https://frictionlessdata.io/code-of-conduct/
 
 ## Where to open issues?
 
