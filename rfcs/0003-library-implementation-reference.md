@@ -1,7 +1,7 @@
 ---
 title: Implementation Reference for Frictionless Libraries
 number: 3
-author: ["Evgeny"]
+author: ["Evgeny Karev"]
 ---
 
 ## Architecture

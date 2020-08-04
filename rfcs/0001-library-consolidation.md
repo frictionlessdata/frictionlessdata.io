@@ -1,7 +1,7 @@
 ---
 title: Libraries consolidation for better users/contributors UX
 date: 2020-04-16
-author: ["Evgeny", "Rufus"]
+author: ["Evgeny Karev", "Rufus Pollock"]
 ---
 
 # Overview
@@ -16,7 +16,7 @@ I think in high-level it can be a good map for libraries consolidation e.g.
 
 ## frictionless
 
-> Also as an options `datapackage/datalib` etc. Datapackage is a good brand though it seems kind narrow and something having a mention of Frictionless Data feels the most practical for project popularization 
+> Also as an options `datapackage/datalib` etc. Datapackage is a good brand though it seems kind narrow and something having a mention of Frictionless Data feels the most practical for project popularization
 
 ```
 SOURCE: tabulator(?) + tableschema + tableschema-sql/datahub/etc + datapackage
