@@ -38,6 +38,7 @@ It encapsulates the functionality of:
 - tableschema-drivers
 - datapackage
 - goodtables
+- dataflows (integration)
 
 ### For JavaScript
 
