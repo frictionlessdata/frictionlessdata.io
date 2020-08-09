@@ -117,3 +117,20 @@ It's proposed to:
 - continue maintaining `datapackage-py` as a part of SDK
 - deprecate various `tableschema-sql/pandas/etc` drivers in favour of `frictionless-py`
 - deprecate `goodtables-py` in favour of `frictionless-py`
+
+---
+
+## Meeting 28 July 2020
+
+> TOTAL AGREEMENT: SDK (“driver”) + Toolkit (aka Framework / Platform)
+
+Decisions:
+- [Agreed] Converge on Frictionless lib patterns for SDKs.
+- [Agreed] Adopt frictionless-py approach to toolkit => Python/R/JavaScript.
+
+Summary:
+- Two types of thing going forward:
+  - Driver (SDK): a low level connector that speaks “Frictionless”. For a language this is a low level SDK around Resource / Dataset / Table Schema etc.
+  - Toolkit: set of useful user-focused utilities. More high level kind of thing wranglers, developers are actually looking for.
+- Drivers for as many languages / tools as possible
+- Toolkits focused on python (javascript / R)
