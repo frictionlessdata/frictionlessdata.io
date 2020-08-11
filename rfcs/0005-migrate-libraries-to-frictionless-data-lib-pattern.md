@@ -1,13 +1,11 @@
----
-title: Migrate Libraries to Frictionless Data Lib Pattern
-number: 5
-author: ["Rufus Pollock"]
-created: 2019-12-11
----
-
 # Migrate Libraries to Frictionless Data Lib Pattern
 
-> See https://github.com/frictionlessdata/project/issues/380 for most recent discussion
+- Author: Rufus Pollock
+- Start date: 2019-12-11
+- Status: Approved (see also [RFC 6](./0006-software-structure.md)
+- Reference issues: See https://github.com/frictionlessdata/project/issues/380 for most recent discussion
+
+# Summary
 
 The proposal is to move away from "datapackage-py/js/..." style libraries to the [Frictionless data lib pattern][f11s-lib] as it is more oriented to what people actually need / want / think about.
 
@@ -17,13 +15,9 @@ The Frictionless Data lib pattern is in Frictionless [RFC 0004][f11s-lib].
 
 [f11s-lib]: ./0004-frictionless-data-lib-pattern.md
 
-## Plan of Work
+# Approach
 
-* [ ] Review existing libraries and do a gap analysis
-* [ ] Short intro / guide to writing a Frictionless Data lib
-* [ ] Trial for one language (e.g. python or javascript)
-* [ ] Decide whether worth doing generally as recommended default pattern for libs
-
+See RFC 0004.
 
 # Appendix: Existing Library APIs
 

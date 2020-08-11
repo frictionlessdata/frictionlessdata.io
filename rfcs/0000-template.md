@@ -5,7 +5,7 @@
 - Target Major Version: (2.x / 3.x)
 - Reference Issues: (fill in existing related issues, if any)
 - Implementation PR: (leave this empty)
-- Status: (Draft, Review, Wontfix, Implemented)
+- Status: (Draft, Approved, Review, Wontfix, Implemented)
 
 # Summary
 

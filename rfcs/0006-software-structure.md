@@ -1,44 +1,101 @@
----
-title: Frictionless software structure for the future
-date: 2020-08-04
-author: ["Evgeny Karev", "Rufus Pollock"]
----
+# Restructuring Libraries to Drivers and Toolkits
 
-This RFC is written on top of:
-- [RFC1: Libraries consolidation for better users/contributors UX](./0001-library-consolidation.md)
-- [RFC3: Implementation Reference for Frictionless Libraries](./0003-library-implementation-reference.md)
-- [RFC4: Migrate Libraries to Frictionless Data Lib Pattern](./0004-frictionless-data-lib-pattern.md)
-- [RFC5: Migrate Libraries to Frictionless Data Lib Pattern](./0005-migrate-libraries-to-frictionless-data-lib-pattern.md)
+- Start date: 2020-08-04
+- Author: Evgeny Karev, Rufus Pollock
+- Reference Issues: (fill in existing related issues, if any)
+- Implementation PR:
+- Status: Draft
 
-# Frictionless Software
+# Summary
 
-This RFC introduces a new high-level structure for the Frictionless Software. It will use the following sections to list different layers of software and concrete implementations.
+This RFC introduces a new high-level structure for the Frictionless suite of libraries.
+
+Going forward, there will be two types of software libraries:
+
+* Drivers (aka SDKs): low level connectors that speaks “Frictionless”. For a language this is a low level SDK around Resource / Dataset / Table Schema etc. (The driver terminology comes from operating systems where driver s are low level connectors providing a standard interface from the the kernel of the operating system to peripherals. In our case drivers are low level connectors from data files and datasets into the standard frictionless model).
+* Toolkits: sets of useful user-focused utilities. More high level and the kind of thing wranglers, developers are actually looking for.
+
+Drivers are created for as many languages / tools as possible. Toolkits will focused on Python (and javascript and R).
+
+Drivers will follow [RFC4: Frictionless Data Lib Pattern](./0004-frictionless-data-lib-pattern.md) (that RFC is accepted as applying to drivers).
+
+Toolkits are described in more detail below and you can see frictionless-py for a demo
+
+## Today vs Future
+
+|   | Today | Future |
+| ---------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Drivers (SDKs) | Python<br>`datapackage-py`<br>`tableschema-py`<br>`tabulator`<br><br>Javascript<br>...<br>Go<br>...| `driver-py`<br><br>API follows RFC 004 (for future work) e.g. `open(...)`<br>with core objects `Dataset, Resource, TableSchema` |
+| Toolkit          | `goodtables`<br>`datapackage-py`<br>`tabulator` | `frictionless-py`<br><br>A single library/tool with a bunch of utilities<br>e.g. describe, extract, validate, infer, ... |
+
 
 ## Frictionless Application
 
-> Graphical Interface is on the top of the stack
+> [Rufus] I propose the App stuff be a separate RFC.
+
+Graphical Interface is on the top of the stack
 
 It's a proposed application that should combine the functionality of:
+
 - Data Package Creator
 - Table Schema Editor
 - Try Goodtables
 - etc
 
-## Frictionless Frameworks/Toolkits
+# Basic example
 
-> High-level frameworks are in-the-middle of the stack
+A brand-new framework `frictionless-py` has just been released for initial testing and feedback collection - https://github.com/frictionlessdata/frictionless-py (https://github.com/frictionlessdata/frictionless-py/blob/b316acc828a1061b0cba9bb01f1bb20d34cc94d2/README.md)
 
-### For Python
+`$ frictionless validate data/invalid.csv`
 
-A brand-new framework `frictionless-py` has just been released for initial testing and feedback collection - https://github.com/frictionlessdata/frictionless-py
+# Approach
 
-It encapsulates the functionality of:
+## Drivers (SDKs)
+
+> Low-level Drivers / SDKs are at the bottom of the stack
+
+Low level SDK library for interfacing with datasets and data files and exposing the core Frictionless objects `Dataset`, `Resource`, `TableSchema` etc.
+
+* Drivers will follow [RFC4: Frictionless Data Lib Pattern](./0004-frictionless-data-lib-pattern.md)
+  * We will apply this for new developments. Existing libraries can be left as is
+* One driver per language rather than one per object e.g. `f11s-driver-py` rather than `datapackage-py`, `tableschema-py` etc.
+  * TODO: naming e.g. we can't `frictionless-py` as used for other stuff. Could have simple `driver-py` (and published named in PyPI as `frictionless-driver`)
+
+## Toolkits
+
+> Toolkits are in-the-middle of the stack
+
+Toolkits encapsulate the functionality of:
+
 - tabulator
 - tableschema
 - tableschema-drivers
 - datapackage
 - goodtables
 - dataflows (integration)
+
+TODO: @roll  put more detail on approach from python docs.
+
+### Migration
+
+To move for the current situation to the described situation, we need to:
+- write the application
+- finish `frictionless-py`
+- create `frictionless-js` from `data-js`
+- finish `frictionless-r`
+- update some Python SDK libraries
+
+### Python
+
+`frictionless-py` has been released (Aug 2020) for initial testing and feedback collection - https://github.com/frictionlessdata/frictionless-py
+
+For migration it's proposed to:
+
+- make `tabulator-py` a thin wrapper over `frictionless-py`
+- continue maintaining `tableschema-py` as a part of SDK
+- continue maintaining `datapackage-py` as a part of SDK
+- deprecate various `tableschema-sql/pandas/etc` drivers in favour of `frictionless-py`
+- deprecate `goodtables-py` in favour of `frictionless-py`
 
 ### For JavaScript
 
@@ -48,9 +105,26 @@ There is no high-level framework for JavaScript at the moment. The proposed solu
 
 There is a work currently happening on `frictionless-r` to become a high-level framework for the R-Lang: https://github.com/frictionlessdata/frictionless-r
 
-## Frictionless SDKs/Drivers
+# Drawbacks
 
-> Low-level SDKs are at the bottom of the stack
+* It's a change and may involve breaking changes in library naming and dependencies
+
+# Alternatives
+
+* Leaving as is
+* One library (which is toolkit and driver)
+
+# Adoption strategy
+
+TODO
+
+# Unresolved questions
+
+* Driver naming: driver, sdk or connector?
+
+# Appendix
+
+## Existing Drivers
 
 ### Table Schema
 
@@ -83,42 +157,19 @@ There is a work currently happening on `frictionless-r` to become a high-level f
 | Ruby | https://github.com/frictionlessdata/datapackage-rb |
 | Swift | https://github.com/frictionlessdata/datapackage-swift |
 
----
-
-## Appendix
-
-### Services
+## Existing Services
 
 It's not a part of this RFC, but we have to mention that we also have a few managed services:
 - DataHub.io
 - Goodtables.io
 
-### Userland
+## Existing Userland
 
 Also we have various user-led projects like:
+
 - Delimiter
 - Data Curator
 - etc
-
-### Migration
-
-To move for the current situation to the described situation, we need to:
-- write the application
-- finish `frictionless-py`
-- create `frictionless-js` from `data-js`
-- finish `frictionless-r`
-- update some Python SDK libraries
-
-#### Updating Python Libraries
-
-It's proposed to:
-- make `tabulator-py` a thin wrapper over `frictionless-py`
-- continue maintaining `tableschema-py` as a part of SDK
-- continue maintaining `datapackage-py` as a part of SDK
-- deprecate various `tableschema-sql/pandas/etc` drivers in favour of `frictionless-py`
-- deprecate `goodtables-py` in favour of `frictionless-py`
-
----
 
 ## Meeting 28 July 2020
 

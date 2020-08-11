@@ -1,8 +1,10 @@
----
-title: Libraries consolidation for better users/contributors UX
-date: 2020-04-16
-author: ["Evgeny Karev", "Rufus Pollock"]
----
+# Libraries consolidation for better users/contributors UX
+
+- Start date: 2020-04-16
+- Author: Evgeny Karev, Rufus Pollock
+- Status: DEPRECATED - replaced by RFC 0006
+
+----
 
 # Overview
 
