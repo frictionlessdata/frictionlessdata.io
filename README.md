@@ -1,4 +1,4 @@
-# Frictionless - Project Management
+# Frictionless - A Project Management System 
 
 This is a repo for managing the Frictionless project  https://frictionlessdata.io/
 
