@@ -12,28 +12,28 @@ updated: 2018-02-15
 >
 > See https://github.com/frictionlessdata/tableschema-js/issues/78 for original issue
 
-This document outlines a simple design pattern for a "core" data library `"data"`.
+This document outlines a simple design pattern for base "driver" style Frictionless libraries.
 
 The pattern is focused on access and use of:
 
-* individual files (streams)
-* collections of files ("datasets")
+* individual resources (files,streams etc)
+* collections of resources ("datasets")
 
 Its primary operation is `open`:
 
 ```
-file = open('path/to/file.csv')
+resource = open('path/to/file.csv')
 dataset = open('path/to/files/')
 ```
 
-It defines a standardized "stream-plus-metadata" interface for file and dataset objects, along with methods for creating these from file or dataset pointers such as file paths or urls.
+It defines a standardized "stream-plus-metadata" interface for file and dataset objects, along with methods for creating these from resource or dataset pointers such as file paths or urls.
 
 ```
-file = open('path/to/file.csv')
-file.stream()
-file.rows()
-file.descriptor
-file.descriptor.path
+resource = open('path/to/file.csv')
+resource.stream()
+resource.rows()
+resource.descriptor
+resource.descriptor.path
 ...
 ```
 
@@ -90,19 +90,19 @@ A minimal viable interface for the file case:
 const data = require('data.js')
 
 // path can be local or remote
-// file is now a data.File object
-const file = data.open(pathOrUrl)
+// resource is now a data.Resource object
+const resource = data.open(pathOrUrl)
 
 // a byte stream
-file.stream()
+resource.stream()
 
-// if this file is tabular this will give me a row stream (iterator)
-file.rows()
+// if this resource is tabular this will give me a row stream (iterator)
+resource.rows()
 
-// descriptor for this file including info like size (if available)
+// descriptor for this resource including info like size (if available)
 // the descriptor follows the Data Resource specification
 // (and if Tabular the Tabular Data Resource spec)
-file.descriptor
+resource.descriptor
 ```
 
 For datasets:
@@ -110,11 +110,11 @@ For datasets:
 ```javascript
 // path or url to a directory (or datapackage.json)
 // dataset is a data.Dataset object
-// note: may rename to openDataset if need to disambiguate from open(file)
+// note: may rename to openDataset if need to disambiguate from open(resource)
 const dataset = open(pathOrUrl)
 
-// list of files
-dataset.files
+// list of resources
+dataset.resources
 
 // readme (if README.md existed)
 dataset.readme
@@ -127,15 +127,12 @@ dataset.descriptor
 These interfaces can then form the standard basis for lots of additional functionality e.g.
 
 ```javascript
-infer(file) => inferred tableschema (and types) for the column
+infer(resource) => inferred tableschema (and types) for the column
 
-writer(file) => stream (for saving to disk)
+writer(resource) => stream (for saving to disk)
 
-validate(file) => validate a file (assumes it has a tableschema)
+validate(resource) => validate a resource (assumes it has a tableschema)
 ```
-
-*NOTE: here we have used `file` and `dataset` terminology. If you are more familiar with the package and resource of the Frictionless Data specs please mentally substitute file => resource and dataset => package.*
-
 
 # The Pattern in Detail
 
@@ -143,24 +140,24 @@ validate(file) => validate a file (assumes it has a tableschema)
 
 ## `open` method
 
-The library MUST provide a method `open` which takes a locator to a file and returns a File object:
+The library MUST provide a method `open` which takes a locator to a file and returns a Resource object:
 
 ```javascript=
-open(path/to/file.csv, [options]) => File object
+open(path/to/file.csv, [options]) => Resource object
 ```
 
-`options` is a dictionary of keyword argument list of options. The library MUST support an option `basePath`. `basePath` is for cases where you want to create a File with a path that is relative to a base directory / path e.g.
+`options` is a dictionary of keyword argument list of options. The library MUST support an option `basePath`. `basePath` is for cases where you want to create a Resource with a path that is relative to a base directory / path e.g.
 
 ```
-file = open('data.csv', {basePath: '/my/base/path'})
+resource = open('data.csv', {basePath: '/my/base/path'})
 ```
 
 Will open the file: `/my/base/path/data.csv`
 
-This functionality is mainly useful when using Files as part of Datasets where it can be convenient for a  File to have a path relative to the directory of the Dataset. (See also Data Package and Data Resource in the Frictionless Data specs).
+This functionality is mainly useful when using Resources as part of Datasets where it can be convenient for a  Resource to have a path relative to the directory of the Dataset. (See also Data Package and Data Resource in the Frictionless Data specs).
 
 
-### File locators
+### Resource locators
 
 Locators can be:
 
@@ -172,12 +169,12 @@ Locators can be:
 Implementors MUST support file paths, SHOULD support URLs and MAY support the last two.
 
 ```javascript
-file = open('/path/to/file.csv')
+resource = open('/path/to/file.csv')
 
-file = open('https://example.com/data.xls')
+resource = open('https://example.com/data.xls')
 
 // loading raw data
-file = open({
+resource = open({
   name: 'mydata',
   data: { // can be any javascript - an object, an array or a string or ...
     a: 1,
@@ -188,7 +185,7 @@ file = open({
 // Loading with a descriptor - this allows more fine-grained configuration
 // The descriptor should follow the Frictionless Data Resource model
 // http://specs.frictionlessdata.io/data-resource/
-file = open({
+resource = open({
   // file or url path
   path: 'https://example.com/data.csv',
   // a Table Schema - https://specs.frictionlessdata.io/table-schema/
@@ -206,9 +203,9 @@ file = open({
 ```
 
 
-## File
+## Resource
 
-The File instance MUST have the following properties and methods
+The Resource instance MUST have the following properties and methods
 
 ### Metadata: `descriptor`
 
@@ -220,7 +217,7 @@ file.descriptor
 
 The descriptor follows the Frictionless Data [Data Resource][] spec.
 
-The descriptor metadata is a combination of the metadata passed in at File creation (if you created the File with a descriptor object) and auto-inferred information from the File path. This is the info that SHOULD be auto-inferred:
+The descriptor metadata is a combination of the metadata passed in at Resource creation (if you created the Resource with a descriptor object) and auto-inferred information from the Resource path. This is the info that SHOULD be auto-inferred:
 
 ```
 path: path this was instantiated with - may not be same as file.path (depending on basePath)
@@ -245,7 +242,7 @@ const hash = file.hash
 const encoding = file.encoding
 ```
 
-**Note**: size, hash are not available for remote Files (those created from urls).
+**Note**: size, hash are not available for remote Resources (those created from urls).
 
 ### Accessing data
 
@@ -303,7 +300,7 @@ The library SHOULD support [Table Schema][] and [CSV Dialect][] in the `rows` me
 ```javascript
 
 // load a CSV with a non-standard dialect e.g. tab separated or semi-colon separated
-file = open({
+resource = open({
   path: 'mydata.tsv'
   // Full support for http://specs.frictionlessdata.io/csv-dialect/
   dialect: {
@@ -313,7 +310,7 @@ file = open({
 file.rows() // use the dialect info in parsing the csv
 
 // open a CSV with a Table Schema
-file = open({
+resource = open({
   path: 'mydata.csv'
   // Full support for Table Schema https://specs.frictionlessdata.io/table-schema/
   schema: {
@@ -341,8 +338,8 @@ A Dataset has two key properties:
 // metadata
 dataset.descriptor
 
-// files in the dataset
-dataset.files
+// resources in the dataset
+dataset.resources
 ```
 
 ### `open` for datasets
@@ -401,21 +398,21 @@ The readme content is taken from the README.md file located in the Dataset root 
 
 ### `files`
 
-A Dataset MUST have `files` property which returns an array of the Files contained in this Dataset:
+A Dataset MUST have `files` property which returns an array of the Resources contained in this Dataset:
 
 ```
-dataset.files => Array(<File>)
+dataset.files => Array(<Resource>)
 ```
 
-### addFile
+### addResource
 
-The library SHOULD implement an `addFile` method to add a `File` to a Dataset:
+The library SHOULD implement an `addResource` method to add a `Resource` to a Dataset:
 
 ```
-dataset.addFile(file)
+dataset.addResource(file)
 ```
 
-* `file`: an already instantiated File object or a File descriptor
+* `file`: an already instantiated Resource object or a Resource descriptor
 
 ## Operators
 
@@ -425,7 +422,7 @@ Finally, we discuss some operators. These SHOULD not be in the core library but 
   * `inferStructure(file)`: infer the structure i.e. [CSV Dialect][] of a CSV or other tabular file. In addition to CSV dialect properties this may include things like `skipRows` i.e. number of rows to skip
 * `validate(file/dataset, metadataOnly=False)`: validate the data in a file e.g. against its schema 
   * `metadataOnly`: only validate the metadata e.g. against the [Data Package][] or [Data Resource][] schemas.
-* `write(file/dataset)`: write a File or Dataset to disk
+* `write(file/dataset)`: write a Resource or Dataset to disk
 
 
 # Conclusion
@@ -472,7 +469,7 @@ This is not just about opening files but about passing streams around with becau
 ```mermaid
 graph LR
 
-file[File on Disk] --"open"-> fileobj[Stream / File-like Object]
+file[Resource on Disk] --"open"-> fileobj[Stream / Resource-like Object]
 fileobj --parse-> strstream[Structured Stream]
 strstream -.-> other[More ...]
 ```
@@ -539,20 +536,20 @@ A. save data to disk should be separate objects that operate on the main objects
     
 ```
 const writer = CSVWriter()
-writer.writer(dataLibFileObjectInstance, filePath, [options])
+writer.writer(dataLibResourceObjectInstance, filePath, [options])
 ```
 
 rather than e.g.
 
 ```
-dataLibFileObjectInstance.saveToCsv(filePath)
+dataLibResourceObjectInstance.saveToCsv(filePath)
 ```
 
 *If there is a simple way to invert dependency (i.e. not have all different dumper in main lib) but have a simple save method that would be fine.*
 
 B. Similarly for parsers (though reading is so essential that read needs to be part of of the class)
 
-C. infer, validate etc should operate *on* Files rather than be part of it ...
+C. infer, validate etc should operate *on* Resources rather than be part of it ...
 
 ```javascript=
 const tableschema = infer(fileObj)
@@ -576,14 +573,14 @@ The library should be stream focused library, including object streams.
 
 ## Library Components
 
-In top level library just have Dataset and File (+ TabularFile)
+In top level library just have Dataset and Resource (+ TabularResource)
 
 ```mermaid
 graph TD
 
-Dataset[Dataset/Package] --> File[File/Resource]
-File --> TabularFile
-TabularFile -.-> TableSchema
+Dataset[Dataset/Package] --> Resource[Resource/Resource]
+Resource --> TabularResource
+TabularResource -.-> TableSchema
 TableSchema -.-> Field
 
 parsers((Parsers))
@@ -642,9 +639,9 @@ writer => writers
 
 ```javascript=
 // aka write
-writer(File) => readable stream
+writer(Resource) => readable stream
 
-parser(File) => object stream
+parser(Resource) => object stream
 ```
 
 ## Loaders/Parsers and Writers
@@ -656,7 +653,7 @@ Inversion of control is important: the core library does **not** depend directly
 Parsers:
 
 ```javascript=
-// file is a data.File object
+// file is a data.Resource object
 parse(file) => row stream
 ```
 
