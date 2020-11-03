@@ -48,7 +48,7 @@ A brand-new framework `frictionless-py` has just been released for initial testi
 
 `$ frictionless validate data/invalid.csv`
 
-# Approach
+# Approach
 
 ## Drivers (SDKs)
 
