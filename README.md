@@ -10,6 +10,9 @@ As such it is more core team focused. :smile:
 * Chat: Discord https://discord.gg/2UgfM2k
 * Code of Conduct: https://frictionlessdata.io/code-of-conduct/
 
+Want to cite this repo? Please use this DOI:
+[![DOI](https://zenodo.org/badge/5938104.svg)](https://zenodo.org/badge/latestdoi/5938104)
+
 ## Where to open issues?
 
 **Summary**:
