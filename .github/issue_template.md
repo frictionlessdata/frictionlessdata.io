@@ -11,7 +11,3 @@ Job story if there is one ...
 * [ ] ...
 
 ## Analysis
-
----
-
-Please preserve this line to notify @lwinfree (lead of this repository)
