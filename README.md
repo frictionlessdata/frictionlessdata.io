@@ -1,6 +1,6 @@
 # Frictionless - Project Management
 
-This is a repo for managing the Frictionless project – https://frictionlessdata.io/
+That is a repo for managing the Frictionless project – https://frictionlessdata.io/
 
 As such it is more core team focused. :smile:
 
