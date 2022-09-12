@@ -1,0 +1,28 @@
+{
+  "name": "frictionlessdata.io",
+  "version": "1.0.0",
+  "description": "Frictionless Data Website",
+  "scripts": {
+    "build": "vuepress build site",
+    "start": "vuepress dev site",
+    "update": "ncu -u"
+  },
+  "devDependencies": {
+    "@limdongjin/vuepress-plugin-simple-seo": "^1.0.4-alpha.5",
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-blog": "^1.9.4",
+    "dotenv": "^10.0.0",
+    "lodash": "^4.17.21",
+    "markdown-it-footnote": "",
+    "mermaid": "^9.1.2",
+    "npm-check-updates": "^11.5.13",
+    "start-server-and-test": "^1.12.3",
+    "tailwindcss": "^1.1.4",
+    "vue-typed-js": "^0.1.2",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-dehydrate": "^1.1.5",
+    "vuepress-plugin-feed": "^0.1.9"
+  }
+}
