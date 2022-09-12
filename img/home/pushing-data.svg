@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101">
+  <g id="Group_494" data-name="Group 494" transform="translate(0.152 -0.154)">
+    <g id="Group_348" data-name="Group 348" transform="translate(0 0)">
+      <g id="Group_340" data-name="Group 340" transform="translate(0 0)">
+        <g id="Ellipse_359" data-name="Ellipse 359" transform="translate(-0.152 0.154)" fill="#151515" stroke="#707070" stroke-width="1">
+          <circle cx="50.5" cy="50.5" r="50.5" stroke="none"/>
+          <circle cx="50.5" cy="50.5" r="50" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <path id="Icon_metro-download" data-name="Icon metro-download" d="M21.844,29.219l9.637-12.681H24.253V3.856H19.435V16.537H12.207ZM30.6,24.031l-2.7,3.554,9.79,4.8-15.85,7.778L5.994,32.389l9.79-4.8-2.7-3.554L2.571,29.219V41.9l19.273,9.511L41.117,41.9V29.219Z" transform="translate(28.03 23.451)" fill="#fff"/>
+  </g>
+</svg>

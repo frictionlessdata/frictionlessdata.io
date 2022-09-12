@@ -1,0 +1,49 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Frictionless Data",
+    "home_page_url": "https://frictionlessdata.io",
+    "feed_url": "https://frictionlessdata.io/feed.json",
+    "description": "Data software and standards",
+    "items": [
+        {
+            "id": "https://frictionlessdata.io/blog/2022/08/30/community-call-github-integration/",
+            "url": "https://frictionlessdata.io/blog/2022/08/30/community-call-github-integration/",
+            "title": "Frictionless Data August 2022 Community Call",
+            "summary": "At our Frictionless Data community call we had our very own Frictionless Data developer Shashi Gharti presenting to the community the new Frictionless GitHub integration...",
+            "image": "https://frictionlessdata.io/img/blog/Shashis-presentation.png",
+            "date_modified": "2022-08-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://frictionlessdata.io/blog/2022/08/29/frictionless-framework-release/",
+            "url": "https://frictionlessdata.io/blog/2022/08/29/frictionless-framework-release/",
+            "title": "Welcome Frictionless Framework (v5)",
+            "summary": "We are very excited to announce the beta release of Frictionless Framework v5",
+            "image": "https://frictionlessdata.io/img/blog/framework.png",
+            "date_modified": "2022-08-29T00:00:00.000Z"
+        },
+        {
+            "id": "https://frictionlessdata.io/blog/2022/08/03/community-call-july-flatterer/",
+            "url": "https://frictionlessdata.io/blog/2022/08/03/community-call-july-flatterer/",
+            "title": "Frictionless Data July 2022 Community Call",
+            "summary": "At our Frictionless Data community call we heard about Flatterer, a tool he developed to convert JSON data into tabular data, from David Raznick...",
+            "image": "https://frictionlessdata.io/img/blog/july-community-call-flatterer.png",
+            "date_modified": "2022-08-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://frictionlessdata.io/blog/2022/07/20/lilly-message-to-community/",
+            "url": "https://frictionlessdata.io/blog/2022/07/20/lilly-message-to-community/",
+            "title": "Thank you from Lilly - A message to the community",
+            "summary": "I’m writing to let you all know that this is my final week working on Frictionless Data with Open Knowledge Foundation...",
+            "image": "https://frictionlessdata.io/img/blog/fosdem2020.jpeg",
+            "date_modified": "2022-07-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://frictionlessdata.io/blog/2022/07/14/flatterer/",
+            "url": "https://frictionlessdata.io/blog/2022/07/14/flatterer/",
+            "title": "Announcing Flatterer: converting structured data into tabular data",
+            "summary": "In this blog post, we introduce Flatterer — a new tool that helps convert JSON into tabular data.",
+            "image": "https://frictionlessdata.io/img/blog/Flatterer.png",
+            "date_modified": "2022-07-14T00:00:00.000Z"
+        }
+    ]
+}

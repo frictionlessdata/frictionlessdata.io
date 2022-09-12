@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101">
+  <g id="Group_507" data-name="Group 507" transform="translate(-241 -2545)">
+    <g id="Group_492" data-name="Group 492" transform="translate(241.151 2544.64)">
+      <g id="Group_340" data-name="Group 340" transform="translate(0 0)">
+        <circle id="Ellipse_359" data-name="Ellipse 359" cx="50.5" cy="50.5" r="50.5" transform="translate(-0.152 0.361)" fill="#272525"/>
+      </g>
+    </g>
+    <path id="Icon_material-find-replace" data-name="Icon material-find-replace" d="M23.21,10.917a12.346,12.346,0,0,1,8.7,3.589l-6.245,6.245H40.42V6l-5.04,5.04A17.2,17.2,0,0,0,6.2,20.751h4.966A12.294,12.294,0,0,1,23.21,10.917ZM37.076,33.388a16.937,16.937,0,0,0,3.147-7.72H35.257a12.313,12.313,0,0,1-20.75,6.245l6.245-6.245H6V40.42l5.04-5.04a17.191,17.191,0,0,0,22.348,1.7L45.337,49,49,45.337,37.076,33.388Z" transform="translate(264 2568)" fill="#fff"/>
+  </g>
+</svg>
