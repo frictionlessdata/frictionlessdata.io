@@ -19,7 +19,7 @@
     "mermaid": "^9.1.2",
     "npm-check-updates": "^11.5.13",
     "start-server-and-test": "^1.12.3",
-    "tailwindcss": "^1.1.4",
+    "tailwindcss": "^1.9.6",
     "vue-typed-js": "^0.1.2",
     "vuepress": "^1.8.2",
     "vuepress-plugin-dehydrate": "^1.1.5",
