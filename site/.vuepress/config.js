@@ -6,14 +6,14 @@ module.exports = {
   title: "Frictionless Data",
   description: "Data software and standards",
   head: [
-    ["link", { rel: "icon", href: "img/favicon.ico" }],
+    ["link", { rel: "icon", href: "/img/favicon.ico" }],
     [
       "link",
       {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: "img/favicon-32x32.png",
+        href: "/img/favicon-32x32.png",
       },
     ],
     [
@@ -22,7 +22,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        href: "img/favicon-16x16.png",
+        href: "/img/favicon-16x16.png",
       },
     ],
     [
@@ -30,7 +30,7 @@ module.exports = {
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "img/apple-touch-icon.png",
+        href: "/img/apple-touch-icon.png",
       },
     ],
     [
@@ -38,10 +38,10 @@ module.exports = {
       {
         rel: "mask-icon",
         color: "#000000",
-        href: "img/safari-pinned-tab.svg",
+        href: "/img/safari-pinned-tab.svg",
       },
     ],
-    ["link", { rel: "manifest", href: "img/site.webmanifest" }],
+    ["link", { rel: "manifest", href: "/img/site.webmanifest" }],
     [
       "link",
       {
