@@ -50,6 +50,15 @@ module.exports = {
           "https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap",
       },
     ],
+    [
+      "script",
+      {
+        src: "https://plausible.io/js/script.js",
+        "data-domain": "frictionlessdata.io",
+      },
+    ],
+    ["script", { src: "https://unpkg.com/honeycomb-grid@3.1.3" }],
+    ["script", { src: "https://unpkg.com/svg.js@2.7.1" }],
   ],
   postcss: {
     plugins: [
@@ -224,17 +233,6 @@ module.exports = {
       },
     ],
     ["@vuepress/back-to-top"],
-  ],
-  head: [
-    [
-      "script",
-      {
-        src: "https://plausible.io/js/script.js",
-        "data-domain": "frictionlessdata.io",
-      },
-    ],
-    ["script", { src: "https://unpkg.com/honeycomb-grid@3.1.3" }],
-    ["script", { src: "https://unpkg.com/svg.js@2.7.1" }],
   ],
 };
 
