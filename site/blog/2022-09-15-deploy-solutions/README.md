@@ -20,13 +20,13 @@ The prototype is modular and organized into different sections, grouped by the i
 This audience includes emergency responders, government officials at the municipal, provincial, and federal levels, officials and staff at hydro-electric stations and municipal infrastructure, and other groups who would have authority over the planning, response, and recovery efforts. They produce and consume official data sources, and can share some of that information with the general public or citizen scientist audiences. The web portal contains sensitive, non-public information and therefore requires a secure login for verified users.
 This is an example of the Trusted Authority Dashboard (showing other prototype"modules" in addition to the flooding): 
  
-![deploy-solutions-img-1](https://user-images.githubusercontent.com/74717970/190383577-834115e6-2321-4e73-9a49-bceb653b4995.png)
+![deploy-solutions-img-1](./deploy-solutions-img-1.png)
  
 ## General public (anonymous website)
 The audience for this section of the prototype is the members of the public who are impacted by the flood, or likely to be. They consume official data sources but do not produce any of their own (in our current prototype). This section is a public, read-only website which does not require any login.
 The information the public will see includes a variety of data sources including: checklists for disaster preparation, response, and recovery; curated news and social media information on the disaster; useful resources including emergency and insurance information; and more.
  
- ![Deploy-solutions-img-2](https://user-images.githubusercontent.com/74717970/190383710-75711826-3f6e-4399-8cb0-21e84026dac8.png)
+ ![deploy-solutions-img-2](./Deploy-solutions-img-2.png)
  
 # What Data Does the Prototype Need?
 As you can see from the screens above, the prototype needs to manage a wide variety of flood disaster-related data sets, from all kinds of providers and with varying degrees of reliability and quality.
@@ -35,8 +35,7 @@ Obviously these lists wouldn't change in the middle of a disaster, and would be 
 However, there would also be a set of ad-hoc lists created to suit the particular needs of the disaster response and community involvement. This is data that is highly subjective to the particular circumstances of the disaster, cannot be known ahead of time, and is likely to evolve over the course of the disaster. 
 Examples of such "dynamic data" include locations where sandbags are prepared, locations of emergency shelters, lists of emergency supplies and so on. 
  
-
-![deploy-solutions-img-3](https://user-images.githubusercontent.com/74717970/190383842-d98004a8-b78a-46f7-8bf9-c322ba9ae1bf.png)
+ ![Deploy-solutions-img-3](./deploy-solutions-img-3.png)
 
 Our software prototype allows users to upload CSV files as part of a data import process to make it easy and quick to populate the system with static or dynamic data. 
 Ensuring the quality of ad-hoc data sets is of particular concern, since there are likely to be fewer quality checks for data generated rapidly in response to urgent need.
@@ -58,7 +57,7 @@ We then create a Frictionless Resource file which consists of the uploaded CSV a
 If errors are found, these need to be returned back to the user. In our front-end web client (we use Angular), we format the raw report into table display. The report tells the user precisely which row, column and cell requires fixing, saving them valuable time and eliminating more errors!
 You can see the result in the animated GIF below.
  
-![OASIS Prototype Features Import Data - Invalid Data is Blocked-high](https://user-images.githubusercontent.com/74717970/190384046-de12a2d2-622a-452c-b324-721d689ea2e9.gif)
+![OASIS Prototype Features Import Data - Invalid Data is Blocked-high](./OASIS-Prototype-Features-Import-Data.gif)
  
 Obviously the technical complexities mentioned above are hidden away and the user just sees a very simple and intuitive set of validation messages - or hopefully just a success message!
 You can see a full video of this process on our video showcase page: https://showcase.oasis.climatechange.ca
