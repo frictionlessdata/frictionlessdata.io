@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Thu, 15 Sep 2022 10:51:59 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 Sep 2022 05:58:07 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Deploy Solutions]]></title>
+            <link>https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/</link>
+            <guid>https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/</guid>
+            <pubDate>Thu, 15 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Frictionless Climate Change Data]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/deploy-solutions-logo.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[Frictionless Data August 2022 Community Call]]></title>
             <link>https://frictionlessdata.io/blog/2022/08/30/community-call-github-integration/</link>
@@ -42,15 +51,6 @@
             <pubDate>Wed, 20 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[I’m writing to let you all know that this is my final week working on Frictionless Data with Open Knowledge Foundation...]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/fosdem2020.jpeg">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Announcing Flatterer: converting structured data into tabular data]]></title>
-            <link>https://frictionlessdata.io/blog/2022/07/14/flatterer/</link>
-            <guid>https://frictionlessdata.io/blog/2022/07/14/flatterer/</guid>
-            <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[In this blog post, we introduce Flatterer — a new tool that helps convert JSON into tabular data.]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/Flatterer.png">
             </enclosure>
         </item>
     </channel>

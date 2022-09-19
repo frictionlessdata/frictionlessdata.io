@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/",
+            "url": "https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/",
+            "title": "Deploy Solutions",
+            "summary": "Frictionless Climate Change Data",
+            "image": "https://frictionlessdata.io/img/blog/deploy-solutions-logo.png",
+            "date_modified": "2022-09-15T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2022/08/30/community-call-github-integration/",
             "url": "https://frictionlessdata.io/blog/2022/08/30/community-call-github-integration/",
             "title": "Frictionless Data August 2022 Community Call",
@@ -36,14 +44,6 @@
             "summary": "I’m writing to let you all know that this is my final week working on Frictionless Data with Open Knowledge Foundation...",
             "image": "https://frictionlessdata.io/img/blog/fosdem2020.jpeg",
             "date_modified": "2022-07-20T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2022/07/14/flatterer/",
-            "url": "https://frictionlessdata.io/blog/2022/07/14/flatterer/",
-            "title": "Announcing Flatterer: converting structured data into tabular data",
-            "summary": "In this blog post, we introduce Flatterer — a new tool that helps convert JSON into tabular data.",
-            "image": "https://frictionlessdata.io/img/blog/Flatterer.png",
-            "date_modified": "2022-07-14T00:00:00.000Z"
         }
     ]
 }

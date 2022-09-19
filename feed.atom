@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://frictionlessdata.io</id>
     <title>Frictionless Data</title>
-    <updated>2022-09-15T10:51:59.498Z</updated>
+    <updated>2022-09-19T05:58:07.962Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://frictionlessdata.io"/>
     <link rel="self" href="https://frictionlessdata.io/feed.atom"/>
     <subtitle>Data software and standards</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Deploy Solutions]]></title>
+        <id>https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/</id>
+        <link href="https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/">
+        </link>
+        <updated>2022-09-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Frictionless Climate Change Data]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Frictionless Data August 2022 Community Call]]></title>
         <id>https://frictionlessdata.io/blog/2022/08/30/community-call-github-integration/</id>
@@ -38,13 +46,5 @@
         </link>
         <updated>2022-07-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[I’m writing to let you all know that this is my final week working on Frictionless Data with Open Knowledge Foundation...]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Announcing Flatterer: converting structured data into tabular data]]></title>
-        <id>https://frictionlessdata.io/blog/2022/07/14/flatterer/</id>
-        <link href="https://frictionlessdata.io/blog/2022/07/14/flatterer/">
-        </link>
-        <updated>2022-07-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In this blog post, we introduce Flatterer — a new tool that helps convert JSON into tabular data.]]></summary>
     </entry>
 </feed>
