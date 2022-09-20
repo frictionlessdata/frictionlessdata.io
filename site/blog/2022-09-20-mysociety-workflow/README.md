@@ -1,5 +1,5 @@
 ---
-title: Publishing and analysing data: mySociety's workflow
+title: "Publishing and analysing data: mySociety's workflow"
 date: 2022-09-20
 tags: ["case-studies"]
 category: case-studies
