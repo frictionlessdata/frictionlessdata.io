@@ -31,7 +31,7 @@ The data_common library contains a dataset command line tool – which automates
 
 Rather than reinventing the wheel, we use the [frictionless data standard](https://specs.frictionlessdata.io/) as a way of describing the data. A repo will hold one or more [data packages](https://specs.frictionlessdata.io/data-package/), which are a collection of [data resources](https://specs.frictionlessdata.io/data-resource/) (generally a CSV table). The dataset tool detects changes to the data resources, and updates the config files. Changes between config files can then be used for automated version changes. 
 
-![mysociety-img-1](https://user-images.githubusercontent.com/74717970/191213186-e3bac821-e159-4153-860f-462bdd573268.png)
+![mysociety-img-1](./mysociety-img-1.png)
 
 ## Data integrity
 
@@ -41,7 +41,7 @@ This is especially important because we have datasets that are fed by automated 
 
 The automated versioning approach means the defined structure of a resource is also a form of automated testing. Generally following the [semver rules for frictionless data](https://specs.frictionlessdata.io/patterns/#data-package-version) (exception that adding a new column after the last column is not a major change), the dataset tool will try and determine if a change from the previous version is a MAJOR (backward compatibility breaking), MINOR (new resource, row or column), or PATCH (correcting errors) change. Generally, we want to avoid major changes, and the automated action will throw an error if this happens. If a major change is required, this can be done manually. The fact that external users of the file can peg their usage to a particular major version means that changes can be made knowing nothing is immediately going to break (even if data may become more stale in the long run).
 
-![mysociety-img-2](https://user-images.githubusercontent.com/74717970/191213745-57dda773-0b76-4bc0-99e9-4282e4ff766b.png)
+![mysociety-img-2](./mysociety-img-2.png)
 
 ## Data publishing and accessibility
 
@@ -51,21 +51,21 @@ Previously, we were uploading the CSVs to GitHub repositories and leaving it as 
 
 To help make data more accessible, we now publish a small GitHub Pages site for each repo, which allows small static sites to be built from the contents of a repository (the [EveryPolitician project](https://everypolitician.org/) also used this approach). This means we can have fuller documentation of the data, better analytics on access, sign-posting to surveys, and better sign-posted links to downloading multiple versions of the data. 
 
-![mysociety-img-3](https://user-images.githubusercontent.com/74717970/191213938-0ae1a237-17f4-4bfc-94e3-099d36009fcf.png)
+![mysociety-img-3](./mysociety-img-3.png)
 
 The automated deployment means we can also very easily create Excel files that packages together all resources in a package into the same file, and include the meta-data information about the dataset, as well as information about how they can tell us about how they’re using it. 
 
 Publishing in an Excel format acknowledges a practical reality that lots of people work in Excel. CSVs don’t always load nicely in Excel, and since Excel files can contain multiple sheets, we can add a cover page that makes it easier to use and understand our data by packaging all the explanations inside the file. We still produce both CSVs and XLSX files – and can now do so with very little work.
 
-![mysociety-img-4](https://user-images.githubusercontent.com/74717970/191214011-429b83b9-7762-4d1a-a96e-9374a72c7b5e.png)
+![mysociety-img-4](./mysociety-img-4.png)
 
 For developers who are interested in making automated use of the data, we also provide [a small package](https://github.com/mysociety/mysoc-dataset) that can be used in Python or as a CLI tool to fetch the data, and instructions on the download page on [how to use it](https://mysociety.github.io/composite_uk_imd/downloads/uk_index_xlsx/latest). 
 
-![mysociety-img-5](https://user-images.githubusercontent.com/74717970/191214213-8dd061ac-4ce5-4a2c-9b45-c45d210b2433.png)
+![mysociety-img-5](./mysociety-img-5.png)
 
 At mySociety Towers, we’re fans of [Datasette](https://datasette.io/), a tool for exploring datasets. Simon Willison recently released [Datasette Lite](https://github.com/simonw/datasette-lite), a version that runs entirely in the browser. That means that just by publishing our data as a SQLite file, we can add a link so that people can explore a dataset without leaving the browser. You can even create shareable links for queries: for example, [all current local authorities in Scotland](https://lite.datasette.io/?url=https://mysociety.github.io/uk_local_authority_names_and_codes/data/uk_la_past_current/latest/uk_la_past_current.sqlite#/uk_la_past_current/uk_local_authorities_current?_facet=region&region=Scotland), or [local authorities in the most deprived quintile](https://lite.datasette.io/?url=https://mysociety.github.io/composite_uk_imd/data/uk_index/latest/uk_index.sqlite#/uk_index/la_labels?_sort=label&_facet=label&label=1st+IMD+quintile). This lets us do some very rapid prototyping of what a data service might look like, just by packaging up some of the data using our new approach.
 
-![mysociety-img-6](https://user-images.githubusercontent.com/74717970/191214675-66f711b0-e3b9-4bb7-aa91-f06141cedd44.png)
+![mysociety-img-6](./mysociety-img-6.png)
 
 ## Data analysis
 
