@@ -7,7 +7,7 @@ image: /img/blog/fellows-cohort3.png
 description: We challenged the Fellows to exchange their data to see if  they could reproduce each other’s Data Packages...
 author: Sara Petti
 ---
-Is reproducing someone else’s research data a Frictionless experience? As we have seen with all the previous cohorts of Frictionless Fellows (you can read the blog [here](https://frictionlessdata.io/blog/2021/03/10/fellows-reproducing/), most often than not it is sadly not the case.
+Is reproducing someone else’s research data a Frictionless experience? As we have seen with all the previous cohorts of Frictionless Fellows (you can read the blog [here](https://frictionlessdata.io/blog/2021/03/10/fellows-reproducing/)), most often than not it is sadly not the case.
 
 To prove that the “reproducibility crisis” is a real problem in scientific research at the moment, we challenged the Fellows to exchange their data to see if  they could reproduce each other’s Data Packages. Read about their experience:
 
