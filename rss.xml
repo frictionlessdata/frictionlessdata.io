@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Tue, 27 Sep 2022 13:50:51 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 03 Oct 2022 06:04:11 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Publishing and analysing data: mySociety's workflow]]></title>
+            <link>https://frictionlessdata.io/blog/2022/09/20/mysociety-workflow/</link>
+            <guid>https://frictionlessdata.io/blog/2022/09/20/mysociety-workflow/</guid>
+            <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[This blog post explores behind the scenes how mySociety is managing climate data, using the GitHub ecosystem and Frictionless Data standards to validate and publish data]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/mysociety-logo.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[Deploy Solutions]]></title>
             <link>https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/</link>
@@ -42,15 +51,6 @@
             <pubDate>Wed, 03 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[At our Frictionless Data community call we heard about Flatterer, a tool he developed to convert JSON data into tabular data, from David Raznick...]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/july-community-call-flatterer.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Thank you from Lilly - A message to the community]]></title>
-            <link>https://frictionlessdata.io/blog/2022/07/20/lilly-message-to-community/</link>
-            <guid>https://frictionlessdata.io/blog/2022/07/20/lilly-message-to-community/</guid>
-            <pubDate>Wed, 20 Jul 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[I’m writing to let you all know that this is my final week working on Frictionless Data with Open Knowledge Foundation...]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/fosdem2020.jpeg">
             </enclosure>
         </item>
     </channel>

@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2022/09/20/mysociety-workflow/",
+            "url": "https://frictionlessdata.io/blog/2022/09/20/mysociety-workflow/",
+            "title": "Publishing and analysing data: mySociety's workflow",
+            "summary": "This blog post explores behind the scenes how mySociety is managing climate data, using the GitHub ecosystem and Frictionless Data standards to validate and publish data",
+            "image": "https://frictionlessdata.io/img/blog/mysociety-logo.png",
+            "date_modified": "2022-09-20T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/",
             "url": "https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/",
             "title": "Deploy Solutions",
@@ -36,14 +44,6 @@
             "summary": "At our Frictionless Data community call we heard about Flatterer, a tool he developed to convert JSON data into tabular data, from David Raznick...",
             "image": "https://frictionlessdata.io/img/blog/july-community-call-flatterer.png",
             "date_modified": "2022-08-03T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2022/07/20/lilly-message-to-community/",
-            "url": "https://frictionlessdata.io/blog/2022/07/20/lilly-message-to-community/",
-            "title": "Thank you from Lilly - A message to the community",
-            "summary": "I’m writing to let you all know that this is my final week working on Frictionless Data with Open Knowledge Foundation...",
-            "image": "https://frictionlessdata.io/img/blog/fosdem2020.jpeg",
-            "date_modified": "2022-07-20T00:00:00.000Z"
         }
     ]
 }
