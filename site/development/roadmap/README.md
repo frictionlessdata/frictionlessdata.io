@@ -26,11 +26,6 @@ title: Frictionless Roadmap
 <li class="done">
   <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v5.beta)</a>
   <a href="#" class="float-right">Jun 2022</a>
-</li>
-
-<li class="current">
-  <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v5)</a>
-  <a href="#" class="float-right">Sep 2022</a>
   <p>A year since the first framework release we're going to publish a new version with some low-level breaking changes.</p>
 </li>
 
@@ -42,18 +37,25 @@ title: Frictionless Roadmap
 
 <li class="current">
   <a target="_blank" href="">Frictionless Application (MVP)</a>
-  <a href="#" class="float-right">Sep 2022</a>
-</li>
-
-<li>
-  <a target="_blank" href="">Frictionless Application (v1)</a>
   <a href="#" class="float-right">Dec 2022</a>
   <p>We're looking forward to finish our application work and release it to a broad audience.</p>
 </li>
 
+<li class="current">
+  <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v5)</a>
+  <a href="#" class="float-right">Dec 2022</a>
+  <p>We're going to publish a stable release version of Frictionless Framework </p>
+</li>
+
+<li>
+  <a target="_blank" href="">Frictionless Application (v1)</a>
+  <a href="#" class="float-right">Jun 2023</a>
+  <p>We're going to publish a stable release version of Frictionless Application </p>
+</li>
+
 <li>
   <a target="_blank" href="https://livemark.frictionlessdata.io/">Livemark (v1)</a>
-  <a href="#" class="float-right">Jun 2023</a>
+  <a href="#" class="float-right">Dec 2023</a>
   <p>Data presentation framework for Python that generates static sites from extended Markdown is going to be released</p>
 </li>
 </ul>
