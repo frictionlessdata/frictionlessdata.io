@@ -4,7 +4,7 @@ date: 2022-08-30
 tags: ['events', 'community-hangout']
 category: events
 image: /img/blog/zenodo-presentation.png
-description: At our Frictionless Data community call we had our very own Frictionless Data developer Shashi Gharti presenting to the community the new Frictionless Zenodo integration...
+description: At our last community call our very own Frictionless Data developer Shashi Gharti presented to the community the new Frictionless Zenodo integration...
 author: Sara Petti
 ---
 On our last community call on October 27<sup>th</sup>, we had our very own Frictionless Data developer Shashi Gharti presenting to the community the Frictionless Zenodo integration, to read and write data packages from and to Zenodo. 
