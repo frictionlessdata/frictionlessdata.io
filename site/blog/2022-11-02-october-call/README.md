@@ -1,6 +1,6 @@
 ---
 title: Frictionless Data October 2022 Community Call 
-date: 2022-08-30
+date: 2022-11-02
 tags: ['events', 'community-hangout']
 category: events
 image: /img/blog/zenodo-presentation.png
