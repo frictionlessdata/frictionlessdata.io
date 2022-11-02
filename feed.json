@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2022/11/02/october-call/",
+            "url": "https://frictionlessdata.io/blog/2022/11/02/october-call/",
+            "title": "Frictionless Data October 2022 Community Call",
+            "summary": "At our last community call our very own Frictionless Data developer Shashi Gharti presented to the community the new Frictionless Zenodo integration...",
+            "image": "https://frictionlessdata.io/img/blog/zenodo-presentation.png",
+            "date_modified": "2022-11-02T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2022/09/20/mysociety-workflow/",
             "url": "https://frictionlessdata.io/blog/2022/09/20/mysociety-workflow/",
             "title": "Publishing and analysing data: mySociety's workflow",
@@ -20,14 +28,6 @@
             "summary": "Frictionless Climate Change Data",
             "image": "https://frictionlessdata.io/img/blog/deploy-solutions-logo.png",
             "date_modified": "2022-09-15T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2022/08/30/october-call/",
-            "url": "https://frictionlessdata.io/blog/2022/08/30/october-call/",
-            "title": "Frictionless Data October 2022 Community Call",
-            "summary": "At our last community call our very own Frictionless Data developer Shashi Gharti presented to the community the new Frictionless Zenodo integration...",
-            "image": "https://frictionlessdata.io/img/blog/zenodo-presentation.png",
-            "date_modified": "2022-08-30T00:00:00.000Z"
         },
         {
             "id": "https://frictionlessdata.io/blog/2022/08/30/community-call-github-integration/",
