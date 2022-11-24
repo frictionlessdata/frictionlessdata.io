@@ -48,9 +48,15 @@ title: Frictionless Roadmap
 </li>
 
 <li>
+  <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v6)</a>
+  <a href="#" class="float-right">Jun 2023</a>
+  <p>This release of Frictionless Framework will be focused on performance, development experience, transformation pipelines, and server capabilities improvements</p>
+</li>
+
+<li>
   <a target="_blank" href="">Frictionless Application (v1)</a>
   <a href="#" class="float-right">Jun 2023</a>
-  <p>We're going to publish a stable release version of Frictionless Application </p>
+  <p>We're going to publish a stable release version of Frictionless Application</p>
 </li>
 
 <li>
