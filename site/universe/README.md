@@ -4,7 +4,7 @@ title: Frictionless Universe
 
 # Frictionless Universe
 
-Cummunity-driven projects based on Frictionless Software and Standards:
+Community-driven projects based on Frictionless Software and Standards:
 
 ## Visual
 
