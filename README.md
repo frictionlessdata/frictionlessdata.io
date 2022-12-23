@@ -1,6 +1,6 @@
 # Frictionless Data
 
-[![Build](https://img.shields.io/github/workflow/status/frictionlessdata/website/general/main)](https://github.com/frictionlessdata/frictionlessdata.io/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/frictionlessdata/frictionlessdata.io/general.yaml?branch=main)](https://github.com/frictionlessdata/frictionlessdata.io/actions)
 [![Codebase](https://img.shields.io/badge/codebase-github-brightgreen)](https://github.com/frictionlessdata/frictionlessdata.io)
 [![Support](https://img.shields.io/badge/support-slack-brightgreen)](https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg)
 
