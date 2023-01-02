@@ -16,7 +16,7 @@
     "dotenv": "^10.0.0",
     "lodash": "^4.17.21",
     "markdown-it-footnote": "",
-    "mermaid": "^9.1.2",
+    "mermaid": "^9.3.0",
     "npm-check-updates": "^11.5.13",
     "start-server-and-test": "^1.12.3",
     "tailwindcss": "^1.9.6",
