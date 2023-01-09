@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/01/06/datapackage-as-a-service/",
+            "url": "https://frictionlessdata.io/blog/2023/01/06/datapackage-as-a-service/",
+            "title": "Frictionless Data last Community Call of the year 2022",
+            "summary": "At our last community call we discussed Data Packages as a service with Oleg Lavrovsky...",
+            "image": "https://frictionlessdata.io/img/blog/Datapackage-service.png",
+            "date_modified": "2023-01-06T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2022/12/07/community-call/",
             "url": "https://frictionlessdata.io/blog/2022/12/07/community-call/",
             "title": "Frictionless Data 1st December 2022 Community Call",
@@ -28,14 +36,6 @@
             "summary": "This blog post explores behind the scenes how mySociety is managing climate data, using the GitHub ecosystem and Frictionless Data standards to validate and publish data",
             "image": "https://frictionlessdata.io/img/blog/mysociety-logo.png",
             "date_modified": "2022-09-20T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/",
-            "url": "https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/",
-            "title": "Deploy Solutions",
-            "summary": "Frictionless Climate Change Data",
-            "image": "https://frictionlessdata.io/img/blog/deploy-solutions-logo.png",
-            "date_modified": "2022-09-15T00:00:00.000Z"
         }
     ]
 }

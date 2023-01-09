@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Fri, 06 Jan 2023 16:54:09 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Jan 2023 14:04:36 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Frictionless Data last Community Call of the year 2022]]></title>
+            <link>https://frictionlessdata.io/blog/2023/01/06/datapackage-as-a-service/</link>
+            <guid>https://frictionlessdata.io/blog/2023/01/06/datapackage-as-a-service/</guid>
+            <pubDate>Fri, 06 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[At our last community call we discussed Data Packages as a service with Oleg Lavrovsky...]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/Datapackage-service.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[Frictionless Data 1st December 2022 Community Call]]></title>
             <link>https://frictionlessdata.io/blog/2022/12/07/community-call/</link>
@@ -33,15 +42,6 @@
             <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[This blog post explores behind the scenes how mySociety is managing climate data, using the GitHub ecosystem and Frictionless Data standards to validate and publish data]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/mysociety-logo.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Deploy Solutions]]></title>
-            <link>https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/</link>
-            <guid>https://frictionlessdata.io/blog/2022/09/15/deploy-solutions/</guid>
-            <pubDate>Thu, 15 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Frictionless Climate Change Data]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/deploy-solutions-logo.png">
             </enclosure>
         </item>
     </channel>
