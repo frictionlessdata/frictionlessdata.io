@@ -35,7 +35,7 @@ title: Frictionless Roadmap
   <p>Frictionless Repository is going to be updated to Frictionless Framework v5</p>
 </li>
 
-<li class="current">
+<li class="done">
   <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v5)</a>
   <a href="#" class="float-right">Dec 2022</a>
   <p>We're going to publish a stable release version of Frictionless Framework </p>
@@ -43,7 +43,7 @@ title: Frictionless Roadmap
 
 <li class="current">
   <a target="_blank" href="">Frictionless Application (MVP)</a>
-  <a href="#" class="float-right">Dec 2022</a>
+  <a href="#" class="float-right">Mar 2023</a>
   <p>We're looking forward to finish our application work and release it to a broad audience.</p>
 </li>
 
