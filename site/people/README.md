@@ -230,7 +230,7 @@ var team = [{
 team = team.concat([
 	{
 		name: 'Evgeny Karev',
-		city: 'Moscow, Russia',
+		city: 'Loulé, Portugal',
 		languages: ['en', 'ru'],
 		github: 'roll',
 		work: {
