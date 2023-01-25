@@ -298,7 +298,7 @@ team = team.concat([
 		languages: ['en', 'ne'],
 		github: 'shashigharti',
 		work: {
-			role: 'Junior Developer',
+			role: 'Developer',
 			org: 'Frictionless Data, Open Knowledge Foundation'
 		},
 		reposOfficial: [
