@@ -211,21 +211,21 @@ var team = [{
 	],
 }]
 
-team = team.concat([
-	{
-		name: 'Lilly Winfree',
-		city: 'Austin, TX',
-		languages: ['en'],
-		github: 'lwinfree',
-		work: {
-			role: 'Product Manager',
-			org: 'Frictionless Data, Open Knowledge Foundation'
-		},
-		reposOfficial: [
-			'okfn/*'
-		]
-	}
-])
+// team = team.concat([
+// 	{
+// 		name: 'Lilly Winfree',
+// 		city: 'Austin, TX',
+// 		languages: ['en'],
+// 		github: 'lwinfree',
+// 		work: {
+// 			role: 'Product Manager',
+// 			org: 'Frictionless Data, Open Knowledge Foundation'
+// 		},
+// 		reposOfficial: [
+// 			'okfn/*'
+// 		]
+// 	}
+// ])
 
 team = team.concat([
 	{
@@ -243,21 +243,21 @@ team = team.concat([
 	}
 ])
 
-team = team.concat([
-	{
-		name: 'Sébastien Lavoie',
-		city: 'Mexico City, Mexico',
-		languages: ['en', 'es'],
-		github: 'sglavoie',
-		work: {
-			role: 'Product Manager',
-			org: 'Datopian'
-		},
-		reposOfficial: [
-			'datapian/*'
-		]
-	}
-])
+// team = team.concat([
+// 	{
+// 		name: 'Sébastien Lavoie',
+// 		city: 'Mexico City, Mexico',
+// 		languages: ['en', 'es'],
+// 		github: 'sglavoie',
+// 		work: {
+// 			role: 'Product Manager',
+// 			org: 'Datopian'
+// 		},
+// 		reposOfficial: [
+// 			'datapian/*'
+// 		]
+// 	}
+// ])
 
 team = team.concat([
 	{
