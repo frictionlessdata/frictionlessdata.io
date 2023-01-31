@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/01/31/frictionless-at-fosdem/",
+            "url": "https://frictionlessdata.io/blog/2023/01/31/frictionless-at-fosdem/",
+            "title": "Frictionless Data loves FOSDEM",
+            "summary": "We are very excited to announce that we are going back to FOSDEM this year!",
+            "image": "https://frictionlessdata.io/img/blog/FOSDEM_logo.png",
+            "date_modified": "2023-01-31T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/01/06/datapackage-as-a-service/",
             "url": "https://frictionlessdata.io/blog/2023/01/06/datapackage-as-a-service/",
             "title": "Frictionless Data last Community Call of the year 2022",
@@ -28,14 +36,6 @@
             "summary": "At our last community call our very own Frictionless Data developer Shashi Gharti presented to the community the new Frictionless Zenodo integration...",
             "image": "https://frictionlessdata.io/img/blog/zenodo-presentation.png",
             "date_modified": "2022-11-02T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2022/09/20/mysociety-workflow/",
-            "url": "https://frictionlessdata.io/blog/2022/09/20/mysociety-workflow/",
-            "title": "Publishing and analysing data: mySociety's workflow",
-            "summary": "This blog post explores behind the scenes how mySociety is managing climate data, using the GitHub ecosystem and Frictionless Data standards to validate and publish data",
-            "image": "https://frictionlessdata.io/img/blog/mysociety-logo.png",
-            "date_modified": "2022-09-20T00:00:00.000Z"
         }
     ]
 }
