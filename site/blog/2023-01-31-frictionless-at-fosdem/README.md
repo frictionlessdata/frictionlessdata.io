@@ -13,7 +13,7 @@ The talk will be featured in the Open Research Tools and Technology devroom, alo
 
 While FOSDEM is going back to Brussels for a physical event this year, the decision was made to keep part of the programme online to allow a broader audience to join. The Frictionless Application overview will be online as well, so you can follow it and participate in the discussion from wherever you are, even if you are not in Brussels.
 
-This will be our 4th year at FOSDEM, and we are very proud we have been part of the Open Research devroom since its creation 4 years ago. To celebrate this, let’s look back at some of the great moments we shared:
+This will be our 4th year at FOSDEM, and we are very proud to have been part of the Open Research devroom since its creation 4 years ago. To celebrate this, let’s look back at some of the great moments we shared:
 
 In 2020 Lilly Winfree presented on-site “Frictionless Data for Reproducible Research” (you can watch the video recording [here](https://www.youtube.com/watch?v=lFgZTfCZu5U&t=317s)), a talk in which she discussed the technical ideas behind Frictionless Data for research, and showcased collaborative use cases, particularly the [BCO-DMO pilot](https://frictionlessdata.io/blog/2020/02/10/frictionless-data-pipelines-for-open-ocean/), which was quite new at the time. Lilly showed how implementing Frictionless Data tooling into their data ingest pipelines allowed BCO-DMO to integrate disparate data while maintaining quality metadata in an easy to use interface. You can find all the info about this talk into the FOSDEM archive [here](https://archive.fosdem.org/2020/schedule/event/open_research_frictionless_data/).
 
