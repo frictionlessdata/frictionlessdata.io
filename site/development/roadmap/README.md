@@ -18,7 +18,7 @@ title: Frictionless Roadmap
 </li>
 
 <li class="done">
-  <a target="_blank" href="https://framework.frictionlessdata.io/">Livemark (MVP)</a>
+  <a target="_blank" href="https://framework.frictionlessdata.io/">Livemark (beta)</a>
   <a href="#" class="float-right">Dec 2021</a>
   <p>Data presentation framework for Python that generates static sites from extended Markdown with interactive charts, tables, scripts, and other features</p>
 </li>
@@ -42,7 +42,7 @@ title: Frictionless Roadmap
 </li>
 
 <li class="current">
-  <a target="_blank" href="">Frictionless Application (MVP)</a>
+  <a target="_blank" href="">Frictionless Application (beta)</a>
   <a href="#" class="float-right">Mar 2023</a>
   <p>We're looking forward to finish our application work and release it to a broad audience.</p>
 </li>
