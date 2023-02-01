@@ -24,12 +24,6 @@ title: Frictionless Roadmap
 </li>
 
 <li class="done">
-  <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v5.beta)</a>
-  <a href="#" class="float-right">Jun 2022</a>
-  <p>A year since the first framework release we're going to publish a new version with some low-level breaking changes.</p>
-</li>
-
-<li class="done">
   <a target="_blank" href="https://repository.frictionlessdata.io/">Frictionless Repository (v2)</a>
   <a href="#" class="float-right">Sep 2022</a>
   <p>Frictionless Repository is going to be updated to Frictionless Framework v5</p>
@@ -38,7 +32,7 @@ title: Frictionless Roadmap
 <li class="done">
   <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v5)</a>
   <a href="#" class="float-right">Dec 2022</a>
-  <p>We're going to publish a stable release version of Frictionless Framework </p>
+  <p>A year since the first framework release we're going to publish a new version with some low-level breaking changes.</p>
 </li>
 
 <li class="current">
