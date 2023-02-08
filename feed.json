@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/02/06/community-call/",
+            "url": "https://frictionlessdata.io/blog/2023/02/06/community-call/",
+            "title": "Frictionless Data Community Call January 2023",
+            "summary": "At our last community call we discussed about DCAT and Frictionless Data with Matteo Fortini...",
+            "image": "https://frictionlessdata.io/img/blog/Frictionless-dcat-january-2023.png",
+            "date_modified": "2023-02-06T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/01/31/frictionless-at-fosdem/",
             "url": "https://frictionlessdata.io/blog/2023/01/31/frictionless-at-fosdem/",
             "title": "Frictionless Data loves FOSDEM",
@@ -28,14 +36,6 @@
             "summary": "At our last community call Frictionless Data senior developer Edgar Zanella presented to the community the Frictionless - CKAN integration...",
             "image": "https://frictionlessdata.io/img/blog/CKAN-Frictionless-integration.png",
             "date_modified": "2022-12-07T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2022/11/02/october-call/",
-            "url": "https://frictionlessdata.io/blog/2022/11/02/october-call/",
-            "title": "Frictionless Data October 2022 Community Call",
-            "summary": "At our last community call our very own Frictionless Data developer Shashi Gharti presented to the community the new Frictionless Zenodo integration...",
-            "image": "https://frictionlessdata.io/img/blog/zenodo-presentation.png",
-            "date_modified": "2022-11-02T00:00:00.000Z"
         }
     ]
 }
