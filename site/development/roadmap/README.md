@@ -49,7 +49,7 @@ title: Frictionless Roadmap
 
 <li>
   <a target="_blank" href="">Frictionless Application (v1)</a>
-  <a href="#" class="float-right">Jun 2023</a>
+  <a href="#" class="float-right">Sep 2023</a>
   <p>We're going to publish a stable release version of Frictionless Application</p>
 </li>
 
