@@ -13,7 +13,7 @@ title: Frictionless Roadmap
 
 <li class="done">
   <a target="_blank" href="https://repository.frictionlessdata.io/">Frictionless Repository (v1)</a>
-  <a href="#" class="float-right">Jul 2021</a>
+  <a href="#" class="float-right">Jun 2021</a>
   <p>Data management service that brings continuous data validation to tabular data in your repository via Github Action</p>
 </li>
 
