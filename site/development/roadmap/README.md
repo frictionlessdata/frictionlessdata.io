@@ -35,6 +35,12 @@ title: Frictionless Roadmap
   <p>A year since the first framework release we're going to publish a new version with some low-level breaking changes.</p>
 </li>
 
+<li>
+  <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v6)</a>
+  <a href="#" class="float-right">Mar 2023</a>
+  <p>This major release of Frictionless Framework will include minor breaking chagnes and improements towards better Frictionless Standards compatability</p>
+</li>
+
 <li class="current">
   <a target="_blank" href="">Frictionless Application (beta)</a>
   <a href="#" class="float-right">Mar 2023</a>
@@ -42,7 +48,7 @@ title: Frictionless Roadmap
 </li>
 
 <li>
-  <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v6)</a>
+  <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v7)</a>
   <a href="#" class="float-right">Jun 2023</a>
   <p>This release of Frictionless Framework will be focused on performance, development experience, transformation pipelines, and server capabilities improvements</p>
 </li>
