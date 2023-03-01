@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/03/01/february-community-call/",
+            "url": "https://frictionlessdata.io/blog/2023/03/01/february-community-call/",
+            "title": "Frictionless Data Community Call February 2023",
+            "summary": "At our last community call we heard about generating spreadsheet templates from Tabular Data Package metadata from Ethan Welty...",
+            "image": "https://frictionlessdata.io/img/blog/WGMS-community-photo.png",
+            "date_modified": "2023-03-01T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/02/06/community-call/",
             "url": "https://frictionlessdata.io/blog/2023/02/06/community-call/",
             "title": "Frictionless Data Community Call January 2023",
@@ -28,14 +36,6 @@
             "summary": "At our last community call we discussed Data Packages as a service with Oleg Lavrovsky...",
             "image": "https://frictionlessdata.io/img/blog/Datapackage-service.png",
             "date_modified": "2023-01-06T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2022/12/07/community-call/",
-            "url": "https://frictionlessdata.io/blog/2022/12/07/community-call/",
-            "title": "Frictionless Data 1st December 2022 Community Call",
-            "summary": "At our last community call Frictionless Data senior developer Edgar Zanella presented to the community the Frictionless - CKAN integration...",
-            "image": "https://frictionlessdata.io/img/blog/CKAN-Frictionless-integration.png",
-            "date_modified": "2022-12-07T00:00:00.000Z"
         }
     ]
 }

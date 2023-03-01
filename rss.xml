@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Wed, 01 Mar 2023 12:17:18 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Mar 2023 13:37:59 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Frictionless Data Community Call February 2023]]></title>
+            <link>https://frictionlessdata.io/blog/2023/03/01/february-community-call/</link>
+            <guid>https://frictionlessdata.io/blog/2023/03/01/february-community-call/</guid>
+            <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[At our last community call we heard about generating spreadsheet templates from Tabular Data Package metadata from Ethan Welty...]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/WGMS-community-photo.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[Frictionless Data Community Call January 2023]]></title>
             <link>https://frictionlessdata.io/blog/2023/02/06/community-call/</link>
@@ -33,15 +42,6 @@
             <pubDate>Fri, 06 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[At our last community call we discussed Data Packages as a service with Oleg Lavrovsky...]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/Datapackage-service.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Frictionless Data 1st December 2022 Community Call]]></title>
-            <link>https://frictionlessdata.io/blog/2022/12/07/community-call/</link>
-            <guid>https://frictionlessdata.io/blog/2022/12/07/community-call/</guid>
-            <pubDate>Wed, 07 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[At our last community call Frictionless Data senior developer Edgar Zanella presented to the community the Frictionless - CKAN integration...]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/CKAN-Frictionless-integration.png">
             </enclosure>
         </item>
     </channel>
