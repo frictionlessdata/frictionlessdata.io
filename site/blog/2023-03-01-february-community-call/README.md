@@ -11,7 +11,7 @@ At our last community call on February 28th, we heard about generating spreadshe
 
 Ethan works for the [World Glacier Monitoring Service (WGMS)](https://wgms.ch/), which maintains and curates a single longrunning dataset (with entries dating back to 1894!) combining both satellite measurements, and manual submissions of scientists from around the world who go out to glaciers and measure the mass changes on the ground.
 
-One of their biggest challenges is that parts of the data are not machine-generated, but imputed by humans. It is therefore important to review the data submissions to try and catch any possible error. To do that, Ethan adopted the Frictionless Tabular Data Package approach, getting as much of the organisation logic and data management into centralised metadata. 
+One of their biggest challenges is that parts of the data are not machine-generated, but inserted by humans. It is therefore important to review the data submissions to try and catch any possible error. To do that, Ethan adopted the Frictionless Tabular Data Package approach, getting as much of the organisation logic and data management into a centralised metadata. 
 
 Plus, to help people doing their data entry, they have spreadsheet templates automatically generated. The file is built in markup language, and is generated from the validation pipeline (which works in a slightly different way than in Frictionless Data, as it scales to a much longer pipeline). The template generator, called _Tablecloth_, currently supports Excel - as it is what most people who work with the WGMS are comfortable using, and it is soon going to support Google Sheets too. 
 
