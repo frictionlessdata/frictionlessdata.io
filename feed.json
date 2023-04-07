@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/04/06/march-community-call/",
+            "url": "https://frictionlessdata.io/blog/2023/04/06/march-community-call/",
+            "title": "Frictionless Data Community Call March 2023",
+            "summary": "At our last community call Evgeny Karev presented the new Frictionless CLI commands and we talked with the community about project governance...",
+            "image": "https://frictionlessdata.io/img/blog/Frictionless-new-CLI-commands.png",
+            "date_modified": "2023-04-06T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/03/01/february-community-call/",
             "url": "https://frictionlessdata.io/blog/2023/03/01/february-community-call/",
             "title": "Frictionless Data Community Call February 2023",
@@ -28,14 +36,6 @@
             "summary": "We are very excited to announce that we are going back to FOSDEM this year!",
             "image": "https://frictionlessdata.io/img/blog/FOSDEM_logo.png",
             "date_modified": "2023-01-31T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2023/01/06/datapackage-as-a-service/",
-            "url": "https://frictionlessdata.io/blog/2023/01/06/datapackage-as-a-service/",
-            "title": "Frictionless Data last Community Call of the year 2022",
-            "summary": "At our last community call we discussed Data Packages as a service with Oleg Lavrovsky...",
-            "image": "https://frictionlessdata.io/img/blog/Datapackage-service.png",
-            "date_modified": "2023-01-06T00:00:00.000Z"
         }
     ]
 }
