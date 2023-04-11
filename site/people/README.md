@@ -94,6 +94,11 @@ Frictionless Data is possible due to our awesome contributor community. You can 
   <img src="https://contrib.rocks/image?repo=frictionlessdata/frictionless-js" />
 </a>
 
+<p><strong><big>frictionless-r</big></strong></p>
+<a href="https://github.com/frictionlessdata/frictionless-js/graphs/contributors" title="Open a Github repo">
+  <img src="https://contrib.rocks/image?repo=frictionlessdata/frictionless-r" />
+</a>
+
 <p><strong><big>datapackage-py</big></strong></p>
 <a href="https://github.com/frictionlessdata/datapackage-py/graphs/contributors" title="Open a Github repo">
   <img src="https://contrib.rocks/image?repo=frictionlessdata/datapackage-py" />
