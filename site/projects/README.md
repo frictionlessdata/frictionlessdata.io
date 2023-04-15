@@ -24,7 +24,7 @@ It's a list of core Frictionless Projects developed by the core Frictionless Tea
  <div class="px-8 text-center">
    <a href="https://application.frictionlessdata.io/" target="_blank">
      <img src="/img/software/components.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px" />
-     <h3>Frictionless Application (soon)</h3>
+     <h3>Frictionless Application</h3>
    </a>
    <p>Data management application for Browser and Desktop for working with tabular data.</p>
  </div>
