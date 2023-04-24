@@ -35,13 +35,13 @@ title: Frictionless Roadmap
   <p>A year since the first framework release we're going to publish a new version with some low-level breaking changes.</p>
 </li>
 
-<li class="current">
+<li class="done">
   <a target="_blank" href="">Frictionless Application (beta)</a>
   <a href="#" class="float-right">Mar 2023</a>
   <p>We're looking forward to finish our application work and release it to a broad audience.</p>
 </li>
 
-<li>
+<li class="current">
   <a target="_blank" href="">Frictionless Application (v1)</a>
   <a href="#" class="float-right">Jun 2023</a>
   <p>We're going to publish a stable release version of Frictionless Application</p>
