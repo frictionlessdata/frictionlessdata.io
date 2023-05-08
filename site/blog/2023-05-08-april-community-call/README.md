@@ -28,7 +28,7 @@ Meanwhile, if you want to know more about Keith’s ideas, you can watch the rec
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UhRYtkYDHsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Join us next month!
-Next community call is on May 27<sup>th</sup>.
+Next community call is on May 25<sup>th</sup>.
 
 Do you have something you would like to present to the community at one of the upcoming calls? Let us know via [this form](https://forms.gle/AWpbxyiGESNSUFK2A), or come and tell us on our [community chat on Slack](https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg)(also accessible via a [Matrix bridge](https://matrix.to/#/#frictionlessdata:matrix.okfn.org) if you prefer to use an open protocol) .
 
