@@ -4,7 +4,7 @@ date: 2023-05-08
 tags: ['events', 'community-hangout']
 category: events
 image: /img/blog/Keith-community-call.png
-description: At our last community call Keith Hughitt share with the communities some ideas on how we can improve the support for non-tabular data...
+description: At our last community call Keith Hughitt shared with the communities some ideas on how we can improve the support for non-tabular data...
 author: Sara Petti
 ---
 At our last community call on April 27<sup>th</sup> Keith Hughitt presented his ideas on how we can improve support for non-tabular data, and on how we could build a specification for describing the relationship between datasets. It took me some time to write this recap blog, because some of the reflections that Keith shared with us resonated very much with some of the thinking we have been doing at Open Knowledge Foundation around governance. I had explained during the [March community call](https://frictionlessdata.io/blog/2023/04/06/march-community-call/) that the governance of the specs has been recently unblocked, and we are starting to think about how to get to v2. It was actually Keith who urged me to do that presentation to clarify the project governance (and I am so glad he did!).
