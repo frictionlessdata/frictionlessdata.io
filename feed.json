@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/05/08/april-community-call/",
+            "url": "https://frictionlessdata.io/blog/2023/05/08/april-community-call/",
+            "title": "Frictionless Data Community Call April 2023",
+            "summary": "At our last community call Keith Hughitt shared with the communities some ideas on how we can improve the support for non-tabular data...",
+            "image": "https://frictionlessdata.io/img/blog/Keith-community-call.png",
+            "date_modified": "2023-05-08T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/04/06/march-community-call/",
             "url": "https://frictionlessdata.io/blog/2023/04/06/march-community-call/",
             "title": "Frictionless Data Community Call March 2023",
@@ -28,14 +36,6 @@
             "summary": "At our last community call we discussed about DCAT and Frictionless Data with Matteo Fortini...",
             "image": "https://frictionlessdata.io/img/blog/Frictionless-dcat-january-2023.png",
             "date_modified": "2023-02-06T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2023/01/31/frictionless-at-fosdem/",
-            "url": "https://frictionlessdata.io/blog/2023/01/31/frictionless-at-fosdem/",
-            "title": "Frictionless Data loves FOSDEM",
-            "summary": "We are very excited to announce that we are going back to FOSDEM this year!",
-            "image": "https://frictionlessdata.io/img/blog/FOSDEM_logo.png",
-            "date_modified": "2023-01-31T00:00:00.000Z"
         }
     ]
 }

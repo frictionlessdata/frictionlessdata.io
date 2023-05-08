@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Mon, 24 Apr 2023 10:18:51 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 08 May 2023 08:19:06 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Frictionless Data Community Call April 2023]]></title>
+            <link>https://frictionlessdata.io/blog/2023/05/08/april-community-call/</link>
+            <guid>https://frictionlessdata.io/blog/2023/05/08/april-community-call/</guid>
+            <pubDate>Mon, 08 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[At our last community call Keith Hughitt shared with the communities some ideas on how we can improve the support for non-tabular data...]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/Keith-community-call.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[Frictionless Data Community Call March 2023]]></title>
             <link>https://frictionlessdata.io/blog/2023/04/06/march-community-call/</link>
@@ -33,15 +42,6 @@
             <pubDate>Mon, 06 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[At our last community call we discussed about DCAT and Frictionless Data with Matteo Fortini...]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/Frictionless-dcat-january-2023.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Frictionless Data loves FOSDEM]]></title>
-            <link>https://frictionlessdata.io/blog/2023/01/31/frictionless-at-fosdem/</link>
-            <guid>https://frictionlessdata.io/blog/2023/01/31/frictionless-at-fosdem/</guid>
-            <pubDate>Tue, 31 Jan 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[We are very excited to announce that we are going back to FOSDEM this year!]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/FOSDEM_logo.png">
             </enclosure>
         </item>
     </channel>
