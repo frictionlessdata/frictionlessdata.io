@@ -48,12 +48,6 @@ title: Frictionless Roadmap
 </li>
 
 <li>
-  <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v6)</a>
-  <a href="#" class="float-right">Sep 2023</a>
-  <p>This release of Frictionless Framework will be focused on improved transformation pipelines and validation checklists, as well as on performance improvements</p>
-</li>
-
-<li>
   <a target="_blank" href="https://livemark.frictionlessdata.io/">Livemark (v1)</a>
   <a href="#" class="float-right">Dec 2023</a>
   <p>Data presentation framework for Python that generates static sites from extended Markdown is going to be released</p>
