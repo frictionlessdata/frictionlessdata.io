@@ -46,12 +46,6 @@ title: Frictionless Roadmap
   <a href="#" class="float-right">Jun 2023</a>
   <p>We're going to publish a stable release version of Frictionless Application</p>
 </li>
-
-<li>
-  <a target="_blank" href="https://livemark.frictionlessdata.io/">Livemark (v1)</a>
-  <a href="#" class="float-right">Dec 2023</a>
-  <p>Data presentation framework for Python that generates static sites from extended Markdown is going to be released</p>
-</li>
 </ul>
 
 <style>
