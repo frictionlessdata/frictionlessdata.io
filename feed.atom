@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://frictionlessdata.io</id>
     <title>Frictionless Data</title>
-    <updated>2023-06-27T09:34:11.807Z</updated>
+    <updated>2023-06-27T09:35:23.829Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://frictionlessdata.io"/>
     <link rel="self" href="https://frictionlessdata.io/feed.atom"/>
@@ -14,6 +14,14 @@
         </link>
         <updated>2023-06-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[At our last community call Augusto Herrmann presented FastETL, a free and open source software library for Apache Airflow that makes it easier to integrate heterogeneous data sources and to publish open data...]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Frictionless Data at csv,conf,v7]]></title>
+        <id>https://frictionlessdata.io/blog/2023/05/12/csv-conf/</id>
+        <link href="https://frictionlessdata.io/blog/2023/05/12/csv-conf/">
+        </link>
+        <updated>2023-05-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[On April 19, 20 we attended csv,conf,v7, the best community conference for datamakers from all around the world!]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Frictionless Data Community Call April 2023]]></title>
@@ -30,13 +38,5 @@
         </link>
         <updated>2023-04-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[At our last community call Evgeny Karev presented the new Frictionless CLI commands and we talked with the community about project governance...]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Frictionless Data Community Call February 2023]]></title>
-        <id>https://frictionlessdata.io/blog/2023/03/01/february-community-call/</id>
-        <link href="https://frictionlessdata.io/blog/2023/03/01/february-community-call/">
-        </link>
-        <updated>2023-03-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[At our last community call we heard about generating spreadsheet templates from Tabular Data Package metadata from Ethan Welty...]]></summary>
     </entry>
 </feed>

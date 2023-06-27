@@ -14,6 +14,14 @@
             "date_modified": "2023-06-05T00:00:00.000Z"
         },
         {
+            "id": "https://frictionlessdata.io/blog/2023/05/12/csv-conf/",
+            "url": "https://frictionlessdata.io/blog/2023/05/12/csv-conf/",
+            "title": "Frictionless Data at csv,conf,v7",
+            "summary": "On April 19, 20 we attended csv,conf,v7, the best community conference for datamakers from all around the world!",
+            "image": "https://frictionlessdata.io/img/blog/csv,conf.png",
+            "date_modified": "2023-05-12T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/05/08/april-community-call/",
             "url": "https://frictionlessdata.io/blog/2023/05/08/april-community-call/",
             "title": "Frictionless Data Community Call April 2023",
@@ -28,14 +36,6 @@
             "summary": "At our last community call Evgeny Karev presented the new Frictionless CLI commands and we talked with the community about project governance...",
             "image": "https://frictionlessdata.io/img/blog/Frictionless-new-CLI-commands.png",
             "date_modified": "2023-04-06T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2023/03/01/february-community-call/",
-            "url": "https://frictionlessdata.io/blog/2023/03/01/february-community-call/",
-            "title": "Frictionless Data Community Call February 2023",
-            "summary": "At our last community call we heard about generating spreadsheet templates from Tabular Data Package metadata from Ethan Welty...",
-            "image": "https://frictionlessdata.io/img/blog/WGMS-community-photo.png",
-            "date_modified": "2023-03-01T00:00:00.000Z"
         }
     ]
 }
