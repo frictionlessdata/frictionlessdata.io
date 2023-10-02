@@ -3,15 +3,15 @@
     <main class="main-section hero-home">
       <div class="content flex flex-wrap items-center px-24" style="padding-top:2rem">
         <div class="tagline black-text flex-1">
-          <h3 class="text-4xl font-thin">Data software and standards</h3>
+          <h1 class="text-5xl">Data Software and Standards</h1>
           <p class="text-xl md:w-4/5 font-thin w-auto">{{ data.tagline || $description || 'Welcome to your VuePress site' }}</p>
           <div class="flex flex-row flex-wrap" style="justify-content:flex-start">
           <a
-            class="bg-transparent hero-button text-black hover:border-black outline-none cursor-pointer border border-solid border-black font-medium text-sm py-4 px-6 hover:border-transparent rounded-full"
+            class="bg-transparent hero-button text-xl text-black outline-none cursor-pointer border border-solid border-black font-medium text-sm py-4 px-6 hover:border-transparent rounded-full"
             href="#video-section"
           >Why Frictionless Data?</a>
           <a
-            class="bg-secondary hover:bg-dark-blue text-black cursor-pointer outline-none border border-solid border-black text-sm font-medium sm:ml-4 mt-2 sm:mt-0 py-4 px-6 rounded-full"
+            class="bg-primary hover:bg-secondary text-white text-xl cursor-pointer outline-none text-sm font-medium sm:ml-4 mt-2 sm:mt-0 py-4 px-6 rounded-full"
             href="/introduction/"
           >Get Started</a>
           </div>
@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <section class="bg-secondary py-8" v-if="data.features && data.features.length">
+      <section class="bg-primary py-8" v-if="data.features && data.features.length">
         <div class="inner-container features text-black flex flex-row flex-wrap items-center content-center">
           <div class="feature md:flex-1 px-12" v-for="(feature, index) in data.features" :key="index">
             <h3>{{ feature.title }}</h3>
@@ -87,7 +87,8 @@ export default {
 }
 
 .hero-button:hover {
-  background-color: #CFE1E6;
+  background-color: #e077ff;
+  color: white
 }
 
 </style>

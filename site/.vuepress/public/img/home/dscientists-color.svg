@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="492" height="309" viewBox="0 0 492 309">
   <g id="Group_513" data-name="Group 513" transform="translate(1464 3733)">
-    <g id="Rectangle_71" data-name="Rectangle 71" transform="translate(-1464 -3733)" fill="#fff" stroke="#e47046" stroke-width="4">
+    <g id="Rectangle_71" data-name="Rectangle 71" transform="translate(-1464 -3733)" fill="#fff" stroke="#e077ff" stroke-width="4">
       <rect width="492" height="309" rx="20" stroke="none"/>
       <rect x="2" y="2" width="488" height="305" rx="18" fill="none"/>
     </g>
     <g id="Group_510" data-name="Group 510" transform="translate(2685.494 1023.278)">
-      <path id="Rectangle_126" data-name="Rectangle 126" d="M8.293,0H107.6a8.453,8.453,0,0,1,8.294,8.6V199.48a8.454,8.454,0,0,1-8.294,8.6H8.294A8.454,8.454,0,0,1,0,199.48V8.6A8.453,8.453,0,0,1,8.293,0Z" transform="translate(-3945.154 -4702.063)" fill="#e47046" stroke="#6e7d76" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Rectangle_126" data-name="Rectangle 126" d="M8.293,0H107.6a8.453,8.453,0,0,1,8.294,8.6V199.48a8.454,8.454,0,0,1-8.294,8.6H8.294A8.454,8.454,0,0,1,0,199.48V8.6A8.453,8.453,0,0,1,8.293,0Z" transform="translate(-3945.154 -4702.063)" fill="#e077ff" stroke="#6e7d76" stroke-miterlimit="10" stroke-width="1"/>
       <path id="Rectangle_127" data-name="Rectangle 127" d="M8.195,0h93.145a8.353,8.353,0,0,1,8.195,8.5V188.1a8.353,8.353,0,0,1-8.195,8.5H8.194A8.352,8.352,0,0,1,0,188.1V8.5A8.353,8.353,0,0,1,8.195,0Z" transform="translate(-3941.974 -4696.324)" fill="#fff" stroke="#6e7d76" stroke-miterlimit="10" stroke-width="1"/>
       <g id="Group_220" data-name="Group 220" transform="translate(-3982.494 -4712.565)">
         <path id="Path_193" data-name="Path 193" d="M1273.905,1095.271s-3.742,0-11.909,26.723c-2.807,9.182,12.834,16.26,12.834,16.26Z" transform="translate(-1261.659 -1056.291)" fill="#fcc486"/>
@@ -133,8 +133,8 @@
         <path id="Path_272" data-name="Path 272" d="M1864.39,996.763a1.735,1.735,0,0,1,3.262,1.052c-.31,2.345-2.82,5.955-3.828,5.278S1863.649,998.8,1864.39,996.763Z" transform="translate(-1787.946 -981.457)" fill="#de8e68"/>
         <path id="Path_273" data-name="Path 273" d="M1754.487,1086.659s-5.749,7.892-3.618,28.541c3.848,37.314-6.231,97.212-6.231,97.212l10.4,3.377s9.937-76.571,7.406-104.36c-1.153-12.664-4.576-16.878.823-27.428C1763.266,1084,1758.008,1084.277,1754.487,1086.659Z" transform="translate(-1698.117 -1047.374)"/>
         <path id="Path_274" data-name="Path 274" d="M1824.862,1083.311s-16.459,17.249-17.748,30.326-3.389,101.636-3.389,101.636l39.184-2.367s-3.6-46.749-4.48-52.6-2.7-39.426,1.269-55.007c2.13-8.371-.4-18.99-5.272-20.15S1824.862,1083.311,1824.862,1083.311Z" transform="translate(-1742.826 -1046.859)"/>
-        <path id="Path_276" data-name="Path 276" d="M1716.4,1286.454l28.67,30.782,19.043-19.092-27.926-31.529Z" transform="translate(-1676.751 -1183.88)" fill="#e47046"/>
-        <path id="Path_277" data-name="Path 277" d="M1727.541,1295.451,1753,1322.789l16.914-16.956-24.8-28Z" transform="translate(-1685.181 -1192.264)" fill="#e47046"/>
+        <path id="Path_276" data-name="Path 276" d="M1716.4,1286.454l28.67,30.782,19.043-19.092-27.926-31.529Z" transform="translate(-1676.751 -1183.88)" fill="#e077ff"/>
+        <path id="Path_277" data-name="Path 277" d="M1727.541,1295.451,1753,1322.789l16.914-16.956-24.8-28Z" transform="translate(-1685.181 -1192.264)" fill="#e077ff"/>
         <path id="Path_278" data-name="Path 278" d="M1746.093,1303.539l-1.787-1.919,6.837-6.855,2.054,1.652Z" transform="translate(-1697.866 -1204.922)" fill="#fff" stroke="#6e7d76" stroke-miterlimit="10" stroke-width="1"/>
         <path id="Path_279" data-name="Path 279" d="M1844.208,1072.822a29.874,29.874,0,0,1-9.878,3.807l2.614,4.326,8.279-5.915Z" transform="translate(-1765.982 -1039.019)" fill="#fff" stroke="#6e7d76" stroke-miterlimit="10" stroke-width="1"/>
         <path id="Path_280" data-name="Path 280" d="M1825.053,1078.548a4.425,4.425,0,0,0,1.643,2.361l-2.455,3.551.09-4.709Z" transform="translate(-1758.349 -1043.299)" fill="#fff" stroke="#6e7d76" stroke-miterlimit="10" stroke-width="1"/>

@@ -60,17 +60,17 @@
       <div class="flex flex-row flex-wrap w-2/3 sm:p-5">
         <div class="container sm:w-1/5 lg:w-1/4">
           <a href="/" class="xs:-mx-8">
-            <img src="/img/frictionless-black-full-logo-blackfont.svg" class="h-20 pl-4 pt-8" />
+            <img src="/img/frictionless-full-logo-blackfont-nobackground.svg" class="h-12 pl-8 pt-12" />
           </a>
         </div>
         <div class="container lg:w-1/5">
           <a href="https://okfn.org/" class="xs:-mx-8">
-            <img src="/img/home/okn.svg" class="h-12 pl-8 pt-12" />
+            <img src="/img/home/okfn.svg" class="h-12 pl-8 pt-12" />
           </a>
         </div>
         <div class="container lg:w-1/5">
           <a href="https://www.datopian.com/" class="xs:-mx-8">
-            <img src="/img/home/datopian.svg" class="h-10 pl-8 pt-12" />
+            <img src="/img/home/datopian.svg" class="h-12 pl-8 pt-12" />
           </a>
         </div>
 
@@ -87,23 +87,24 @@ li {
 }
 
 .footer-bg {
-  background-color: #EEEEEE;
-  border-top: 1px solid #eaeaea;
+  background-color: #00d1ff;
+  border-top: 1px solid #cfe1e6;
 }
 
 li > a {
   color:black;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 1rem;
 }
 
 li > a:hover {
-  font-weight: 500;
+  color: white;
 }
 
 .footer-title {
   color: black;
   font-size: 1.1rem;
+  font-weight: 700;
 }
 .footer-items{
   margin-left: 8em;
