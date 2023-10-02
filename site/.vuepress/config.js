@@ -51,6 +51,14 @@ module.exports = {
       },
     ],
     [
+      "link",
+      {
+        rel: "stylesheet",
+        href:
+          "/fonts/index.css",
+      },
+    ],
+    [
       "script",
       {
         src: "https://plausible.io/js/script.js",
@@ -82,7 +90,7 @@ module.exports = {
     },
   },
   themeConfig: {
-    logo: "/img/frictionless-color-full-logo.svg",
+    logo: "/img/frictionless-full-logo-blackfont.svg",
     // repo: "https://github.com/frictionlessdata",
     // repoLabel: "GitHub",
     docsBranch: "main",

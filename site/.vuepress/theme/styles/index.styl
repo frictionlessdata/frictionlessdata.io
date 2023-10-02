@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body
-  font-family 'Lato', sans-serif
+  font-family: 'HK Grotesk', sans-serif
   max-width: 1920px
   margin 0 auto
   color black
@@ -33,7 +33,7 @@ img.logo {
 }
 
 p > span, h1, h2, h3 {
-  font-weight: 500;
+  font-weight: 700;
   color: black;
 }
 
@@ -41,3 +41,39 @@ p > span, h1, h2, h3 {
   &.tip
     background-color #f3f5f7
     /* border-color #ea6d4c */
+
+.bg-circle-right
+  position: relative
+  overflow: hidden
+
+  &::before
+    content: ''
+    position: absolute
+    top: 20%
+    left: 100%
+    transform: translate(-20%)
+    width: 30rem;
+    height: 30rem;
+    background-color: #00d1ff
+    border-radius: 50%
+    filter: blur(8.4375rem)
+    -webkit-filter: blur(8.4375rem)
+    mix-blend-mode: darken
+
+
+.bg-circle-left
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    top: 20%
+    left: 0
+    transform: translate(-80%)
+    width: 40rem;
+    height: 40rem;
+    background-color: #e077ff
+    border-radius: 50%
+    filter: blur(8.4375rem)
+    -webkit-filter: blur(8.4375rem)
+    mix-blend-mode: darken
