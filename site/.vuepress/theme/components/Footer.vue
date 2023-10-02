@@ -60,7 +60,7 @@
       <div class="flex flex-row flex-wrap w-2/3 sm:p-5">
         <div class="container sm:w-1/5 lg:w-1/4">
           <a href="/" class="xs:-mx-8">
-            <img src="/img/frictionless-full-logo-blackfont-nobackground.svg" class="h-20 pl-4 pt-8" />
+            <img src="/img/frictionless-full-logo-blackfont-nobackground.svg" class="h-12 pl-8 pt-12" />
           </a>
         </div>
         <div class="container lg:w-1/5">
