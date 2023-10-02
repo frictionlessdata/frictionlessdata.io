@@ -3,7 +3,7 @@
     <main class="main-section hero-home">
       <div class="content flex flex-wrap items-center px-24" style="padding-top:2rem">
         <div class="tagline black-text flex-1">
-          <h1 class="text-5xl">Data software and standards</h1>
+          <h1 class="text-5xl">Data Software and Standards</h1>
           <p class="text-xl md:w-4/5 font-thin w-auto">{{ data.tagline || $description || 'Welcome to your VuePress site' }}</p>
           <div class="flex flex-row flex-wrap" style="justify-content:flex-start">
           <a

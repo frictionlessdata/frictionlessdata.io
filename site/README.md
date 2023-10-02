@@ -14,88 +14,8 @@ features:
   details: Enhance, rather than replace, your existing tools and workflows.
 ---
 
-
-<div class="banner p-8 text-black bg-circle-right">
-  <div class="inner-container">
-    <h1 class="text-center text-5xl">Frictionless Projects<br/><small class="font-light text-xl">Open Source projects for working with data.<hr></small>
-    </h1>
-<div class="main-section black-text">
-<div class="features flex flex-row flex-wrap py-4">
-
-<!-- Frictionless Application -->
-<div class="w-full md:w-1/3 feature flex justify-center">
- <div class="px-8 text-center">
-   <a href="https://application.frictionlessdata.io/" target="_blank">
-     <img src="/img/software/components.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px" />
-     <h3>Frictionless Application</h3>
-   </a>
-   <p>Data management application for Browser and Desktop for working with tabular data.</p>
- </div>
-</div>
-
-<!-- Frictionless Framework -->
-<div class="w-full md:w-1/3 feature flex justify-center">
- <div class="px-8 text-center">
-   <a href="https://framework.frictionlessdata.io" target="_blank">
-     <img src="/img/software/framework.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px;" />
-     <h3>Frictionless Framework</h3>
-   </a>
-   <p>Python framework to describe, extract, validate, and transform tabular data.</p>
- </div>
-</div>
-
-<!-- Livemark -->
-<div class="w-full md:w-1/3 feature flex justify-center">
- <div class="px-8 text-center">
-   <a href="https://livemark.frictionlessdata.io" target="_blank">
-     <img src="/img/software/livemark.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px;" />
-     <h3>Livemark</h3>
-   </a>
-   <p>Static site generator that extends Markdown with charts, tables, scripts, and more.</p>
- </div>
-</div>
-
-<!-- Frictionless Repository -->
-<div class="w-full md:w-1/3 feature flex justify-center">
- <div class="px-8 text-center">
-   <a href="https://repository.frictionlessdata.io" target="_blank">
-     <img src="/img/software/repository.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px;" />
-     <h3>Frictionless Repository</h3>
-   </a>
-   <p>Github Action allowing you to validate tabular data on every commit to your repository.</p>
- </div>
-</div>
-
-<!-- Frictionless Standards -->
-<div class="w-full md:w-1/3 feature flex justify-center">
- <div class="px-8 text-center">
-   <a href="https://specs.frictionlessdata.io" target="_blank">
-     <img src="/img/software/libraries.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px;" />
-     <h3>Frictionless Standards</h3>
-   </a>
-   <p>Lightweight yet comprehensive data standards as Data Package and Table Schema.</p>
- </div>
-</div>
-
-<!-- Datahub -->
-<div class="w-full md:w-1/3 feature flex justify-center">
- <div class="px-8 text-center">
-   <a href="https://datahub.io/" target="_blank">
-     <img src="/img/software/datahub.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px;" />
-     <h3>Datahub</h3>
-   </a>
-   <p>A web platform built on Frictionless Data that allows discovering, publishing, and sharing data.</p>
- </div>
-</div>
-
-</div>
-</div>
-
-  </div>
-</div>
-
 <div class="main-section black-text py-8">
-    <h1 class="text-center text-5xl px-12" id="more">For anyone who works with data<br/><small class="font-light text-xl">Especially complex data or across tools or teams.<hr></small></h1>
+    <h1 class="text-center text-5xl px-12" id="more">For Anyone Who Works With Data<br/><small class="font-light text-xl">Especially complex data or across tools or teams.<hr></small></h1>
     <div class="features flex flex-row flex-wrap lg:px-40">
       <div class="w-full md:w-1/3 feature flex justify-center">
         <div class="py-12 px-8 text-center">
@@ -121,7 +41,7 @@ features:
     </div>
 </div>
 
-<div class="main-section py-10 black-text">
+<div class="main-section py-10 black-text bg-circle-right">
   <div class="mx-auto lg:w-3/5 text-center font-normal">
     <h1 class="text-5xl lg:px-40" id="more">Frictionless Data Integration and Management</h1><br/><small class="font-light text-xl">Data integration is the job of bringing complex data together, cleaning it up, knitting it together and pushing it into downstream applications, analytics or warehouses – and you can do this reliably, repeatedly and automatedly with Frictionless.</small><hr class="mt-4">
   </div>
