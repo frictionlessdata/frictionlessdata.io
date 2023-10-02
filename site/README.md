@@ -217,8 +217,8 @@ export default {
 
 hr {
   height: 2px;
-  color: #ea6d4c;
-  background-color: #ea6d4c;
+  color: #e077ff;
+  background-color: #e077ff;
   border: none;
   width: 160px;
 }
@@ -251,7 +251,7 @@ hr {
 }
 
 .orange-text {
-  color: #EA6D4C;
+  color: #e077ff;
 }
 
 </style>

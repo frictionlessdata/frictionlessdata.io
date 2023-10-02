@@ -65,7 +65,7 @@
         </div>
         <div class="container lg:w-1/5">
           <a href="https://okfn.org/" class="xs:-mx-8">
-            <img src="/img/home/okn.svg" class="h-12 pl-8 pt-12" />
+            <img src="/img/home/okfn.svg" class="h-12 pl-8 pt-12" />
           </a>
         </div>
         <div class="container lg:w-1/5">
