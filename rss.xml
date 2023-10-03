@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Tue, 03 Oct 2023 08:11:57 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 03 Oct 2023 08:13:59 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Frictionless Data Community Call September 2023]]></title>
+            <link>https://frictionlessdata.io/blog/2023/10/02/community-call/</link>
+            <guid>https://frictionlessdata.io/blog/2023/10/02/community-call/</guid>
+            <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[At our last monthly call we presented the new Frictionless no-code application Open Data Editor...]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/Cover-Sept-community calls.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[Frictionless Data Community Call June 2023]]></title>
             <link>https://frictionlessdata.io/blog/2023/07/05/community-call/</link>
@@ -24,15 +33,6 @@
             <pubDate>Mon, 05 Jun 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[At our last community call Augusto Herrmann presented FastETL, a free and open source software library for Apache Airflow that makes it easier to integrate heterogeneous data sources and to publish open data...]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/Augustos-presentation-FastETL.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Frictionless Data at csv,conf,v7]]></title>
-            <link>https://frictionlessdata.io/blog/2023/05/12/csv-conf/</link>
-            <guid>https://frictionlessdata.io/blog/2023/05/12/csv-conf/</guid>
-            <pubDate>Fri, 12 May 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[On April 19, 20 we attended csv,conf,v7, the best community conference for datamakers from all around the world!]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/csv,conf.png">
             </enclosure>
         </item>
     </channel>
