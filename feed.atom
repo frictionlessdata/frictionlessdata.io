@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://frictionlessdata.io</id>
     <title>Frictionless Data</title>
-    <updated>2023-11-06T17:17:09.246Z</updated>
+    <updated>2023-11-07T09:32:15.664Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://frictionlessdata.io"/>
     <link rel="self" href="https://frictionlessdata.io/feed.atom"/>
     <subtitle>Data software and standards</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Frictionless Data Community Call October 2023]]></title>
+        <id>https://frictionlessdata.io/blog/2023/11/06/community-call/</id>
+        <link href="https://frictionlessdata.io/blog/2023/11/06/community-call/">
+        </link>
+        <updated>2023-11-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[At our last monthly call we started talking about the specs update...]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Frictionless Data Community Call September 2023]]></title>
         <id>https://frictionlessdata.io/blog/2023/10/02/community-call/</id>
@@ -22,13 +30,5 @@
         </link>
         <updated>2023-07-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[At our last monthly call we had a hands-on session on strange datasets and how to describe them.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Frictionless Data Community Call May 2023]]></title>
-        <id>https://frictionlessdata.io/blog/2023/06/05/community-call-fastetl/</id>
-        <link href="https://frictionlessdata.io/blog/2023/06/05/community-call-fastetl/">
-        </link>
-        <updated>2023-06-05T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[At our last community call Augusto Herrmann presented FastETL, a free and open source software library for Apache Airflow that makes it easier to integrate heterogeneous data sources and to publish open data...]]></summary>
     </entry>
 </feed>

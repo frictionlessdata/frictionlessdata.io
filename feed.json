@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/11/06/community-call/",
+            "url": "https://frictionlessdata.io/blog/2023/11/06/community-call/",
+            "title": "Frictionless Data Community Call October 2023",
+            "summary": "At our last monthly call we started talking about the specs update...",
+            "image": "https://frictionlessdata.io/img/blog/FD Community Call - Specs Update - 2023.jpg",
+            "date_modified": "2023-11-06T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/10/02/community-call/",
             "url": "https://frictionlessdata.io/blog/2023/10/02/community-call/",
             "title": "Frictionless Data Community Call September 2023",
@@ -20,14 +28,6 @@
             "summary": "At our last monthly call we had a hands-on session on strange datasets and how to describe them.",
             "image": "https://frictionlessdata.io/img/blog/june-community-call.png",
             "date_modified": "2023-07-05T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2023/06/05/community-call-fastetl/",
-            "url": "https://frictionlessdata.io/blog/2023/06/05/community-call-fastetl/",
-            "title": "Frictionless Data Community Call May 2023",
-            "summary": "At our last community call Augusto Herrmann presented FastETL, a free and open source software library for Apache Airflow that makes it easier to integrate heterogeneous data sources and to publish open data...",
-            "image": "https://frictionlessdata.io/img/blog/Augustos-presentation-FastETL.png",
-            "date_modified": "2023-06-05T00:00:00.000Z"
         }
     ]
 }
