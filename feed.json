@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/11/15/frictionless-specs-update/",
+            "url": "https://frictionlessdata.io/blog/2023/11/15/frictionless-specs-update/",
+            "title": "Frictionless specs update",
+            "summary": "We have kickstarted the Frictionless specs update!",
+            "image": "https://frictionlessdata.io/img/blog/ Specs-Update-2023.png",
+            "date_modified": "2023-11-15T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/11/06/community-call/",
             "url": "https://frictionlessdata.io/blog/2023/11/06/community-call/",
             "title": "Frictionless Data Community Call October 2023",
@@ -20,14 +28,6 @@
             "summary": "At our last monthly call we presented the new Frictionless no-code application Open Data Editor...",
             "image": "https://frictionlessdata.io/img/blog/Cover-Sept-community calls.png",
             "date_modified": "2023-10-02T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2023/07/05/community-call/",
-            "url": "https://frictionlessdata.io/blog/2023/07/05/community-call/",
-            "title": "Frictionless Data Community Call June 2023",
-            "summary": "At our last monthly call we had a hands-on session on strange datasets and how to describe them.",
-            "image": "https://frictionlessdata.io/img/blog/june-community-call.png",
-            "date_modified": "2023-07-05T00:00:00.000Z"
         }
     ]
 }
