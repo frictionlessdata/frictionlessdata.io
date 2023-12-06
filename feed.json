@@ -6,20 +6,20 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2023/12/05/community-call/",
+            "url": "https://frictionlessdata.io/blog/2023/12/05/community-call/",
+            "title": "Frictionless Data Community Call October 2023",
+            "summary": "At our last monthly call continued talking about the specs update...",
+            "image": "https://frictionlessdata.io/img/blog/Specs Update-call-november-2023.png",
+            "date_modified": "2023-12-05T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2023/11/15/frictionless-specs-update/",
             "url": "https://frictionlessdata.io/blog/2023/11/15/frictionless-specs-update/",
             "title": "Frictionless specs update",
             "summary": "We have kickstarted the Frictionless specs update!",
             "image": "https://frictionlessdata.io/img/blog/ Specs-Update-2023.png",
             "date_modified": "2023-11-15T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2023/11/06/community-call/",
-            "url": "https://frictionlessdata.io/blog/2023/11/06/community-call/",
-            "title": "Frictionless Data Community Call October 2023",
-            "summary": "At our last monthly call continued talking about the specs update...",
-            "image": "https://frictionlessdata.io/img/blog/Specs Update-call-november-2023.png",
-            "date_modified": "2023-11-06T00:00:00.000Z"
         },
         {
             "id": "https://frictionlessdata.io/blog/2023/11/06/community-call/",
