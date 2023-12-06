@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://frictionlessdata.io</id>
     <title>Frictionless Data</title>
-    <updated>2023-12-06T14:52:02.161Z</updated>
+    <updated>2023-12-06T16:20:42.331Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://frictionlessdata.io"/>
     <link rel="self" href="https://frictionlessdata.io/feed.atom"/>
     <subtitle>Data software and standards</subtitle>
     <entry>
-        <title type="html"><![CDATA[Frictionless Data Community Call October 2023]]></title>
+        <title type="html"><![CDATA[Frictionless Data Community Call November 2023]]></title>
         <id>https://frictionlessdata.io/blog/2023/12/05/community-call/</id>
         <link href="https://frictionlessdata.io/blog/2023/12/05/community-call/">
         </link>
