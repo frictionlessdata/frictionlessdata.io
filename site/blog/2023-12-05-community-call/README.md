@@ -1,5 +1,5 @@
 ---
-title: Frictionless Data Community Call October 2023
+title: Frictionless Data Community Call November 2023
 date: 2023-12-05
 tags: ["events", "community-hangout"]
 category: events
