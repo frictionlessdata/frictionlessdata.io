@@ -4,7 +4,7 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Wed, 06 Dec 2023 09:28:56 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 Dec 2023 09:29:18 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
@@ -22,17 +22,17 @@
             <link>https://frictionlessdata.io/blog/2023/11/06/community-call/</link>
             <guid>https://frictionlessdata.io/blog/2023/11/06/community-call/</guid>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[At our last monthly call we started talking about the specs update...]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/FD Community Call - Specs Update - 2023.jpg">
+            <description><![CDATA[At our last monthly call continued talking about the specs update...]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/Specs Update-call-november-2023.png">
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Frictionless Data Community Call September 2023]]></title>
-            <link>https://frictionlessdata.io/blog/2023/10/02/community-call/</link>
-            <guid>https://frictionlessdata.io/blog/2023/10/02/community-call/</guid>
-            <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[At our last monthly call we presented the new Frictionless no-code application Open Data Editor...]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/Cover-Sept-community calls.png">
+            <title><![CDATA[Frictionless Data Community Call October 2023]]></title>
+            <link>https://frictionlessdata.io/blog/2023/11/06/community-call/</link>
+            <guid>https://frictionlessdata.io/blog/2023/11/06/community-call/</guid>
+            <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[At our last monthly call we started talking about the specs update...]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/FD Community Call - Specs Update - 2023.jpg">
             </enclosure>
         </item>
     </channel>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://frictionlessdata.io</id>
     <title>Frictionless Data</title>
-    <updated>2023-12-06T09:28:56.340Z</updated>
+    <updated>2023-12-06T09:29:18.973Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://frictionlessdata.io"/>
     <link rel="self" href="https://frictionlessdata.io/feed.atom"/>
@@ -21,14 +21,14 @@
         <link href="https://frictionlessdata.io/blog/2023/11/06/community-call/">
         </link>
         <updated>2023-11-06T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[At our last monthly call we started talking about the specs update...]]></summary>
+        <summary type="html"><![CDATA[At our last monthly call continued talking about the specs update...]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Frictionless Data Community Call September 2023]]></title>
-        <id>https://frictionlessdata.io/blog/2023/10/02/community-call/</id>
-        <link href="https://frictionlessdata.io/blog/2023/10/02/community-call/">
+        <title type="html"><![CDATA[Frictionless Data Community Call October 2023]]></title>
+        <id>https://frictionlessdata.io/blog/2023/11/06/community-call/</id>
+        <link href="https://frictionlessdata.io/blog/2023/11/06/community-call/">
         </link>
-        <updated>2023-10-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[At our last monthly call we presented the new Frictionless no-code application Open Data Editor...]]></summary>
+        <updated>2023-11-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[At our last monthly call we started talking about the specs update...]]></summary>
     </entry>
 </feed>
