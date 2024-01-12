@@ -60,3 +60,10 @@ We welcome contributors from diverse backgrounds, recognising that individuals w
 Acknowledging the ethical imperative, we understand that recruiting individuals into a community historically designed to exclude them is neither ethical nor effective without adequate support. We therefore prioritise transparency with new community members, providing a [contributor's guide](https://frictionlessdata.io/work-with-us/contribute/), a [published roadmap](https://frictionlessdata.io/development/roadmap/), and comprehensive documentation to ensure clarity and support throughout their engagement. Our [Code of Conduct](https://frictionlessdata.io/work-with-us/code-of-conduct/) applies to all activities linked to the Frictionless Data project, and it is enforced by our community manager. As part of this project, we will make it a priority to enhance the accessibility of our documentation and website, aiming to make them as inclusive as possible. 
 
 We welcome any other suggestions that would help us enhance diversity, equity, and inclusion in our work. Please let us know if you have a good idea to share!
+
+ ## Funding
+
+ This project is funded through [NGI0 Entrust](https://nlnet.nl/entrust), a fund established by [NLnet](https://nlnet.nl) with financial support from the European Commission's [Next Generation Internet](https://ngi.eu) program. Learn more at the [NLnet project page](https://nlnet.nl/FrictionlessStandards).
+
+[<img src="https://nlnet.nl/logo/banner.png" alt="NLnet foundation logo" width="20%" />](https://nlnet.nl)
+[<img src="https://nlnet.nl/image/logos/NGI0_tag.svg" alt="NGI Zero Logo" width="20%" />](https://nlnet.nl/entrust)
