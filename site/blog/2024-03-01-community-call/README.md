@@ -43,5 +43,5 @@ Here is the recording of the full call:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-F3egB_40xo?si=0NrYa7N6QKni43A5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-#Thank you
+# Thank you
 On a final note, we would like to thank all community members that joined the call and that keep all these discussions alive, and particularly tho those who are putting a lot of thinking and hard work into the specs working group. Without you, all of this would not be possible.
