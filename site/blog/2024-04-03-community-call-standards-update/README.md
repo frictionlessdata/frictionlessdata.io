@@ -17,7 +17,7 @@ For a full overview of the items that the working group tackled on the call, you
 
 A few issues were moved out of the draft release to be rather included [in the final release](https://github.com/frictionlessdata/specs/milestone/7), which is planned for June. One example is versioning, which was [discussed in the last call](https://frictionlessdata.io/blog/2024/03/01/community-call/#working-group-discussion). As versioning is a brand new element, it will require more time to be tackled. We are currently working on a solid proposal to discuss with the working group next month. 
 
-# Join us in March!
+# Join us in April!
 Next community call is on April 25<sup>th</sup>, join us to hear all the exciting news about the [Frictionless standards](https://datapackage.org/) update! 
 
 Do you have something you would like to present to the community at one of the upcoming calls? Let us know via [this form](https://forms.gle/AWpbxyiGESNSUFK2A), or come and tell us on our [community chat on Slack](https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg)(also accessible via a [Matrix bridge](https://matrix.to/#/#frictionlessdata:matrix.okfn.org) if you prefer to use an open protocol).
