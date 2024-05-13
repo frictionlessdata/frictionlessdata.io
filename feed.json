@@ -6,6 +6,14 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2024/05/10/datapackage-update-community-call/",
+            "url": "https://frictionlessdata.io/blog/2024/05/10/datapackage-update-community-call/",
+            "title": "Frictionless Data Community Call April 2024",
+            "summary": "At our last call we continued talking about the Data Package update, as we are getting close to the v2 draft release...",
+            "image": "https://frictionlessdata.io/img/blog/April-2024-Community-Call.png.png",
+            "date_modified": "2024-05-10T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2024/04/03/community-call-standards-update/",
             "url": "https://frictionlessdata.io/blog/2024/04/03/community-call-standards-update/",
             "title": "Frictionless Data Community Call March 2024",
@@ -20,14 +28,6 @@
             "summary": "At our last call we continued talking about the specs update, this month the discussion focus was versioning...",
             "image": "https://frictionlessdata.io/img/blog/FD-community-call-february.png",
             "date_modified": "2024-03-01T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2024/02/07/community-call/",
-            "url": "https://frictionlessdata.io/blog/2024/02/07/community-call/",
-            "title": "Frictionless Data Community Call January 2024",
-            "summary": "At our last monthly call continued talking about the specs update...",
-            "image": "https://frictionlessdata.io/img/blog/Specs-Update-February-Call.png",
-            "date_modified": "2024-02-07T00:00:00.000Z"
         }
     ]
 }
