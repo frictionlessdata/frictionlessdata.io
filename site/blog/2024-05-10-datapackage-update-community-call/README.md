@@ -3,7 +3,7 @@ title: Frictionless Data Community Call April 2024
 date: 2024-05-10
 tags: ["events", "community-hangout"]
 category: events
-image: /img/blog/April-2024-Community-Call.png.
+image: /img/blog/April-2024-Community-Call.png
 description: At our last call we continued talking about the Data Package update, as we are getting close to the v2 draft release...
 author: Sara Petti
 ---
