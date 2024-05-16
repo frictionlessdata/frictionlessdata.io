@@ -4,7 +4,7 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Tue, 14 May 2024 09:35:35 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 May 2024 13:55:09 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
@@ -14,7 +14,7 @@
             <guid>https://frictionlessdata.io/blog/2024/05/10/datapackage-update-community-call/</guid>
             <pubDate>Fri, 10 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[At our last call we continued talking about the Data Package update, as we are getting close to the v2 draft release...]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/April-2024-Community-Call.png.">
+            <enclosure url="https://frictionlessdata.io/img/blog/April-2024-Community-Call.png">
             </enclosure>
         </item>
         <item>
