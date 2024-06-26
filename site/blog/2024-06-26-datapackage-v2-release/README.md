@@ -7,7 +7,7 @@ image: /img/blog/DP-release.png
 description: We are very excited to announce the release of Data Package v2
 author: Sara Petti
 ---
-We are very excited to announce the release of the version 2.0 of Data Package (previously known as Frictionless Specs). Thanks to the generous support of [NLnet](https://nlnet.nl/) from November last year we were able to [focus on reviewing Data Package](https://frictionlessdata.io/blog/2023/11/15/frictionless-specs-update/#additional-deliverables) in order to include features that were often requested throughout the years and improve extensibility for domain-specific implementations. 
+We are very excited to announce the release of the version 2.0 of the Data Package standard (previously known as Frictionless Specs). Thanks to the generous support of [NLnet](https://nlnet.nl/) from November last year we were able to [focus on reviewing Data Package](https://frictionlessdata.io/blog/2023/11/15/frictionless-specs-update/#additional-deliverables) in order to include features that were often requested throughout the years and improve extensibility for domain-specific implementations. 
 
 Data Package is a standard for data containerisation, which consists of a set of simple yet extensible specifications to describe datasets, data files and tabular data. It is a data definition language (DDL) and data API that enhances data FAIRness (findability, accessibility, interoperability, and reusability). Since the last releases of Data Package and all its components, the community had requested a few features throught the years that would improve the standard support for specific data types and simplify the extensions. Some of the Internet requirements also have evolved meanwhile. We therefore used [the issues that had accumulated in the GitHub repository](https://github.com/frictionlessdata/datapackage/issues) to build our Roadmap.
 
@@ -23,7 +23,7 @@ During these months we have been working on the core specifications that compose
 
 During the update process we tried to be as little disruptive as possible, avoiding breaking changes when possible. 
 
-We put a lot of effort into removing ambiguity, cutting or clarifying under-defined features, and promoting some well-oiled [recipes](https://datapackage.org/recipes/caching-of-resources/) into the Standard itself. An example of a recipe (or pattern, as they were called in v1) that has been promoted to the Standard is the [Missing values per field
+We put a lot of effort into removing ambiguity, cutting or clarifying under-defined features, and promoting some well-oiled recipes into the Standard itself. An example of a recipe (or pattern, as they were called in v1) that has been promoted to the Standard is the [Missing values per field
 one](https://specs.frictionlessdata.io/patterns/#missing-values-per-field).
 
 Among other things, we added versioning, to ensure consistency and reliability over time, and support for categorical data.
