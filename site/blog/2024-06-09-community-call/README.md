@@ -7,7 +7,7 @@ image: /img/blog/Frictionless-may-2024-call.png
 description: At our last call we continued talking about the Data Package update, as we are getting close to the v2 draft release...
 author: Sara Petti
 ---
-On our last community call was on May 30<sup>th</sup>, we continued discussing the Frictionless Standard update with community members. As a reminder, thanks to the generous support of [NLnet](https://nlnet.nl/), the Frictionless core team, together with a working group composed of members of the community, is now working on a v2 of the Data Package standard and the Frictionless Specs. Read the [announcement blog](https://frictionlessdata.io/blog/2023/11/15/frictionless-specs-update/) to know more about it.
+On our last community call on May 30<sup>th</sup>, we continued discussing the Frictionless Standard update with community members. As a reminder, thanks to the generous support of [NLnet](https://nlnet.nl/), the Frictionless core team, together with a working group composed of members of the community, is now working on a v2 of the Data Package standard and the Frictionless Specs. Read the [announcement blog](https://frictionlessdata.io/blog/2023/11/15/frictionless-specs-update/) to know more about it.
 
 ## Working group discussion
 
