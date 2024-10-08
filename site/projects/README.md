@@ -19,14 +19,14 @@ It's a list of core Frictionless Projects developed by the core Frictionless Tea
 <div class="main-section black-text">
 <div class="features flex flex-row flex-wrap py-4">
 
-<!-- Frictionless Application -->
+<!-- Open Data Editor -->
 <div class="w-full md:w-1/3 feature flex justify-center">
  <div class="px-8 text-center">
-   <a href="https://application.frictionlessdata.io/" target="_blank">
+   <a href="https://opendataeditor.okfn.org/" target="_blank">
      <img src="/img/software/components.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px" />
-     <h3>Frictionless Application</h3>
+     <h3>Open Data Editor</h3>
    </a>
-   <p>Data management application for Browser and Desktop for working with tabular data.</p>
+   <p>Data management desktop application to work with tabular data.</p>
  </div>
 </div>
 
@@ -63,14 +63,14 @@ It's a list of core Frictionless Projects developed by the core Frictionless Tea
  </div>
 </div>
 
-<!-- Frictionless Standards -->
+<!-- Frictionless Data Package -->
 <div class="w-full md:w-1/3 feature flex justify-center">
  <div class="px-8 text-center">
-   <a href="https://specs.frictionlessdata.io" target="_blank">
+   <a href="https://datapackage.org/" target="_blank">
      <img src="/img/software/libraries.png" style="width: 200px; border:dashed 1px #555; padding: 10px; border-radius: 10px;" />
-     <h3>Frictionless Standards</h3>
+     <h3>Frictionless Data Package</h3>
    </a>
-   <p>Lightweight yet comprehensive data standards as Data Package and Table Schema.</p>
+   <p>A set of simple yet extensible specifications to describe datasets, data files, and tabular data.</p>
  </div>
 </div>
 
@@ -96,7 +96,7 @@ Choosing the right tool for the job can be challenging. Here are our recommendat
 
 If you prefer to use a visual interface:
 
-- **Frictionless Application (coming soon):** We're working on our brand-new Frictionless Application that will be released in 2021. Until then, you can use [Data Package Creator](https://create.frictionlessdata.io/) to create and edit data packages and [Goodtables On-Demand](http://try.goodtables.io/) for data validation.
+- **Open Data Editor (coming soon):** We're working on our brand-new Frictionless application [Open Data Editor](https://opendataeditor.okfn.org/) that will be released in December 2024. Until then, you can use [Data Package Creator](https://create.frictionlessdata.io/) to create and edit data packages and [Goodtables On-Demand](http://try.goodtables.io/) for data validation.
 - **Frictionless Repository:** For ensuring the quality of your data on Github, Frictionless provides [Frictionless Repository](https://repository.frictionlessdata.io/). This creates visual quality reports and validation statuses on Github everytime you commit your data.
 - **Datahub:** For discovering, publishing, and sharing data we have [Datahub](https://datahub.io/) which is built on Frictionless software. Using this software as a service, you can sign-in and find, share, and publish quality data.
 
@@ -122,14 +122,14 @@ To help you pick a standard to use, we've categorized them according to how many
 
 If you have more than one file:
 
-- **Data Package**: Use a [Data Package](https://specs.frictionlessdata.io/data-package/) for describing datasets of any file format. Data Package is a basic container format for describing a collection of data in a single "package". It provides a basis for convenient delivery, installation and management of datasets.
+- **Data Package**: Use a [Data Package](https://datapackage.org/) for describing datasets of any file format. Data Package is a basic container format for describing a collection of data in a single "package". It provides a basis for convenient delivery, installation and management of datasets.
 - **Fiscal Data Package**: For fiscal data, use a [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/). This lightweight and user-oriented format is for publishing and consuming fiscal data. It concerns with how fiscal data should be packaged and providing means for publishers to best convey the meaning of the data - so it can be optimally used by consumers.
 
 ### Individual File
 
 If you need to describe an individual file:
 
-- **Data Resource**: Use [Data Resource](https://specs.frictionlessdata.io/data-resource/) for describing individual files. Data Resource is a format to describe and package a single data resource of any file format, such as an individual table or file. It can also be extended for specific use cases.
-- **Tabular Data Resource**: For tabular data, use the Data Resource extension called [Tabular Data Resource](https://specs.frictionlessdata.io/tabular-data-resource/). Tabular Data Resource describes a single *tabular* data resource such as a CSV file. It includes support for metadata and schemas to describe the data content and structure.
-- **Table Schema**: To describe only the schema of a tabular data file, use [Table Schema](https://specs.frictionlessdata.io/table-schema/). Table Schema is a format to declare a schema for tabular data. The schema is designed to be expressible in JSON. You can have a schema as independent metadata or use it with a Tabular Data Resource.
-- **CSV Dialect**: To specify the CSV dialect within a schema, use [CSV Dialect](https://specs.frictionlessdata.io/csv-dialect/). This defines a format to describe the various dialects of CSV files in a language agnostic manner. This is important because CSV files might be published in different forms, making it harder to read the data without errors. CSV Dialect can be used with a Tabular Data Resource to provide additional information.
+- **Data Resource**: Use [Data Resource](https://datapackage.org/standard/data-resource/) for describing individual files. Data Resource is a format to describe and package a single data resource of any file format, such as an individual table or file. It can also be extended for specific use cases.
+- **Tabular Data Resource**: For tabular data, use the Data Resource extension called [Tabular Data Resource](https://datapackage.org/standard/data-resource/#tabular). Tabular Data Resource describes a single *tabular* data resource such as a CSV file. It includes support for metadata and schemas to describe the data content and structure.
+- **Table Schema**: To describe only the schema of a tabular data file, use [Table Schema](https://datapackage.org/standard/table-schema/). Table Schema is a format to declare a schema for tabular data. The schema is designed to be expressible in JSON. You can have a schema as independent metadata or use it with a Tabular Data Resource.
+- **Table Dialect**: To specify the table dialect within a schema, use [Table Dialect](https://datapackage.org/standard/table-dialect/). This defines a format to describe the various dialects of table files in a language agnostic manner. This is important because table files might be published in different forms, making it harder to read the data without errors. Table Dialect can be used with a Tabular Data Resource to provide additional information.
