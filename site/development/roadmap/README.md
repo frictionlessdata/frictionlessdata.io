@@ -26,24 +26,30 @@ title: Frictionless Roadmap
 <li class="done">
   <a target="_blank" href="https://repository.frictionlessdata.io/">Frictionless Repository (v2)</a>
   <a href="#" class="float-right">Sep 2022</a>
-  <p>Frictionless Repository is going to be updated to Frictionless Framework v5</p>
+  <p>Frictionless Repository is updated to Frictionless Framework v5</p>
 </li>
 
 <li class="done">
   <a target="_blank" href="https://framework.frictionlessdata.io/">Frictionless Framework (v5)</a>
   <a href="#" class="float-right">Dec 2022</a>
-  <p>A year since the first framework release we're going to publish a new version with some low-level breaking changes.</p>
+  <p>A year since the first framework release we published a new version with some low-level breaking changes.</p>
 </li>
 
 <li class="done">
   <a target="_blank" href="">Frictionless Application (beta)</a>
   <a href="#" class="float-right">Mar 2023</a>
-  <p>We're looking forward to finish our application work and release it to a broad audience.</p>
+  <p>We finalised our the first part of our application work and beta-release it to a broad audience.</p>
+</li>
+
+<li class="done">
+  <a target="_blank" href="">Data Package (v2)</a>
+  <a href="#" class="float-right">Jun 2024</a>
+  <p>The Data Package working group releases the v2 of the Frictionless standard</p>
 </li>
 
 <li class="current">
   <a target="_blank" href="">Frictionless Application (v1)</a>
-  <a href="#" class="float-right">Jun 2023</a>
+  <a href="#" class="float-right">Dec 2025</a>
   <p>We're going to publish a stable release version of Frictionless Application</p>
 </li>
 </ul>
