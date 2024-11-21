@@ -6,20 +6,20 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2024/11/21/communy-call-october/",
+            "url": "https://frictionlessdata.io/blog/2024/11/21/communy-call-october/",
+            "title": "Frictionless Data Community Call October 2024",
+            "summary": "At our last call Keith Hughitt shared some ideas to improve the project....",
+            "image": "https://frictionlessdata.io/img/blog/community-call-october-2024.png",
+            "date_modified": "2024-11-21T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2024/10/08/monthly-community-call/",
             "url": "https://frictionlessdata.io/blog/2024/10/08/monthly-community-call/",
             "title": "Frictionless Data Community Call September 2024",
             "summary": "At our last call we discussed with the community the Frictionless project and changes in governance of the Python Framework....",
             "image": "https://frictionlessdata.io/img/blog/Frictionless-call-September.png",
             "date_modified": "2024-10-08T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2024/06/26/datapackage-v2-release/",
-            "url": "https://frictionlessdata.io/blog/2024/06/26/datapackage-v2-release/",
-            "title": "Data Package version 2.0 is out!",
-            "summary": "We are very excited to announce the release of Data Package v2",
-            "image": "https://frictionlessdata.io/img/blog/DP-release.png",
-            "date_modified": "2024-06-26T00:00:00.000Z"
         }
     ]
 }
