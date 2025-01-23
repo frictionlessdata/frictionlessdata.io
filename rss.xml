@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Thu, 23 Jan 2025 11:02:57 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 23 Jan 2025 11:10:26 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Frictionless Data Community Call December 2024]]></title>
+            <link>https://frictionlessdata.io/blog/2025/01/23/community-call-december/</link>
+            <guid>https://frictionlessdata.io/blog/2025/01/23/community-call-december/</guid>
+            <pubDate>Thu, 23 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[At our last call Romina Colman presented the stable release of Open Data Editor....]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/Call-November-ODE.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[Frictionless Data Community Call October 2024]]></title>
             <link>https://frictionlessdata.io/blog/2024/11/21/communy-call-october/</link>
@@ -15,15 +24,6 @@
             <pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[At our last call Keith Hughitt shared some ideas to improve the project....]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/community-call-october-2024.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Frictionless Data Community Call September 2024]]></title>
-            <link>https://frictionlessdata.io/blog/2024/10/08/monthly-community-call/</link>
-            <guid>https://frictionlessdata.io/blog/2024/10/08/monthly-community-call/</guid>
-            <pubDate>Tue, 08 Oct 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[At our last call we discussed with the community the Frictionless project and changes in governance of the Python Framework....]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/Frictionless-call-September.png">
             </enclosure>
         </item>
     </channel>
