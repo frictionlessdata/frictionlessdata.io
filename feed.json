@@ -6,20 +6,20 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2025/02/07/monthly-community-call/",
+            "url": "https://frictionlessdata.io/blog/2025/02/07/monthly-community-call/",
+            "title": "Frictionless Data Community Call Jaunary/February 2025",
+            "summary": "Our first Frictionless community call of 2025 we discussed new project ideas and got an update from the Categorical Data Working group...",
+            "image": "https://frictionlessdata.io/img/blog/monthly-call-jan-feb-2025.png",
+            "date_modified": "2025-02-07T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2025/01/23/community-call-december/",
             "url": "https://frictionlessdata.io/blog/2025/01/23/community-call-december/",
             "title": "Frictionless Data Community Call December 2024",
             "summary": "At our last call Romina Colman presented the stable release of Open Data Editor....",
             "image": "https://frictionlessdata.io/img/blog/Call-November-ODE.png",
             "date_modified": "2025-01-23T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2024/11/21/communy-call-october/",
-            "url": "https://frictionlessdata.io/blog/2024/11/21/communy-call-october/",
-            "title": "Frictionless Data Community Call October 2024",
-            "summary": "At our last call Keith Hughitt shared some ideas to improve the project....",
-            "image": "https://frictionlessdata.io/img/blog/community-call-october-2024.png",
-            "date_modified": "2024-11-21T00:00:00.000Z"
         }
     ]
 }
