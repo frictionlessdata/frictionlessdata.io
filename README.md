@@ -7,9 +7,8 @@
 This is a repo for managing the Frictionless project – https://frictionlessdata.io/. As such it is more core team focused. :smile:
 
 - Frictionless Data: https://frictionlessdata.io/
-- Specifications: https://specs.frictionlessdata.io/
-- Discussion forums: https://github.com/frictionlessdata/project/discussions
-- Chat: Discord https://discord.gg/2UgfM2k
+- Data Package Standard: https://datapackage.org/
+- Chat: Slack https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg
 - Code of Conduct: https://frictionlessdata.io/code-of-conduct/
 
 Want to cite this repo? Please use this DOI:
@@ -22,11 +21,11 @@ Want to cite this repo? Please use this DOI:
 - **Discussions**: https://github.com/frictionlessdata/project/discussions – the default place for anyone out there to open an issue. It means _one_ place for people to do that. Discussions is a welcoming place where people can open a first issue, have a look around, etc. If those issues are substantive, they may move elsewhere (e.g. I did that with a spec issue recently)... But it's a good landing spot.
   - Also the catch-all for general questions, suggestions, ideas, support requests, etc.
 - **Project**: https://github.com/frictionlessdata/project/issues – the default place for core team to organize and plan work, schedule sprints, etc. **NOT** for general discussion, ideas, support, etc.
-- **Specs**: https://github.com/frictionlessdata/specs/issues
+- **Data Package**: https://github.com/frictionlessdata/datapackage/issues
 
 ## How to contribute to the website
 
-This is the new FrictionlessData.io website to be released in 2020. It reflects the recent updates made to Frictionless Data project setup and brand.
+This is the new FrictionlessData.io website released in 2020. It reflects the recent updates made to Frictionless Data project setup and brand.
 
 ### Development
 
