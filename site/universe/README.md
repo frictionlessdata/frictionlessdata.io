@@ -8,6 +8,7 @@ Community-driven projects based on Frictionless Software and Standards:
 
 ## Visual
 
+- [Open Data Editor](https://github.com/okfn/opendataeditor)
 - [Data Curator](https://github.com/qcif/data-curator)
 - [Delimiter](https://github.com/frictionlessdata/delimiter)
 
