@@ -28,7 +28,7 @@ To wrap up, we discussed plans for **a Frictionless community summit at the end 
 
 Several attendees also raised topics they'd like to see discussed, including performance improvements, metadata best practices, and linked data.
 
-📢 Stay tuned for an official invite to the summit soon! You can sign up for it already [here].(https://docs.google.com/forms/d/e/1FAIpQLSeuNCopxXauMkrWvF6VHqOyHMcy54SfNDOseVXfWRQZWkvqjQ/viewform?usp=sf_link)
+📢 Stay tuned for an official invite to the summit soon! You can sign up for it already [here](https://docs.google.com/forms/d/e/1FAIpQLSeuNCopxXauMkrWvF6VHqOyHMcy54SfNDOseVXfWRQZWkvqjQ/viewform?usp=sf_link).
 
 ## 👋 Until Next Time
 Thanks to everyone who joined and contributed to the discussion. If you missed the call, you can always watch the recording here:
