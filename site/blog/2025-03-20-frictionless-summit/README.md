@@ -1,5 +1,5 @@
 ---
-title: The Tech We Want: Join us to discuss the future of Frictionless Data in a 3-hour online summit
+title: "The Tech We Want: Join us to discuss the future of Frictionless Data in a 3-hour online summit"
 date: 2025-03-20
 tags: ["events", "community-hangout", "case-studies"]
 category: events
