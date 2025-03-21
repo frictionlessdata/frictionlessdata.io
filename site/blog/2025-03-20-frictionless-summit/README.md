@@ -1,7 +1,7 @@
 ---
 title: The Tech We Want: Join us to discuss the future of Frictionless Data in a 3-hour online summit
 date: 2025-03-20
-tags: ["events", "community-hangout", "case-studies]
+tags: ["events", "community-hangout", "case-studies"]
 category: events
 image: /img/blog/frictionless-summit.png
 description: At the summit, we want to promote successful cases and projects using Frictionless, and collectively discuss how such a long-running project adapts to the current context and Open Knowledge’s current vision of technology.
