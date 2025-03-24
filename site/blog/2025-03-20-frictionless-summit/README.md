@@ -46,6 +46,7 @@ Confirmed discussion leaders:
 * Pierre Camilleri
 * Peter Desmet
 * Keith Hughitt
+* Kyle Husmann
 * Phil Schumm
 
 ## Register now
