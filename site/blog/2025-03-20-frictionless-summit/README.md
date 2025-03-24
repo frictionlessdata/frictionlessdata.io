@@ -38,7 +38,7 @@ _A presentation about new practical ways to build software that is useful, simpl
 
 * Patricio Del Boca – Open Knowledge Foundation
 
-**🕔 17:00 CET – Community Hangout**
+**🕔 17:00 CET – Community Discussion**
 _What will Frictionless be like tomorrow and how will the current tech changes impact it?_
 
 Confirmed discussion leaders:
