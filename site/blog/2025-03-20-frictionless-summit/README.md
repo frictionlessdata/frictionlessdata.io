@@ -27,7 +27,7 @@ _Here’s how Frictionless is used today_
 
 Confirmed project presentations:
 
-* Pierre Camilleri: Validata (government data)
+* Pierre Camilleri, Johan Richer: Validata (government data)
 * Romina Colman: Open Data Editor (data quality for non-technical audiences)
 * Peter Desmet: Camtrap DP (bioinformatics)
 * Nicholas Kellett: Deploy Solutions (climate/disaster response + citizen science)
