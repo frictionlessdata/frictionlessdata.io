@@ -22,8 +22,8 @@ At the summit, successful cases and projects will be promoted, and there will be
 
 ## Programme
 
-**🕒 15:00 CET – Frictionless demos**
-_Here’s how Frictionless is used today_
+**🕒 15:00 CET – Frictionless today**
+_Some project presentation illustrating how Frictionless is used today_
 
 Confirmed project presentations:
 
@@ -38,13 +38,14 @@ _A presentation about new practical ways to build software that is useful, simpl
 
 * Patricio Del Boca – Open Knowledge Foundation
 
-**🕔 17:00 CET – Community Discussion**
-_What will Frictionless be like tomorrow and how will the current tech changes impact it?_
+**🕔 16:45 CET – Frictionless Tomorrow**
+_A community discussion on the future of the project_
 
 Confirmed discussion leaders:
 
 * Pierre Camilleri
 * Peter Desmet
+* Stephen Diggs
 * Keith Hughitt
 * Kyle Husmann
 * Phil Schumm
