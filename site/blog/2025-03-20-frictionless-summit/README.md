@@ -32,6 +32,7 @@ Confirmed project presentations:
 * Peter Desmet: Camtrap DP (bioinformatics)
 * Nicholas Kellett: Deploy Solutions (climate/disaster response + citizen science)
 * Phil Schumm: Data curation with Frictionless at NIH/University of Chicago (biomedical data)
+* Adam Shepherd, Amber York: BCO-DMO (oceanography data)
 
 **🕓 16:30 CET – The Tech We Want Vision**
 _A presentation about new practical ways to build software that is useful, simple, long-lasting and focused on solving people’s real problems._
