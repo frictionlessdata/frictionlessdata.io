@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Mon, 07 Apr 2025 16:06:04 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Apr 2025 16:11:45 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Frictionless Summit]]></title>
+            <link>https://frictionlessdata.io/blog/2025/04/07/frictionless-summit/</link>
+            <guid>https://frictionlessdata.io/blog/2025/04/07/frictionless-summit/</guid>
+            <pubDate>Mon, 07 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[On March 28th we hosted the first Frictionless Summit to bring together maintainers, users, and contributors to discuss challenges, priorities, and governance for the project moving forward.]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/Frictionless-summit.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[The Tech We Want: Join us to discuss the future of Frictionless Data in a 3-hour online summit]]></title>
             <link>https://frictionlessdata.io/blog/2025/03/20/frictionless-summit/</link>
@@ -15,15 +24,6 @@
             <pubDate>Thu, 20 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[At the summit, we want to promote successful cases and projects using Frictionless, and collectively discuss how such a long-running project adapts to the current context and Open Knowledge’s current vision of technology.]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/frictionless-summit.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Frictionless Data Community Call Jaunary/February 2025]]></title>
-            <link>https://frictionlessdata.io/blog/2025/02/07/monthly-community-call/</link>
-            <guid>https://frictionlessdata.io/blog/2025/02/07/monthly-community-call/</guid>
-            <pubDate>Fri, 07 Feb 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Our first Frictionless community call of 2025 we discussed new project ideas and got an update from the Categorical Data Working group...]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/monthly-call-jan-feb-2025.png">
             </enclosure>
         </item>
     </channel>
