@@ -56,7 +56,7 @@ The community agreed to follow up on the two macro-topics that emerged with sepa
 * One for software simplification and core functionalities
 * One for outreach and adoption
 
-Join the [community chat on Slack](https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg) to know more about that meetings.
+Join the [community chat on Slack](https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg) to know more about the meetings.
 
 ## Call recording
 
