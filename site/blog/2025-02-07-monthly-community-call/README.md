@@ -1,5 +1,5 @@
 ---
-title: Frictionless Data Community Call Jaunary/February 2025
+title: Frictionless Data Community Call January/February 2025
 date: 2025-02-07
 tags: ["events", "community-hangout"]
 category: events
