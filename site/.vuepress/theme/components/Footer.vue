@@ -39,7 +39,7 @@
           <li><a target="_blank" href="https://network.okfn.org/specialist/">Global Directory</a></li>
         </ul>
   </div>
-  <div>
+  <div class="flex flex-col items-left">
   <div class="flex flex-row items-center gap-4 mb-4">
       <a href="https://en.wikipedia.org/wiki/MIT_License"><img src="/img/footer/subfooter/license.png"></a>
       <div>Source code available under the MIT license.</div>
