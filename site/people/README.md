@@ -200,8 +200,6 @@ Frictionless Data is possible due to our awesome contributor community. You can 
 </a>
 
 <script>
-// import data from './data.json'
-
 var team = [{
 	name: 'Rufus Pollock',
 	city: 'Paris, France',
@@ -215,54 +213,6 @@ var team = [{
 		'datopian/*'
 	],
 }]
-
-// team = team.concat([
-// 	{
-// 		name: 'Lilly Winfree',
-// 		city: 'Austin, TX',
-// 		languages: ['en'],
-// 		github: 'lwinfree',
-// 		work: {
-// 			role: 'Product Manager',
-// 			org: 'Frictionless Data, Open Knowledge Foundation'
-// 		},
-// 		reposOfficial: [
-// 			'okfn/*'
-// 		]
-// 	}
-// ])
-
-team = team.concat([
-	{
-		name: 'Evgeny Karev',
-		city: 'Loulé, Portugal',
-		languages: ['en', 'ru'],
-		github: 'roll',
-		work: {
-			role: 'Technical Lead',
-			org: 'Frictionless Data, Open Knowledge Foundation'
-		},
-		reposOfficial: [
-			'okfn/*'
-		]
-	}
-])
-
-// team = team.concat([
-// 	{
-// 		name: 'Sébastien Lavoie',
-// 		city: 'Mexico City, Mexico',
-// 		languages: ['en', 'es'],
-// 		github: 'sglavoie',
-// 		work: {
-// 			role: 'Product Manager',
-// 			org: 'Datopian'
-// 		},
-// 		reposOfficial: [
-// 			'datapian/*'
-// 		]
-// 	}
-// ])
 
 team = team.concat([
 	{
@@ -279,39 +229,6 @@ team = team.concat([
 		]
 	}
 ])
-
-team = team.concat([
-	{
-		name: 'Edgar Zanella Alvarenga',
-		city: 'Italy',
-		languages: ['en', 'pt'],
-		github: 'aivuk',
-		work: {
-			role: 'Developer',
-			org: 'Frictionless Data, Open Knowledge Foundation'
-		},
-		reposOfficial: [
-			'okfn/*'
-		]
-	}
-])
-
-team = team.concat([
-	{
-		name: 'Shashi Gharti',
-		city: 'Nepal',
-		languages: ['en', 'ne'],
-		github: 'shashigharti',
-		work: {
-			role: 'Developer',
-			org: 'Frictionless Data, Open Knowledge Foundation'
-		},
-		reposOfficial: [
-			'okfn/*'
-		]
-	}
-])
-
 
 var toolFundPartners = [
 	{
