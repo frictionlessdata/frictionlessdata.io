@@ -457,6 +457,18 @@ toolFundPartners = toolFundPartners.concat([
 
 var fellows = [
 	{
+		name: 'Renu Kumari',
+		city: 'New Delhi, India',
+		languajes: ['en', 'hi'],
+		github: 'flower1430',
+		work: {
+			role: 'Frictionless Fellow @ Open Knowledge Foundation'
+		},
+	}
+]
+
+var fellows = fellows.concat([
+	{
 		name: 'Lindsay Gypin',
 		city: 'USA',
 		github: 'lagypin',
@@ -464,7 +476,8 @@ var fellows = [
       role: 'Reproducible Research Fellow 2021-2022'
 		},
 	}
-]
+])
+
 fellows = fellows.concat([
 	{
 		name: 'Kevin Kidambasi',
