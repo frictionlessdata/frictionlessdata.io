@@ -1,86 +1,78 @@
 <template>
-  <footer class="main-section footer-bg xs:py-12 xs:-ml-24">
-    <div class="flex flex-col">
-      <div class="flex sm:p-5 justify-center">
-        <div class="footer-items flex flex-row flex-wrap w-2/3 sm:p-5">
-        <div class="box-border bottom-padding w-full sm:w-1/2 lg:w-1/5">
-          <div class="footer-title font-normal text-xl pb-4"> Supported by </div>
-          <li><a href="https://sloan.org/"><img class="w-32 mx-auto py-5" src="/img/home/alfred.svg"></img></a><li>
-          <li><a href="https://theodi.org/"><img class="w-32 mx-auto" src="/img/home/opendata.svg"></img></a></li>
-        </div>
-        <div class="box-border bottom-padding w-full sm:w-1/2 lg:w-1/5">
-          <div class="footer-title font-normal text-xl pb-2 xs:pt-4"> {{ $site.themeConfig.footer_col1_title }} </div>
-          <li class="pt-4"><a href="/about/" class=""> {{ $site.themeConfig.footer_col1_row1 }} </a><li>
-          <li class="pt-4"><a href="/work-with-us/get-help/" class=""> {{ $site.themeConfig.footer_col1_row2 }} </a></li>
-          <li class="pt-4"><a href="https://okfn.org/terms-of-use/" class=""> {{ $site.themeConfig.footer_col1_row3 }} </a></li>
-          <li class="pt-4"><a href="https://okfn.org/privacy-policy/" class=""> {{ $site.themeConfig.footer_col1_row4 }} </a></li>
-        </div>
-        <div class="box-border bottom-padding w-full sm:w-1/2 lg:w-1/5">
-          <div class="footer-title font-normal text-xl pb-2 xs:pt-4"> {{ $site.themeConfig.footer_col2_title }} </div>
-          <li class="pt-4"><a href="/support/" class=""> {{ $site.themeConfig.footer_col2_row1 }} </a><li>
-          <li class="pt-4"><a href="/guide/" class=""> {{ $site.themeConfig.footer_col2_row2 }} </a></li>
-          <li class="pt-4"><a href="https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg" class=""> {{ $site.themeConfig.footer_col2_row3 }} </a></li>
-          <li class="pt-4"><a href="https://github.com/frictionlessdata/project/discussions" class=""> {{ $site.themeConfig.footer_col2_row4 }} </a></li>
-        </div>
-        <div class="box-border bottom-padding w-full sm:w-1/2 lg:w-1/5">
-          <div class="footer-title font-normal text-xl pb-2 xs:pt-4"> {{ $site.themeConfig.footer_col3_title }} </div>
-          <li class="pt-4"><a href="/reproducible-research/" class=""> {{ $site.themeConfig.footer_col3_row1 }} </a><li>
-          <li class="pt-4"><a href="/design/" class=""> {{ $site.themeConfig.footer_col3_row2 }} </a></li>
-          <li class="pt-4"><a href="/blog/" class=""> {{ $site.themeConfig.footer_col3_row3 }} </a></li>
-          <li class="pt-4"><a href="/contribute/" class=""> {{ $site.themeConfig.footer_col3_row4 }} </a></li>
-        </div>
-        <div class="box-border bottom-padding w-full sm:w-1/2 lg:w-1/5">
-          <div class="footer-title font-normal text-xl pb-2 xs:pt-4"> {{ $site.themeConfig.footer_col4_title }} </div>
-          <li class="pt-4"> <a href="https://twitter.com/frictionlessd8a" class="inline font-light text-base">
-            <img class="pr-2 align-middle social-link-icon" src="/img/home/twitter.svg" />
-            {{ $site.themeConfig.footer_col4_row2 }}</a>
-          <li>
-          <li class="pt-4">
-            <a href="https://github.com/frictionlessdata" class="font-light text-base">
-              <img class="pr-2 align-middle social-link-icon" src="/img/home/github.svg" />
-              {{ $site.themeConfig.footer_col4_row1 }}
-            </a>
-          </li>
-          <li class="pt-4">
-            <a href="https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg" class="font-light text-base">
-              <img class="pr-2 align-middle social-link-icon" width="27" src="/img/home/slack-icon.png"></img>
-              {{ $site.themeConfig.footer_col4_row3 }}
-            </a>
-          </li>
-          <li class="pt-4">
-            <a href="https://matrix.to/#/#frictionlessdata:matrix.okfn.org" class="font-light text-base">
-              <img class="pr-2 align-middle social-link-icon" width="27" src="/img/home/matrix.svg"></img>
-              {{ $site.themeConfig.footer_col4_row4 }}
-            </a>
-          </li>
-        </div>
-      </div>
-      </div>
-    <div class="flex sm:px-5 justify-center footer-logo">
-      <div class="flex flex-row flex-wrap w-2/3 sm:p-5">
-        <div class="container sm:w-1/5 lg:w-1/4">
-          <a href="/" class="xs:-mx-8">
-            <img src="/img/frictionless-full-logo-blackfont-nobackground.svg" class="h-12 pl-8 pt-12" />
-          </a>
-        </div>
-        <div class="container lg:w-1/5">
-          <a href="https://okfn.org/" class="xs:-mx-8">
-            <img src="/img/home/okfn.svg" class="h-12 pl-8 pt-12" />
-          </a>
-        </div>
-        <div class="container lg:w-1/5">
-          <a href="https://www.datopian.com/" class="xs:-mx-8">
-            <img src="/img/home/datopian.svg" class="h-12 pl-8 pt-12" />
-          </a>
-        </div>
-
-      </div>
-      </div>
+<footer class="main-footer">
+  <div class="master">
+  <div class="flex flex-row flex-wrap gap-4">
+    <div class="flex-none">
+      <a href="/">
+        <img src="{% static '/images/lg-okfn-black.svg' %}" class="h-20" alt="Open Knowledge Foundation">
+      </a>
     </div>
-  </footer>
+      <ul class="flex flex-wor flex-grow gap-10 justify-end items-center">
+      <li><a href="https://us9.list-manage.com/subscribe?u=73f922f8e68e21a10efa21f02&id=32d370a7fc" target="_blank"><img src="{% static '/images/footer/mailinglist.svg' %}"></a></li>
+      <li><a href="https://github.com/okfn" target="_blank"><img src="{% static '/images/footer/github.svg' %}"></a></li>
+      <li><a href="https://www.linkedin.com/company/open-knowledge-foundation/" target="_blank"><img src="{% static '/images/footer/linkedin.svg' %}"></a></li>
+      <li><a href="https://fosstodon.org/@okfn" target="_blank"><img src="{% static '/images/footer/mastodon.svg' %}"></a></li>
+      <li><a href="https://twitter.com/okfn" target="_blank"><img src="{% static '/images/footer/x.svg' %}"></a></li>
+      <li><a href="https://www.youtube.com/@OpenKnowledgeFoundation/videos" target="_blank"><img src="{% static '/images/footer/youtube.svg' %}"></a></li>
+      <li><a href="https://flickr.com/photos/okfn/" target="_blank"><img src="{% static '/images/footer/flickr.svg' %}"></a></li>
+      </ul>
+  </div>
+  <div class="flex flex-row flex-wrap justify-between gap-10 py-4">
+    <div class="w-1/4">
+      OKFN is a not-for-profit organisation incorporated in England & Wales with company number 05133759.
+      </br>
+      </br>
+      <a href="mailto:info@okfn.org" target="_blank">info@okfn.org</a>
+    </div>
+        <ul class="w-3/5 grid grid-cols-4 grid-rows-3 text-left">
+          <li><a href="/privacy-policy/">Privacy policy</a></li>
+          <li><a href="/terms-of-use/">Terms of use</a></li>
+          <li><a href="/newsroom/#resources">Brand Guidelines</a></li>
+          <li><a href="/network">Open Knowledge Network</a></li>
+          <li><a href="/ip-policy/">IP policy</a></li>
+          <li><a href="/code-of-conduct/">Code of conduct</a></li>
+          <li><a href="/who-we-are/governance">Governance</a></li>
+          <li><a href="https://network.okfn.org/project/">Project repository</a></li>
+          <li><a href="/cookie-policy/">Cookie policy</a></li>
+          <li><a href="/en/jobs/">Jobs & Opportunities</a></li>
+          <li><a href="https://www.paypal.com/donate/?hosted_button_id=RRFW36P7AQUJL">Donate</a></li>
+          <li><a href="https://network.okfn.org/specialist/">Global Directory</a></li>
+        </ul>
+  </div>
+  <div>
+  <div class="flex flex-row items-center gap-4 mb-4">
+      <a href="https://en.wikipedia.org/wiki/MIT_License"><img src="{% static '/images/footer/subfooter/license.png' %}"></a>
+      <div>Source code available under the MIT license.</div>
+  </div>
+  <div class="flex flex-row items-center gap-4 mb-4"> 
+    <a href="https://creativecommons.org/licenses/by/4.0/"><img src="{% static '/images/footer/subfooter/creative-commons.png' %}"></a>
+    <div>Content on this site, made by Open Knowledge, is licensed under a Creative Commons Attribution 4.0 International License.</div>
+  </div>
+  <div class="flex flex-row items-center gap-4 mb-4">
+    <a href="https://okfn.org/en/who-we-are/governance/"><img src="{% static '/images/footer/subfooter/ngo-source.png' %}"></a>
+    <div>Open Knowledge is certified by NGOsource in accordance with the Equivalency Determination (ED).</div>
+  </div>
+  <div class="flex flex-row items-center gap-4 mb-4">
+    <a href="https://www.ckan.org"><img width="82px" src="{% static '/images/footer/subfooter/ckan.svg' %}"></a>
+    <div>CKAN assets are held in trust by Open Knowledge, with best practice policies on governing openly and for use of the trademark.</div>
+  </div>
+  <div class="flex flex-row items-center gap-4 mb-4">
+    <a href="https://www.digitalpublicgoods.net/"><img src="{% static '/images/footer/subfooter/dpga.png' %}"></a>
+    <div>Open Knowledge is part of the Digital Public Goods Alliance, accelerating the attainment of the Sustainable Development Goals.</div>
+  </div>
+  </div>
+  </div>
+</footer>
+
 </template>
 
 <style scoped>
+
+.main-footer {
+    background-color: rgb(0 209 255);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 
 li {
   list-style: none;
