@@ -3,7 +3,7 @@
   <div class="master">
   <div class="flex flex-row flex-wrap gap-4">
     <div class="flex-none">
-      <a href="/">
+      <a target="_blank" href="https://okfn.org">
         <img src="{% static '/images/lg-okfn-black.svg' %}" class="h-20" alt="Open Knowledge Foundation">
       </a>
     </div>
@@ -25,18 +25,18 @@
       <a href="mailto:info@okfn.org" target="_blank">info@okfn.org</a>
     </div>
         <ul class="w-3/5 grid grid-cols-4 grid-rows-3 text-left">
-          <li><a href="/privacy-policy/">Privacy policy</a></li>
-          <li><a href="/terms-of-use/">Terms of use</a></li>
-          <li><a href="/newsroom/#resources">Brand Guidelines</a></li>
-          <li><a href="/network">Open Knowledge Network</a></li>
-          <li><a href="/ip-policy/">IP policy</a></li>
-          <li><a href="/code-of-conduct/">Code of conduct</a></li>
-          <li><a href="/who-we-are/governance">Governance</a></li>
-          <li><a href="https://network.okfn.org/project/">Project repository</a></li>
-          <li><a href="/cookie-policy/">Cookie policy</a></li>
-          <li><a href="/en/jobs/">Jobs & Opportunities</a></li>
-          <li><a href="https://www.paypal.com/donate/?hosted_button_id=RRFW36P7AQUJL">Donate</a></li>
-          <li><a href="https://network.okfn.org/specialist/">Global Directory</a></li>
+          <li><a target="_blank" href="https://okfn.org/privacy-policy/">Privacy policy</a></li>
+          <li><a target="_blank" href="https://okfn.org/terms-of-use/">Terms of use</a></li>
+          <li><a target="_blank" href="https://okfn.org/newsroom/#resources">Brand Guidelines</a></li>
+          <li><a target="_blank" href="https://okfn.org/network">Open Knowledge Network</a></li>
+          <li><a target="_blank" href="https://okfn.org/ip-policy/">IP policy</a></li>
+          <li><a target="_blank" href="https://okfn.org/code-of-conduct/">Code of conduct</a></li>
+          <li><a target="_blank" href="https://okfn.org/who-we-are/governance">Governance</a></li>
+          <li><a target="_blank" href="https://network.okfn.org/project/">Project repository</a></li>
+          <li><a target="_blank" href="https://okfn.org/cookie-policy/">Cookie policy</a></li>
+          <li><a target="_blank" href="https://okfn.org/en/jobs/">Jobs & Opportunities</a></li>
+          <li><a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=RRFW36P7AQUJL">Donate</a></li>
+          <li><a target="_blank" href="https://network.okfn.org/specialist/">Global Directory</a></li>
         </ul>
   </div>
   <div>
