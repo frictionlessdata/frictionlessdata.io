@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://frictionlessdata.io</id>
     <title>Frictionless Data</title>
-    <updated>2025-08-14T16:10:43.914Z</updated>
+    <updated>2025-11-27T20:15:06.892Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://frictionlessdata.io"/>
     <link rel="self" href="https://frictionlessdata.io/feed.atom"/>
     <subtitle>Data software and standards</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Frictionless Data Community Call November 2025]]></title>
+        <id>https://frictionlessdata.io/blog/2025/11/21/_21/</id>
+        <link href="https://frictionlessdata.io/blog/2025/11/21/_21/">
+        </link>
+        <updated>2025-11-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[At our last call we discussed the Zenodo Integration of the Data Package and an Action Plan for the community reactivation in 2026.]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Frictionless Summit]]></title>
         <id>https://frictionlessdata.io/blog/2025/04/07/frictionless-summit/</id>
@@ -14,13 +22,5 @@
         </link>
         <updated>2025-04-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[On March 28th we hosted the first Frictionless Summit to bring together maintainers, users, and contributors to discuss challenges, priorities, and governance for the project moving forward.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Tech We Want: Join us to discuss the future of Frictionless Data in a 3-hour online summit]]></title>
-        <id>https://frictionlessdata.io/blog/2025/03/20/frictionless-summit/</id>
-        <link href="https://frictionlessdata.io/blog/2025/03/20/frictionless-summit/">
-        </link>
-        <updated>2025-03-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[At the summit, we want to promote successful cases and projects using Frictionless, and collectively discuss how such a long-running project adapts to the current context and Open Knowledge’s current vision of technology.]]></summary>
     </entry>
 </feed>

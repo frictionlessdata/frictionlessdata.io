@@ -4,10 +4,19 @@
         <title>Frictionless Data</title>
         <link>https://frictionlessdata.io</link>
         <description>Data software and standards</description>
-        <lastBuildDate>Thu, 14 Aug 2025 16:10:43 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 27 Nov 2025 20:15:06 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://frictionlessdata.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Frictionless Data Community Call November 2025]]></title>
+            <link>https://frictionlessdata.io/blog/2025/11/21/_21/</link>
+            <guid>https://frictionlessdata.io/blog/2025/11/21/_21/</guid>
+            <pubDate>Fri, 21 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[At our last call we discussed the Zenodo Integration of the Data Package and an Action Plan for the community reactivation in 2026.]]></description>
+            <enclosure url="https://frictionlessdata.io/img/blog/Community-call-Nov-25.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[Frictionless Summit]]></title>
             <link>https://frictionlessdata.io/blog/2025/04/07/frictionless-summit/</link>
@@ -15,15 +24,6 @@
             <pubDate>Mon, 07 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[On March 28th we hosted the first Frictionless Summit to bring together maintainers, users, and contributors to discuss challenges, priorities, and governance for the project moving forward.]]></description>
             <enclosure url="https://frictionlessdata.io/img/blog/Frictionless-summit.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[The Tech We Want: Join us to discuss the future of Frictionless Data in a 3-hour online summit]]></title>
-            <link>https://frictionlessdata.io/blog/2025/03/20/frictionless-summit/</link>
-            <guid>https://frictionlessdata.io/blog/2025/03/20/frictionless-summit/</guid>
-            <pubDate>Thu, 20 Mar 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[At the summit, we want to promote successful cases and projects using Frictionless, and collectively discuss how such a long-running project adapts to the current context and Open Knowledge’s current vision of technology.]]></description>
-            <enclosure url="https://frictionlessdata.io/img/blog/frictionless-summit.png">
             </enclosure>
         </item>
     </channel>
