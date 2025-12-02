@@ -53,4 +53,4 @@ During our project development we have had various collaborations with instituti
 
 ## Ready for more?
 
-As a next step, we recommend you start using one of our [Software](/projects) projects, get known our [Standards](/projects) or read about other user experience in [Pilots](/tag/pilot) and [Case Studies](/tag/case-studies) sections. Also, we welcome you to reach out on [Slack](https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg) or [Matrix](https://matrix.to/#/#frictionlessdata:matrix.okfn.org) to say hi or ask questions!
+As a next step, we recommend you start using one of our [Software](/projects) projects, get to know our [Standards](/projects) or read about other user experience in [Pilots](/tag/pilot) and [Case Studies](/tag/case-studies) sections. Also, we welcome you to reach out on [Slack](https://join.slack.com/t/frictionlessdata/shared_invite/zt-17kpbffnm-tRfDW_wJgOw8tJVLvZTrBg) or [Matrix](https://matrix.to/#/#frictionlessdata:matrix.okfn.org) to say hi or ask questions!
