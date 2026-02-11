@@ -6,20 +6,20 @@
     "description": "Data software and standards",
     "items": [
         {
+            "id": "https://frictionlessdata.io/blog/2026/01/23/monthly-community-call/",
+            "url": "https://frictionlessdata.io/blog/2026/01/23/monthly-community-call/",
+            "title": "Frictionless Data Community Call January 2026",
+            "summary": "At our last call we discussed the evolution of the Frictionless Data standards, ongoing software development, and real-world adoption across research domains.",
+            "image": "https://frictionlessdata.io/img/blog/2026-01-23-FD-Community-call.png",
+            "date_modified": "2026-01-23T00:00:00.000Z"
+        },
+        {
             "id": "https://frictionlessdata.io/blog/2025/11/21/_21/",
             "url": "https://frictionlessdata.io/blog/2025/11/21/_21/",
             "title": "Frictionless Data Community Call November 2025",
             "summary": "At our last call we discussed the Zenodo Integration of the Data Package and an Action Plan for the community reactivation in 2026.",
             "image": "https://frictionlessdata.io/img/blog/Community-call-Nov-25.png",
             "date_modified": "2025-11-21T00:00:00.000Z"
-        },
-        {
-            "id": "https://frictionlessdata.io/blog/2025/04/07/frictionless-summit/",
-            "url": "https://frictionlessdata.io/blog/2025/04/07/frictionless-summit/",
-            "title": "Frictionless Summit",
-            "summary": "On March 28th we hosted the first Frictionless Summit to bring together maintainers, users, and contributors to discuss challenges, priorities, and governance for the project moving forward.",
-            "image": "https://frictionlessdata.io/img/blog/Frictionless-summit.png",
-            "date_modified": "2025-04-07T00:00:00.000Z"
         }
     ]
 }
